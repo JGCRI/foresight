@@ -1,0 +1,17 @@
+title: Foresight
+
+navbar:
+  type: inverse
+  left:
+    - text: "User Guide"
+      icon: fas fa-book
+      href: articles/vignette_froesight.html
+    - icon: fa-file-code-o
+      text: "Reference"
+      href: reference/index.html
+    - icon: fa-newspaper-o
+      text: "News"
+      href: news/index.html
+      
+toc:
+  depth: 2

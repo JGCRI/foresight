@@ -1,0 +1,161 @@
+.navbar {
+  background-image: url("images/earth-header.png");
+  background-size:100% 100%;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+  font-family: 'Circular-Loom';
+  font-size: 30px;
+  font-weight: bold;
+  }
+
+.navbar-default .navbar-nav > li > a {
+  color:white;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+
+.nav-tabs {
+    text-align:center;
+}
+
+body{
+  padding-top:60px;
+}
+
+.panel-title{
+    font-size:15px !important;
+}
+
+.window{
+ min-height=700px
+}
+
+.floatNav {
+  z-index: 100000 !important; /* Stay on top */
+  background-color: rgba(200,200,200,0.6);
+  padding: 10px;
+}
+
+.leaflet-control-layers{ z-index: 500 !important; }
+.legend { z-index: 100 !important; }
+
+.update_button{
+  font-size:15px !important;
+  background-color: #F5F5F5;
+}
+
+.shiny-notification {
+           height: 100px;
+           width: 800px;
+           position:fixed;
+           top: calc(50% - 50px);
+           left: calc(50% - 400px);
+           font-size: 250%;
+           text-align: center;
+           }
+
+.download_button{
+  font-size:15px !important;
+  color:#595959;
+  background-color: #f2f2f2;
+  border: 0px;
+  padding:5px;
+  margin-top:10px;
+  margin-right:10px;
+  float: right;
+}
+
+.download_button_input{
+  font-size:15px !important;
+  color:#595959;
+  background-color: #f2f2f2;
+  border: 0px;
+  padding:5px;
+  margin-top:10px;
+  margin-right:10px;
+  float: right;
+}
+
+.download_button_in{
+  font-size:15px !important;
+  color:#595959;
+  background-color: #f2f2f2;
+  border: 0px;
+  padding:5px;
+  margin-top: -40px;
+  margin-right:10px;
+  float: right;
+}
+
+.icon{
+  font-size:20px !important;
+  color:#fff;
+  border: 0px;
+  padding:5px;
+  margin-top:10px;
+  margin-right:10px;
+  float: right;
+  font-weight: bold;
+}
+
+.sidenav {
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  width: 100%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */ /* Disable horizontal scroll */
+}
+
+.dropdown-menu{
+  z-index: 10000000 !important; /* Stay on top */
+  margin-top:45px;
+  margin-right:10px;
+}
+
+
+.btn-preloadedButton {
+  font-size:15px !important;
+  color:#595959;
+  background-color: #f2f2f2;
+  border: 0px;
+  padding:5px;
+  margin-top:10px;
+  margin-right:10px;
+  float: right;}
+
+/* .panel-title{
+    font-size: 12px !important;
+} */
+
+.panel-heading {
+    color: whitesmoke !important;
+    background-color: slategray !important;
+    border: 0.2 !important;
+    border-color: darkslategray !important;
+  }
+
+.panel-body {
+    color: black !important;
+    border: 0.2 !important;
+    border-color: darkslategray !important;
+  }
+
+.panel {
+    border: 0.2 !important;
+    border-color: darkslategray !important;
+    box-shadow: none !important;
+  }
+
+
+.storyboardtext {white-space: pre-wrap;}

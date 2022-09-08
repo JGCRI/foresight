@@ -1,0 +1,11 @@
+name: argus
+title: argus
+username:
+account: jgcri
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4178628
+bundleId: 4822365
+url: https://jgcri.shinyapps.io/argus/
+when: 1626356044.31341
+lastSyncTime: 1626356044.31341
