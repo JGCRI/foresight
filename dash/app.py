@@ -14,7 +14,7 @@ app = dash.Dash(__name__)
 app.layout = html.Div(
     children=[
         html.H1(
-            children="GCAM Steel Production Dashboard",
+            children="Pilot Dashboard (GCAM Steel Trade)",
         ),
         html.P(
             children="Analyze the behavior of GCAM steel trade values over time"
