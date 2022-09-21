@@ -14,7 +14,7 @@ library(raster)
 library(sp)
 
 steel_trade_data <- read.csv('../extdata/Iron_Steel_Trade_data_GCAM6.0.csv',skip=1)
-precip_ncdf_data <- nc_open('../../extdata/pilot_dashboard_data/wrfout_d01_2020-01-01_00%3A00%3A00_3hourly.nc')
+precip_ncdf_data <- nc_open('../extdata/wrfout_d01_2020-01-01_00%3A00%3A00_3hourly.nc')
 
 # Extract the coordinates for the precipitation variables:
 # Get the directory of the netcdf files:

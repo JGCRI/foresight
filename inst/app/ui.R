@@ -18,7 +18,7 @@ library(RColorBrewer)
 # Define UI for application that plots bar chart of  steel imports,
 # exports, production, and consumptions. These should be ordered in terms
 # of value during the plotting:
-steel_trade_data <- read.csv('../../extdata/Iron_Steel_Trade_data_GCAM6.0.csv',skip=1)
+steel_trade_data <- read.csv('../extdata/Iron_Steel_Trade_data_GCAM6.0.csv',skip=1)
 
 # Define UI for application that plots bar chart of  steel imports,
 # exports, production, and consumptions. These should be ordered in terms
