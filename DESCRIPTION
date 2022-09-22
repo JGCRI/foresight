@@ -16,7 +16,12 @@ Imports:
     dplyr,
 	rmarkdown,
 	knitr,
-	shiny
+	shiny,
+	tidyr,
+	ncdf4,
+	raster,
+	rasterVis,
+	RColorBrewer
 Remotes: 
 VignetteBuilder: 
     knitr
