@@ -12,7 +12,6 @@ jobs:
     
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      GITHUB_PAT: ${{ secrets.GH_PAT_FORESIGHT}}
           
     steps:
     

@@ -11,7 +11,6 @@ jobs:
     
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      GITHUB_PAT: ${{ secrets.GH_PAT_FORESIGHT}}
 
     steps:
       - uses: actions/checkout@v1
@@ -37,10 +36,6 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages(c("remotes","rcmdcheck"), repos = "https://cloud.r-project.org")
-          remotes::install_github("JGCRI/jgcricolors")
-          remotes::install_github("JGCRI/rgcam")
-          remotes::install_github("JGCRI/rmap")
-          remotes::install_github("JGCRI/gcamextractor")
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
