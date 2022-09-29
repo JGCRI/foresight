@@ -10,3 +10,5 @@
 ^_config.yml$
 ^codecov\.yml$
 paper
+dash
+LICENSE
