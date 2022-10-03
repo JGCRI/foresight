@@ -101,18 +101,17 @@
 <!-- ------------------------><!-- ------------------------>
 </div>
 <div class="section level1">
-<h1 id="foresight-offline">
-<a name="foresight%20Offline"></a>foresight Offline<a class="anchor" aria-label="anchor" href="#foresight-offline"></a>
+<h1 id="foresight-installation">
+<a name="Foresight%20Installation"></a>Foresight Installation<a class="anchor" aria-label="anchor" href="#foresight-installation"></a>
 </h1>
-<!-- ------------------------><!-- ------------------------><p>If users want to use foresight locally on their machines they can install the software as follows:</p>
-<ol style="list-style-type: decimal">
-<li>Download and install:<ul>
-<li>R (<a href="https://www.r-project.org/" class="external-link uri">https://www.r-project.org/</a>)</li>
-<li>R studio (<a href="https://www.rstudio.com/" class="external-link uri">https://www.rstudio.com/</a>)</li>
-</ul>
-</li>
-<li>Open R studio:</li>
-</ol>
+<!-- ------------------------><!-- ------------------------><p>For the development of this dashboard, Rshiny and Python Dash Apps are being developed in parallel. These have separate installation instructions that are described here:</p>
+<div class="section level2">
+<h2 id="rshiny-app-installation">
+<a name="Rshiny%20App%20Installation"></a>Rshiny App Installation<a class="anchor" aria-label="anchor" href="#rshiny-app-installation"></a>
+</h2>
+<p>The 1. Download and install: - R (<a href="https://www.r-project.org/" class="external-link uri">https://www.r-project.org/</a>) - R studio (<a href="https://www.rstudio.com/" class="external-link uri">https://www.rstudio.com/</a>)<br>
+- PyCharm or some other Python IDE (<a href="https://www.jetbrains.com/pycharm/" class="external-link uri">https://www.jetbrains.com/pycharm/</a>)</p>
+<ol start="2" style="list-style-type: decimal"><li>Open R studio:</li></ol>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"JGCRI/rgcam"</span><span class="op">)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"JGCRI/rmap"</span><span class="op">)</span></span>
@@ -129,6 +128,17 @@ sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libmagi
 <pre><code>brew install pkg-config
 brew install gdal
 brew install imagemagick@6</code></pre>
+</div>
+<div class="section level2">
+<h2 id="python-dash-app-installation">
+<a name="Python%20Dash%20App%20Installation"></a>Python Dash App Installation<a class="anchor" aria-label="anchor" href="#python-dash-app-installation"></a>
+</h2>
+<p>The Python Dash app is located on a separate branch called <code>dash</code>. This is currently not pushed to PyPi</p>
+<ol style="list-style-type: decimal"><li>Open a terminal and set your python to your local venv. After setting this as your Pyton interpreter, users can either run:</li></ol>
+<pre><code>pip install requirements.txt</code></pre>
+<p>or…</p>
+<pre><code>python setup.py develop</code></pre>
+</div>
 </div>
 
   </div>
