@@ -133,11 +133,15 @@ brew install imagemagick@6</code></pre>
 <h2 id="python-dash-app-installation">
 <a name="Python%20Dash%20App%20Installation"></a>Python Dash App Installation<a class="anchor" aria-label="anchor" href="#python-dash-app-installation"></a>
 </h2>
-<p>The Python Dash app is located on a separate branch called <code>dash</code>. This is currently not pushed to PyPi</p>
-<ol style="list-style-type: decimal"><li>Open a terminal and set your python to your local venv. After setting this as your Pyton interpreter, users can either run:</li></ol>
-<pre><code>pip install requirements.txt</code></pre>
-<p>or…</p>
+<p>The Python Dash app is located on a separate branch called <code>dash</code>. This is currently not avilable through PyPi and must be accessed by cloning this repo</p>
+<ol style="list-style-type: decimal"><li>Open a terminal and create a local environment (venv) in the directory using:</li></ol>
+<pre><code>cd foresight
+python -m env venv
+.\env\Scripts\activate </code></pre>
+<ol start="2" style="list-style-type: decimal"><li>After setting this as your Pyton interpreter in the IDE, users can either run:</li></ol>
 <pre><code>python setup.py develop</code></pre>
+<p>or…</p>
+<pre><code>pip install requirements.txt</code></pre>
 </div>
 </div>
 
