@@ -80,24 +80,5 @@ brew install pkg-config
 brew install gdal
 brew install imagemagick@6
 ```
-## <a name="Python Dash App Installation"></a>Python Dash App Installation
-The Python Dash app is located on a separate branch called `dash`. This is currently not avilable through PyPi and must be accessed by cloning this repo
-
-1. Open a terminal and create a local environment (venv) in the directory using:
-``` 
-cd foresight
-python -m env venv
-.\env\Scripts\activate 
-```
-
-2. After setting this as your Pyton interpreter in the IDE, users can either run:
-```
-python setup.py develop
-```
-or...
-```
-pip install requirements.txt
-```
-
 
   
