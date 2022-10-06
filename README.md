@@ -42,15 +42,18 @@ To be added
 
 <!-- ------------------------>
 <!-- ------------------------>
-# <a name="foresight Offline"></a>foresight Offline
+# <a name="Foresight Installation"></a>Foresight Installation
 <!-- ------------------------>
 <!-- ------------------------>
 
-If users want to use foresight locally on their machines they can install the software as follows:
+For the development of this dashboard, Rshiny and Python Dash Apps are being developed in parallel. These have separate installation instructions that are described here:
 
+## <a name="Rshiny App Installation"></a>Rshiny App Installation
+The 
 1. Download and install:
     - R (https://www.r-project.org/)
     - R studio (https://www.rstudio.com/)  
+    - PyCharm or some other Python IDE (https://www.jetbrains.com/pycharm/)
     
 2. Open R studio:
 
@@ -77,6 +80,5 @@ brew install pkg-config
 brew install gdal
 brew install imagemagick@6
 ```
-
 
   
