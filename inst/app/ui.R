@@ -1,14 +1,21 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
+#' shinyUI
+#'
+#' This is the user-interface definition of a Shiny web application. You can
+# run the application by clicking 'Run App' above..
+#'
+#' @export run
+#'
+#' @return UI for application that plots bar chart of  steel imports,
+# exports, production, and consumption
+#'
+#' @examples \dontrun{
+#' library(foresight)
+#' }
+#'
+#' @import shiny dplyr leaflet tidyr ncdf4 raster rasterVis RColorBrewer shinythemes
 library(shiny)
 library(dplyr)
+library(leaflet)
 library(tidyr)
 library(ncdf4)
 library(raster)
@@ -16,10 +23,6 @@ library(rasterVis)
 library(RColorBrewer)
 library(shinythemes)
 
-
-# Define UI for application that plots bar chart of  steel imports,
-# exports, production, and consumptions. These should be ordered in terms
-# of value during the plotting:
 shinyUI(
   fluidPage(theme = shinytheme('darkly'),
     navbarPage("GCIMS Rshiny Dashboard Integration",
