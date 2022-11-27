@@ -13,18 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-<<<<<<< Updated upstream
-          use-public-rspm: true
-      
-      - name: Install dependencies
-        run: |
-          install.packages(c("remotes","rcmdcheck"), repos = "https://cloud.r-project.org")
-          remotes::install_deps(dependencies = TRUE)
-        shell: Rscript {0}
-=======
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
->>>>>>> Stashed changes
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
