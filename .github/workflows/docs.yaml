@@ -7,20 +7,13 @@ on:
 
 
 jobs:
-  pkgdown:
-    runs-on: windows-latest
-    
-    env:
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-          
+  deploy:
+    runs-on: ubuntu-latest
+              
     steps:
-    
       - uses: actions/checkout@v2
-
-      - uses: r-lib/actions/setup-pandoc@v1
-
-      - uses: r-lib/actions/setup-r@v1
         with:
+<<<<<<< Updated upstream
           use-public-rspm: true
       
       - name: Install dependencies
@@ -28,14 +21,18 @@ jobs:
           install.packages(c("remotes","rcmdcheck"), repos = "https://cloud.r-project.org")
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
+=======
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+>>>>>>> Stashed changes
 
-      - uses: r-lib/actions/setup-r-dependencies@v1
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          extra-packages: pkgdown
-          needs: website
+          hugo-version: '0.85.0'
 
-      - name: Deploy package
-        run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./webpage/_site
