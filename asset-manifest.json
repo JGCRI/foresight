@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/foresight/static/css/main.073c9b0a.css",
-    "main.js": "/foresight/static/js/main.9e1acc86.js",
+    "main.css": "/foresight/static/css/main.a2ada720.css",
+    "main.js": "/foresight/static/js/main.6c08b512.js",
     "static/js/787.29ac686a.chunk.js": "/foresight/static/js/787.29ac686a.chunk.js",
-    "static/media/logo.svg": "/foresight/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/foresight/index.html",
-    "main.073c9b0a.css.map": "/foresight/static/css/main.073c9b0a.css.map",
-    "main.9e1acc86.js.map": "/foresight/static/js/main.9e1acc86.js.map",
+    "main.a2ada720.css.map": "/foresight/static/css/main.a2ada720.css.map",
+    "main.6c08b512.js.map": "/foresight/static/js/main.6c08b512.js.map",
     "787.29ac686a.chunk.js.map": "/foresight/static/js/787.29ac686a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.9e1acc86.js"
+    "static/css/main.a2ada720.css",
+    "static/js/main.6c08b512.js"
   ]
 }
