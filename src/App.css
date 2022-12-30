@@ -28,7 +28,7 @@ body {
 .toggle {
   position: fixed;
   right: 30px;
-  top: 15px;
+  top: 20px;
   z-index: 10000 !important;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 #light .bartop {
-  background-color: rgb(222, 222, 222) !important;
+  background-color: #3c3c3c !important;
 }
 
 /******* Home ********/
