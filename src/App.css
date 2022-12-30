@@ -1,0 +1,108 @@
+/******* Default ********/
+
+body {
+  overflow: hidden !important;
+}
+
+/*** Navbar ***/
+
+.logo-text {
+  height:35px;
+  margin: 5px 0 0 0;
+}
+
+.logo {
+  height:50px;
+  margin: 0 0 5px 0;
+}
+
+.bartop {
+  z-index: 1000 !important;
+}
+
+.bartop .container {
+  padding-left: 50px !important;
+  margin-left: 0px !important;
+}
+
+.toggle {
+  position: fixed;
+  right: 30px;
+  top: 15px;
+  z-index: 10000 !important;
+}
+
+#dark .bartop {
+  background-color: #000000 !important;
+}
+
+#light .bartop {
+  background-color: rgb(222, 222, 222) !important;
+}
+
+/******* Home ********/
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home-globe {
+  position: relative;
+  /* transform: translate(20%, 10%); */
+  pointer-events: none;
+}
+
+.home-title {
+  position: absolute;
+  top: 20%;
+  opacity: 1;
+  left: 60px;
+  font-size: calc(10vw + 5vh);
+  display: flex;
+  align-items: top;
+  color: rgb(201, 201, 201);
+  animation: 3.5s ease-in-out 0s 1 homeTitleAnimate;
+  padding-bottom: 2%;
+}
+
+@keyframes homeTitleAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.home-subtitle {
+  position: absolute;
+  font-size: calc((10vw + 5vh)*0.3);
+  color: rgb(201, 201, 201);
+  top: 100%;
+
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid rgb(255, 243, 221); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3s steps(33, end),
+    blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 243, 221); }
+}
