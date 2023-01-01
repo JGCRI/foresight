@@ -1,18 +1,20 @@
 /******* Default ********/
 
-body {
+body, html {
   overflow: hidden !important;
 }
 
 /*** Navbar ***/
 
 .logo-text {
-  height:35px;
+  height:6vw;
+  max-height:40px;
   margin: 5px 0 0 0;
 }
 
 .logo {
-  height:50px;
+  height:6vw;
+  max-height:40px;
   margin: 0 0 5px 0;
 }
 
@@ -22,13 +24,17 @@ body {
 
 .bartop .container {
   padding-left: 50px !important;
-  margin-left: 0px !important;
+  padding-right: 50px !important;
+  padding-top: 10px !important;
+  margin: 0px !important;
 }
 
 .toggle {
   position: fixed;
-  right: 30px;
-  top: 20px;
+  right: 0;
+  top: 0;
+  margin-top: 28px !important;
+  margin-right: 15px !important;
   z-index: 10000 !important;
 }
 
@@ -56,10 +62,10 @@ body {
 
 .home-title {
   position: absolute;
-  top: 20%;
+  top: 30%;
   opacity: 1;
   left: 60px;
-  font-size: calc(10vw + 5vh);
+  font-size: calc(8vw + 5vh);
   display: flex;
   align-items: top;
   color: rgb(201, 201, 201);
