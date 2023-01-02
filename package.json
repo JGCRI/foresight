@@ -4,19 +4,26 @@
   "homepage": "https://jgcri.github.io/foresight",
   "private": true,
   "dependencies": {
+    "@nivo/bar": "^0.80.0",
+    "@nivo/bump": "^0.80.0",
+    "@nivo/chord": "^0.80.0",
+    "@nivo/core": "^0.80.0",
+    "@nivo/funnel": "^0.80.0",
+    "@nivo/geo": "^0.80.0",
+    "@nivo/pie": "^0.80.0",
+    "@nivo/sankey": "^0.80.0",
+    "@nivo/treemap": "^0.80.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
-    "deploy-react": "^2.2.11",
-    "nivo": "^0.31.0",
     "react": "^18.2.0",
+    "react-before-after-slider-component": "^1.1.6",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
-    "react-globe.gl": "^2.22.8",
+    "react-globe.gl": "^2.22.9",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
-    "react-toggle-dark-mode": "^1.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,7 +53,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
-    "web-vitals": "^3.1.0"
+    "gh-pages": "^4.0.0"
   }
 }

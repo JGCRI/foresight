@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 
 const N = 50;
@@ -22,7 +22,7 @@ function getWindowDimensions() {
   };
 }
 
-export default function useWindowDimensions() {
+export function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
@@ -37,14 +37,14 @@ export default function useWindowDimensions() {
   return windowDimensions;
 }
 
-export const Home = () => {
+function Home() {
   const globeElement = React.useRef();
   const { height, width } = useWindowDimensions();
 
   React.useEffect(() => {
     // Auto-rotate
     globeElement.current.controls().autoRotate = true;
-    globeElement.current.controls().autoRotateSpeed = 0.5;
+    globeElement.current.controls().autoRotateSpeed = 0.7;
     //globeElement.current.controls().enableZoom = false;
     globeElement.current.controls().enabled = true;
     globeElement.current.controls().enableRotate = true;
@@ -73,9 +73,11 @@ export const Home = () => {
         />
       </div>
       <div className="home-title">Foresight
-      <div className="home-subtitle typewriter">Global Change Analytics</div>
+      <div className="home-subtitle">Global Change Analytics</div>
       </div>
       
     </div>
   );
-};
+}
+
+export default Home;
