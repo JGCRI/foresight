@@ -62,14 +62,14 @@ body, html {
 
 .home-title {
   position: absolute;
-  top: 30%;
+  top: 25%;
   opacity: 1;
   left: 60px;
   font-size: calc(8vw + 5vh);
   display: flex;
   align-items: top;
   color: rgb(201, 201, 201);
-  animation: 3.5s ease-in-out 0s 1 homeTitleAnimate;
+  /* animation: 3.5s ease-in-out 0s 1 homeTitleAnimate;*/
   padding-bottom: 2%;
 }
 
@@ -93,12 +93,12 @@ body, html {
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .1em solid rgb(255, 243, 221); /* The typwriter cursor */
+  /*border-right: .1em solid rgb(255, 243, 221); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
+  /* animation: 
     typing 3s steps(33, end),
-    blink-caret 1s step-end infinite;
+    blink-caret 1s step-end infinite;*/
 }
 
 /* The typing effect */
