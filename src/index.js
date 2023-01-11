@@ -8,7 +8,8 @@ import {
   Home,
   Dashboard,
   Explore,
-  World
+  World,
+  Experiment
 } from "./components";
 
 
@@ -19,7 +20,8 @@ ReactDOM.render(
       <Route path="/foresight" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />     
       <Route path="/explore" element={<Explore />} />      
-      <Route path="/world" element={<World />} />   
+      <Route path="/world" element={<World />} />  
+      <Route path="/experiment" element={<Experiment />} />   
     </Routes>
   </Router>,
 

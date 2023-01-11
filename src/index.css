@@ -137,5 +137,15 @@ body, html {
 .slider {
   padding-top: 4vh;
   width: 50vw;
-  min-width: 500px;
+  min-width: 300px;
+}
+
+/******* Eexperiment ********/
+
+.experiment {
+  margin-top: 70px !important;
+  padding: 100px !important;
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  height: 100vh;
 }

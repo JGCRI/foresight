@@ -10,3 +10,4 @@ export { default as TreeMap } from "./charts/TreeMap";
 export { default as Funnel } from "./charts/Funnel";
 export { default as Explore } from "./Explore";
 export { default as World } from "./World";
+export { default as Experiment } from "./Experiment";
