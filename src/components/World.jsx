@@ -41,7 +41,7 @@ function World() {
   React.useEffect(() => {
     // Auto-rotate
     globeElement.current.controls().autoRotate = true;
-    globeElement.current.controls().autoRotateSpeed = 0.7;
+    globeElement.current.controls().autoRotateSpeed = 0.4;
     //globeElement.current.controls().enableZoom = false;
     globeElement.current.controls().enabled = true;
     globeElement.current.controls().enableRotate = true;

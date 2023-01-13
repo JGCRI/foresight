@@ -145,7 +145,8 @@ body, html {
 .experiment {
   margin-top: 70px !important;
   padding: 100px !important;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(30, 30, 30);
   width: 100vw;
   height: 100vh;
+  color:rgb(253, 248, 229)
 }
