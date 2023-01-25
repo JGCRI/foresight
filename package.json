@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "npm install && node server/index.js",
+    "build": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/JGCRI/foresight#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "yarn": "^1.22.19"
   }
 }
