@@ -1,0 +1,47 @@
+[
+    {
+      "country": "AD",
+      "param 1": 81,
+      "param 1Color": "hsl(154, 70%, 50%)",
+      "param 2": 193,
+      "param 2Color": "hsl(304, 70%, 50%)",
+      "param 3": 50,
+      "param 3Color": "hsl(222, 70%, 50%)",
+      "param 4": 154,
+      "param 4Color": "hsl(241, 70%, 50%)",
+      "param 5": 68,
+      "param 5Color": "hsl(331, 70%, 50%)",
+      "param 6": 49,
+      "param 6Color": "hsl(259, 70%, 50%)"
+    },
+    {
+      "country": "AE",
+      "param 1": 46,
+      "param 1Color": "hsl(33, 70%, 50%)",
+      "param 2": 96,
+      "param 2Color": "hsl(70, 70%, 50%)",
+      "param 3": 10,
+      "param 3Color": "hsl(348, 70%, 50%)",
+      "param 4": 18,
+      "param 4Color": "hsl(191, 70%, 50%)",
+      "param 5": 93,
+      "param 5Color": "hsl(262, 70%, 50%)",
+      "param 6": 54,
+      "param 6Color": "hsl(118, 70%, 50%)"
+    },
+    {
+      "country": "AF",
+      "param 1": 123,
+      "param 1Color": "hsl(17, 70%, 50%)",
+      "param 2": 24,
+      "param 2Color": "hsl(122, 70%, 50%)",
+      "param 3": 12,
+      "param 3Color": "hsl(35, 70%, 50%)",
+      "param 4": 141,
+      "param 4Color": "hsl(102, 70%, 50%)",
+      "param 5": 33,
+      "param 5Color": "hsl(191, 70%, 50%)",
+      "param 6": 8,
+      "param 6Color": "hsl(183, 70%, 50%)"
+    }
+  ]

@@ -1,59 +1,23 @@
 {
   "name": "foresight",
-  "version": "0.1.0",
-  "homepage": "https://jgcri.github.io/foresight",
-  "private": true,
-  "dependencies": {
-    "@nivo/bar": "^0.80.0",
-    "@nivo/bump": "^0.80.0",
-    "@nivo/chord": "^0.80.0",
-    "@nivo/core": "^0.80.0",
-    "@nivo/funnel": "^0.80.0",
-    "@nivo/geo": "^0.80.0",
-    "@nivo/pie": "^0.80.0",
-    "@nivo/sankey": "^0.80.0",
-    "@nivo/treemap": "^0.80.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.2.3",
-    "d3": "^7.8.0",
-    "react": "^18.2.0",
-    "react-before-after-slider-component": "^1.1.6",
-    "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.2.0",
-    "react-globe.gl": "^2.22.9",
-    "react-router-dom": "^6.6.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "nodemon server/index.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGCRI/foresight.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JGCRI/foresight/issues"
   },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
+  "homepage": "https://github.com/JGCRI/foresight#readme",
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
