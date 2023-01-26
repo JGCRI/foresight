@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/JGCRI/foresight#readme",
   "dependencies": {
-    "express": "^4.18.2",
-    "yarn": "^1.22.19"
+    "express": "^4.18.2"
   }
 }
