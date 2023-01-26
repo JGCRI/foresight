@@ -1,5 +1,5 @@
 {
-  "name": "foresight",
+  "name": "fullstack1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,18 +7,14 @@
     "start": "npm install && node server/index.js",
     "build": "cd client && npm install && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JGCRI/foresight.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JGCRI/foresight/issues"
-  },
-  "homepage": "https://github.com/JGCRI/foresight#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "engines": {
+    "node": "v14.15.0"
   }
 }

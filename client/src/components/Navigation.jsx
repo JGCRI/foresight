@@ -21,7 +21,7 @@ function Navigation() {
         <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink onClick={() => setExpanded(false)} className="nav-link" to="/foresight">
+            <NavLink onClick={() => setExpanded(false)} className="nav-link" to="/">
               Home
             </NavLink>
             <NavLink onClick={() => setExpanded(false)} className="nav-link" to="/dashboard">
