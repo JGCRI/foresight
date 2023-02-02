@@ -22,7 +22,7 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />     
       <Route path="/explore" element={<Explore />} />      
-      <Route path="/world" element={<World />} /> 
+      <Route path="/world" element={<World />} />
     </Routes>
   </Router>,
 );

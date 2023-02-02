@@ -143,10 +143,8 @@ body, html {
 /******* Eexperiment ********/
 
 .experiment {
-  margin-top: 70px !important;
-  padding: 100px !important;
+  margin-top: 50px !important;
+  padding: 10px !important;
   background-color: rgb(30, 30, 30);
-  width: 100vw;
-  height: 100vh;
   color:rgb(253, 248, 229)
 }
