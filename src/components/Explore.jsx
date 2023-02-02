@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
 import { Amplify, API, graphqlOperation } from "aws-amplify";
-import awsconfig from "./aws-exports";
+import awsconfig from "../aws-exports";
 import { listSongs } from "../graphql/queries";
 import { updateSong } from '../graphql/mutations';
 import { useState, useEffect } from "react";
