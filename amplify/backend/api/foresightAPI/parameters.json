@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "foresightAPI",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}
