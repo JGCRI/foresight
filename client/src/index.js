@@ -19,7 +19,7 @@ root.render(
   <Router>
     <Navigation />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/foresight" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />     
       <Route path="/explore" element={<Explore />} />      
       <Route path="/world" element={<World />} /> 
