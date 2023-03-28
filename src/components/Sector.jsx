@@ -13,7 +13,7 @@ function Sector() {
 const dataBar = [
   {
     "country": "AD",
-    "param 1": 100,
+    "param 1": 101,
     "param 1Color": "hsl(154, 70%, 50%)",
     "param 2": 593,
     "param 2Color": "hsl(304, 70%, 50%)",
