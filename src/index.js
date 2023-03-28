@@ -8,7 +8,8 @@ import {
   Home,
   Dashboard,
   Explore,
-  World
+  World,
+  Sector
 } from "./components";
 import reportWebVitals from './reportWebVitals';
 
@@ -20,6 +21,7 @@ root.render(
     <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/sector" element={<Sector />} />    
       <Route path="/dashboard" element={<Dashboard />} />     
       <Route path="/explore" element={<Explore />} />      
       <Route path="/world" element={<World />} />

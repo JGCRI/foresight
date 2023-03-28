@@ -1,6 +1,7 @@
 export { default as Navigation } from "./Navigation";
 export { default as Home } from "./Home";
 export { default as Dashboard } from "./Dashboard";
+export { default as Sector } from "./Sector";
 export { default as Bar } from "./charts/Bar";
 export { default as AreaBump } from "./charts/AreaBump";
 export { default as Choropleth } from "./charts/Choropleth";
