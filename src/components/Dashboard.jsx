@@ -13,7 +13,7 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
-import TravelExploreIcon from "@mui/icons-material/TravelExplore";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import SettingsIcon from "@mui/icons-material/Settings";
 
@@ -235,7 +235,7 @@ function Dashboard() {
           <span className={"linkText"}>{"Summary"}</span>
         </NavLink>
         <NavLink className="sideitem" to="/sector">
-          <TravelExploreIcon/>
+          <AcUnitIcon/>
           <span className={"linkText"}>{"Energy"}</span>
         </NavLink>
         <NavLink className="sideitem" to="/sector">
