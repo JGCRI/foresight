@@ -87,6 +87,15 @@ html {
 
 /******* Dashboard ********/
 
+.sector {
+  position: relative;
+  margin-top: 100px !important;
+  padding-right: 20px !important;
+  padding-left: 200px !important;
+  overflow: auto !important;
+  background-color: rgb(253, 248, 229);
+}
+
 .dashboard {
   position: relative;
   margin-top: 70px !important;
@@ -168,6 +177,7 @@ html {
 
 .sidenav {
   position: absolute;
+  left: 0 !important;
   z-index: 999 !important;
   width: 175px;
   transition: width 0.3s ease-in-out;
@@ -178,6 +188,7 @@ html {
 }
 .sidenavClosed {
   position: absolute;
+  left: 0 !important;
   z-index: 999 !important;
   width: 60px;
   transition: width 0.3s ease-in-out;
@@ -198,6 +209,7 @@ html {
 }
 .linkText {
   padding-left: 16px;
+  color: #B2BAC2;
 }
 
 .sideitem:hover {

@@ -7,17 +7,12 @@ import Chord from "./charts/Chord";
 import Pie from "./charts/Pie";
 import TreeMap from "./charts/TreeMap";
 import Funnel from "./charts/Funnel";
-// In Sidenav.js
-import { NavLink } from "react-router-dom";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
-import { useState } from "react";
-import HomeIcon from "@mui/icons-material/Home";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import SettingsIcon from "@mui/icons-material/Settings";
+import Sidebar from "./Sidebar";
+import { connect } from 'react-redux';
 
-function Dashboard() {
+  // <div className={open ? "dashboard" : "dashboardClosed"}></div>
+
+function Dashboard({open, toggleOpen}) {
   const dataBar = [
     {
       country: "AD",
@@ -214,39 +209,9 @@ function Dashboard() {
     },
   ];
 
-  /* Side bar */
-  const [open, setopen] = useState(true);
-  const toggleOpen = () => {
-    setopen(!open);
-  };
-
   return (
     <div>
-      <div className={open ? "sidenav" : "sidenavClosed"}>
-        <button className={"menuBtn"} onClick={toggleOpen}>
-          {open ? (
-            <KeyboardDoubleArrowLeftIcon />
-          ) : (
-            <KeyboardDoubleArrowRightIcon />
-          )}
-        </button>
-        <NavLink className="sideitem" to="/dashboard">
-          <HomeIcon />
-          <span className={"linkText"}>{"Summary"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/sector">
-          <AcUnitIcon/>
-          <span className={"linkText"}>{"Energy"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/sector">
-          <BarChartIcon/>
-          <span className={"linkText"}>{"Water"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/sector">
-          <SettingsIcon/>
-          <span className={"linkText"}>{"Land"}</span>
-        </NavLink>
-      </div>
+      <Sidebar />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">
@@ -294,4 +259,16 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+function mapStateToProps(state) {
+  return {
+    open: state.open,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    toggleOpen: () => dispatch({ type: 'toggleOpen' })
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

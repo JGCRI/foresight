@@ -33,6 +33,9 @@ function Navigation() {
             <NavLink onClick={() => setExpanded(false)} className="nav-link" to="/world">
               Globe
             </NavLink>
+            <NavLink onClick={() => setExpanded(false)} className="nav-link" to="/sector">
+              Sector
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
