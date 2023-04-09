@@ -2,11 +2,9 @@
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
-type Song @model {
-  id: ID!
-  title: String!
-  description: String!
-  filePath: String!
-  like: Int!
-  owner: String!
+type foresight @model {
+  id: Int!
+  region: String!
+  scenario: String
+  value: Float
 }

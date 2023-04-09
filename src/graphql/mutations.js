@@ -1,54 +1,78 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createSong = /* GraphQL */ `
-  mutation CreateSong(
-    $input: CreateSongInput!
-    $condition: ModelSongConditionInput
+export const createForesight = /* GraphQL */ `
+  mutation CreateForesight(
+    $input: CreateForesightInput!
+    $condition: ModelForesightConditionInput
   ) {
-    createSong(input: $input, condition: $condition) {
+    createForesight(input: $input, condition: $condition) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
     }
   }
 `;
-export const updateSong = /* GraphQL */ `
-  mutation UpdateSong(
-    $input: UpdateSongInput!
-    $condition: ModelSongConditionInput
+export const updateForesight = /* GraphQL */ `
+  mutation UpdateForesight(
+    $input: UpdateForesightInput!
+    $condition: ModelForesightConditionInput
   ) {
-    updateSong(input: $input, condition: $condition) {
+    updateForesight(input: $input, condition: $condition) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteSong = /* GraphQL */ `
-  mutation DeleteSong(
-    $input: DeleteSongInput!
-    $condition: ModelSongConditionInput
+export const deleteForesight = /* GraphQL */ `
+  mutation DeleteForesight(
+    $input: DeleteForesightInput!
+    $condition: ModelForesightConditionInput
   ) {
-    deleteSong(input: $input, condition: $condition) {
+    deleteForesight(input: $input, condition: $condition) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
+    }
+  }
+`;
+export const createForesightData = /* GraphQL */ `
+  mutation CreateForesightData($input: CreateForesightDataInput!) {
+    createForesightData(input: $input) {
+      id
+      region
+      scenario
+      value
+    }
+  }
+`;
+export const updateForesightData = /* GraphQL */ `
+  mutation UpdateForesightData($input: UpdateForesightDataInput!) {
+    updateForesightData(input: $input) {
+      id
+      region
+      scenario
+      value
+    }
+  }
+`;
+export const deleteForesightData = /* GraphQL */ `
+  mutation DeleteForesightData($input: DeleteForesightDataInput!) {
+    deleteForesightData(input: $input) {
+      id
+      region
+      scenario
+      value
     }
   }
 `;

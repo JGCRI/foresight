@@ -1,45 +1,105 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateSong = /* GraphQL */ `
-  subscription OnCreateSong($filter: ModelSubscriptionSongFilterInput) {
-    onCreateSong(filter: $filter) {
+export const onCreateForesight = /* GraphQL */ `
+  subscription OnCreateForesight(
+    $filter: ModelSubscriptionForesightFilterInput
+  ) {
+    onCreateForesight(filter: $filter) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateSong = /* GraphQL */ `
-  subscription OnUpdateSong($filter: ModelSubscriptionSongFilterInput) {
-    onUpdateSong(filter: $filter) {
+export const onUpdateForesight = /* GraphQL */ `
+  subscription OnUpdateForesight(
+    $filter: ModelSubscriptionForesightFilterInput
+  ) {
+    onUpdateForesight(filter: $filter) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteSong = /* GraphQL */ `
-  subscription OnDeleteSong($filter: ModelSubscriptionSongFilterInput) {
-    onDeleteSong(filter: $filter) {
+export const onDeleteForesight = /* GraphQL */ `
+  subscription OnDeleteForesight(
+    $filter: ModelSubscriptionForesightFilterInput
+  ) {
+    onDeleteForesight(filter: $filter) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
+    }
+  }
+`;
+export const onCreateForesightData = /* GraphQL */ `
+  subscription OnCreateForesightData(
+    $id: Int
+    $region: String
+    $scenario: String
+    $value: Float
+  ) {
+    onCreateForesightData(
+      id: $id
+      region: $region
+      scenario: $scenario
+      value: $value
+    ) {
+      id
+      region
+      scenario
+      value
+    }
+  }
+`;
+export const onUpdateForesightData = /* GraphQL */ `
+  subscription OnUpdateForesightData(
+    $id: Int
+    $region: String
+    $scenario: String
+    $value: Float
+  ) {
+    onUpdateForesightData(
+      id: $id
+      region: $region
+      scenario: $scenario
+      value: $value
+    ) {
+      id
+      region
+      scenario
+      value
+    }
+  }
+`;
+export const onDeleteForesightData = /* GraphQL */ `
+  subscription OnDeleteForesightData(
+    $id: Int
+    $region: String
+    $scenario: String
+    $value: Float
+  ) {
+    onDeleteForesightData(
+      id: $id
+      region: $region
+      scenario: $scenario
+      value: $value
+    ) {
+      id
+      region
+      scenario
+      value
     }
   }
 `;

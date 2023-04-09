@@ -1,7 +1,7 @@
 {
   "version": 1,
   "serviceConfiguration": {
-    "apiName": "foresightAPI",
+    "apiName": "foresight",
     "serviceName": "AppSync",
     "defaultAuthType": {
       "mode": "API_KEY",

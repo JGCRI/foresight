@@ -1,36 +1,59 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getSong = /* GraphQL */ `
-  query GetSong($id: ID!) {
-    getSong(id: $id) {
+export const getForesight = /* GraphQL */ `
+  query GetForesight($id: ID!) {
+    getForesight(id: $id) {
       id
-      title
-      description
-      filePath
-      like
-      owner
+      region
+      scenario
+      value
       createdAt
       updatedAt
     }
   }
 `;
-export const listSongs = /* GraphQL */ `
-  query ListSongs(
-    $filter: ModelSongFilterInput
+export const listForesights = /* GraphQL */ `
+  query ListForesights(
+    $filter: ModelForesightFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listSongs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listForesights(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        title
-        description
-        filePath
-        like
-        owner
+        region
+        scenario
+        value
         createdAt
         updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getForesightData = /* GraphQL */ `
+  query GetForesightData($id: Int!, $region: String!) {
+    getForesightData(id: $id, region: $region) {
+      id
+      region
+      scenario
+      value
+    }
+  }
+`;
+export const listForesightData = /* GraphQL */ `
+  query ListForesightData(
+    $filter: TableForesightDataFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listForesightData(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        region
+        scenario
+        value
       }
       nextToken
     }

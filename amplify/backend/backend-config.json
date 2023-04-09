@@ -1,6 +1,6 @@
 {
   "api": {
-    "foresightAPI": {
+    "foresight": {
       "dependsOn": [],
       "output": {
         "authConfig": {
