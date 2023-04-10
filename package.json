@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.7.11",
     "@aws-amplify/analytics": "^6.0.22",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -44,9 +45,11 @@
     "@nivo/treemap": "^0.80.0",
     "aws-amplify": "^5.0.22",
     "bootstrap": "^5.2.3",
+    "chart.js": "^4.2.1",
     "react": "^18.2.0",
     "react-before-after-slider-component": "^1.1.6",
     "react-bootstrap": "^2.7.2",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-globe.gl": "^2.23.3",
     "react-redux": "^8.0.5",

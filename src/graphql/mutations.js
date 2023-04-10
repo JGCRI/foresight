@@ -1,46 +1,43 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createForesight = /* GraphQL */ `
-  mutation CreateForesight(
-    $input: CreateForesightInput!
-    $condition: ModelForesightConditionInput
+export const createTodo = /* GraphQL */ `
+  mutation CreateTodo(
+    $input: CreateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    createForesight(input: $input, condition: $condition) {
+    createTodo(input: $input, condition: $condition) {
       id
-      region
-      scenario
-      value
+      name
+      description
       createdAt
       updatedAt
     }
   }
 `;
-export const updateForesight = /* GraphQL */ `
-  mutation UpdateForesight(
-    $input: UpdateForesightInput!
-    $condition: ModelForesightConditionInput
+export const updateTodo = /* GraphQL */ `
+  mutation UpdateTodo(
+    $input: UpdateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    updateForesight(input: $input, condition: $condition) {
+    updateTodo(input: $input, condition: $condition) {
       id
-      region
-      scenario
-      value
+      name
+      description
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteForesight = /* GraphQL */ `
-  mutation DeleteForesight(
-    $input: DeleteForesightInput!
-    $condition: ModelForesightConditionInput
+export const deleteTodo = /* GraphQL */ `
+  mutation DeleteTodo(
+    $input: DeleteTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    deleteForesight(input: $input, condition: $condition) {
+    deleteTodo(input: $input, condition: $condition) {
       id
-      region
-      scenario
-      value
+      name
+      description
       createdAt
       updatedAt
     }

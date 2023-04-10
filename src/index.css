@@ -85,16 +85,18 @@ html {
   padding-left: 2%;
 }
 
-/******* Dashboard ********/
+/******* Sector ********/
 
 .sector {
   position: relative;
-  margin-top: 100px !important;
+  margin-top: 70px !important;
   padding-right: 20px !important;
   padding-left: 200px !important;
-  overflow: auto !important;
-  background-color: rgb(253, 248, 229);
+  height: 75%;
+  width: 75%
 }
+
+/******* Dashboard ********/
 
 .dashboard {
   position: relative;
