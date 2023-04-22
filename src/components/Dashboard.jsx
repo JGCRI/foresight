@@ -10,8 +10,6 @@ import Funnel from "./charts/Funnel";
 import Sidebar from "./Sidebar";
 import { connect } from 'react-redux';
 
-  // <div className={open ? "dashboard" : "dashboardClosed"}></div>
-
 function Dashboard({open, toggleOpen}) {
   const dataBar = [
     {

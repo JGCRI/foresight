@@ -57,3 +57,42 @@ export const listForesightData = /* GraphQL */ `
     }
   }
 `;
+export const getGcamDataTableAggParamGlobal = /* GraphQL */ `
+  query GetGcamDataTableAggParamGlobal($id: Int!, $scenario: String!) {
+    getGcamDataTableAggParamGlobal(id: $id, scenario: $scenario) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
+  query ListGcamDataTableAggParamGlobals(
+    $filter: TableGcamDataTableAggParamGlobalFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggParamGlobals(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        param
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

@@ -73,3 +73,51 @@ export const deleteForesightData = /* GraphQL */ `
     }
   }
 `;
+export const createGcamDataTableAggParamGlobal = /* GraphQL */ `
+  mutation CreateGcamDataTableAggParamGlobal(
+    $input: CreateGcamDataTableAggParamGlobalInput!
+  ) {
+    createGcamDataTableAggParamGlobal(input: $input) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateGcamDataTableAggParamGlobal = /* GraphQL */ `
+  mutation UpdateGcamDataTableAggParamGlobal(
+    $input: UpdateGcamDataTableAggParamGlobalInput!
+  ) {
+    updateGcamDataTableAggParamGlobal(input: $input) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteGcamDataTableAggParamGlobal = /* GraphQL */ `
+  mutation DeleteGcamDataTableAggParamGlobal(
+    $input: DeleteGcamDataTableAggParamGlobalInput!
+  ) {
+    deleteGcamDataTableAggParamGlobal(input: $input) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;

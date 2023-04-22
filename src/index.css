@@ -85,22 +85,12 @@ html {
   padding-left: 2%;
 }
 
-/******* Sector ********/
-
-.sector {
-  position: relative;
-  margin-top: 70px !important;
-  padding-right: 20px !important;
-  padding-left: 200px !important;
-  height: 75%;
-  width: 75%
-}
-
 /******* Dashboard ********/
 
 .dashboard {
   position: relative;
   margin-top: 70px !important;
+  padding-top: 20px !important;
   padding-right: 20px !important;
   padding-left: 200px !important;
   display: flex;
@@ -117,6 +107,7 @@ html {
 .dashboardClosed {
   position: relative;
   margin-top: 70px !important;
+  padding-top: 20px !important;
   padding-right: 20px !important;
   padding-left: 100px !important;
   display: flex;

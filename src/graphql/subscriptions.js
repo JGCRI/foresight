@@ -94,3 +94,81 @@ export const onDeleteForesightData = /* GraphQL */ `
     }
   }
 `;
+export const onCreateGcamDataTableAggParamGlobal = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggParamGlobal(
+    $id: Int
+    $scenario: String
+    $param: String
+    $x: Int
+    $units: String
+  ) {
+    onCreateGcamDataTableAggParamGlobal(
+      id: $id
+      scenario: $scenario
+      param: $param
+      x: $x
+      units: $units
+    ) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateGcamDataTableAggParamGlobal = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggParamGlobal(
+    $id: Int
+    $scenario: String
+    $param: String
+    $x: Int
+    $units: String
+  ) {
+    onUpdateGcamDataTableAggParamGlobal(
+      id: $id
+      scenario: $scenario
+      param: $param
+      x: $x
+      units: $units
+    ) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteGcamDataTableAggParamGlobal = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggParamGlobal(
+    $id: Int
+    $scenario: String
+    $param: String
+    $x: Int
+    $units: String
+  ) {
+    onDeleteGcamDataTableAggParamGlobal(
+      id: $id
+      scenario: $scenario
+      param: $param
+      x: $x
+      units: $units
+    ) {
+      id
+      scenario
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;

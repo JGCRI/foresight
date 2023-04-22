@@ -24,15 +24,15 @@ function Sidebar({open, toggleOpen}) {
           <HomeIcon />
           <span className={"linkText"}>{"Summary"}</span>
         </NavLink>
-        <NavLink className="sideitem" to="/sector">
+        <NavLink className="sideitem" to="/energy">
           <AcUnitIcon/>
           <span className={"linkText"}>{"Energy"}</span>
         </NavLink>
-        <NavLink className="sideitem" to="/sector">
+        <NavLink className="sideitem" to="/water">
           <BarChartIcon/>
           <span className={"linkText"}>{"Water"}</span>
         </NavLink>
-        <NavLink className="sideitem" to="/sector">
+        <NavLink className="sideitem" to="/land">
           <SettingsIcon/>
           <span className={"linkText"}>{"Land"}</span>
         </NavLink>
