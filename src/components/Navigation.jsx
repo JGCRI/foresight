@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logoText from "../assets/img/logo_pnnl_white_cropped_text.png";
-import logo from "../assets/img/logo_pnnl_white_cropped.png";
+import logo from "../assets/img/PNNL_CENTER_White.png";
 import {useState} from "react";
 
 function Navigation() {
@@ -15,7 +14,6 @@ function Navigation() {
     <Navbar expanded={expanded} fixed="top" bg="dark" variant="dark" expand="lg" className="bartop">
       <Container>
         <Navbar.Brand to="/">
-          <img className="logo-text" src={logoText} alt="Logo" />
           <img className="logo" src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
