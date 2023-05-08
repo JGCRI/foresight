@@ -23,16 +23,20 @@ html {
 
 /******* Navigation ********/
 
-.logo-text {
-  height: 5vw;
-  max-height: 40px;
-  margin: 5px 0 0 0;
-}
-
 .logo {
   height:30vw;
   max-height:80px;
   margin: 0 0 0 20px;
+}
+
+.bartop {
+  position: fixed;
+  z-index: 1000000 !important;
+  top: 0;
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: rgb(0,0,0,1) !important;
 }
 
 .nav-link {
@@ -42,20 +46,44 @@ html {
   align-items: center;
 }
 
-.bartop {
-  z-index: 1000 !important;
-  height: 120px;
-  background-color: rgb(0, 0, 0) !important;
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-top: 0px;
+  font-size: 20px;
 }
 
-.container {
-  margin-left: 2vw !important;
+.nav-link:hover {
+  color: rgb(255, 247, 186);
 }
 
-.navbar-collapse {
-  background-color: rgb(0, 0, 0, 0.7) !important;
-  border-radius: 10px !important;
-  padding-left: 20px;
+.nav-link:not(:hover) {
+  color: grey;
+}
+
+.navbar-nav .nav-icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+.navbar-nav {
+  padding-left: 50px;
+  line-height: 0.8;
+}
+
+.nav-left {
+  padding-top: 20px;
+}
+
+.nav-right {
+  padding-bottom: 20px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px;
+}
 }
 
 /******* Home ********/
@@ -96,34 +124,30 @@ html {
 
 .dashboard {
   position: relative;
-  margin-top: 120px !important;
-  padding-top: 20px !important;
+  margin-top: 100px !important;
+  padding-top: 50px !important;
   padding-right: 20px !important;
-  padding-left: 200px !important;
+  padding-left: 250px !important;
   display: flex;
   align-items: top;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   overflow: auto !important;
   background-color: rgb(253, 248, 229);
 }
 
 .dashboardClosed {
   position: relative;
-  margin-top: 120px !important;
-  padding-top: 20px !important;
+  margin-top: 100px !important;
+  padding-top: 50px !important;
   padding-right: 20px !important;
-  padding-left: 100px !important;
+  padding-left: 150px !important;
   display: flex;
   align-items: top;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   overflow: auto !important;
   background-color: rgb(253, 248, 229);
 }
@@ -145,7 +169,7 @@ html {
 
 .explore {
   position: relative;
-  margin-top: 120px !important;
+  margin-top: 100px !important;
   display: flex;
   align-items: top;
   justify-content: center;
