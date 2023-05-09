@@ -39,20 +39,15 @@ html {
   background-color: rgb(0,0,0,1) !important;
 }
 
-.nav-link {
-  padding-top: 40px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-}
-
-
 .navbar-nav .nav-link {
   display: flex;
   align-items: center;
   color: #fff;
-  padding-top: 0px;
   font-size: 20px;
+}
+
+.nav-icon{
+  font-size: 30px;
 }
 
 .nav-link:hover {
@@ -214,7 +209,7 @@ html {
   left: 0 !important;
   z-index: 999 !important;
   width: 60px;
-  transition: width 0.3s ease-in-out;
+  transition: none;
   height: 200vh !important;
   background-color: rgb(10,25,41);
   padding-top: 20px !important;
@@ -224,22 +219,43 @@ html {
 .sideitem {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0;
   cursor: pointer;
-  color: #B2BAC2;
   text-decoration: none;
   overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.sideitem svg {
+  margin-left: 15px;
+  margin-right: 10px;
+  font-size: 30px;
 }
 
 .linkText {
-  padding-left: 16px;
-  color: #B2BAC2;
+  padding-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  flex-grow: 1; /* Allow the text to grow and occupy available space */
+}
+
+.sidenavClosed .linkText {
+  display: none;
 }
 
 .sideitem:hover {
-  background-color: #244f7d1c;
-
+  color: rgb(255, 247, 186);
 }
+
+.sideitem:not(:hover) {
+  color: grey
+}
+
+.sideitem.active {
+  color: #fff;
+}
+
 .menuBtn {
   align-self: center;
   align-self: flex-start;  
@@ -248,5 +264,9 @@ html {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding-left: 20px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
 }
+

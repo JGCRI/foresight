@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from 'react-redux';
 // In Sidenav.js
 import { NavLink } from "react-router-dom";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
-import HomeIcon from "@mui/icons-material/Home";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import SettingsIcon from "@mui/icons-material/Settings";
+import { AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
+import { RiDashboardFill } from "react-icons/ri";
+import { MdElectricBolt } from "react-icons/md";
+import { GiWaterDrop } from "react-icons/gi";
+import { CiWheat } from "react-icons/ci"
+
 
 function Sidebar({open, toggleOpen}) {
 
@@ -15,26 +15,26 @@ function Sidebar({open, toggleOpen}) {
       <div className={open ? "sidenav" : "sidenavClosed"}>
         <button className={"menuBtn"} onClick={toggleOpen}>
           {open ? (
-            <KeyboardDoubleArrowLeftIcon />
+            <AiFillCaretLeft />
           ) : (
-            <KeyboardDoubleArrowRightIcon />
+            <AiFillCaretRight />
           )}
         </button>
         <NavLink className="sideitem" to="/dashboard">
-          <HomeIcon />
-          <span className={"linkText"}>{"Summary"}</span>
+          <RiDashboardFill/>
+          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Dashboard"}</span>
         </NavLink>
         <NavLink className="sideitem" to="/energy">
-          <AcUnitIcon/>
-          <span className={"linkText"}>{"Energy"}</span>
+          <MdElectricBolt />
+          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Energy"}</span>
         </NavLink>
         <NavLink className="sideitem" to="/water">
-          <BarChartIcon/>
-          <span className={"linkText"}>{"Water"}</span>
+          <GiWaterDrop/>
+          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Water"}</span>
         </NavLink>
         <NavLink className="sideitem" to="/land">
-          <SettingsIcon/>
-          <span className={"linkText"}>{"Land"}</span>
+          <CiWheat/>
+          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Land"}</span>
         </NavLink>
       </div>
   );
