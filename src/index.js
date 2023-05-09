@@ -14,7 +14,8 @@ import {
   World,
   Energy,
   Water,
-  Land
+  Land,
+  Footer
 } from "./components";
 import reportWebVitals from './reportWebVitals';
 
@@ -34,6 +35,7 @@ root.render(
         <Route path="/world" element={<World />} />
       </Routes>
     </Router>
+    <Footer />
     </Provider>
 );
 

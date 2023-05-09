@@ -147,19 +147,6 @@ html {
   background-color: rgb(253, 248, 229);
 }
 
-.chart {
-  height: 30vh;
-}
-
-.choropleth {
-  margin-top: 50px;
-  height: 50vh !important;
-}
-
-.chord {
-  height: 30vh !important;
-}
-
 /******* Explore ********/
 
 .explore {
@@ -265,8 +252,9 @@ html {
   border: none;
   cursor: pointer;
   padding-left: 15px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
   font-size: 30px;
 }
 
+ /**** Charts ********/

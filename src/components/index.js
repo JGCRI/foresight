@@ -8,3 +8,4 @@ export { default as Explore } from "./Explore";
 export { default as World } from "./World";
 export { default as Sidebar } from "./Sidebar";
 export { default as Store } from "./Store";
+export { default as Footer } from "./Footer";

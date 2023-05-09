@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Sidebar from "./Sidebar";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-function Dashboard({open, toggleOpen}) {
-
+function Dashboard({ open, toggleOpen }) {
   return (
     <div>
       <Sidebar />
@@ -47,7 +46,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    toggleOpen: () => dispatch({ type: 'toggleOpen' })
+    toggleOpen: () => dispatch({ type: "toggleOpen" }),
   };
 }
 

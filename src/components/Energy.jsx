@@ -68,13 +68,13 @@ function Energy({ open, toggleOpen }) {
         <Container fluid>
           <Row className="row">
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-              <div className="bar chart">
+              <div className="bar-chart">
                 <h2>Bar Chart Energy</h2>
                 <Bar data={chartData} />
               </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-              <div className="bar chart">
+              <div className="bar-chart">
                 <h2>Bar Chart Energy</h2>
                 <Bar data={chartData} />
               </div>
