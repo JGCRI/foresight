@@ -54,8 +54,8 @@ function Home() {
     <div className="home">
       <div className="home-globe">
         <Globe
-          width={width*1.7}
-          height={height*2}
+          width={width*2}
+          height={height*2.5}
           waitForGlobeReady={false}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           arcAltitude={0.2}

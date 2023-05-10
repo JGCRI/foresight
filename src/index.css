@@ -21,6 +21,10 @@ html {
   padding: 0 !important;
 }
 
+.body-page{
+  padding-top: 100px !important;
+}
+
 /******* Navigation ********/
 
 .logo {
@@ -31,6 +35,7 @@ html {
 
 .bartop {
   position: fixed;
+  min-height: 100px;
   z-index: 1000000 !important;
   top: 0;
   width: 100%;
@@ -91,13 +96,12 @@ html {
 
 .home-globe {
   position: relative;
-  /* transform: translate(20%, 10%); */
   pointer-events: none;
 }
 
 .home-title {
   position: absolute;
-  top: 30%;
+  top: 25%;
   opacity: 1;
   left: 100px;
   font-size: calc(8vw + 5vh);
@@ -115,43 +119,63 @@ html {
   padding-left: 2%;
 }
 
+@media (max-width: 750px) {
+  .logo {
+    height:20vw;
+    max-height:40px;
+    margin: 0 0 0 0px;
+  }
+
+  .home-title {
+    top: 30%;
+    left: 50px;
+  }
+
+}
+
 /******* Dashboard ********/
 
 .dashboard {
   position: relative;
-  margin-top: 100px !important;
-  padding-top: 50px !important;
   padding-right: 20px !important;
   padding-left: 250px !important;
+  padding-top: 50px !important;
   display: flex;
   align-items: top;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 150px);
   overflow: auto !important;
   background-color: rgb(253, 248, 229);
 }
 
 .dashboardClosed {
   position: relative;
-  margin-top: 100px !important;
-  padding-top: 50px !important;
   padding-right: 20px !important;
   padding-left: 150px !important;
+  padding-top: 50px !important;
   display: flex;
   align-items: top;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 150px);
   overflow: auto !important;
   background-color: rgb(253, 248, 229);
+}
+
+.chart, .chart-bar, .chart-areabump, .chart-chord, .chart-choropleth, .chart-treemap, .chart-pie, .chart-funnel {
+  padding:20px;
+  height: 25vh;
+}
+
+.chart-sector{
+  padding:20px;
 }
 
 /******* Explore ********/
 
 .explore {
   position: relative;
-  margin-top: 100px !important;
   display: flex;
   align-items: top;
   justify-content: center;
@@ -184,11 +208,10 @@ html {
   position: absolute;
   left: 0 !important;
   z-index: 999 !important;
-  width: 175px;
+  width: 180px;
   transition: width 0.3s ease-in-out;
   height: 200vh !important;
   background-color: rgb(10,25,41);
-  padding-top: 20px !important;
   overflow: hidden !important;
 }
 .sidenavClosed {
@@ -199,7 +222,6 @@ html {
   transition: none;
   height: 200vh !important;
   background-color: rgb(10,25,41);
-  padding-top: 20px !important;
   overflow: hidden !important;
 }
 
@@ -252,8 +274,8 @@ html {
   border: none;
   cursor: pointer;
   padding-left: 15px;
-  padding-top: 20px;
   padding-bottom: 10px;
+  padding-top: 20px;
   font-size: 30px;
 }
 

@@ -62,19 +62,19 @@ function Water({ open, toggleOpen }) {
   };
 
   return (
-    <div>
+    <div className="body-page"> 
       <Sidebar />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-              <div className="bar chart">
+            <div className="chart-sector">
                 <h2>Bar Chart Water</h2>
                 <Bar data={chartData} />
               </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-              <div className="bar chart">
+            <div className="chart-sector">
                 <h2>Bar Chart Water</h2>
                 <Bar data={chartData} />
               </div>

@@ -48,6 +48,7 @@ function World() {
   }, []);
 
   return (
+    <div className="body-page"> 
     <div className="world">
       <div className="world-inner">
         <Globe
@@ -61,6 +62,7 @@ function World() {
           ref={globeElement}
         />
       </div>
+    </div>
     </div>
   );
 }

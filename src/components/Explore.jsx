@@ -15,6 +15,7 @@ const SECOND_IMAGE = {
 function Explore() {
 
   return (
+    <div className="body-page"> 
     <div className="explore">
       <div className="slider">
         <Container fluid>
@@ -26,6 +27,7 @@ function Explore() {
           </Row>
         </Container>
       </div>
+    </div>
     </div>
   );
 }
