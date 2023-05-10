@@ -50,7 +50,6 @@ function World() {
   return (
     <div className="body-page"> 
     <div className="world">
-      <div className="world-inner">
         <Globe
           width={width*1}
           height={height*1}
@@ -61,7 +60,6 @@ function World() {
           backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
           ref={globeElement}
         />
-      </div>
     </div>
     </div>
   );

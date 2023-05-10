@@ -196,9 +196,10 @@ html {
 /******* World ********/
 
 .world {
-  margin-top: 40px !important;
+  position: relative;
   background-color: rgb(30, 30, 30);
   color: rgb(253, 248, 229);
+  bottom: 100px !important;
 }
 
 
