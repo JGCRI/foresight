@@ -1,20 +1,58 @@
 {
-  "name": "Foresight",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "npm install && node server/index.js",
-    "build": "cd client && npm install && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20"
-  },
-  "engines": {
-    "node": "v14.15.0"
+    "@apollo/client": "^3.7.14",
+    "@aws-amplify/analytics": "^6.0.22",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@nivo/bar": "^0.83.0",
+    "@nivo/bump": "^0.83.0",
+    "@nivo/chord": "^0.83.0",
+    "@nivo/funnel": "^0.83.0",
+    "@nivo/geo": "^0.83.0",
+    "@nivo/pie": "^0.83.0",
+    "@nivo/treemap": "^0.83.0",
+    "aws-amplify": "^5.2.0",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.3.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "react": "^18.2.0",
+    "react-before-after-slider-component": "^1.1.8",
+    "react-bootstrap": "^2.7.4",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.24.1",
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.1",
+    "web-vitals": "^3.3.1"
   }
 }
