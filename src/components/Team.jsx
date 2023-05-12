@@ -50,7 +50,7 @@ const Team = () => {
         <h1 className="page-title">Our Team</h1>
         <hr className="home-hr" />
           <div className="page-subtitle">
-            The models and data used by foresight are produced by our full team of water, energy, land, and climate scientists at the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>
+            The models and data used by Foresight are produced by our full team of water, energy, land, and climate scientists at the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>.<br></br> Key contributors to the Foresight dashboard are listed below. 
           </div>
         </Row>
         <hr className="home-hr lower-hr" />
