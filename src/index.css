@@ -21,8 +21,72 @@ html {
   padding: 0 !important;
 }
 
+a {
+  text-decoration: none; /* Remove underline */
+  color: steelblue; /* Inherit the color from the parent */
+  font-weight: bold;
+}
+
+/******* Site Wide ********/
+
+.page-title {
+  font-size: 60px;
+  color: rgb(0,0,0,1);
+  margin-top: 100px;
+  text-align: center;
+  line-height: 1.2;
+  padding-bottom: 50px;
+  z-index: 2 !important;
+}
+
+.page-subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(100, 100, 100) !important;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2 !important;
+}
+
+.page-text {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  z-index: 2 !important;
+}
+
+.page-image-container {
+  text-align: center;
+}
+
+.page-image {
+  max-width: 100%;
+  height: auto;
+}
+
 .body-page{
   padding-top: 100px !important;
+  padding-bottom: 50px !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(253, 248, 229);
+  overflow: auto !important;
+}
+
+.home-hr {
+  height: 2px; /* change the thickness */
+  width: 90%; /* change the width */
+  margin: 0 auto; /* center the horizontal rule */
+  border-top: 2px solid black !important;
+  z-index: 2 !important;
+}
+
+.lower-hr {
+  margin-bottom: 50px;
+  z-index: 2 !important;
 }
 
 /******* Navigation ********/
@@ -67,7 +131,7 @@ html {
   margin-right: 10px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 950px) {
 .navbar-nav {
   padding-left: 50px;
   line-height: 0.8;
@@ -92,11 +156,15 @@ html {
   position: relative;
   height: 100vh;
   width: 100vw;
+  /**background-image: url(//unpkg.com/three-globe/example/img/night-sky.png);**/
+  background-color: black !important;
 }
 
 .home-globe {
-  position: relative;
-  pointer-events: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  transform: translate(-10%, 0%);
 }
 
 .home-title {
@@ -119,16 +187,40 @@ html {
   padding-left: 2%;
 }
 
-@media (max-width: 750px) {
-  .logo {
-    height:20vw;
-    max-height:40px;
-    margin: 0 0 0 0px;
-  }
+@media (max-width: 900px) {
 
   .home-title {
-    top: 30%;
-    left: 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(8vw + 5vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(201, 201, 201);
+    padding-bottom: 2%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-subtitle {
+    position: absolute;
+    font-size: calc((10vw + 5vh) * 0.3);
+    color: rgb(201, 201, 201);
+    top: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    padding-left: 0%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-globe {
+    position: absolute;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translate(-4%, -3%);
   }
 
 }
@@ -146,7 +238,6 @@ html {
   width: 100vw;
   height: calc(100vh - 150px);
   overflow: auto !important;
-  background-color: rgb(253, 248, 229);
 }
 
 .dashboardClosed {
@@ -160,7 +251,6 @@ html {
   width: 100vw;
   height: calc(100vh - 150px);
   overflow: auto !important;
-  background-color: rgb(253, 248, 229);
 }
 
 .chart, .chart-bar, .chart-areabump, .chart-chord, .chart-choropleth, .chart-treemap, .chart-pie, .chart-funnel {
@@ -177,29 +267,31 @@ html {
 .explore {
   position: relative;
   display: flex;
-  align-items: top;
+  align-items: center; /* Updated: Vertically center the content */
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
   overflow: auto !important;
   background-color: rgb(0, 0, 0);
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  overflow: hidden !important;
 }
 
-.slider {
-  padding-top: 4vh;
-  width: 50vw;
-  min-width: 300px;
+.image-citation {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 20px;
+  font-size: 16px;
 }
 
 /******* World ********/
 
-.world {
+.world-page {
   position: relative;
-  background-color: rgb(30, 30, 30);
-  color: rgb(253, 248, 229);
-  bottom: 100px !important;
+  overflow: hidden !important;
+  padding-top: 50px !important;
 }
 
 
@@ -280,4 +372,50 @@ html {
   font-size: 30px;
 }
 
- /**** Charts ********/
+ /**** About ********/
+
+
+ /**** Teams ********/
+
+ .teams-page {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-member h3 {
+  margin-top: 1rem;
+}
+
+.team-member p {
+  margin-bottom: 0;
+}
+
+
+/**** Help Page ****/
+
+.icon-label {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.link-text {
+  margin-left: 8px;
+}

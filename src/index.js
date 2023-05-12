@@ -15,6 +15,9 @@ import {
   Energy,
   Water,
   Land,
+  About,
+  Team,
+  Help,
   Footer
 } from "./components";
 import reportWebVitals from './reportWebVitals';
@@ -33,6 +36,9 @@ root.render(
         <Route path="/dashboard" element={<Dashboard />} />     
         <Route path="/explore" element={<Explore />} />      
         <Route path="/world" element={<World />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/help" element={<Help />} />
       </Routes>
     </Router>
     <Footer />

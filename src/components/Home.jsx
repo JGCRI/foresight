@@ -16,9 +16,23 @@ const arcsData = [...Array(N).keys()].map(() => ({
 // Set window dimensions //
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
+  
+  let adjustedWidth = width;
+  let adjustedHeight = height;
+  
+  if (width > 900) {
+    // Adjust for large screens
+    adjustedWidth *= 2;
+    adjustedHeight *= 2;
+  } else {
+    // Adjust for small screens
+    adjustedWidth *= 1.1;
+    adjustedHeight *= 1.1;
+  }
+  
   return {
-    width,
-    height
+    width: adjustedWidth,
+    height: adjustedHeight
   };
 }
 
@@ -54,8 +68,8 @@ function Home() {
     <div className="home">
       <div className="home-globe">
         <Globe
-          width={width*2}
-          height={height*2.5}
+          width={width}
+          height={height}
           waitForGlobeReady={false}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           arcAltitude={0.2}
@@ -68,7 +82,7 @@ function Home() {
           arcDashAnimateTime={() => Math.random() * 4000 + 5000}
           ref={globeElement}
           enablePointerInteraction={true}
-          // backgroundColor={"rgba(0,0,0,0)"} // transparent background
+          backgroundColor={"rgba(0,0,0,0)"} // transparent background
           backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         />
       </div>
