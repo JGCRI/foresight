@@ -23,16 +23,16 @@ const teamMembers = [
     email: "chris.vernon@pnnl.gov"
   },
   {
-    name: "Taryn Waite",
-    position: "Earth Scientist",
-    photo: team_taryn,
-    email: "tayrn.waite@pnnl.gov"
-  },
-  {
     name: "Mengqi Zhao",
     position: "Earth Scientist",
     photo: team_mengqi,
     email: "mengqi.zhao@pnnl.gov"
+  },
+  {
+    name: "Taryn Waite",
+    position: "Earth Scientist",
+    photo: team_taryn,
+    email: "tayrn.waite@pnnl.gov"
   },
   {
     name: "Hassan Niazi",
