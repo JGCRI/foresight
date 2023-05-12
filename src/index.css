@@ -30,17 +30,17 @@ a {
 /******* Site Wide ********/
 
 .page-title {
-  font-size: 60px;
+  font-size: 40px;
   color: rgb(0,0,0,1);
-  margin-top: 100px;
+  margin-top: 80px;
   text-align: center;
   line-height: 1.2;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   z-index: 2 !important;
 }
 
 .page-subtitle {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   color: rgb(100, 100, 100) !important;
   text-align: center;
@@ -53,7 +53,7 @@ a {
 
 .page-text {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   z-index: 2 !important;
 }
@@ -62,17 +62,12 @@ a {
   text-align: center;
 }
 
-.page-image {
-  max-width: 100%;
-  height: auto;
-}
-
 .body-page{
   padding-top: 100px !important;
   padding-bottom: 50px !important;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(253, 248, 229);
+  background-color: rgb(253, 248, 229, 0.7);
   overflow: auto !important;
 }
 
@@ -112,11 +107,12 @@ a {
   display: flex;
   align-items: center;
   color: #fff;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .nav-icon{
-  font-size: 30px;
+  font-size: 20px;
+  transform: translate(0px, -2px);
 }
 
 .nav-link:hover {
@@ -301,7 +297,7 @@ a {
   position: absolute;
   left: 0 !important;
   z-index: 999 !important;
-  width: 180px;
+  width: 160px;
   transition: width 0.3s ease-in-out;
   height: 200vh !important;
   background-color: rgb(10,25,41);
@@ -338,8 +334,9 @@ a {
   padding-left: 5px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 15px;
   flex-grow: 1; /* Allow the text to grow and occupy available space */
+  font-weight: normal !important;
 }
 
 .sidenavClosed .linkText {
@@ -378,7 +375,7 @@ a {
  /**** Teams ********/
 
  .teams-page {
-  padding-top: 50px !important;
+  padding-top: 80px !important;
   padding-bottom: 50px !important;
 }
 
