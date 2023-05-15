@@ -4,7 +4,7 @@ export { default as Dashboard } from "./Dashboard";
 export { default as Energy } from "./Energy";
 export { default as Water } from "./Water";
 export { default as Land } from "./Land";
-export { default as Explore } from "./Explore";
+export { default as Experiment } from "./Experiment";
 export { default as World } from "./World";
 export { default as Sidebar } from "./Sidebar";
 export { default as Store } from "./Store";

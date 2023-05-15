@@ -10,7 +10,7 @@ import {
   Navigation,
   Home,
   Dashboard,
-  Explore,
+  Experiment,
   World,
   Energy,
   Water,
@@ -34,7 +34,7 @@ root.render(
         <Route path="/water" element={<Water />} />    
         <Route path="/land" element={<Land />} />    
         <Route path="/dashboard" element={<Dashboard />} />     
-        <Route path="/explore" element={<Explore />} />      
+        <Route path="/explore" element={<Experiment />} />      
         <Route path="/world" element={<World />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />

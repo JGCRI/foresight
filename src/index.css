@@ -259,27 +259,45 @@ a {
 }
 
 /******* Explore ********/
-
 .explore {
-  position: relative;
-  display: flex;
-  align-items: center; /* Updated: Vertically center the content */
-  justify-content: center;
-  overflow: auto !important;
   background-color: rgb(0, 0, 0);
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  overflow: hidden !important;
+  padding-top: 150px !important;
+  padding-bottom: 50px !important;
+  overflow: auto !important;
+}
+
+.slider {
+  max-width: 50vw !important;
+  position: relative;
+}
+
+.slider-container {
+  position: relative;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+}
+
+.slider img {
+  max-height: 70vh;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .image-citation {
   position: absolute;
-  bottom: 80px;
-  right: 50px;
-  background-color: rgba(0, 0, 0, 0.8);
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 5px 20px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 8px;
 }
 
 /******* World ********/

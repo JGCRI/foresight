@@ -38,7 +38,7 @@ function Navigation() {
               <div className="nav-icon"><RiDashboardFill /></div> Dashboard
               </NavLink>
               <NavLink className="nav-link" to="/explore" onClick={handleClose}>
-              <div className="nav-icon"><AiFillExperiment /></div>Explore
+              <div className="nav-icon"><AiFillExperiment /></div>Experiment
             </NavLink>
             <NavLink className="nav-link" to="/world" onClick={handleClose}>
               <div className="nav-icon"><FaGlobeAmericas /></div>World
