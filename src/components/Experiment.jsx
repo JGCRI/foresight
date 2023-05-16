@@ -10,7 +10,7 @@ import second_img from "../assets/img/rice_oli_2022259_lrg.jpg";
 
 function Experiment() {
   return (
-    <div className="body-page explore">
+    <div className="body-page experiment">
       <Container fluid>
         <Row className="justify-content-center">
           <div className="slider">

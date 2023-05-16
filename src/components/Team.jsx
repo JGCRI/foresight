@@ -50,7 +50,7 @@ const Team = () => {
         <h1 className="page-title">Our Team</h1>
         <hr className="home-hr" />
           <div className="page-subtitle">
-            The models and data used by Foresight are produced by our full team of water, energy, land, and climate scientists at the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>.<br></br> Key contributors to the Foresight dashboard are listed below. 
+            The models and data used by Foresight are produced by our full team of scientists at the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>. Key contributors to the Foresight dashboard are listed below. 
           </div>
         </Row>
         <hr className="home-hr lower-hr" />
@@ -73,7 +73,7 @@ const Team = () => {
                     roundedCircle
                   />
                 )}
-              <h3 className="mt-4">{member.name}</h3>
+              <h3 className="mt-3 team-member-name">{member.name}</h3>
               <p>{member.position}</p>
               <p><a href={`mailto:${member.email}`}>{member.email}</a></p>
             </Col>
