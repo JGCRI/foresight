@@ -13,70 +13,95 @@ Amplify.configure(awsconfig);
 Chart.register(CategoryScale);
 
 function Water({ open, toggleOpen }) {
-  const [foresightData, setForesightData] = useState([]);
+  const [highlightedScenario, setHighlightedScenario] = useState(null);
 
-  useEffect(() => {
-    const fetchForesightData = async () => {
-      try {
-        const { data } = await API.graphql(graphqlOperation(listForesightData));
-        setForesightData(
-          data.listForesightData.items.sort((a, b) => a.id - b.id)
-        );
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchForesightData();
-  }, []);
-
-  // prepare data for charting
-  const regions = Array.from(new Set(foresightData.map((item) => item.region))); // get unique regions
-  const chartData = {
-    labels: regions,
+  const data = {
+    labels: ["X1", "X2", "X3", "X4", "X5"],
     datasets: [
       {
         label: "Scenario 1",
-        data: regions.map(
-          (region) =>
-            foresightData.find(
-              (item) => item.region === region && item.scenario === "scen1"
-            ).value
-        ),
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        data: [10, 8, 6, 4, 2],
+        backgroundColor:
+          highlightedScenario === "Scenario 1"
+            ? "rgba(255, 99, 132, 1)"
+            : "rgba(255, 99, 132, " + (highlightedScenario ? "0.1" : "0.5") + ")",
+        borderColor:
+          highlightedScenario === "Scenario 1"
+            ? "rgba(255, 99, 132, 1)"
+            : "rgba(255, 99, 132, " + (highlightedScenario ? "0.1" : "0.5") + ")",
         borderWidth: 1,
       },
       {
         label: "Scenario 2",
-        data: regions.map(
-          (region) =>
-            foresightData.find(
-              (item) => item.region === region && item.scenario === "scen2"
-            ).value
-        ),
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
-        borderColor: "rgba(54, 162, 235, 1)",
+        data: [3, 6, 9, 12, 15],
+        backgroundColor:
+          highlightedScenario === "Scenario 2"
+            ? "rgba(54, 162, 235, 1)"
+            : "rgba(54, 162, 235, " + (highlightedScenario ? "0.1" : "0.5") + ")",
+        borderColor:
+          highlightedScenario === "Scenario 2"
+            ? "rgba(54, 162, 235, 1)"
+            : "rgba(54, 162, 235, " + (highlightedScenario ? "0.1" : "0.5") + ")",
+        borderWidth: 1,
+      },
+      {
+        label: "Scenario 3",
+        data: [5, 10, 15, 10, 5],
+        backgroundColor:
+          highlightedScenario === "Scenario 3"
+            ? "rgba(255, 206, 86, 1)"
+            : "rgba(255, 206, 86, " + (highlightedScenario ? "0.1" : "0.5") + ")",
+        borderColor:
+          highlightedScenario === "Scenario 3"
+            ? "rgba(255, 206, 86, 1)"
+            : "rgba(255, 206, 86, " + (highlightedScenario ? "0.1" : "0.5") + ")",
         borderWidth: 1,
       },
     ],
   };
 
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    onClick: (event, chartElements) => {
+      if (chartElements.length > 0) {
+        const clickedDatasetIndex = chartElements[0].datasetIndex;
+        const clickedDatasetLabel = data.datasets[clickedDatasetIndex].label;
+
+        setHighlightedScenario((prevHighlightedScenario) => {
+          if (prevHighlightedScenario === clickedDatasetLabel) {
+            return null;
+          } else {
+            return clickedDatasetLabel;
+          }
+        });
+      } else {
+        setHighlightedScenario(null);
+      }
+    },
+  };
+
+
   return (
-    <div className="body-page"> 
+    <div className="body-page">
       <Sidebar />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-            <div className="chart-sector">
+              <div className="chart-sector">
                 <h2>Bar Chart Water</h2>
-                <Bar data={chartData} />
+                <div className="chart-container">
+                  <Bar data={data} options={options} />
+                </div>
               </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-            <div className="chart-sector">
+              <div className="chart-sector">
                 <h2>Bar Chart Water</h2>
-                <Bar data={chartData} />
+                <div className="chart-container">
+                  <Bar data={data} options={options} />
+                </div>
               </div>
             </Col>
           </Row>
