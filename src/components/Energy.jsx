@@ -40,6 +40,7 @@ function Energy({ open, toggleOpen }) {
   const fetchParamOptions = useCallback(async () => {
     try {
       const { data } = await API.graphql(graphqlOperation(queryParamOptions));
+      console.log("Param options response:", data); // Print the response data
       const uniqueOptions = [
         ...new Set(
           data.listGcamDataTableAggParamGlobals.items.map((item) => item.param)
@@ -58,6 +59,7 @@ function Energy({ open, toggleOpen }) {
           param: selectedParam,
         })
       );
+      console.log("Foresight data response:", data); // Print the response data
       setForesightData(data.listGcamDataTableAggParamGlobals.items);
     } catch (error) {
       console.log(error);
@@ -121,6 +123,12 @@ function Energy({ open, toggleOpen }) {
       new Set(foresightData.map((item) => item.scenario))
     );
   
+    const sortedData = foresightData.sort((a, b) => {
+      if (a.x < b.x) return -1;
+      if (a.x > b.x) return 1;
+      return 0;
+    });
+  
     const chartData = {
       labels: uniqueXValues,
       datasets: uniqueScenarios.map((scenario, index) => {
@@ -134,11 +142,13 @@ function Energy({ open, toggleOpen }) {
           ? color
           : hexToRGBA(color, opacity);
   
+        const filteredData = sortedData.filter(
+          (item) => item.scenario === scenario && item.param === selectedParam
+        );
+  
         return {
           label: scenario,
-          data: foresightData
-            .filter((item) => item.scenario === scenario)
-            .map((item) => item.value),
+          data: filteredData.map((item) => parseFloat(item.value)),
           backgroundColor: backgroundColor,
           borderColor: borderColor,
           borderWidth: 1,
@@ -147,6 +157,7 @@ function Energy({ open, toggleOpen }) {
       }),
     };
   
+    console.log("Chart data:", chartData);
     return chartData;
   };
   
@@ -232,13 +243,6 @@ function Energy({ open, toggleOpen }) {
                 ))}
               </Form.Control>
             </Form.Group>
-          </Row>
-          <Row className="row">
-            <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-              <div className="chart-sector">
-                <h2>Energy Chart</h2>
-              </div>
-            </Col>
           </Row>
           <Row className="row">
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
