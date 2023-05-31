@@ -36,6 +36,7 @@ function Energy({ open, toggleOpen }) {
   const [paramOptions, setParamOptions] = useState([]);
   const [selectedParam, setSelectedParam] = useState(null);
   const [highlightedScenario, setHighlightedScenario] = useState(null);
+  
 
   const fetchParamOptions = useCallback(async () => {
     try {
@@ -185,23 +186,23 @@ function Energy({ open, toggleOpen }) {
         setHighlightedScenario(null);
       }
     },
-    onHover: (event, chartElements) => {
-      if (chartElements && chartElements.length > 0) {
-        const hoveredDatasetIndex = chartElements[0].datasetIndex;
-        const hoveredDataset = event.chart.data.datasets[hoveredDatasetIndex];
+  //   onHover: (event, chartElements) => {
+  //     if (chartElements && chartElements.length > 0) {
+  //       const hoveredDatasetIndex = chartElements[0].datasetIndex;
+  //       const hoveredDataset = event.chart.data.datasets[hoveredDatasetIndex];
 
-        if (hoveredDataset) {
-          const hoveredDatasetLabel = hoveredDataset.label;
+  //       if (hoveredDataset) {
+  //         const hoveredDatasetLabel = hoveredDataset.label;
 
-          setHighlightedScenario(hoveredDatasetLabel);
-        }
-      } else {
-        setHighlightedScenario(null);
-      }
-    },
-      onLeave: (event, chartElements) => {
-    setHighlightedScenario(null);
-  },
+  //         setHighlightedScenario(hoveredDatasetLabel);
+  //       }
+  //     } else {
+  //       setHighlightedScenario(null);
+  //     }
+  //   },
+  //     onLeave: (event, chartElements) => {
+  //   setHighlightedScenario(null);
+  // },
   };
 
 
