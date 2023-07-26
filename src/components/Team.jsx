@@ -8,6 +8,7 @@ import team_chris from "../assets/img/team_chris.png";
 import team_mengqi from "../assets/img/team_mengqi.jpg";
 import team_taryn from "../assets/img/team_taryn.png";
 import team_hassan from "../assets/img/team_hassan.jpg";
+import team_benjamin from "../assets/img/team_benjamin.jpg";
 
 const teamMembers = [
   {
@@ -43,7 +44,7 @@ const teamMembers = [
   {
     name: "Benjamin Knight",
     position: "Software Intern",
-    photo: team_hassan,
+    photo: team_benjamin,
     email: "benjamin.knight@pnnl.gov"
   },  
 ];
