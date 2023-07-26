@@ -80,6 +80,7 @@ export const createGcamDataTableAggParamGlobal = /* GraphQL */ `
     createGcamDataTableAggParamGlobal(input: $input) {
       id
       scenario
+      dataset
       param
       x
       units
@@ -96,6 +97,7 @@ export const updateGcamDataTableAggParamGlobal = /* GraphQL */ `
     updateGcamDataTableAggParamGlobal(input: $input) {
       id
       scenario
+      dataset
       param
       x
       units
@@ -112,6 +114,7 @@ export const deleteGcamDataTableAggParamGlobal = /* GraphQL */ `
     deleteGcamDataTableAggParamGlobal(input: $input) {
       id
       scenario
+      dataset
       param
       x
       units

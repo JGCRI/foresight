@@ -14,27 +14,28 @@ function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height
+    height,
   };
 }
 
 export function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowDimensions;
 }
 
 function World() {
-
   const globeElement = React.useRef();
   const { height, width } = useWindowDimensions();
 
@@ -48,10 +49,11 @@ function World() {
   }, []);
 
   return (
-    <div className="body-page world-page">
+    <div className="body-page">
+      <div className="world-page">
         <Globe
-          width={width*1}
-          height={height*1}
+          width={500}
+          height={500}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
           pointsData={gData}
           pointAltitude="size"
@@ -59,6 +61,7 @@ function World() {
           backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
           ref={globeElement}
         />
+      </div>
     </div>
   );
 }

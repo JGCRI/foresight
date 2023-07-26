@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import 'leaflet/dist/leaflet.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './components/Store';
@@ -10,11 +11,13 @@ import {
   Navigation,
   Home,
   Dashboard,
-  Experiment,
-  World,
+  Charts,
+  Maps,
+  Globes,
   Energy,
   Water,
   Land,
+  Test,
   About,
   Team,
   Help,
@@ -33,9 +36,11 @@ root.render(
         <Route path="/energy" element={<Energy />} />    
         <Route path="/water" element={<Water />} />    
         <Route path="/land" element={<Land />} />    
+        <Route path="/test" element={<Test />} />  
         <Route path="/dashboard" element={<Dashboard />} />     
-        <Route path="/explore" element={<Experiment />} />      
-        <Route path="/world" element={<World />} />
+        <Route path="/charts" element={<Charts />} />      
+        <Route path="/maps" element={<Maps />} />    
+        <Route path="/globes" element={<Globes />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
         <Route path="/help" element={<Help />} />

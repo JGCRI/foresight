@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Sidebar from "./Sidebar";
+import SidebarDashboard from "./SidebarDashboard.jsx";
 import { connect } from "react-redux";
 import AreaBump from "./charts/AreaBump";
 import Bar from "./charts/Bar";
-import Choropleth from "./charts/Choropleth.jsx";
 import Chord from "./charts/Chord";
 import Pie from "./charts/Pie";
 import TreeMap from "./charts/TreeMap";
 import Funnel from "./charts/Funnel";
+import Sankey from "./charts/Sankey";
 
 function Dashboard({ open, toggleOpen }) {
   const dataBar = [
@@ -209,7 +209,7 @@ function Dashboard({ open, toggleOpen }) {
 
   return (
     <div className="body-page"> 
-      <Sidebar />
+      <SidebarDashboard />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">
@@ -231,7 +231,7 @@ function Dashboard({ open, toggleOpen }) {
           <Row className="row">
             <Col xs={12} sm={12} md={12} lg={12} xl={4}>
               <div className="chart-chord">
-                <Chord />
+                <Chord/>
               </div>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12} xl={4}>
@@ -248,7 +248,7 @@ function Dashboard({ open, toggleOpen }) {
           <Row>
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>
               <div className="chart-choropleth">
-                <Choropleth />
+                <Sankey/>
               </div>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>

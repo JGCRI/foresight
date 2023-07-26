@@ -9,7 +9,7 @@ import { GiWaterDrop } from "react-icons/gi";
 import { CiWheat } from "react-icons/ci"
 
 
-function Sidebar({open, toggleOpen}) {
+function SidebarDashboard({open, toggleOpen}) {
 
   return (
       <div className={open ? "sidenav" : "sidenavClosed"}>
@@ -36,6 +36,10 @@ function Sidebar({open, toggleOpen}) {
           <CiWheat/>
           <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Land"}</span>
         </NavLink>
+        <NavLink className="sideitem" to="/test">
+          <CiWheat/>
+          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Test"}</span>
+        </NavLink>
       </div>
   );
 }
@@ -52,4 +56,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarDashboard);

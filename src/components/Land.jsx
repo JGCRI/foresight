@@ -5,7 +5,7 @@ import { Amplify, API, graphqlOperation } from "aws-amplify";
 import awsconfig from "../aws-exports";
 import { listForesightData } from "../graphql/queries";
 import { useState, useEffect } from "react";
-import Sidebar from "./Sidebar";
+import SidebarDashboard from "./SidebarDashboard.jsx";
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -63,7 +63,7 @@ function Land({ open, toggleOpen }) {
 
   return (
     <div className="body-page"> 
-      <Sidebar />
+      <SidebarDashboard />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">

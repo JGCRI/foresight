@@ -3,7 +3,7 @@ import { Bar, Line } from "react-chartjs-2";
 import { API, graphqlOperation } from "aws-amplify";
 import { connect } from "react-redux";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import Sidebar from "./Sidebar";
+import SidebarDashboard from "./SidebarDashboard.jsx";
 
 // GraphQL query for retrieving parameter options
 const queryParamOptions = `
@@ -157,8 +157,6 @@ function Energy({ open, toggleOpen }) {
         };
       }),
     };
-  
-    console.log("Chart data:", chartData);
     return chartData;
   };
   
@@ -226,7 +224,7 @@ function Energy({ open, toggleOpen }) {
 
   return (
     <div className="body-page">
-      <Sidebar />
+      <SidebarDashboard />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">

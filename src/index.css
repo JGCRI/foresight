@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -63,7 +65,7 @@ a {
 
 .page-title {
   font-size: 30px;
-  color: rgb(0,0,0,1);
+  color: rgb(0, 0, 0, 1);
   margin-top: 40px;
   text-align: center;
   line-height: 1.2;
@@ -101,9 +103,8 @@ a {
   min-height: calc(100vh - 150px);
   background-color: rgb(253, 248, 229, 0.7);
   overflow-y: auto !important;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
-
 
 .home-hr {
   height: 2px; /* change the thickness */
@@ -118,11 +119,21 @@ a {
   z-index: 2 !important;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+}
+
 /******* Navigation ********/
 
 .logo {
-  height:30vw;
-  max-height:80px;
+  height: 30vw;
+  max-height: 70px;
   margin: 0 0 0 20px;
 }
 
@@ -134,7 +145,7 @@ a {
   width: 100%;
   padding-right: 50px;
   padding-left: 50px;
-  background-color: rgb(0,0,0,1) !important;
+  background-color: rgb(0, 0, 0, 1) !important;
 }
 
 .navbar-nav .nav-link {
@@ -144,9 +155,17 @@ a {
   font-size: 14px;
 }
 
-.nav-icon{
+.nav-dropdown-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-icon {
   font-size: 20px;
   transform: translate(0px, -2px);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .nav-link:hover {
@@ -162,22 +181,26 @@ a {
 }
 
 @media (max-width: 950px) {
-.navbar-nav {
-  padding-left: 50px;
-  line-height: 0.8;
-}
+  .navbar-nav {
+    padding-left: 50px;
+    line-height: 0.8;
+  }
 
-.nav-left {
-  padding-top: 20px;
-}
+  .nav-icon-drop {
+    transform: translate(-10px,0px);
+  }
 
-.nav-right {
-  padding-bottom: 20px;
-}
+  .nav-left {
+    padding-top: 20px;
+  }
 
-.navbar-nav .nav-link {
-  padding: 10px;
-}
+  .nav-right {
+    padding-bottom: 20px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
 }
 
 /******* Home ********/
@@ -218,7 +241,6 @@ a {
 }
 
 @media (max-width: 900px) {
-
   .home-title {
     position: absolute;
     top: 40%;
@@ -252,7 +274,6 @@ a {
     padding: 0 !important;
     transform: translate(-4%, 0%);
   }
-
 }
 
 /******* Dashboard ********/
@@ -283,59 +304,49 @@ a {
   overflow: auto !important;
 }
 
-.chart, .chart-bar, .chart-areabump, .chart-chord, .chart-choropleth, .chart-treemap, .chart-pie, .chart-funnel {
-  padding:20px;
-  height: 25vh;
-}
-
-.chart-sector{
-  padding:20px;
-}
-
 .chart-container {
-  height: 400px;
-  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.chart-container-experiment {
+  min-width: 100% !important;
+}
+
+.globe-container-experiment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  overflow: hidden !important;
 }
 
 /******* Experiment ********/
 .experiment {
-  background-color: rgb(0, 0, 0);
-  padding-top: 50px !important;
+  position: relative;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding-top: 50px;
+  padding-left: 100px;
+  height: calc(100vh - 150px);
   overflow: auto !important;
 }
 
-.slider {
-  max-width: 50vw !important;
-  position: relative;
+.page-title-experiment {
+  font-size: 30px;
+  margin-top: 0px !important;
+  color: rgb(255, 255, 255);
 }
 
-.slider-container {
-  position: relative;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.image-container {
-  position: relative;
-}
-
-.slider img {
-  max-height: 50vh;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.image-citation {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px;
-  font-size: 8px;
+.image-gallery-experiment {
+  max-width: 70% !important;
+  margin: 0 auto; /* Center the gallery horizontally */
 }
 
 /******* World ********/
@@ -355,7 +366,7 @@ a {
   width: 150px;
   transition: width 0.3s ease-in-out;
   height: 200vh !important;
-  background-color: rgb(10,25,41);
+  background-color: rgb(10, 25, 41);
   overflow: hidden !important;
 }
 .sidenavClosed {
@@ -365,7 +376,7 @@ a {
   width: 60px;
   transition: none;
   height: 200vh !important;
-  background-color: rgb(10,25,41);
+  background-color: rgb(10, 25, 41);
   overflow: hidden !important;
 }
 
@@ -403,7 +414,7 @@ a {
 }
 
 .sideitem:not(:hover) {
-  color: grey
+  color: grey;
 }
 
 .sideitem.active {
@@ -412,9 +423,9 @@ a {
 
 .menuBtn {
   align-self: center;
-  align-self: flex-start;  
+  align-self: flex-start;
   justify-self: flex-end;
-  color: #B2BAC2;
+  color: #b2bac2;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -424,9 +435,9 @@ a {
   font-size: 30px;
 }
 
- /**** About ********/
+/**** About ********/
 
- .about-page {
+.about-page {
   position: relative;
   display: flex;
   align-items: top;
@@ -437,16 +448,15 @@ a {
 }
 
 .about-page .page-text {
-  max-width: 80%; 
-  width: 100%; 
-  margin-left: auto; 
-  margin-right: auto; 
+  max-width: 80%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/**** Teams ********/
 
- /**** Teams ********/
-
- .teams-page {
+.teams-page {
   position: relative;
   display: flex;
   align-items: top;
@@ -465,7 +475,7 @@ a {
   align-items: center;
 }
 
-.team-member-name{
+.team-member-name {
   font-size: 20px;
 }
 
@@ -485,7 +495,6 @@ a {
   margin-bottom: 0;
 }
 
-
 /**** Help Page ****/
 
 .icon-label {
@@ -496,4 +505,58 @@ a {
 
 .link-text {
   margin-left: 8px;
+}
+
+/****** Slider *******/
+
+.slider {
+  max-width: 60vw !important;
+  position: relative;
+}
+
+.slider-container {
+  position: relative;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+}
+
+.slider img {
+  max-height: 50vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.image-citation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 8px;
+}
+
+/* Leaflet */
+
+.legend {
+  line-height: 18px;
+  color: #555;
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
 }

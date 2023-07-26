@@ -62,6 +62,7 @@ export const getGcamDataTableAggParamGlobal = /* GraphQL */ `
     getGcamDataTableAggParamGlobal(id: $id, scenario: $scenario) {
       id
       scenario
+      dataset
       param
       x
       units
@@ -85,6 +86,7 @@ export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
       items {
         id
         scenario
+        dataset
         param
         x
         units

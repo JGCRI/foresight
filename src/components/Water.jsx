@@ -1,11 +1,10 @@
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
-import { Amplify, API, graphqlOperation } from "aws-amplify";
+import { Amplify} from "aws-amplify";
 import awsconfig from "../aws-exports";
-import { listForesightData } from "../graphql/queries";
-import { useState, useEffect } from "react";
-import Sidebar from "./Sidebar";
+import { useState} from "react";
+import SidebarDashboard from "./SidebarDashboard.jsx";
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -84,7 +83,7 @@ function Water({ open, toggleOpen }) {
 
   return (
     <div className="body-page">
-      <Sidebar />
+      <SidebarDashboard />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">
