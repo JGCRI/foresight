@@ -39,6 +39,12 @@ const teamMembers = [
     position: "Post Masters Research Associate",
     photo: team_hassan,
     email: "hassan.niazi@pnnl.gov"
+  },
+  {
+    name: "Benjamin Knight",
+    position: "Software Intern",
+    photo: team_hassan,
+    email: "benjamin.knight@pnnl.gov"
   },  
 ];
 
