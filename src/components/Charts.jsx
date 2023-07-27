@@ -62,7 +62,7 @@ function Charts({ open, toggleOpen }) {
     showFullscreenButton: true, // Show the fullscreen button
     useBrowserFullscreen: true, // Enable fullscreen mode using the browser's built-in functionality
     autoPlay: false, // Enable automatic slideshow
-    slideInterval: 2000, // Set the interval between slides (in milliseconds)
+    slideInterval: 3500, // Set the interval between slides (in milliseconds)
     showNav: false, // Hide the navigation arrows
     showBullets: true, // Show bullet navigation
     disableSwipe: false, // Disable swipe gestures

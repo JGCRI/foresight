@@ -59,7 +59,7 @@ function Home() {
     // Auto-rotate
     globeElement.current.controls().autoRotate = true;
     globeElement.current.controls().autoRotateSpeed = 0.2;
-    //globeElement.current.controls().enableZoom = false;
+    globeElement.current.controls().enableZoom = false;
     globeElement.current.controls().enabled = true;
     globeElement.current.controls().enableRotate = true;
   }, []);

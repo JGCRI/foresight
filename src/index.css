@@ -85,6 +85,19 @@ a {
   z-index: 2 !important;
 }
 
+/*Grey title text smaller than titles but larger than subtitles.*/
+.page-section-break {
+  font-size: 23px;
+  font-weight: 400;
+  color: rgb(100, 100, 100) !important;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2 !important;
+}
+
 .page-text {
   margin-bottom: 20px;
   font-size: 15px;
@@ -107,15 +120,45 @@ a {
 }
 
 .home-hr {
-  height: 2px; /* change the thickness */
-  width: 90%; /* change the width */
-  margin: 0 auto; /* center the horizontal rule */
+  height: 2px;
+  width: 90%;
+  margin: 0 auto;
   border-top: 2px solid black !important;
+  z-index: 2 !important;
+}
+
+/* 85% version of home-hr*/
+.small-home-hr {
+  height: 2px;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-top: 2px solid rgb(100, 100, 100) !important;
   z-index: 2 !important;
 }
 
 .lower-hr {
   margin-bottom: 30px;
+  z-index: 2 !important;
+}
+
+/* Solid line above a section break */
+.section-break-hr {
+  height: 2px; /* change the thickness */
+  width: 40%; /* change the width */
+  margin: 0 auto; /* center the horizontal rule */
+  margin-top: 40px; /* Set space before section break */
+  border-top: 2px solid black !important;
+  z-index: 2 !important;
+}
+
+/* Smaller solid line below a section break */
+.lower-section-break-hr {
+  height: 2px; /* change the thickness */
+  width: 35%; /* change the width */
+  margin: 0 auto; /* center the horizontal rule */
+  margin-bottom: 50px;
+  border-top: 2px solid black !important;
   z-index: 2 !important;
 }
 
@@ -454,6 +497,37 @@ a {
   margin-right: auto;
 }
 
+/* Four grid cells for design philosophy */
+.about-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Title texts for the grid */
+.about-grid-title {
+  font-size: 15px;
+  width: 97%;
+  color: rgb(100, 100, 100) !important;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  z-index: 2 !important;
+}
+
+/* Body text in the grid */
+.about-grid-text {
+  margin-bottom: 40px;
+  margin-top: 0px;
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 2 !important;
+}
 /**** Teams ********/
 
 .teams-page {
