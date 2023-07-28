@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { FiMail, FiAlertCircle, FiMessageCircle } from "react-icons/fi";
+import './css/Help.css';
 
 function Help() {
   return (

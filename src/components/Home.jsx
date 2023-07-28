@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Globe from "react-globe.gl";
+import './css/Home.css';
 
 const N = 50;
 const arcsData = [...Array(N).keys()].map(() => ({

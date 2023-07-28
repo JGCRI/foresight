@@ -10,6 +10,7 @@ import TreeMap from "./charts/TreeMap";
 import Funnel from "./charts/Funnel";
 import Sankey from "./charts/Sankey";
 import DateDropdown from "./dropdowns/DashboardDate";
+import './css/Dashboard.css';
 
 function Dashboard({ open, toggleOpen }) {
   const dataBar = [

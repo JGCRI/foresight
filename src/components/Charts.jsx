@@ -12,6 +12,7 @@ import gaugeThumbnail from "../assets/img/icon_chart_gauge.svg";
 import SidebarExperiment from "./SidebarExperiment.jsx";
 import CustomGauge from "./charts/CustomGauge.jsx";
 import { connect } from "react-redux";
+import './css/Experiment.css';
 
 function Charts({ open, toggleOpen }) {
   const images = [

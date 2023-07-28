@@ -12,6 +12,7 @@ import { RiTeamFill } from "react-icons/ri";
 import { MdHelp } from "react-icons/md";
 import { connect } from "react-redux";
 import { setDataset } from "./Store";
+import './css/Navigation.css';
 
 function Navigation({ dataset, updateDataset }) {
   const handleDatasetChange = (selectedDataset) => {

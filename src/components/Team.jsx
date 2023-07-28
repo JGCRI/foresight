@@ -9,6 +9,7 @@ import team_mengqi from "../assets/img/team_mengqi.jpg";
 import team_taryn from "../assets/img/team_taryn.png";
 import team_hassan from "../assets/img/team_hassan.jpg";
 import team_benjamin from "../assets/img/team_benjamin.jpg";
+import './css/Team.css';
 
 const teamMembers = [
   {
