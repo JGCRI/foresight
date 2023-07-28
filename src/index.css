@@ -27,8 +27,10 @@ html {
 }
 
 a {
-  text-decoration: none; /* Remove underline */
-  color: steelblue; /* Inherit the color from the parent */
+  text-decoration: none;
+  /* Remove underline */
+  color: steelblue;
+  /* Inherit the color from the parent */
   font-weight: bold;
 }
 
@@ -119,6 +121,17 @@ a {
   overflow-x: hidden;
 }
 
+/* Dark version of page background */
+.body-page-dark {
+  margin-top: 100px !important;
+  margin-bottom: 50px !important;
+  width: 100vw;
+  min-height: calc(100vh - 150px);
+  background-color: rgb(44, 44, 44);
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
 .home-hr {
   height: 2px;
   width: 90%;
@@ -144,19 +157,26 @@ a {
 
 /* Solid line above a section break */
 .section-break-hr {
-  height: 2px; /* change the thickness */
-  width: 40%; /* change the width */
-  margin: 0 auto; /* center the horizontal rule */
-  margin-top: 40px; /* Set space before section break */
+  height: 2px;
+  /* change the thickness */
+  width: 40%;
+  /* change the width */
+  margin: 0 auto;
+  /* center the horizontal rule */
+  margin-top: 40px;
+  /* Set space before section break */
   border-top: 2px solid black !important;
   z-index: 2 !important;
 }
 
 /* Smaller solid line below a section break */
 .lower-section-break-hr {
-  height: 2px; /* change the thickness */
-  width: 35%; /* change the width */
-  margin: 0 auto; /* center the horizontal rule */
+  height: 2px;
+  /* change the thickness */
+  width: 35%;
+  /* change the width */
+  margin: 0 auto;
+  /* center the horizontal rule */
   margin-bottom: 50px;
   border-top: 2px solid black !important;
   z-index: 2 !important;
@@ -230,7 +250,7 @@ a {
   }
 
   .nav-icon-drop {
-    transform: translate(-10px,0px);
+    transform: translate(-10px, 0px);
   }
 
   .nav-left {
@@ -369,6 +389,65 @@ a {
   overflow: hidden !important;
 }
 
+/****** New Dashboard *****/
+@media screen and (min-width: 940px) {
+  .date-select-row {
+    width: 420px;
+    height: 30px;
+    background: rgb(0, 0, 0, 1);
+    margin-left: 45% !important;
+    border: 1px solid rgb(21, 21, 21);
+    border-radius: 5px;
+    /* Curve border at corners*/
+    justify-content: left;
+    text-indent: 15px !important;
+    font-family: Geneva, sans-serif;
+    color: rgb(187, 155, 49) !important;
+    line-height: 28px !important;
+  }
+}
+
+@media screen and (max-width: 939px) and (min-width: 610px) {
+
+  /*Switch when width is 940px*/
+  .date-select-row {
+    width: 420px;
+    height: 30px;
+    background: rgb(0, 0, 0, 1);
+    margin: auto !important;
+    border: 1px solid rgb(21, 21, 21);
+    border-radius: 5px;
+    /* Curve border at corners*/
+    justify-content: left;
+    text-indent: 15px !important;
+    font-family: Geneva, sans-serif;
+    color: rgb(187, 155, 49) !important;
+    line-height: 28px !important;
+  }
+}
+
+@media screen and (max-width: 609px) {
+
+  /*Switch when width is 610px*/
+  .date-select-row {
+    width: 100%;
+    height: 30px;
+    background: rgb(0, 0, 0, 1);
+    margin: auto !important;
+    border: 1px solid rgb(21, 21, 21);
+    border-radius: 5px;
+    /* Curve border at corners*/
+    justify-content: left;
+    text-indent: 0px !important;
+    font-family: Geneva, sans-serif;
+    color: rgb(187, 155, 49) !important;
+    line-height: 28px !important;
+  }
+}
+
+.datatest {
+  width: 100px;
+}
 /******* Experiment ********/
 .experiment {
   position: relative;
@@ -389,7 +468,8 @@ a {
 
 .image-gallery-experiment {
   max-width: 70% !important;
-  margin: 0 auto; /* Center the gallery horizontally */
+  margin: 0 auto;
+  /* Center the gallery horizontally */
 }
 
 /******* World ********/
@@ -412,6 +492,7 @@ a {
   background-color: rgb(10, 25, 41);
   overflow: hidden !important;
 }
+
 .sidenavClosed {
   position: absolute;
   left: 0 !important;
@@ -444,7 +525,8 @@ a {
   display: inline-block;
   vertical-align: middle;
   font-size: 15px;
-  flex-grow: 1; /* Allow the text to grow and occupy available space */
+  flex-grow: 1;
+  /* Allow the text to grow and occupy available space */
   font-weight: normal !important;
 }
 
@@ -528,6 +610,7 @@ a {
   line-height: 1.5;
   z-index: 2 !important;
 }
+
 /**** Teams ********/
 
 .teams-page {

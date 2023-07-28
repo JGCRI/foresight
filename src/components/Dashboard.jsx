@@ -9,6 +9,7 @@ import Pie from "./charts/Pie";
 import TreeMap from "./charts/TreeMap";
 import Funnel from "./charts/Funnel";
 import Sankey from "./charts/Sankey";
+import DateDropdown from "./dropdowns/DashboardDate";
 
 function Dashboard({ open, toggleOpen }) {
   const dataBar = [
@@ -208,10 +209,28 @@ function Dashboard({ open, toggleOpen }) {
   ];
 
   return (
-    <div className="body-page"> 
+    <div className="body-page-dark">
       <SidebarDashboard />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
+          <Row className="date-select-row">
+            <Col>
+              % Change from :
+            </Col>
+            <Col>
+              <DateDropdown
+                year={2015} 
+              />
+            <Col>
+            </Col>
+              to
+            </Col>
+            <Col>
+              <DateDropdown
+                year={2100} 
+              />
+            </Col>
+          </Row>
           <Row className="row">
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>
               <div className="chart-areabump">
@@ -248,7 +267,7 @@ function Dashboard({ open, toggleOpen }) {
           <Row>
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>
               <div className="chart-choropleth">
-                <Sankey/>
+                <Sankey />
               </div>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>
