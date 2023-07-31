@@ -1,51 +1,105 @@
 /**** About ********/
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-text {
+  margin-top: 150vh;
+  animation: fadeIn 2s;
+  color: rgb(192, 192, 192);
+}
+
+/*Photo by <a href="https://unsplash.com/@bazylu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tomasz Bazylinski</a> on <a href="https://unsplash.com/photos/V3p5NSMh_lo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+  
 .about-page {
-    position: relative;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    width: 100vw;
-    height: calc(100vh - 150px);
-    overflow: auto !important;
-  }
-  
-  .about-page .page-text {
-    max-width: 80%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Four grid cells for design philosophy */
-  .about-grid {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  /* Title texts for the grid */
-  .about-grid-title {
-    font-size: 15px;
-    width: 97%;
-    color: rgb(100, 100, 100) !important;
-    text-align: center;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 0px;
-    z-index: 2 !important;
-  }
-  
-  /* Body text in the grid */
-  .about-grid-text {
-    margin-bottom: 40px;
-    margin-top: 0px;
-    font-size: 13px;
-    line-height: 1.5;
-    z-index: 2 !important;
-  }
-  
+  background-color:black;
+  background-image: url(../../assets/img/globe_above.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-position-y: 225px;
+  background-repeat: no-repeat;
+  transition: background 0.5s linear;
+  position: relative;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 150px);
+  overflow: auto !important;
+}
+
+.about-page .page-text {
+  max-width: 80%;
+  width: 100%;
+  mix-blend-mode: difference;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-title {
+  font-size: 100px;
+  mix-blend-mode: difference;
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+  text-align: center;
+  line-height: 1.2;
+  padding-bottom: 25px;
+  z-index: 2 !important;
+  opacity: 1;
+}
+
+.home-hr {
+  height: 4px;
+  border-top: 2px solid rgb(202, 202, 202, 0.95) !important;
+  opacity: 1;
+}
+
+.page-subtitle {
+  color: rgb(226, 226, 226) !important;
+  opacity: 1;
+}
+
+.globe_above {
+  display: block;
+  object-fit: cover;
+  width: 100vh;
+}
+
+/* Four grid cells for design philosophy */
+.about-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Title texts for the grid */
+.about-grid-title {
+  font-size: 15px;
+  width: 97%;
+  color: rgb(100, 100, 100) !important;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  z-index: 2 !important;
+}
+
+/* Body text in the grid */
+.about-grid-text {
+  margin-bottom: 40px;
+  margin-top: 0px;
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 2 !important;
+}
