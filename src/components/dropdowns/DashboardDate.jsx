@@ -9,6 +9,7 @@ export default function DashboardDate({year}) {
         <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
+            showYearPicker
             dateFormat="yyyy"
         />
     );
