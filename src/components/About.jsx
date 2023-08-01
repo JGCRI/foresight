@@ -9,14 +9,15 @@ const scrollHandler = (event) => {
   let background = document.querySelector('.about-page');
   let about1 = document.querySelector('.about-page-text');
   let crop_fade = document.querySelector('.fade-in-text');
+  let crop_text = document.querySelector('.page-text-green');
   let x = background.scrollTop;
   let y = window.scrollY + about1.getBoundingClientRect().bottom;
   console.log(y);
   if (y > 530) {
     background.style.backgroundSize = '' + (100 + x / 10) + '%';
   }
-  if (y <= 100 && y > -500) {
-    background.style.backgroundSize = '' + ((5100 - y) / 50) + '%';
+  if (y <= 249 && y > -500) {
+    background.style.backgroundSize = '' + ((5249 - y) / 50) + '%';
   }
   if (y < 250 && background.style.backgroundPositionY !== '0px' ) {
     background.style.backgroundImage = "url(" + CroplandAbove + ")";
@@ -25,6 +26,7 @@ const scrollHandler = (event) => {
     background.style.backgroundSize = '100%';
     about1.style.opacity = '0';
     crop_fade.style.opacity = '1';
+    crop_text.style.opacity = '1';
   }
   if (y > 249 && background.style.backgroundPositionY === '0px') {
     background.style.backgroundColor = 'rgb(0, 0, 0, 1)';
@@ -33,6 +35,7 @@ const scrollHandler = (event) => {
     background.style.backgroundImage = 'url(' + GlobeAbove + ')';
     about1.style.opacity = '1';
     crop_fade.style.opacity = '0';
+    crop_text.style.opacity = '0';
   }
   if (y < -500 && background.style.backgroundPositionY !== '2px' ) {
     background.style.backgroundImage = "url(" + MountainsAbove + ")";
@@ -72,9 +75,9 @@ function About() {
           </div>
         </Row>
         <Row className="justify-content-between">
-          <hr className="section-break-hr" />
+          <hr className="about-section-break-hr" />
           <h2 className="page-section-break">Design Philosophy</h2>
-          <hr className="lower-section-break-hr" />
+          <hr className="about-lower-section-break-hr" />
         </Row>
         <Row className="about-grid">
           <div>

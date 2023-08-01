@@ -21,13 +21,11 @@
 }
 
 .fade-in-text {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
   margin: auto;
-  margin-top: 30vh;
+  margin-top: 10vh;
   animation: fadeIn 2s;
   opacity: 0;
-  background-color: rgb(157, 188, 209, 0.8);
+  background-color: rgb(96, 158, 81, 0.8);
   text-align: center;
   color: rgb(43, 43, 43);
   margin-bottom: 10px;
@@ -36,10 +34,11 @@
 }
 
 .page-text-green {
-  margin-top: 20vh;
+  margin-top: 0vh;
   animation: fadeIn 2s;
   background-color: rgb(96, 158, 81, 0.8);
   color: rgb(221, 221, 221);
+  opacity: 0;
   margin-bottom: 20px;
   font-size: 15px;
   line-height: 1.5;
@@ -88,8 +87,9 @@
 }
 
 .about-home-hr {
-  height: 4px;
-  border-top: 2px solid rgb(202, 202, 202, 0.95) !important;
+  height: 8px;
+  mix-blend-mode: difference;
+  border-top: 2px solid rgba(82, 82, 82, 0.95) !important;
   opacity: 1;
   width: 90%;
   margin: 0 auto;
@@ -124,25 +124,51 @@
 
 /* Title texts for the grid */
 .about-grid-title {
+  background-color: rgb(66, 71, 42);
   font-size: 15px;
   width: 97%;
-  color: rgb(100, 100, 100) !important;
+  color:rgb(211, 201, 186);
+  font-weight: 700;
   text-align: center;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 0px;
   z-index: 2 !important;
 }
 
 /* Body text in the grid */
 .about-grid-text {
+  background-color: rgb(66, 71, 42);
+  color: rgb(209, 196, 181);
+  font-weight: 500;
   margin-bottom: 40px;
   margin-top: 0px;
   font-size: 13px;
   line-height: 1.5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2 !important;
+}
+
+.about-section-break-hr {
+  height: 2px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 125vh;
+  border-top: 2px solid rgb(0, 0, 0) !important;
+  z-index: 2 !important;
+}
+
+.about-lower-section-break-hr {
+  height: 2px;
+  width: 35%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-top: 2px solid black !important;
   z-index: 2 !important;
 }
