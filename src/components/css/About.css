@@ -10,14 +10,46 @@
   }
 }
 
-.page-text {
+.about-page-text {
   margin-top: 150vh;
   animation: fadeIn 2s;
   color: rgb(192, 192, 192);
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  z-index: 2 !important;
+}
+
+.fade-in-text {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin: auto;
+  margin-top: 30vh;
+  animation: fadeIn 2s;
+  opacity: 0;
+  background-color: rgb(157, 188, 209, 0.8);
+  text-align: center;
+  color: rgb(43, 43, 43);
+  margin-bottom: 10px;
+  font-size: 50px;
+  z-index: 2 !important;
+}
+
+.page-text-green {
+  margin-top: 20vh;
+  animation: fadeIn 2s;
+  background-color: rgb(96, 158, 81, 0.8);
+  color: rgb(221, 221, 221);
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 2%;
+  z-index: 2 !important;
 }
 
 /*Photo by <a href="https://unsplash.com/@bazylu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tomasz Bazylinski</a> on <a href="https://unsplash.com/photos/V3p5NSMh_lo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
-  
+/*Photo by <a href="https://unsplash.com/@karthik_sreenivas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karthik Sreenivas</a> on <a href="https://unsplash.com/photos/0XBjfPcPEKs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  */
 .about-page {
   background-color:black;
   background-image: url(../../assets/img/globe_above.jpg);
@@ -35,7 +67,7 @@
   overflow: auto !important;
 }
 
-.about-page .page-text {
+.about-page .about-page-text {
   max-width: 80%;
   width: 100%;
   mix-blend-mode: difference;
@@ -55,15 +87,26 @@
   opacity: 1;
 }
 
-.home-hr {
+.about-home-hr {
   height: 4px;
   border-top: 2px solid rgb(202, 202, 202, 0.95) !important;
   opacity: 1;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 2 !important;
 }
 
-.page-subtitle {
+.about-page-subtitle {
   color: rgb(226, 226, 226) !important;
   opacity: 1;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2 !important;
 }
 
 .globe_above {

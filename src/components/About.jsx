@@ -1,57 +1,74 @@
 import { React, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
+import GlobeAbove from '../assets/img/globe_above.jpg'
+import CroplandAbove from '../assets/img/cropland_above.jpg'
+import MountainsAbove from '../assets/img/mountains_above.jpg'
 import './css/About.css';
 
-export function ScrollWatch() {
-  useEffect(() => {
-    let background = document.querySelector('.about-page')
-    let about1 = document.querySelector('.page-text')
-    background.addEventListener("scroll", () => {
-      let x = background.scrollTop;
-      let y = window.scrollY + about1.getBoundingClientRect().bottom;
-      console.log(background.style.backgroundColor);
-      if (y > 530) {
-        background.style.backgroundSize = '' + (100 + x / 10) + '%';
-      }
-      /*
-      if (y < 250 && background.style.backgroundColor == 'black') {
-        background.style.backgroundSize = '100%';
-        background.style.backgroundImage = 'url(../../assets/img/cropland_above.jpg)';
-        background.style.backgroundColor = 'rgb(91, 143, 94, 1)';
-        background.style.backgroundPositionY = '0px';
-      }
-      if (y > 249 && background.style.backgroundImage == 'url(../../assets/img/cropland_above.jpg)') {
-        background.style.backgroundImage = 'url(../../assets/img/globe_above.jpg)';
-        background.style.backgroundColor = 'rgb(0, 0, 0, 1)';
-        background.style.backgroundPositionY = '225px';
-      }
-      */
-    })
-
-    return () => {
-      window.removeEventListener('scroll');
-    };
-
-
-  });
-}
+const scrollHandler = (event) => {
+  let background = document.querySelector('.about-page');
+  let about1 = document.querySelector('.about-page-text');
+  let crop_fade = document.querySelector('.fade-in-text');
+  let x = background.scrollTop;
+  let y = window.scrollY + about1.getBoundingClientRect().bottom;
+  console.log(y);
+  if (y > 530) {
+    background.style.backgroundSize = '' + (100 + x / 10) + '%';
+  }
+  if (y <= 100 && y > -500) {
+    background.style.backgroundSize = '' + ((5100 - y) / 50) + '%';
+  }
+  if (y < 250 && background.style.backgroundPositionY !== '0px' ) {
+    background.style.backgroundImage = "url(" + CroplandAbove + ")";
+    background.style.backgroundColor = 'rgb(91, 143, 94, 1)';
+    background.style.backgroundPositionY = '0px';
+    background.style.backgroundSize = '100%';
+    about1.style.opacity = '0';
+    crop_fade.style.opacity = '1';
+  }
+  if (y > 249 && background.style.backgroundPositionY === '0px') {
+    background.style.backgroundColor = 'rgb(0, 0, 0, 1)';
+    background.style.backgroundPositionY = '225px';
+    background.style.backgroundSize = '' + (100 + x / 10) + '%';
+    background.style.backgroundImage = 'url(' + GlobeAbove + ')';
+    about1.style.opacity = '1';
+    crop_fade.style.opacity = '0';
+  }
+  if (y < -500 && background.style.backgroundPositionY !== '2px' ) {
+    background.style.backgroundImage = "url(" + MountainsAbove + ")";
+    background.style.backgroundColor = 'rgb(91, 143, 94, 1)';
+    background.style.backgroundPositionY = '2px';
+    crop_fade.style.opacity = '0';
+  }
+  if (y > -499 && background.style.backgroundPositionY === '2px' ) {
+    background.style.backgroundImage = "url(" + CroplandAbove + ")";
+    background.style.backgroundColor = 'rgb(142, 169, 198, 1)';
+    background.style.backgroundPositionY = '0px';
+    crop_fade.style.opacity = '1';
+  }
+};
 
 function About() {
   return (
-    <div className="body-page about-page ">
+    <div className="body-page about-page " onScroll={scrollHandler}>
       <Container>
         <Row className="justify-content-between">
           <h1 className="about-title">About Foresight</h1>
-          <ScrollWatch></ScrollWatch>
-          <hr className="home-hr" />
-          <div className="page-subtitle">
+          <hr className="about-home-hr" />
+          <div className="about-page-subtitle">
             Foresight is a community dashboard that curates key insights from the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>
           </div>
         </Row>
-        <hr className="home-hr  lower-hr" />
+        <hr className="about-home-hr  lower-hr" />
         <Row className="justify-content-between">
-          <div className="page-text">
-            As scientific models continue to grow in complexity and the amount of detail they capture, so too does the size and complexity of their data outputs. Managing the overwhelming amounts of data and curating it into key insights and messages is a big responsibility for any scientific team. Foresight is an online community platform to visualize and interact with data outputs from the <a href="https://gcims.pnnl.gov/global-change-intersectoral-modeling-system" target="_blank" rel="noreferrer">Global Change Intersectoral Modeling System (GCIMS)</a>. Development of Foresight is a continuous process with regular feedback solicited from the community to improve its features. With Foresight, our team is addressing the challenges of managing data storage, selecting and curating key visualizations, as well as trying to strike a balance between providing simplified digestible results while still ensuring transparency and access to reproducible data and workflows.
+          <div className="about-page-text">
+            As scientific models continue to grow in complexity and the amount of detail they capture, so too does the size and complexity of their data outputs. Managing the overwhelming amounts of data and curating it into key insights and messages is a big responsibility for any scientific team. Foresight is an online community platform to visualize and interact with data outputs from the <a href="https://gcims.pnnl.gov/global-change-intersectoral-modeling-system" target="_blank" rel="noreferrer">Global Change Intersectoral Modeling System (GCIMS)</a>. 
+          </div>
+          <div className="fade-in-text">
+            User-Focused Design 
+          </div>
+          <div className="page-text-green">
+            Development of Foresight is a continuous process with regular feedback solicited from the community to improve its features. With Foresight, our team is addressing the challenges of managing data storage, selecting and curating key visualizations, as well as trying to strike a balance between providing simplified digestible results while still ensuring transparency and access to reproducible data and workflows.
           </div>
         </Row>
         <Row className="justify-content-between">
@@ -61,28 +78,28 @@ function About() {
         </Row>
         <Row className="about-grid">
           <div>
-            <hr className="home-hr" />
+            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               Single Point of Access
             </h3>
 
           </div>
           <div>
-            <hr className="home-hr" />
+            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               Community
             </h3>
 
           </div>
           <div>
-            <hr className="home-hr" />
+            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               Gold Standard of Visualization
             </h3>
 
           </div>
           <div>
-            <hr className="home-hr" />
+            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               AI data insights
             </h3>
