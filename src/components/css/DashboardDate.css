@@ -8,21 +8,25 @@
 .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before,
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
   border-bottom-color: rgb(70, 70, 70);
+  left: 65px;
 }
 
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
   border-top: none;
+  left: 65px;
   border-bottom-color: rgb(70, 70, 70);
 }
 
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
   top: -1px;
+  left: 65px;
   border-bottom-color: rgb(70, 70, 70);
 }
 
 .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before {
   bottom: -1px;
+  left: 65px;
   border-top-color: rgb(70, 70, 70);
 }
 
@@ -37,7 +41,7 @@
   background-color: rgb(100, 100, 100);
   color: rgb(248, 248, 248);
   border: 1px solid rgb(70, 70, 70);
-  right: 30%;
+  right: 37.5%;
   text-indent: 0px;
 }
 
@@ -47,12 +51,6 @@
 
 .react-datepicker-popper[data-placement^=bottom] {
   padding-top: 10px;
-}
-
-.react-datepicker-popper[data-placement=bottom-end] .react-datepicker__triangle,
-.react-datepicker-popper[data-placement=top-end] .react-datepicker__triangle {
-  left: auto;
-  right: 50px;
 }
 
 .react-datepicker-popper[data-placement^=top] {
@@ -192,12 +190,6 @@
 .react-datepicker__month-year-option--selected {
   position: absolute;
   left: 15px;
-}
-
-.react-datepicker__calendar-icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
 }
 
 .react-datepicker__children-container {
