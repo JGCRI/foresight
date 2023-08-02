@@ -23,12 +23,20 @@ function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end 
             return new Date().setFullYear(start);
         return new Date().setFullYear(end);
     }
+
+    const getBounds = (date) => {
+        if (isStart == 0)
+            return date.getFullYear() < end;
+        return date.getFullYear() > start;
+    }
+
     return (
         <DatePicker
             selected={getYear(isStart)}
             onChange={(date) => dateHandler(date, isStart)}
             showYearPicker
             dateFormat="yyyy"
+            filterDate={getBounds}
         />
     );
 }
