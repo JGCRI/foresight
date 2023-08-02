@@ -214,15 +214,21 @@ function Dashboard({ open, toggleOpen }) {
       <SidebarDashboard />
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
-          <Row className="date-select-row gx-0">
-            <Col classname="date-select-text">
+          <Row className="date-select-row">
+            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
               % Change from :
+            </Col>
+            <Col>
               <DateDropdown
-                year={2015} 
+                year={2015}
               />
-              to 
+            </Col>
+            <Col className="date-select-text" xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              to
+            </Col>
+            <Col>
               <DateDropdown
-                year={2100} 
+                year={2100}
               />
             </Col>
           </Row>
@@ -245,7 +251,7 @@ function Dashboard({ open, toggleOpen }) {
           <Row className="row">
             <Col xs={12} sm={12} md={12} lg={12} xl={4}>
               <div className="chart-chord">
-                <Chord/>
+                <Chord />
               </div>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12} xl={4}>

@@ -7,7 +7,6 @@ const scrollHandler = (event) => {
   let about1 = document.querySelector('.about-grid');
   let x = background.scrollTop;
   let y = window.scrollY + about1.getBoundingClientRect().bottom;
-  console.log(y);
   if (y > 530) {
     background.style.backgroundSize = '' + (100 + x / 10) + '%';
   }
