@@ -5,12 +5,8 @@ import './css/About.css';
 const scrollHandler = (event) => {
   let background = document.querySelector('.about-page');
   let about1 = document.querySelector('.about-grid');
-  let bottom_margin = document.querySelector('.small-home-hr');
   let x = background.scrollTop;
   let y = window.scrollY + about1.getBoundingClientRect().bottom;
-  if(bottom_margin.style.marginBottom === '0px') {
-    bottom_margin.style.marginBottom = "" + window.outerHeight/2 + 'px';
-  }
   if (y > 530) {
     background.style.backgroundSize = '' + (100 + x / 10) + '%';
   }
@@ -39,7 +35,6 @@ function About() {
             <h3 className="about-grid-title">
               Single Point of Access
             </h3>
-
           </div>
           <div>
             <hr className="about-home-hr" />

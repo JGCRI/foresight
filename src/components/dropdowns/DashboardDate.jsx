@@ -11,11 +11,9 @@ function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end 
     function dateHandler(date, isStart) {
         setStartDate(date);
         if (isStart == 0) {
-            console.log(start);
             updateStart(date.getFullYear());
         }
         else {
-            console.log(end);
             updateEnd(date.getFullYear());
         }
     }

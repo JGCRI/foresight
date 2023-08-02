@@ -160,7 +160,7 @@
   height: 2px;
   width: 85%;
   margin: 0 auto;
-  margin-bottom: 0px;
+  margin-bottom: 50vh;
   border-top: 2px solid rgb(255, 255, 255) !important;
   z-index: 2 !important;
 }
