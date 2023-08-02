@@ -7,6 +7,7 @@ export default function DashboardDate({year}) {
     const [startDate, setStartDate] = useState(new Date().setFullYear(year));
     return (
         <DatePicker
+            wrapperClassName="datePicker"
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             showYearPicker

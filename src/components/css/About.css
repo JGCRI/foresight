@@ -14,41 +14,27 @@
   margin-top: 150vh;
   animation: fadeIn 2s;
   color: rgb(192, 192, 192);
+  font-weight: 600;
   margin-bottom: 20px;
   font-size: 15px;
   line-height: 1.5;
   z-index: 2 !important;
 }
 
-.fade-in-text {
-  margin: auto;
-  margin-top: 10vh;
-  animation: fadeIn 2s;
-  opacity: 0;
-  background-color: rgb(96, 158, 81, 0.8);
+
+/*Grey title text smaller than titles but larger than subtitles.*/
+.page-section-break {
+  font-size: 23px;
+  font-weight: 400;
+  color: rgb(236, 236, 236) !important;
   text-align: center;
-  color: rgb(43, 43, 43);
-  margin-bottom: 10px;
-  font-size: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   z-index: 2 !important;
 }
 
-.page-text-green {
-  margin-top: 0vh;
-  animation: fadeIn 2s;
-  background-color: rgb(96, 158, 81, 0.8);
-  color: rgb(221, 221, 221);
-  opacity: 0;
-  margin-bottom: 20px;
-  font-size: 15px;
-  line-height: 1.5;
-  padding: 2%;
-  z-index: 2 !important;
-}
-
-/*Photo by <a href="https://unsplash.com/@bazylu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tomasz Bazylinski</a> on <a href="https://unsplash.com/photos/V3p5NSMh_lo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
-/*Photo by <a href="https://unsplash.com/@karthik_sreenivas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karthik Sreenivas</a> on <a href="https://unsplash.com/photos/0XBjfPcPEKs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  */
 .about-page {
   background-color:black;
   background-image: url(../../assets/img/globe_above.jpg);
@@ -56,7 +42,6 @@
   background-size: 100%;
   background-position-y: 225px;
   background-repeat: no-repeat;
-  transition: background 0.5s linear;
   position: relative;
   display: flex;
   align-items: top;
@@ -89,7 +74,7 @@
 .about-home-hr {
   height: 8px;
   mix-blend-mode: difference;
-  border-top: 2px solid rgba(82, 82, 82, 0.95) !important;
+  border-top: 2px solid rgba(214, 214, 214, 0.95) !important;
   opacity: 1;
   width: 90%;
   margin: 0 auto;
@@ -124,18 +109,13 @@
 
 /* Title texts for the grid */
 .about-grid-title {
-  background-color: rgb(66, 71, 42);
   font-size: 15px;
-  width: 97%;
-  color:rgb(211, 201, 186);
+  color:rgb(255, 255, 255);
   font-weight: 700;
   text-align: center;
   overflow: hidden;
-  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 0px;
   z-index: 2 !important;
@@ -143,15 +123,16 @@
 
 /* Body text in the grid */
 .about-grid-text {
-  background-color: rgb(66, 71, 42);
-  color: rgb(209, 196, 181);
+  background-color: rgb(214, 214, 214);
+  color: rgb(26, 26, 26);
   font-weight: 500;
   margin-bottom: 40px;
-  margin-top: 0px;
+  margin-top: 20px;
   font-size: 13px;
   line-height: 1.5;
   padding-top: 10px;
   padding-bottom: 10px;
+  opacity: 0.8;
   z-index: 2 !important;
 }
 
@@ -160,7 +141,8 @@
   width: 40%;
   margin: 0 auto;
   margin-top: 125vh;
-  border-top: 2px solid rgb(0, 0, 0) !important;
+  border-top: 2px solid rgb(255, 255, 255) !important;
+  opacity: 1;
   z-index: 2 !important;
 }
 
@@ -169,6 +151,16 @@
   width: 35%;
   margin: 0 auto;
   margin-bottom: 50px;
-  border-top: 2px solid black !important;
+  border-top: 2px solid rgb(255, 255, 255) !important;
+  opacity: 1;
+  z-index: 2 !important;
+}
+
+.small-home-hr {
+  height: 2px;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-top: 2px solid rgb(255, 255, 255) !important;
   z-index: 2 !important;
 }

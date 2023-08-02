@@ -87,19 +87,6 @@ a {
   z-index: 2 !important;
 }
 
-/*Grey title text smaller than titles but larger than subtitles.*/
-.page-section-break {
-  font-size: 23px;
-  font-weight: 400;
-  color: rgb(100, 100, 100) !important;
-  text-align: center;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  z-index: 2 !important;
-}
-
 .page-text {
   margin-bottom: 20px;
   font-size: 15px;
@@ -137,16 +124,6 @@ a {
   width: 90%;
   margin: 0 auto;
   border-top: 2px solid black !important;
-  z-index: 2 !important;
-}
-
-/* 85% version of home-hr*/
-.small-home-hr {
-  height: 2px;
-  width: 85%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  border-top: 2px solid rgb(100, 100, 100) !important;
   z-index: 2 !important;
 }
 

@@ -77,14 +77,16 @@
       border: 1px solid rgb(21, 21, 21);
       border-radius: 5px;
       /* Curve border at corners*/
+      padding: 0%;
       justify-content: left;
       text-indent: 15px !important;
       font-family: Geneva, sans-serif;
       color: rgb(187, 155, 49) !important;
       line-height: 28px !important;
+      align-items: flex-end;
     }
   }
-  
+
   @media screen and (max-width: 609px) {
   
     /*Switch when width is 610px*/
