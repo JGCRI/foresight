@@ -25,33 +25,28 @@ function About() {
         </Row>
         <hr className="about-home-hr  lower-hr" />
         <Row className="justify-content-between">
-          <hr className="about-section-break-hr" />
-          <h2 className="page-section-break">Design Philosophy</h2>
-          <hr className="about-lower-section-break-hr" />
+          <h1 className="page-section-break">Design Philosophy</h1>         
+          <hr className="about-home-hr" />
         </Row>
         <Row className="about-grid">
           <div>
-            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               Single Point of Access
             </h3>
           </div>
           <div>
-            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               Community: Share and engage! 
             </h3>
 
           </div>
           <div>
-            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               Visual Excellence
             </h3>
 
           </div>
           <div>
-            <hr className="about-home-hr" />
             <h3 className="about-grid-title">
               AI-Driven Insights
             </h3>
@@ -60,16 +55,16 @@ function About() {
         </Row>
         <Row className="about-grid">
           <div className="about-grid-text">
-            Access key highlights on intial landing pages, then dive deeper into insights across water, energy, land, and many other systems leveraging the power of our integrated suite of tools
+            Access analysis-specific highlights as well as broader insights across water, energy, land, and many other systems, leveraging the power of our integrated suite of tools
           </div>
           <div className="about-grid-text">
             All figures are shareable across platforms, inviting feedback and comments from the community to drive continuous improvement.
           </div>
           <div className="about-grid-text">
-            We strive to make each figure stand out as the best in class, featuring interactive, minimalistic, and powerful designs customized for to convey each insight most effectively
+            We strive to make each figure stand out as the best in class, featuring interactive, minimalistic, and powerful designs customized to convey each insight most effectively
           </div>
           <div className="about-grid-text">
-            Leverage AI-driven interactions to "talk" to our datasets and extract personalized insights and generate customize graphics.
+            Leverage AI-driven interactions to "talk" to our datasets and extract personalized insights and customized graphics.
           </div>
         </Row>
         <Row className="about-grid">
