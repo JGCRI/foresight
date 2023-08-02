@@ -221,6 +221,7 @@ function Dashboard({ open, toggleOpen }) {
             <Col>
               <DateDropdown
                 year={2015}
+                isOrNotStart={0}
               />
             </Col>
             <Col className="date-select-text" xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
@@ -229,6 +230,7 @@ function Dashboard({ open, toggleOpen }) {
             <Col>
               <DateDropdown
                 year={2100}
+                isOrNotStart={1}
               />
             </Col>
           </Row>
