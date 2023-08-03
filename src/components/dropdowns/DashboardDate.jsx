@@ -10,11 +10,14 @@ function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end 
     const isStart = isOrNotStart
     function dateHandler(date, isStart) {
         setStartDate(date);
+        var selectedYear = 1;
+        if(date != null)
+            selectedYear = date.getFullYear();
         if (isStart == 0) {
-            updateStart(date.getFullYear());
+            updateStart(selectedYear);
         }
         else {
-            updateEnd(date.getFullYear());
+            updateEnd(selectedYear);
         }
     }
 
@@ -25,9 +28,12 @@ function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end 
     }
 
     const getBounds = (date) => {
+        var selectedYear = 1;
+        if(date != null)
+            selectedYear = date.getFullYear();
         if (isStart == 0)
-            return date.getFullYear() < end;
-        return date.getFullYear() > start;
+            return selectedYear < end && selectedYear > 0;
+        return selectedYear > start && selectedYear > 0;
     }
 
     return (
