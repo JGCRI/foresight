@@ -10,6 +10,7 @@ import TreeMap from "./charts/TreeMap";
 import Funnel from "./charts/Funnel";
 import Sankey from "./charts/Sankey";
 import DateDropdown from "./dropdowns/DashboardDate";
+import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
 import './css/Dashboard.css';
 
 function Dashboard({ open, toggleOpen }) {
@@ -209,6 +210,27 @@ function Dashboard({ open, toggleOpen }) {
     },
   ];
 
+  const scenarios = [
+    {
+      title: "Scenerio X",
+    },
+    {
+      title: "Scenerio Y",
+    },
+    {
+      title: "1.5 Degrees",
+    },
+    {
+      title: "2.0 Degrees",
+    },
+    {
+      title: "2.5 Degrees",
+    },
+    {
+      title: "3.0 Degrees",
+    }
+  ];
+
   return (
     <div className="body-page-dark">
       <SidebarDashboard />
@@ -234,13 +256,16 @@ function Dashboard({ open, toggleOpen }) {
               />
             </Col>
           </Row>
+          <DashboardScenerioRows
+            scenarios={scenarios}
+          />
           <Row className="row">
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>
               <div className="chart-areabump">
                 {!dataAreaBump ? (
                   "Loading..."
                 ) : (
-                  <AreaBump data={dataAreaBump} />
+                  <AreaBump data={[dataAreaBump]} />
                 )}
               </div>
             </Col>

@@ -49,8 +49,8 @@ function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end 
 
 function mapStateToProps(state) {
     return {
-        start: state.start_date,
-        end: state.end_date,
+        start: state.startDate,
+        end: state.endDate,
     };
 }
 

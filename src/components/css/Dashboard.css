@@ -52,6 +52,7 @@
   height: 30px;
   background: rgb(0, 0, 0, 1);
   margin: auto !important;
+  margin-bottom: 50px;
   border: 1px solid rgb(21, 21, 21);
   border-radius: 5px;
   font-family: Geneva, sans-serif;
@@ -98,4 +99,19 @@
   .date-select-row {
     --bs-gutter-x: 0rem;
   }
+}
+
+.dashboard-data-row {
+  position: relative;
+  width: 90%;
+  padding-top: 10px;
+  margin-top: 30px;
+  margin-right: 0px;
+  background-color: rgb(44, 44, 44);
+  font-family: Geneva, sans-serif;
+  color:rgb(218, 218, 218);
+  justify-content: left;
+  --bs-gutter-x: 1.25rem;
+  transform: translateY(30px);
+  z-index: 2;
 }

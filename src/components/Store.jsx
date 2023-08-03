@@ -4,8 +4,39 @@ import { createStore } from 'redux';
 const initialState = {
   open: 1,
   dataset: "foresight_v1",
-  start_date: 2015,
-  end_date: 2100
+  startDate: 2015,
+  endDate: 2100,
+  scenerios: [
+    {
+      title: "Scenerio X",
+      pos: 1,
+    },
+    {
+      title: "Scenerio Y",
+      pos: 2,
+    }
+  ],
+  guages: [
+    {
+      title: "runoff"
+    },
+    {
+      title: "yields"
+    },
+    {
+      title: "temp"
+    },
+    {
+      title: "emiss"
+    },
+    {
+      title: "pop"
+    },
+    {
+      title: "gdp"
+    }
+  ],
+  currentGuage: "yields"
 };
 
 // Define a reducer function to update the state
@@ -16,9 +47,15 @@ function reducer(state = initialState, action) {
     case 'setDataset':
       return { ...state, dataset: action.payload };
     case 'setStartDate':
-      return { ...state, start_date: action.payload };
+      return { ...state, startDate: action.payload };
     case 'setEndDate':
-      return { ...state, end_date: action.payload };
+      return { ...state, endDate: action.payload };
+    case 'setScenerios':
+      return { ...state, scenerios: action.payload };
+    case 'setGuages':
+      return { ...state, guages: action.payload };
+    case 'setCurrentGuage':
+      return { ...state, currentGuage: action.payload };
     default:
       return state;
   }
@@ -37,6 +74,12 @@ export function setStartDate(date) {
 // Change dashboard end date
 export function setEndDate(date) {
   return { type: 'setEndDate', payload: date };
+}
+
+// Change dashboard scenerios array
+export function setScenerios(index, newTitle, scenerios) {
+  scenerios.at(index).title = newTitle;
+  return { type: 'setScenerios', payload: scenerios };
 }
 
 // Create the Redux store
