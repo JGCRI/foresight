@@ -21,20 +21,6 @@
   z-index: 2 !important;
 }
 
-
-/*Grey title text smaller than titles but larger than subtitles.*/
-.page-section-break {
-  font-size: 23px;
-  font-weight: 400;
-  color: rgb(236, 236, 236) !important;
-  text-align: center;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  z-index: 2 !important;
-}
-
 .about-page {
   background-color:black;
   background-image: url(../../assets/img/about_globe.jpg);
@@ -100,6 +86,24 @@
   width: 100vh;
 }
 
+
+/*Grey title text smaller than titles but larger than subtitles.*/
+.page-section-break {
+  margin: 0 auto;
+  margin-top: 125vh;
+  mix-blend-mode: difference;
+  font-size: 50px;
+  font-weight: 400;
+  color: rgb(236, 236, 236) !important;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  line-height: 1.2;
+  padding-bottom: 25px;
+  z-index: 2 !important;
+}
+
 /* Four grid cells for design philosophy */
 .about-grid {
   display: grid;
@@ -109,7 +113,8 @@
 
 /* Title texts for the grid */
 .about-grid-title {
-  font-size: 15px;
+  font-size: 18px;  
+  mix-blend-mode: difference;
   color:rgb(255, 255, 255);
   font-weight: 700;
   text-align: center;
@@ -123,8 +128,8 @@
 
 /* Body text in the grid */
 .about-grid-text {
-  background-color: rgb(214, 214, 214);
-  color: rgb(26, 26, 26);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
   font-weight: 500;
   margin-bottom: 40px;
   margin-top: 20px;
