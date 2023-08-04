@@ -44,6 +44,7 @@
     "d3-force": "^3.0.0",
     "d3-selection": "^3.0.0",
     "d3-zoom": "^3.0.0",
+    "justgage": "^1.6.1",
     "leaflet": "^1.9.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

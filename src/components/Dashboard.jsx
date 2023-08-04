@@ -257,7 +257,7 @@ function Dashboard({ open, toggleOpen }) {
             </Col>
           </Row>
           <DashboardScenerioRows
-            scenarios={scenarios}
+            Scenarios={scenarios}
           />
           <Row className="row">
             <Col xs={12} sm={12} md={12} lg={12} xl={6}>

@@ -12,9 +12,9 @@ function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScen
     const cOpen = curOpen;
     const [value, setValue] = useState(starting);
 
-    const handlePress = (database) => {
-        setValue(database);
-        updateScenerios(cIndex, database, cOpen);
+    const handlePress = (scenerioTitle) => {
+        setValue(scenerioTitle);
+        updateScenerios(cIndex, scenerioTitle, cOpen);
     }
     const links = list.map((scenerio) => (
         <div key={scenerio.title}>
@@ -27,9 +27,14 @@ function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScen
     return (
         <div>
             <Dropdown as={ButtonGroup}>
-                <Button variant="success">{value}</Button>
+                <Button variant="outline-light">{value}</Button>
 
-                <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+                <Dropdown.Toggle 
+                    split 
+                    variant="outline-warning" 
+                    id="dropdown-split-basic" 
+
+                />
 
                 <Dropdown.Menu>
                     {links}

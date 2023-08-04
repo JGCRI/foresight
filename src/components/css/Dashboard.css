@@ -111,17 +111,48 @@
   transform: translateY(30px);
 }
 
+.btn-outline-light {
+  --bs-btn-color: rgb(218, 218, 218);
+  --bs-btn-hover-color: rgb(218, 218, 218);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: transparent;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-active-shadow: transparent;
+}
+
+.btn-outline-warning {
+  --bs-btn-color: rgb(187, 155, 49);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
+}
+
+.btn {
+  --bs-btn-padding-x: 0.25rem;
+}
+
 .dashboard-data-grid {
   position: relative;
   display: grid;
-  width: 90%;
+  width: 100%;
   font-family: Geneva, sans-serif;
   color:rgb(218, 218, 218);
-  z-index: 1;
   grid-template-columns: auto repeat(6, 1fr);
   grid-template-rows: repeat(2, auto);
   column-gap: 4px;
-  row-gap: 0px;
+  row-gap: 10px;
+  margin-top: 7%;
+  margin-bottom: 10%;
   justify-items: center;
   align-items: center;
+}
+
+.guageText {
+  text-align: center;
+  font-size: 60%;
 }

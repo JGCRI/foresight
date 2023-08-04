@@ -55,13 +55,13 @@ function About() {
         </Row>
         <Row className="about-grid">
           <div className="about-grid-text">
-            Access analysis-specific highlights as well as broader insights across water, energy, land, and many other systems, leveraging the power of our integrated suite of tools
+            Access analysis-specific highlights as well as broader insights across water, energy, land, and many other systems, leveraging the power of our integrated suite of tools.
           </div>
           <div className="about-grid-text">
             All figures are shareable across platforms, inviting feedback and comments from the community to drive continuous improvement.
           </div>
           <div className="about-grid-text">
-            We strive to make each figure stand out as the best in class, featuring interactive, minimalistic, and powerful designs customized to convey each insight most effectively
+            We strive to make each figure stand out as the best in class, featuring interactive, minimalistic, and powerful designs customized to convey each insight most effectively.
           </div>
           <div className="about-grid-text">
             Leverage AI-driven interactions to "talk" to our datasets and extract personalized insights and customized graphics.
