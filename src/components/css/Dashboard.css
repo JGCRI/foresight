@@ -59,6 +59,7 @@
   color: rgb(187, 155, 49) !important;
   line-height: 28px !important;
   justify-content: left;
+  z-index: 3;
 }
 
 /****** New Dashboard *****/
@@ -99,16 +100,6 @@
   .date-select-row {
     --bs-gutter-x: 0rem;
   }
-}
-
-.tempStore {
-  padding-top: 10px;
-  margin-top: 30px;
-  margin-right: 0px;
-  background-color: rgb(44, 44, 44);
-  justify-content: left;
-  --bs-gutter-x: 1.25rem;
-  transform: translateY(30px);
 }
 
 .btn-outline-light {
