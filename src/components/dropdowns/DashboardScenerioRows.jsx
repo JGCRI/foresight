@@ -9,32 +9,34 @@ function DashboardScenerioRows({ scenarios, openScenerio, guageList, openGuage }
     const list = scenarios;
 
     const cols = guageList.map((guage, index) => (
-        <Col className = {guage.title === openGuage ? "guageOpen" : "guageDefault"} xs="auto" sm="auto" md="auto" lg="auto" xl="auto" key = {index}>
+        <div className={guage.title === openGuage ? "guageOpen" : "guageDefault"} xs="auto" sm="auto" md="auto" lg="auto" xl="auto" key={index}>
             <DashboardGuage
                 title={guage.title}
                 num={guageList.length}
             />
-        </Col>
-    ))
-
-    const rows = openScenerio.map((open, index) => (
-        <div key={index}>
-            <Row className="dashboard-data-row">
-                <Col className = "dashboard-scenerio-selector" xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
-                    <DashboardScenerioSelector
-                        test={list}
-                        current={open.title}
-                        curIndex={index}
-                        curOpen={openScenerio}
-                    />
-                </Col>
-                {cols}
-            </Row>
         </div>
     ))
 
+    const rows = openScenerio.map((open, index) => (
+        <>
+            <div className="dashboard-scenerio-selector">
+                <DashboardScenerioSelector
+                    test={list}
+                    current={open.title}
+                    curIndex={index}
+                    curOpen={openScenerio}
+                    className="dashboard-scenerio-selector"
+                />
+            </div>
+            {cols}
+        </>
+
+    ))
+
     return (
-        rows
+        <div className="dashboard-data-grid">
+            {rows}
+        </div>
     );
 }
 
