@@ -4,6 +4,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { setScenerios } from "../Store";
 import { connect } from 'react-redux';
 import Dropdown from 'react-bootstrap/Dropdown';
+import updateGrid from './DashboardScenerioRows'
 
 function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScenerios }) {
     const list = test;
@@ -15,7 +16,11 @@ function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScen
     const handlePress = (scenerioTitle) => {
         setValue(scenerioTitle);
         updateScenerios(cIndex, scenerioTitle, cOpen);
+        updateGrid();
     }
+
+    //Maps the dropdown menu. Takes in the vector of all scenerios and creates 
+    //a Dropdown.Item for each.
     const links = list.map((scenerio) => (
         <div key={scenerio.title}>
             <Dropdown.Item as="button" onClick={() => handlePress(scenerio.title)}>
@@ -44,6 +49,8 @@ function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScen
     );
 }
 
+//Maps the newly selected scenerio to storage. Also takes the current index
+//and the list of current open scenerios for positioning purposes.
 function mapDispatchToProps(dispatch) {
     return {
         updateScenerios: (newIndex, newTitle, openScenerio) => dispatch(setScenerios(newIndex, newTitle, openScenerio))
