@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import DashboardScenerioSelector from "./DashboardScenerioSelector";
 import ScenerioGuage from "../guages/ScenerioGuage"
 import ScenerioGuageNegative from "../guages/ScenerioGuageNegative"
+import { setdashboardSelection } from "../Store";
 
 const dummyData = [
     {
@@ -190,7 +191,7 @@ const dummyData = [
 //This function gets data from a current dummy set. It searches the dummy
 //set for a parameter matching the passed in scenerio and guage title.
 //If the vlaue is found it is returned. Otherwise the function returns -1.
-const getDataValue = (scenerioTitle, fieldTitle) => {
+export const getDataValue = (scenerioTitle, fieldTitle) => {
     const scenerio = scenerioTitle;
     const field = fieldTitle;
     var ans = -1;
@@ -202,7 +203,7 @@ const getDataValue = (scenerioTitle, fieldTitle) => {
         }
     }
     return ans;
-}
+};
 
 //This function creates guages. Positive guages are created with ScenerioGuage and
 //negative values are created with ScenerioGuageNegative. Each guage asks for three
@@ -229,71 +230,84 @@ const guageNumber = (number, rowNum, guageTitle) => {
             guageValue={num}
         />
     )
-}
+};
 
-function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage }) {
-
-    const list = Scenarios;
-
-    //Puts together the columns of the dashboard-grid. Triggers once per row to place the guages.
-    //Takes in the current row number and title of the scenerio as parameters. Then each individual
-    //guage is added using a map along the list of guages. The current selected guage is given the
-    //CSS class name of guageOpen. All other guages will be styled as guageDefault. The guage is
-    //created with two nested functions. The function guageNumber decides which guage to use depending
-    //on if the number passed in is negative and takes in the number, row, and title of the guage for
-    //guage creation. The getDataValue function retrieves the number from the current dataset.
-    const col = (rowIndex, scenerioTitle) => {
-        const row = rowIndex;
-        const scenerio = scenerioTitle;
-        return (
-            guageList.map((guage, index) => (
-                <div className={guage.title === openGuage ? "guageOpen" : "guageDefault"} key={index}>
-                    {guageNumber(getDataValue(scenerio, guage.title), row, guage.title)}
-                </div>
-            ))
-        )
-    }
-
-    //Puts together the rows of the dashboard grid. Uses a map to go through every scenerio
-    //and generates a row for each. A dashboard row begins with a DashboardScenerioSelector
-    //object and then preceds with the list of user selected guages provided by the col
-    //function.
-    const rows = openScenerio.map((open, index) => (
-        <>
-            <div className="dashboard-scenerio-selector" key={index}>
-                <DashboardScenerioSelector
-                    test={list}
-                    current={open.title}
-                    curIndex={index}
-                    curOpen={openScenerio}
-                    className="dashboard-scenerio-selector"
-                />
+//Puts together the columns of the dashboard-grid. Triggers once per row to place the guages.
+//Takes in the current row number and title of the scenerio as parameters. Then each individual
+//guage is added using a map along the list of guages. The current selected guage is given the
+//CSS class name of guageOpen. All other guages will be styled as guageDefault. The guage is
+//created with two nested functions. The function guageNumber decides which guage to use depending
+//on if the number passed in is negative and takes in the number, row, and title of the guage for
+//guage creation. The getDataValue function retrieves the number from the current dataset.
+const col = (rowIndex, scenerioTitle, list, guage, updateSelection) => {
+    const row = rowIndex;
+    const scenerio = scenerioTitle;
+    const guageList = list;
+    const openGuage = guage;
+    return (
+        guageList.map((guage, index) => (
+            <div className={guage.title === openGuage ? "guageOpen" : "guageDefault"} key={index} onClick={() => updateSelection(guage.title)}>
+                {guageNumber(getDataValue(scenerio, guage.title), row, guage.title)}
             </div>
-            {col(index, open.title)}
-        </>
+        ))
+    )
+};
 
-    ))
+//Puts together the rows of the dashboard grid. Uses a map to go through every scenerio
+//and generates a row for each. A dashboard row begins with a DashboardScenerioSelector
+//object and then preceds with the list of user selected guages provided by the col
+//function.
+const rows = (Scenarios, openedScenerios, guages, openedGuage, updateSelection) => {
+    const list = Scenarios;
+    const openedScene = openedScenerios;
+    const guageLists = guages;
+    const openGuages = openedGuage;
+    const updateSelect = updateSelection;
+    return (
+        openedScene.map((open, index) => (
+            <>
+                <div className="dashboard-scenerio-selector" key={index}>
+                    <DashboardScenerioSelector
+                        scenerios={list}
+                        current={open.title}
+                        curIndex={index}
+                        curOpen={openedScene}
+                        className="dashboard-scenerio-selector"
+                    />
+                </div>
+                {col(index, open.title, guageLists, openGuages, updateSelect)}
+            </>
+        ))
+    )
+};
 
+function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage, updateSelection }) {
+    const openScenerios = openScenerio;
+    const ScenarioList = Scenarios;
+    const guageLists = guageList;
+    const openGage = openGuage;
+    const updateSelect = updateSelection;
     //Returns the completed dashboard grid.
     return (
-        <div id="dash-grid" className="dashboard-data-grid">
-            {rows}
+        <div className="dashboard-data-grid">
+            {rows(ScenarioList, openScenerios, guageLists, openGage, updateSelect)}
         </div>
     );
 }
 
-export function updateGrid() {
-    let grid = document.querySelector("dash-grid");
-    //grid.innerHTML = rows;
+function mapDispatchToProps(dispatch) {
+    return {
+        updateSelection: (openGuage) => dispatch(setdashboardSelection(openGuage)),
+    };
 }
 
 //Gets open scenerios, open guages, and the current selected guage from storage.
 function mapStateToProps(state) {
     return {
+        openGuage: state.dashboardSelection,
         openScenerio: state.scenerios,
         guageList: state.guages,
-        openGuage: state.currentGuage,
     };
 }
 
-export default connect(mapStateToProps)(DashboardScenerioRows);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardScenerioRows);

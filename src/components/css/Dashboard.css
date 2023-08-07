@@ -127,6 +127,9 @@
   --bs-btn-padding-x: 0.25rem;
 }
 
+.dropdown btn-group {
+  width: 20vw;
+}
 .dashboard-data-grid {
   position: relative;
   display: grid;
@@ -136,14 +139,40 @@
   grid-template-columns: auto repeat(6, 1fr);
   grid-template-rows: repeat(2, auto);
   column-gap: 4px;
-  row-gap: 10px;
-  margin-top: 7%;
-  margin-bottom: 10%;
+  row-gap: 0px;
+  margin-top: 2%;
+  margin-bottom: 2%;
   justify-items: center;
   align-items: center;
 }
 
 .guageText {
   text-align: center;
-  font-size: 60%;
+  font-size: 1.25vw;
+  margin-bottom: 10%;
+}
+
+.guageOpen {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(127, 127, 127);
+}
+
+.guageDefault {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.selection-divider {
+  position: relative;
+  margin: auto;
+  height: 40px;
+  border-radius: 9px;
+  background-color: black;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: pre;
+  font-family: Arial, sans-serif;
 }

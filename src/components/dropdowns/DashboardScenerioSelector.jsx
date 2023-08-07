@@ -4,10 +4,9 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { setScenerios } from "../Store";
 import { connect } from 'react-redux';
 import Dropdown from 'react-bootstrap/Dropdown';
-import updateGrid from './DashboardScenerioRows'
 
-function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScenerios }) {
-    const list = test;
+function DashboardScenerioSelector({curIndex, curOpen, scenerios, current, updateScenerios}) {
+    const list = scenerios;
     const starting = current;
     const cIndex= curIndex;
     const cOpen = curOpen;

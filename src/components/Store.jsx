@@ -6,6 +6,7 @@ const initialState = {
   dataset: "foresight_v1",
   startDate: 2015,
   endDate: 2100,
+  dashboardSelection: "yield",
   scenerios: [
     {
       title: "Scenerio X",
@@ -35,13 +36,14 @@ const initialState = {
     {
       title: "gdp"
     }
-  ],
-  currentGuage: "yields"
+  ]
 };
 
 // Define a reducer function to update the state
 function reducer(state = initialState, action) {
   switch (action.type) {
+    case 'dashboardSelection':
+      return { ...state, dashboardSelection: action.payload };
     case 'toggleOpen':
       return { ...state, open: state.open ? 0 : 1 };
     case 'setDataset':
@@ -54,11 +56,14 @@ function reducer(state = initialState, action) {
       return { ...state, scenerios: action.payload };
     case 'setGuages':
       return { ...state, guages: action.payload };
-    case 'setCurrentGuage':
-      return { ...state, currentGuage: action.payload };
     default:
       return state;
   }
+}
+
+// Change currently selected guage
+export function setdashboardSelection(num) {
+  return { type: 'dashboardSelection', payload: num };
 }
 
 // Action creator function to update the dataset
