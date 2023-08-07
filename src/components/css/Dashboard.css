@@ -161,6 +161,7 @@
 .guageDefault {
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .selection-divider {
