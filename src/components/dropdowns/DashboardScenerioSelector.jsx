@@ -16,7 +16,6 @@ function DashboardScenerioSelector({curIndex, curOpen, test, current, updateScen
     const handlePress = (scenerioTitle) => {
         setValue(scenerioTitle);
         updateScenerios(cIndex, scenerioTitle, cOpen);
-        updateGrid();
     }
 
     //Maps the dropdown menu. Takes in the vector of all scenerios and creates 

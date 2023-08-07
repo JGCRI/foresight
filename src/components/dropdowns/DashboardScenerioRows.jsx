@@ -280,11 +280,11 @@ function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage }
             {rows}
         </div>
     );
+}
 
-    function updateGrid() {
-        let grid = document.querySelector("dash-grid");
-        grid.innerHTML = rows;
-    }
+export function updateGrid() {
+    let grid = document.querySelector("dash-grid");
+    //grid.innerHTML = rows;
 }
 
 //Gets open scenerios, open guages, and the current selected guage from storage.
