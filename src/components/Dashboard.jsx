@@ -7,7 +7,7 @@ import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
 import { MdError, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
-import {FaThermometerHalf} from "react-icons/fa"
+import { FaThermometerHalf } from "react-icons/fa"
 import './css/Dashboard.css';
 
 export const getIcon = (selection) => {

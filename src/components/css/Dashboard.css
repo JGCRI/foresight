@@ -149,6 +149,20 @@
   background-color: rgb(127, 127, 127);
 }
 
+.guageOpenTop {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(127, 127, 127);
+  border-radius: 10% 10% 0 0;
+}
+
+.guageOpenBottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(127, 127, 127);
+  border-radius: 0 0 10% 10%;
+}
+
 .guageDefault {
   padding-top: 10px;
   padding-bottom: 10px;

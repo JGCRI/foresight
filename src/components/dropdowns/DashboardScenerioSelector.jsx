@@ -204,7 +204,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         updateScenerios(cIndex, scenerioTitle, cOpen);
     }
 
-    
+
 
     //This function gets data from a current dummy set. It searches the dummy
     //set for a parameter matching the passed in scenerio and guage title.
@@ -255,10 +255,25 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     //created with two nested functions. The function guageNumber decides which guage to use depending
     //on if the number passed in is negative and takes in the number, row, and title of the guage for
     //guage creation. The getDataValue function retrieves the number from the current dataset.
+
+    const getGuageCSS = (title) => {
+        if (title === openGuages) {
+            switch (cIndex) {
+                case 0:
+                    return "guageOpenTop";
+                case 1:
+                    return "guageOpenBottom";
+                default:
+                    return "guageOpen";
+            }
+        }
+        return "guageDefault";
+    }
+
     const col = () => {
         return (
             guageLists.map((guage, index) => (
-                <div className={guage.title === openGuages ? "guageOpen" : "guageDefault"} key={index} onClick={() => updateSelect(guage.title)}>
+                <div className={getGuageCSS(guage.title)} key={index} onClick={() => updateSelect(guage.title)}>
                     {guageNumber(getDataValue(guage.title), guage.title)}
                 </div>
             ))
@@ -277,7 +292,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
 
     return (
         <>
-            <Dropdown as={ButtonGroup} className = {"dashboard-scenerio-selector"}>
+            <Dropdown as={ButtonGroup} className={"dashboard-scenerio-selector"}>
                 <Button variant="outline-light">{value}</Button>
                 <Dropdown.Toggle
                     split
