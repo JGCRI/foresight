@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { FiMail, FiAlertCircle, FiMessageCircle } from "react-icons/fi";
-import './css/Help.css';
+import styles from './css/Help.module.css';
 
 function Help() {
   return (
@@ -19,18 +19,18 @@ function Help() {
           <div className="page-text">
             <ul>
               <li>            
-                  <span className="link-text">Email</span>
+                  <span className={styles.linkText}>Email</span>
                 <a href="mailto:zarrar.khan@pnnl.gov" target="_blank" rel="noreferrer"> <FiMail size={30} /> zarrar.khan@pnnl.gov</a>
               </li>
               <li>
-                  <span className="link-text">Post an</span>
+                  <span className={styles.linkText}>Post an</span>
                 <a href="https://github.com/JGCRI/foresight/issues" target="_blank" rel="noreferrer"> <FiAlertCircle size={30} /> issue</a>
-                <span className="link-text">on Foresight's GitHub page</span>
+                <span className={styles.linkText}>on Foresight's GitHub page</span>
               </li>
               <li>
-                  <span className="link-text">Start a</span>
+                  <span className={styles.linkText}>Start a</span>
                 <a href="https://github.com/JGCRI/foresight/discussions" target="_blank" rel="noreferrer"> <FiMessageCircle size={30} />discussion</a>
-                <span className="link-text">on Foresight's GitHub discussion page</span>
+                <span className={styles.linkText}>on Foresight's GitHub discussion page</span>
               </li>
             </ul>
           </div>
