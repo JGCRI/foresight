@@ -21,9 +21,8 @@ const rows = (Scenarios, openedScenerios, guages, openedGuage, updateSelection) 
                 current={open.title}
                 curIndex={index}
                 curOpen={openedScene}
-                className="dashboard-scenerio-selector"
                 guages={guageLists}
-                openGuageList={openGuages}
+                openGuage={openGuages}
                 update={updateSelect}
             />
         ))

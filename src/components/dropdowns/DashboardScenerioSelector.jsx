@@ -6,16 +6,15 @@ import { connect } from 'react-redux';
 import ScenerioGuage from "../guages/ScenerioGuage"
 import ScenerioGuageNegative from "../guages/ScenerioGuageNegative"
 import Dropdown from 'react-bootstrap/Dropdown';
-import JustGage from "justgage";
 
-function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuageList, update }) {
-    const list = scenerios;
-    const cIndex = curIndex;
-    const cOpen = curOpen;
-    const guageLists = guages;
-    const openGuages = openGuageList;
-    const updateSelect = update;
-    const [value, setValue] = useState(current);
+function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update }) {
+    const list = scenerios; //List of all possible scenerios
+    const cIndex = curIndex; //Number of current row
+    const cOpen = curOpen; //Currently open scenerios
+    const guageLists = guages; //All open guages
+    const openGuages = openGuage; //Currently selected guage category
+    const updateSelect = update; //Function to update selected guage
+    const [value, setValue] = useState(current); //Currently selected scenerio
 
     const dummyData = [
         {
@@ -203,11 +202,6 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     const handlePress = (scenerioTitle) => {
         setValue(scenerioTitle);
         updateScenerios(cIndex, scenerioTitle, cOpen);
-        //var gage = new JustGage({id: "yields0"})
-        //guageLists.map((guage) => (
-        //    gage = new JustGage({id: '' + guage.title + cIndex}),
-        //    gage.refresh(getDataValue(guage.title))
-        //))
     }
 
     
@@ -233,14 +227,13 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     //values, the guage if which is [GUAGE_TITLE][ROW_NUMBER] with no spaces, the text
     //to display below the guage which is given by the guage title, and the value of the
     //guage, given by the number, num.
-    const guageNumber = (number, rowNum, guageTitle) => {
+    const guageNumber = (number, guageTitle) => {
         const num = number;
-        const row = rowNum;
         const title = guageTitle;
         if (number < 0) {
             return (
                 <ScenerioGuageNegative
-                    guageText={'' + title + row}
+                    guageText={'' + title + cIndex}
                     bottomText={title}
                     guageValue={num}
                 />
@@ -248,7 +241,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         }
         return (
             <ScenerioGuage
-                guageText={'' + title + row}
+                guageText={'' + title + cIndex}
                 bottomText={title}
                 guageValue={num}
             />
@@ -262,14 +255,11 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     //created with two nested functions. The function guageNumber decides which guage to use depending
     //on if the number passed in is negative and takes in the number, row, and title of the guage for
     //guage creation. The getDataValue function retrieves the number from the current dataset.
-    const col = (rowIndex, list, guage, updateSelection) => {
-        const row = rowIndex;
-        const guageList = list;
-        const openGuage = guage;
+    const col = () => {
         return (
-            guageList.map((guage, index) => (
-                <div className={guage.title === openGuage ? "guageOpen" : "guageDefault"} key={index} onClick={() => updateSelection(guage.title)}>
-                    {guageNumber(getDataValue(guage.title), row, guage.title)}
+            guageLists.map((guage, index) => (
+                <div className={guage.title === openGuages ? "guageOpen" : "guageDefault"} key={index} onClick={() => updateSelect(guage.title)}>
+                    {guageNumber(getDataValue(guage.title), guage.title)}
                 </div>
             ))
         )
@@ -287,21 +277,18 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
 
     return (
         <>
-            <Dropdown as={ButtonGroup}>
+            <Dropdown as={ButtonGroup} className = {"dashboard-scenerio-selector"}>
                 <Button variant="outline-light">{value}</Button>
-
                 <Dropdown.Toggle
                     split
                     variant="outline-warning"
                     id="dropdown-split-basic"
-
                 />
-
                 <Dropdown.Menu>
                     {links}
                 </Dropdown.Menu>
             </Dropdown>
-            {col(cIndex, guageLists, openGuages, updateSelect)}
+            {col()}
         </>
     );
 }

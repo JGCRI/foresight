@@ -85,7 +85,7 @@
 
   /*Switch when width is 610px*/
   .date-select-row {
-    width: 100%;
+    width:420px;
     text-indent: 0px !important;
   }
 }
@@ -93,12 +93,6 @@
 @media screen and (max-width: 450px) {
   .date-select-text {
     display: none;
-  }
-}
-
-@media screen and (max-width: 544px) {
-  .date-select-row {
-    --bs-gutter-x: 0rem;
   }
 }
 
@@ -127,9 +121,6 @@
   --bs-btn-padding-x: 0.25rem;
 }
 
-.dropdown btn-group {
-  width: 20vw;
-}
 .dashboard-data-grid {
   position: relative;
   display: grid;
@@ -172,7 +163,7 @@
   border-radius: 9px;
   background-color: black;
   align-items: center;
-  color: white;
+  color: rgb(254, 254, 254);
   font-size: 16px;
   font-weight: 600;
   white-space: pre;
@@ -184,4 +175,19 @@
   font-size: 16px;
   font-weight: 400;
   justify-items: center;
+}
+
+@media screen and (max-width: 822px) {
+  .dashboard-data-grid {
+    grid-template-columns: auto repeat(6, 80px);
+    grid-template-rows: repeat(2, 80px);
+  }
+
+  .selection-divider {
+    width: 618px;
+  }
+
+  .guageText {
+    font-size: 10px;
+  }
 }

@@ -11,7 +11,6 @@ import {FaThermometerHalf} from "react-icons/fa"
 import './css/Dashboard.css';
 
 export const getIcon = (selection) => {
-  console.log(selection);
   switch (selection) {
     case "runoff":
       return <GiWaterDrop />;
