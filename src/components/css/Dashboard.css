@@ -166,6 +166,7 @@
 
 .selection-divider {
   position: relative;
+  text-align: center;
   margin: auto;
   height: 40px;
   border-radius: 9px;
@@ -176,4 +177,11 @@
   font-weight: 600;
   white-space: pre;
   font-family: Arial, sans-serif;
+}
+
+.dashboard-graph-titles {
+  color: rgb(187, 155, 49);
+  font-size: 16px;
+  font-weight: 400;
+  justify-items: center;
 }

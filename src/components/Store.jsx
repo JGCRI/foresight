@@ -6,7 +6,7 @@ const initialState = {
   dataset: "foresight_v1",
   startDate: 2015,
   endDate: 2100,
-  dashboardSelection: "yield",
+  dashboardSelection: "yields",
   scenerios: [
     {
       title: "Scenerio X",

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Gauge from "justgage";
+import { getIcon } from "../Dashboard";
 
 
 const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
@@ -42,11 +43,11 @@ const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
         // const refreshValue = generateRandomValue(value, type);
         // gauge.refresh(refreshValue);
         // }, GAUGE_CONFIG[type].interval);
-    }, []);
+    }, [Value]);
     return (
         <>
             <div id={Text} />
-            <div className="guageText"> {Bottom}</div>
+            <div className="guageText"> {getIcon(Bottom)}  {Bottom}</div>
         </>
     );
 };

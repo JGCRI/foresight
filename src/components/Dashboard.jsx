@@ -4,7 +4,31 @@ import SidebarDashboard from "./SidebarDashboard.jsx";
 import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
+import { MdError, MdGroups } from "react-icons/md";
+import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
+import { TbCoins } from "react-icons/tb";
+import {FaThermometerHalf} from "react-icons/fa"
 import './css/Dashboard.css';
+
+export const getIcon = (selection) => {
+  console.log(selection);
+  switch (selection) {
+    case "runoff":
+      return <GiWaterDrop />;
+    case "yields":
+      return <GiCorn />;
+    case "temp":
+      return <FaThermometerHalf />;
+    case "emiss":
+      return <GiFactory />;
+    case "pop":
+      return <MdGroups />;
+    case "gdp":
+      return <TbCoins />;
+    default:
+      return <MdError />;
+  }
+}
 
 function Dashboard({ open, selection, toggleOpen }) {
 
@@ -58,7 +82,20 @@ function Dashboard({ open, selection, toggleOpen }) {
             Scenarios={scenarios}
           />
           <Row className="selection-divider">
-            SELECTED:   {selection}
+            <div>
+              SELECTED:    {selection.toUpperCase()}   {getIcon(selection)}
+            </div>
+          </Row>
+          <Row>
+            <Col className="dashboard-graph-titles">
+              Global Trends
+            </Col>
+            <Col className="dashboard-graph-titles">
+              Spatial Composition
+            </Col>
+            <Col className="dashboard-graph-titles">
+              Top 10 Countries -- By Subsector
+            </Col>
           </Row>
         </Container>
       </div>
@@ -69,7 +106,7 @@ function Dashboard({ open, selection, toggleOpen }) {
 function mapStateToProps(state) {
   return {
     open: state.open,
-    selection: state.dashboardSelection.toUpperCase(),
+    selection: state.dashboardSelection,
   };
 }
 
