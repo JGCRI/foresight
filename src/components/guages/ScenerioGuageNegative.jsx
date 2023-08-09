@@ -43,7 +43,7 @@ const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
         // const refreshValue = generateRandomValue(value, type);
         // gauge.refresh(refreshValue);
         // }, GAUGE_CONFIG[type].interval);
-    }, [Value]);
+    }, [Value, Text]);
     return (
         <>
             <div id={Text} />
