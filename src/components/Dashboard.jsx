@@ -72,11 +72,9 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
         updateEnd(searchParams.get("end"));
       }
     }
-    console.log(searchParams.get("selected"));
     if(searchParams.has("selected")) {
       for(var i = 0; i < openGuages.length; i++) {
         if(openGuages.at(i).title === searchParams.get("selected")) {
-          console.log("!");
           updateCurrentGuage(searchParams.get("selected"));
         }
       }

@@ -4,8 +4,9 @@ import { ResponsiveAreaBump } from "@nivo/bump";
 const AreaBump = ({data}) => (
   <ResponsiveAreaBump
     data={data}
-    margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
+    margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
     spacing={8}
+    endLabel={false}
     colors={{ scheme: "nivo" }}
     blendMode="multiply"
     defs={[
@@ -43,7 +44,6 @@ const AreaBump = ({data}) => (
       },
     ]}
     startLabel="id"
-    endLabel="id"
     axisTop={{
       tickSize: 5,
       tickPadding: 5,
