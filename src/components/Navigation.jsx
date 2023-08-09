@@ -12,6 +12,7 @@ import { RiTeamFill } from "react-icons/ri";
 import { MdHelp } from "react-icons/md";
 import { connect } from "react-redux";
 import { setDataset } from "./Store";
+import {updateHash} from './Dashboard';
 import './css/Navigation.css';
 
 function Navigation({ dataset, updateDataset }) {
@@ -136,6 +137,7 @@ function Navigation({ dataset, updateDataset }) {
 }
 
 const mapStateToProps = (state) => {
+  updateHash("dataset", state.dataset);
   return {
     dataset: state.dataset,
   };

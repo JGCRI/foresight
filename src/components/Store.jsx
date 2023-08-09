@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-
+import {updateHash} from './Dashboard';
 // Define the initial state
 const initialState = {
   open: 1,
@@ -61,23 +61,30 @@ function reducer(state = initialState, action) {
   }
 }
 
+export function getHash() {
+
+}
 // Change currently selected guage
 export function setdashboardSelection(num) {
+  updateHash("selected", num);
   return { type: 'dashboardSelection', payload: num };
 }
 
 // Action creator function to update the dataset
 export function setDataset(dataset) {
+  updateHash("dataset", dataset);
   return { type: 'setDataset', payload: dataset };
 }
 
 // Change dashboard start date
 export function setStartDate(date) {
+  updateHash("start", date);
   return { type: 'setStartDate', payload: date };
 }
 
 // Change dashboard end date
 export function setEndDate(date) {
+  updateHash("end", date);
   return { type: 'setEndDate', payload: date };
 }
 

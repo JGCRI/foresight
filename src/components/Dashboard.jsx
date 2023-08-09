@@ -5,12 +5,12 @@ import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
 import DashboardGraphs from "./DashboardGraphs.jsx";
-import { MdOutlineAddChart, MdError, MdGroups } from "react-icons/md";
+import { MdError, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
+import { setStartDate, setEndDate } from "./Store";
 import './css/Dashboard.css';
-import { setStartDate, setEndDate } from "./Store.jsx";
 
 export const getIcon = (selection) => {
   switch (selection) {
@@ -32,22 +32,15 @@ export const getIcon = (selection) => {
 }
 
 export const updateHash = (name, value) => {
-  var hash = window.location;
-  hash.search = hash.hash.substring(1);
-  hash.searchParams.set(name, value);
-  window.location.hash=hash.searchParams;
+  var searchParams = new URLSearchParams(window.location.hash.substring(1));
+  if (!searchParams.has(name))
+    searchParams.append(name, value);
+  else
+    searchParams.set(name, value);
+  window.location.hash = searchParams.toString();
 }
-/*
-export const processDashUrl = (updateS, updateE) => {
-  const locationStart = window.location.hash.indexOf("sd=");
-  const locationEnd = window.location.hash.indexOf("ed=");
-  if (locationStart != -1)
-    updateS(Number(window.location.hash.substring(locationStart, locationStart + 4)));
-  if (locationEnd != -1)
-    updateE(Number(window.location.hash.substring(locationStart, locationStart + 4)));
-}
-*/
-function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio }) {
+
+function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio, updateStart, updateEnd, start, end }) {
   const scenarios = [
     {
       title: "Scenerio X",
@@ -69,9 +62,22 @@ function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio }) {
     }
   ];
 
+  const setDataParameters = () => {
+    var searchParams = new URLSearchParams(window.location.hash.substring(1));
+    if (searchParams.has("start") && searchParams.has("end")) {
+      const newStart = Number(searchParams.get("start"));
+      const newEnd = Number(searchParams.get("end"));
+      if(newStart > 0 && newEnd > 0 && newStart < newEnd) {
+        updateStart(searchParams.get("start"));
+        updateEnd(searchParams.get("end"));
+      }
+    }
+  }
+
   return (
     <div className="body-page-dark">
       <SidebarDashboard></SidebarDashboard>
+      {setDataParameters()}
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="date-select-row">
@@ -112,16 +118,23 @@ function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio }) {
 }
 
 function mapStateToProps(state) {
+  updateHash("start", state.startDate);
+  updateHash("end", state.endDate);
+  updateHash("selected", state.dashboardSelection);
   return {
     open: state.open,
     selection: state.dashboardSelection,
     scenerios: state.scenerios,
+    start: state.startDate,
+    end: state.endDate,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     toggleOpen: () => dispatch({ type: "toggleOpen" }),
+    updateStart: (start) => dispatch(setStartDate(start)),
+    updateEnd: (end) => dispatch(setEndDate(end)),
   };
 }
 
