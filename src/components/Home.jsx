@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import './css/Home.css';
+import background from "../assets/img/globe_stars.jpg";
 
 const N = 50;
 const arcsData = [...Array(N).keys()].map(() => ({
@@ -84,7 +85,7 @@ function Home() {
           ref={globeElement}
           enablePointerInteraction={true}
           backgroundColor={"rgba(0,0,0,0)"} // transparent background
-          backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+          backgroundImageUrl={background}
         />
       </div>
       <div className="home-title">Foresight

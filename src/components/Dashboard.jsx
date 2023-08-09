@@ -30,6 +30,13 @@ export const getIcon = (selection) => {
       return <MdError />;
   }
 }
+
+export const updateHash = (name, value) => {
+  var hash = window.location;
+  hash.search = hash.hash.substring(1);
+  hash.searchParams.set(name, value);
+  window.location.hash=hash.searchParams;
+}
 /*
 export const processDashUrl = (updateS, updateE) => {
   const locationStart = window.location.hash.indexOf("sd=");
