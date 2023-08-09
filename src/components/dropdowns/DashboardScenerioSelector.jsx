@@ -261,7 +261,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
             switch (cIndex) {
                 case 0:
                     return "guageOpenTop";
-                case 1:
+                case cOpen.length - 1:
                     return "guageOpenBottom";
                 default:
                     return "guageOpen";

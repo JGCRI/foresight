@@ -4,11 +4,13 @@ import SidebarDashboard from "./SidebarDashboard.jsx";
 import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
-import { MdError, MdGroups } from "react-icons/md";
+import DashboardGraphs from "./DashboardGraphs.jsx";
+import { MdOutlineAddChart, MdError, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
 import './css/Dashboard.css';
+import { setStartDate, setEndDate } from "./Store.jsx";
 
 export const getIcon = (selection) => {
   switch (selection) {
@@ -28,9 +30,17 @@ export const getIcon = (selection) => {
       return <MdError />;
   }
 }
-
-function Dashboard({ open, selection, toggleOpen }) {
-
+/*
+export const processDashUrl = (updateS, updateE) => {
+  const locationStart = window.location.hash.indexOf("sd=");
+  const locationEnd = window.location.hash.indexOf("ed=");
+  if (locationStart != -1)
+    updateS(Number(window.location.hash.substring(locationStart, locationStart + 4)));
+  if (locationEnd != -1)
+    updateE(Number(window.location.hash.substring(locationStart, locationStart + 4)));
+}
+*/
+function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio }) {
   const scenarios = [
     {
       title: "Scenerio X",
@@ -54,7 +64,7 @@ function Dashboard({ open, selection, toggleOpen }) {
 
   return (
     <div className="body-page-dark">
-      <SidebarDashboard />
+      <SidebarDashboard></SidebarDashboard>
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="date-select-row">
@@ -86,15 +96,7 @@ function Dashboard({ open, selection, toggleOpen }) {
             </div>
           </Row>
           <Row>
-            <Col className="dashboard-graph-titles">
-              Global Trends
-            </Col>
-            <Col className="dashboard-graph-titles">
-              Spatial Composition
-            </Col>
-            <Col className="dashboard-graph-titles">
-              Top 10 Countries -- By Subsector
-            </Col>
+            <DashboardGraphs></DashboardGraphs>
           </Row>
         </Container>
       </div>
@@ -106,6 +108,7 @@ function mapStateToProps(state) {
   return {
     open: state.open,
     selection: state.dashboardSelection,
+    scenerios: state.scenerios,
   };
 }
 

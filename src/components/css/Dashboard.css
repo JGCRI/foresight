@@ -184,13 +184,31 @@
   font-family: Arial, sans-serif;
 }
 
-.dashboard-graph-titles {
+.graph-grid {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  font-size: 1vw;
+  font-weight: 600;
   color: rgb(187, 155, 49);
-  font-size: 16px;
-  font-weight: 400;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4px;
+  row-gap: 20px;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 2%;
   justify-items: center;
+  align-items: center;
 }
 
+.add-column {
+  position: relative;
+  font-size: 2vw;
+  font-weight: 600;
+  color: rgb(227, 255, 232);
+  align-items:start;
+  height: 2.1vw
+}
 @media screen and (max-width: 822px) {
   .dashboard-data-grid {
     grid-template-columns: auto repeat(6, 80px);
@@ -203,5 +221,9 @@
 
   .guageText {
     font-size: 10px;
+  }
+
+  .btn-group {
+    width:20%
   }
 }
