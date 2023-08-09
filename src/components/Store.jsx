@@ -72,7 +72,6 @@ export function setdashboardSelection(num) {
 
 // Action creator function to update the dataset
 export function setDataset(dataset) {
-  updateHash("dataset", dataset);
   return { type: 'setDataset', payload: dataset };
 }
 

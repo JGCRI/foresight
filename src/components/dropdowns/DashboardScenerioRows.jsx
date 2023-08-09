@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import DashboardScenerioSelector from "./DashboardScenerioSelector";
 import { setdashboardSelection } from "../Store";
+import {updateHash} from '../Dashboard';
 
 //Puts together the rows of the dashboard grid. Uses a map to go through every scenerio
 //and generates a row for each. A dashboard row begins with a DashboardScenerioSelector
@@ -29,12 +30,16 @@ const rows = (Scenarios, openedScenerios, guages, openedGuage, updateSelection) 
     )
 };
 
-function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage, updateSelection }) {
+function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage, updateSelection, startDate, endDate, dashboardSelection }) {
     const openScenerios = openScenerio;
     const ScenarioList = Scenarios;
     const guageLists = guageList;
     const openGage = openGuage;
     const updateSelect = updateSelection;
+
+    updateHash("start", startDate);
+    updateHash("end", endDate);
+    updateHash("selected", openGuage);
     //Returns the completed dashboard grid.
     return (
         <div className="dashboard-data-grid">
@@ -55,6 +60,8 @@ function mapStateToProps(state) {
         openGuage: state.dashboardSelection,
         openScenerio: state.scenerios,
         guageList: state.guages,
+        startDate: state.startDate,
+        endDate: state.endDate,
     };
 }
 

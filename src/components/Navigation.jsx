@@ -137,7 +137,6 @@ function Navigation({ dataset, updateDataset }) {
 }
 
 const mapStateToProps = (state) => {
-  updateHash("dataset", state.dataset);
   return {
     dataset: state.dataset,
   };

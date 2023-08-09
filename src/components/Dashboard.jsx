@@ -9,7 +9,7 @@ import { MdError, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
-import { setStartDate, setEndDate } from "./Store";
+import { setdashboardSelection, setStartDate, setEndDate } from "./Store";
 import './css/Dashboard.css';
 
 export const getIcon = (selection) => {
@@ -40,7 +40,7 @@ export const updateHash = (name, value) => {
   window.location.hash = searchParams.toString();
 }
 
-function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio, updateStart, updateEnd, start, end }) {
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, openGuages }) {
   const scenarios = [
     {
       title: "Scenerio X",
@@ -70,6 +70,15 @@ function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio, upd
       if(newStart > 0 && newEnd > 0 && newStart < newEnd) {
         updateStart(searchParams.get("start"));
         updateEnd(searchParams.get("end"));
+      }
+    }
+    console.log(searchParams.get("selected"));
+    if(searchParams.has("selected")) {
+      for(var i = 0; i < openGuages.length; i++) {
+        if(openGuages.at(i).title === searchParams.get("selected")) {
+          console.log("!");
+          updateCurrentGuage(searchParams.get("selected"));
+        }
       }
     }
   }
@@ -118,15 +127,11 @@ function Dashboard({ open, selection, scenerios, toggleOpen, addNewScenerio, upd
 }
 
 function mapStateToProps(state) {
-  updateHash("start", state.startDate);
-  updateHash("end", state.endDate);
-  updateHash("selected", state.dashboardSelection);
   return {
     open: state.open,
     selection: state.dashboardSelection,
     scenerios: state.scenerios,
-    start: state.startDate,
-    end: state.endDate,
+    openGuages: state.guages,
   };
 }
 
@@ -135,6 +140,7 @@ function mapDispatchToProps(dispatch) {
     toggleOpen: () => dispatch({ type: "toggleOpen" }),
     updateStart: (start) => dispatch(setStartDate(start)),
     updateEnd: (end) => dispatch(setEndDate(end)),
+    updateCurrentGuage: (guage) => dispatch(setdashboardSelection(guage)),
   };
 }
 
