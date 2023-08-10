@@ -12,16 +12,19 @@ const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
         prevGuage.destroy();
         new Gauge({
             id: Text,
-            value: Value,
+            value: (Math.max(0,Value+100)),
             hideValue: false,
             hideMinMax: true,
-            min: -100,
-            max: 0,
-            reverse: true,
+            min: 0,
+            max: 100,
+            reverse: false,
             symbol: "%",
             pointer: false,
+            textRenderer: function (value) {
+                return (Value + "%");
+            },
             startAnimationTime: 120,
-            startAnimationType: ">",
+            startAnimationType: "<",
             refreshAnimationTime: 120,
             refreshAnimationType: "bounce",
             showInnerShadow: true,
@@ -34,9 +37,10 @@ const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
             counter: true,
             valueFontColor: "#DADADA",
             valueFontFamily: "Geneva",
+            gaugeColor: "#f27e35",
             formatNumber: true,
             levelColors: [
-                "#f27e35"
+                "#edebeb"
             ],
         });
         // setInterval(() => {
