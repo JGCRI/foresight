@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import './css/Home.css';
-import background from "../assets/img/globe_stars.jpg";
+import background from "../assets/img/globe_stars_medium.jpg";
 
 const N = 50;
 const arcsData = [...Array(N).keys()].map(() => ({

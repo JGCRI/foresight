@@ -6,6 +6,7 @@
     width: 100vw;
     /**background-image: url(//unpkg.com/three-globe/example/img/night-sky.png);**/
     background-color: black !important;
+    background-image: url(../../assets/img/globe_stars_small.jpg);
   }
   
   .home-globe {
