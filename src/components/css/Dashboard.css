@@ -253,7 +253,7 @@
 @media screen and (max-width: 822px) {
   .dashboard-data-grid {
     justify-items: start;
-    grid-template-columns: 100px repeat(6, 80px);
+    grid-template-columns: auto repeat(6, 80px);
     grid-template-rows: repeat(2, 80px);
   }
 

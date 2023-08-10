@@ -37,6 +37,8 @@ function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage, 
     const openGage = openGuage;
     const updateSelect = updateSelection;
 
+    //Updates the hash value with the dashboard's current parameters. This is useful for auto-filling
+    //the URL when a user has opened up the dashboard for the first time or from another page.
     updateHash("start", startDate);
     updateHash("end", endDate);
     updateHash("selected", openGuage);
