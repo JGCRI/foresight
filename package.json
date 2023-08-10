@@ -68,7 +68,6 @@
     "react-router-dom": "^6.11.1",
     "react-scripts": "^5.0.1",
     "react-svg-gauge": "^1.0.10",
-    "react-virtualized-auto-sizer": "^1.0.20",
     "react-vis": "^1.12.1",
     "reaviz": "^14.6.0",
     "redux": "^4.2.1",
