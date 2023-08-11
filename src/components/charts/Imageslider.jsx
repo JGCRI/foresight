@@ -14,6 +14,10 @@ function Imageslider({ firstImage, secondImage, href, linkText }) {
             handle={<ReactCompareSliderHandle />}
             itemOne={<ReactCompareSliderImage src={firstImage} alt="First Image" />}
             itemTwo={<ReactCompareSliderImage src={secondImage} alt="Second Image" />}
+            style={{
+              height: '100%',
+              width: '100%'
+            }}
           />
           <div className="image-citation">
             Images from{" "}

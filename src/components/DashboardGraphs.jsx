@@ -4,6 +4,11 @@ import first_img from "../assets/img/rice_oli_2021247_lrg.jpg";
 import second_img from "../assets/img/rice_oli_2022259_lrg.jpg";
 import Bump from "./charts/Bump";
 import BarHorizontal from "./charts/BarHorizontal";
+import Choropleth from './charts/Choropleth';
+import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
+
+import DashboardChoropleth from './charts/DashboardChoropleth';
+import getDashboardData from "./DashboardDummyData";
 function DashboardGraphs() {
 
     const dataBar = [
@@ -433,27 +438,6 @@ function DashboardGraphs() {
                     href="https://earthobservatory.nasa.gov/images/150412/a-rough-year-for-rice-in-california"
                     linkText="NASA"
                 />
-                {!dataBar ? (
-                    "Loading..."
-                ) : (
-                    <BarHorizontal data={dataBar} />
-                )}
-            </div>
-            <div className="graph-grid-small">
-                <div>Global Trends</div>
-                {!dataBump ? (
-                    "Loading..."
-                ) : (
-                    <Bump data={dataBump} />
-                )}
-                <div>Spatial Composition</div>
-                <Imageslider
-                    firstImage={first_img}
-                    secondImage={second_img}
-                    href="https://earthobservatory.nasa.gov/images/150412/a-rough-year-for-rice-in-california"
-                    linkText="NASA"
-                />
-                <div>Top 10 Countries -- By Subsector</div>
                 {!dataBar ? (
                     "Loading..."
                 ) : (

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import SidebarDashboard from "./SidebarDashboard.jsx";
 import Sankey from "./charts/Sankey";
 import MapPoint from "./maps/MapPoint";
-import CustomGauge from "./charts/CustomGauge.jsx";
+import ScenerioGuage from "./guages/ScenerioGuage.jsx";
 
 const countryData = [
   {
@@ -43,7 +43,10 @@ function Test({ open, toggleOpen }) {
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="row">
-              <CustomGauge height={"400px"} value={gaugeValue} />
+            <ScenerioGuage
+              guageText={'chart_test'}
+              guageValue={60}
+            />
           </Row>
           <Row className="row">
             <Col>

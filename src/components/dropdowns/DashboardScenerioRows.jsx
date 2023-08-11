@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import DashboardScenerioSelector from "./DashboardScenerioSelector";
 import { setdashboardSelection } from "../Store";
-import {updateHash} from '../Dashboard';
+import { updateHash } from '../Dashboard';
 
 //Puts together the rows of the dashboard grid. Uses a map to go through every scenerio
 //and generates a row for each. A dashboard row begins with a DashboardScenerioSelector
@@ -39,9 +39,12 @@ function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage, 
 
     //Updates the hash value with the dashboard's current parameters. This is useful for auto-filling
     //the URL when a user has opened up the dashboard for the first time or from another page.
-    updateHash("start", startDate);
-    updateHash("end", endDate);
-    updateHash("selected", openGuage);
+    useEffect(() => {
+        updateHash("start", startDate);
+        updateHash("end", endDate);
+        updateHash("selected", openGuage);
+    }, [startDate, endDate, openGuage]);
+
     //Returns the completed dashboard grid.
     return (
         <div className="dashboard-data-grid">
