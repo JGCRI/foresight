@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import Gauge from "justgage";
-import { getIcon } from "../Dashboard";
 
 
-const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
+const ScenerioGuageNegative = ({ guageText, guageValue }) => {
     const Text = guageText;
-    const Bottom = bottomText;
     const Value = guageValue;
     useEffect(() => {
         var prevGuage = new Gauge({id:Text});
@@ -49,10 +47,7 @@ const ScenerioGuageNegative = ({ guageText, bottomText, guageValue }) => {
         // }, GAUGE_CONFIG[type].interval);
     }, [Value, Text]);
     return (
-        <>
-            <div id={Text} />
-            <div className="guageText"> {getIcon(Bottom)}  {Bottom}</div>
-        </>
+        <div id={Text} />
     );
 };
 

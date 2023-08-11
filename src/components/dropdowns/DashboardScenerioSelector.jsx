@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import ScenerioGuage from "../guages/ScenerioGuage"
 import ScenerioGuageNegative from "../guages/ScenerioGuageNegative"
 import Dropdown from 'react-bootstrap/Dropdown';
+import { getIcon } from "../Dashboard";
 
 function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update }) {
     const list = scenerios; //List of all possible scenerios
@@ -232,19 +233,23 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         const title = guageTitle;
         if (number < 0) {
             return (
-                <ScenerioGuageNegative
-                    guageText={'' + title + cIndex}
-                    bottomText={title}
-                    guageValue={num}
-                />
+                <>
+                    <ScenerioGuageNegative
+                        guageText={'' + title + cIndex}
+                        guageValue={num}
+                    />
+                    <div className="guageText"> {getIcon(title)}  {title}</div>
+                </>
             )
         }
         return (
-            <ScenerioGuage
-                guageText={'' + title + cIndex}
-                bottomText={title}
-                guageValue={num}
-            />
+            <>
+                <ScenerioGuage
+                    guageText={'' + title + cIndex}
+                    guageValue={num}
+                />
+                <div className="guageText"> {getIcon(title)}  {title}</div>
+            </>
         )
     };
 

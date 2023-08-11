@@ -125,6 +125,7 @@
   position: relative;
   display: grid;
   width: 100%;
+  max-width: 1000px;
   font-family: Geneva, sans-serif;
   color:rgb(218, 218, 218);
   grid-template-columns: auto repeat(6, 1fr);
