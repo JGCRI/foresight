@@ -37,12 +37,20 @@ function DashboardScenerioRows({ Scenarios, openScenerio, guageList, openGuage, 
     const openGage = openGuage;
     const updateSelect = updateSelection;
 
+    function getScenerioHash() {
+        var scenerioHash = openScenerios.at(0).title;
+        for(var i = 1; i < openScenerios.length; i++) {
+            scenerioHash = scenerioHash + "," + openScenerios.at(i).title;
+        }
+        return scenerioHash
+    }
     //Updates the hash value with the dashboard's current parameters. This is useful for auto-filling
     //the URL when a user has opened up the dashboard for the first time or from another page.
     useEffect(() => {
         updateHash("start", startDate);
         updateHash("end", endDate);
         updateHash("selected", openGuage);
+        updateHash("scenerios", getScenerioHash());
     }, [startDate, endDate, openGuage]);
 
     //Returns the completed dashboard grid.

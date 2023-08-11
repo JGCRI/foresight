@@ -9,7 +9,7 @@ import { MdError, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
-import { setdashboardSelection, setStartDate, setEndDate } from "./Store";
+import { setdashboardSelection, setStartDate, setEndDate, setScenerios } from "./Store";
 import './css/Dashboard.css';
 
 export const getIcon = (selection) => {
@@ -40,7 +40,17 @@ export const updateHash = (name, value) => {
   window.location.hash = searchParams.toString();
 }
 
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, openGuages }) {
+export const updateListHash = (name, index, value) => {
+  var searchParams = new URLSearchParams(window.location.hash.substring(1));
+  if (searchParams.has(name)) {
+    let arr = searchParams.get(name).toString().split(",");
+    arr[index] = value;
+    searchParams.set(name, arr.join(","));
+    window.location.hash = searchParams.toString();
+  }
+}
+
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages }) {
   const scenarios = [
     {
       title: "Scenerio X",
@@ -78,6 +88,11 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
           updateCurrentGuage(searchParams.get("selected"));
         }
       }
+    }
+    if(searchParams.has("scenerios")) {
+      let arr = searchParams.get("scenerios").toString().split(",");
+      for(var i = 0; i < openScenerios.length; i++)
+        updateScenerios(i, arr[i], openScenerios);
     }
   }
 
@@ -128,7 +143,7 @@ function mapStateToProps(state) {
   return {
     open: state.open,
     selection: state.dashboardSelection,
-    scenerios: state.scenerios,
+    openScenerios: state.scenerios,
     openGuages: state.guages,
   };
 }
@@ -139,6 +154,7 @@ function mapDispatchToProps(dispatch) {
     updateStart: (start) => dispatch(setStartDate(start)),
     updateEnd: (end) => dispatch(setEndDate(end)),
     updateCurrentGuage: (guage) => dispatch(setdashboardSelection(guage)),
+    updateScenerios: (index, name, scenerios) => dispatch(setScenerios(index, name, scenerios)),
   };
 }
 

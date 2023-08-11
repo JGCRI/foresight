@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import {updateHash} from './Dashboard';
+import {updateHash, updateListHash} from './Dashboard';
 // Define the initial state
 const initialState = {
   open: 1,
@@ -89,6 +89,7 @@ export function setEndDate(date) {
 
 // Change dashboard scenerios array
 export function setScenerios(index, newTitle, scenerios) {
+  updateListHash("scenerios", index, newTitle);
   scenerios.at(index).title = newTitle;
   return { type: 'setScenerios', payload: scenerios };
 }
