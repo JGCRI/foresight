@@ -1,43 +1,24 @@
 import React from "react";
-import { ResponsiveBump } from '@nivo/bump'
+import { ResponsiveLine } from '@nivo/line'
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-const MyResponsiveBump = ({ data }) => (
+const Line = ({ data }) => (
     <div className="nivo-wrapper">
-        <ResponsiveBump
+        <ResponsiveLine
             data={data}
-            colors={{ scheme: 'spectral' }}
-            lineWidth={3}
-            activeLineWidth={6}
-            inactiveLineWidth={3}
-            inactiveOpacity={0.15}
-            pointSize={10}
-            activePointSize={12}
-            inactivePointSize={0}
-            pointColor={{ theme: 'background' }}
-            pointBorderWidth={3}
-            activePointBorderWidth={3}
-            pointBorderColor={{ from: 'serie.color' }}
-            axisTop={null}
-            axisBottom={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: '',
-                legendPosition: 'middle',
-                legendOffset: 32
+            margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+            xScale={{
+                type: 'linear',
+                min: 'auto',
+                max: 'auto',
+                stacked: false,
+                reverse: false
             }}
-            axisLeft={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: 'ranking',
-                legendPosition: 'middle',
-                legendOffset: -40
+            yScale={{
+                type: 'linear',
+                min: 'auto',
+                max: 'auto',
+                stacked: false,
+                reverse: false
             }}
             theme={{
                 "text": {
@@ -49,26 +30,26 @@ const MyResponsiveBump = ({ data }) => (
                 "axis": {
                     "domain": {
                         "line": {
-                            "stroke": "#ffffff",
+                            "stroke": "#DADADA",
                             "strokeWidth": 1
                         }
                     },
                     "legend": {
                         "text": {
                             "fontSize": 12,
-                            "fill": "#ffffff",
+                            "fill": "#DADADA",
                             "outlineWidth": 0,
                             "outlineColor": "transparent"
                         }
                     },
                     "ticks": {
                         "line": {
-                            "stroke": "#ffffff",
+                            "stroke": "#DADADA",
                             "strokeWidth": 1
                         },
                         "text": {
                             "fontSize": 11,
-                            "fill": "#ffffff",
+                            "fill": "#DADADA",
                             "outlineWidth": 0,
                             "outlineColor": "transparent"
                         }
@@ -76,7 +57,7 @@ const MyResponsiveBump = ({ data }) => (
                 },
                 "grid": {
                     "line": {
-                        "stroke": "#ffffff",
+                        "stroke": "#DADADA",
                         "strokeWidth": 1
                     }
                 },
@@ -110,33 +91,33 @@ const MyResponsiveBump = ({ data }) => (
                         "fontSize": 13,
                         "fill": "#333333",
                         "outlineWidth": 2,
-                        "outlineColor": "#ffffff",
+                        "outlineColor": "#DADADA",
                         "outlineOpacity": 1
                     },
                     "link": {
                         "stroke": "#000000",
                         "strokeWidth": 1,
                         "outlineWidth": 2,
-                        "outlineColor": "#ffffff",
+                        "outlineColor": "#DADADA",
                         "outlineOpacity": 1
                     },
                     "outline": {
                         "stroke": "#000000",
                         "strokeWidth": 2,
                         "outlineWidth": 2,
-                        "outlineColor": "#ffffff",
+                        "outlineColor": "#DADADA",
                         "outlineOpacity": 1
                     },
                     "symbol": {
                         "fill": "#000000",
                         "outlineWidth": 2,
-                        "outlineColor": "#ffffff",
+                        "outlineColor": "#DADADA",
                         "outlineOpacity": 1
                     }
                 },
                 "tooltip": {
                     "container": {
-                        "background": "#ffffff",
+                        "background": "#DADADA",
                         "fontSize": 12
                     },
                     "basic": {},
@@ -146,11 +127,60 @@ const MyResponsiveBump = ({ data }) => (
                     "tableCellValue": {}
                 }
             }}
-            legends={[]}
-            margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+            yFormat=" >-.2f"
+            axisTop={null}
             axisRight={null}
+            axisBottom={{
+                tickSize: 5,
+                tickPadding: 5,
+                tickRotation: 0,
+                legendOffset: 36,
+                legendPosition: 'middle'
+            }}
+            axisLeft={{
+                tickSize: 5,
+                tickPadding: 5,
+                tickRotation: 0,
+                legend: "Scenerio",
+                legendOffset: -40,
+                legendPosition: 'middle'
+            }}
+            colors={{ scheme: 'set1' }}
+            pointSize={10}
+            pointColor={{ theme: 'background' }}
+            pointBorderWidth={2}
+            pointBorderColor={{ from: 'serieColor' }}
+            pointLabelYOffset={-12}
+            useMesh={true}
+            
+            stacked= {false}
+            legends={[
+                {
+                    anchor: 'top',
+                    direction: 'row',
+                    justify: false,
+                    translateX: 0,
+                    translateY: 0,
+                    itemWidth: 74,
+                    itemHeight: 28,
+                    itemsSpacing: 0,
+                    symbolSize: 12,
+                    symbolShape: 'circle',
+                    itemDirection: 'left-to-right',
+                    itemTextColor: '#DADADA',
+                    effects: [
+                        {
+                            on: 'hover',
+                            style: {
+                                itemBackground: 'rgba(0, 0, 0, .03)',
+                                itemOpacity: 1
+                            }
+                        }
+                    ]
+                }
+            ]}
         />
-    </div>
+    </div >
 )
 
-export default MyResponsiveBump
+export default Line;

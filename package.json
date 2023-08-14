@@ -34,6 +34,7 @@
     "@nivo/chord": "^0.83.0",
     "@nivo/funnel": "^0.83.0",
     "@nivo/geo": "^0.83.0",
+    "@nivo/line": "^0.83.0",
     "@nivo/pie": "^0.83.0",
     "@nivo/sankey": "^0.83.0",
     "@nivo/treemap": "^0.83.0",
