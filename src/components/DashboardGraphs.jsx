@@ -757,12 +757,7 @@ return (
             ) : (
                 <Line data={test} />
             )}
-            <Imageslider
-                firstImage={first_img}
-                secondImage={second_img}
-                href="https://earthobservatory.nasa.gov/images/150412/a-rough-year-for-rice-in-california"
-                linkText="NASA"
-            />
+            <ChoroplethImageSlider/>
             {!dataBar ? (
                 "Loading..."
             ) : (

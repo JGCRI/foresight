@@ -22,7 +22,7 @@ const MyResponsiveBar = ({ data, scenerioName }) => (
             layout="horizontal"
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}
-            colors={{ scheme: 'set2' }}
+            colors={{ scheme: 'set1' }}
             borderColor={{
                 from: 'color',
                 modifiers: [
