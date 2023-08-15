@@ -15,109 +15,81 @@ function DashboardGraphs() {
 
     const dataBar = [
         {
-            "country": "AD",
-            "hot dog": 101,
-            "hot dogColor": "hsl(41, 70%, 50%)",
-            "burger": 196,
-            "burgerColor": "hsl(284, 70%, 50%)",
-            "sandwich": 82,
-            "sandwichColor": "hsl(324, 70%, 50%)",
-            "kebab": 95,
-            "kebabColor": "hsl(150, 70%, 50%)",
-            "fries": 116,
-            "friesColor": "hsl(66, 70%, 50%)",
-            "donut": 111,
-            "donutColor": "hsl(209, 70%, 50%)"
+            "country": "USA",
+            "Category 1": 101,
+            "Category 1 Color": "hsl(41, 70%, 50%)",
+            "Category 2": 196,
+            "Category 2 Color": "hsl(284, 70%, 50%)",
+            "Category 3": 82,
+            "Category 3 Color": "hsl(324, 70%, 50%)",
+            "Category 4": 95,
+            "Category 4 Color": "hsl(150, 70%, 50%)"
         },
         {
-            "country": "AE",
-            "hot dog": 110,
-            "hot dogColor": "hsl(133, 70%, 50%)",
-            "burger": 140,
-            "burgerColor": "hsl(343, 70%, 50%)",
-            "sandwich": 80,
-            "sandwichColor": "hsl(319, 70%, 50%)",
-            "kebab": 138,
-            "kebabColor": "hsl(140, 70%, 50%)",
-            "fries": 40,
-            "friesColor": "hsl(3, 70%, 50%)",
-            "donut": 136,
-            "donutColor": "hsl(232, 70%, 50%)"
+            "country": "Russia",
+            "Category 1": 110,
+            "Category 1 Color": "hsl(133, 70%, 50%)",
+            "Category 2": 140,
+            "Category 2 Color": "hsl(343, 70%, 50%)",
+            "Category 3": 80,
+            "Category 3 Color": "hsl(319, 70%, 50%)",
+            "Category 4": 138,
+            "Category 4 Color": "hsl(140, 70%, 50%)"
         },
         {
-            "country": "AF",
-            "hot dog": 128,
-            "hot dogColor": "hsl(188, 70%, 50%)",
-            "burger": 136,
-            "burgerColor": "hsl(107, 70%, 50%)",
-            "sandwich": 105,
-            "sandwichColor": "hsl(168, 70%, 50%)",
-            "kebab": 25,
-            "kebabColor": "hsl(242, 70%, 50%)",
-            "fries": 42,
-            "friesColor": "hsl(359, 70%, 50%)",
-            "donut": 158,
-            "donutColor": "hsl(283, 70%, 50%)"
+            "country": "Mexico",
+            "Category 1": 128,
+            "Category 1 Color": "hsl(188, 70%, 50%)",
+            "Category 2": 136,
+            "Category 2 Color": "hsl(107, 70%, 50%)",
+            "Category 3": 105,
+            "Category 3 Color": "hsl(168, 70%, 50%)",
+            "Category 4": 25,
+            "Category 4 Color": "hsl(242, 70%, 50%)"
         },
         {
-            "country": "AG",
-            "hot dog": 169,
-            "hot dogColor": "hsl(188, 70%, 50%)",
-            "burger": 8,
-            "burgerColor": "hsl(129, 70%, 50%)",
-            "sandwich": 123,
-            "sandwichColor": "hsl(221, 70%, 50%)",
-            "kebab": 12,
-            "kebabColor": "hsl(244, 70%, 50%)",
-            "fries": 14,
-            "friesColor": "hsl(343, 70%, 50%)",
-            "donut": 162,
-            "donutColor": "hsl(46, 70%, 50%)"
+            "country": "Japan",
+            "Category 1": 169,
+            "Category 1 Color": "hsl(188, 70%, 50%)",
+            "Category 2": 8,
+            "Category 2 Color": "hsl(129, 70%, 50%)",
+            "Category 3": 123,
+            "Category 3 Color": "hsl(221, 70%, 50%)",
+            "Category 4": 12,
+            "Category 4 Color": "hsl(244, 70%, 50%)"
         },
         {
-            "country": "AI",
-            "hot dog": 173,
-            "hot dogColor": "hsl(145, 70%, 50%)",
-            "burger": 119,
-            "burgerColor": "hsl(51, 70%, 50%)",
-            "sandwich": 145,
-            "sandwichColor": "hsl(238, 70%, 50%)",
-            "kebab": 25,
-            "kebabColor": "hsl(280, 70%, 50%)",
-            "fries": 146,
-            "friesColor": "hsl(174, 70%, 50%)",
-            "donut": 119,
-            "donutColor": "hsl(212, 70%, 50%)"
+            "country": "India",
+            "Category 1": 173,
+            "Category 1 Color": "hsl(145, 70%, 50%)",
+            "Category 2": 119,
+            "Category 2 Color": "hsl(51, 70%, 50%)",
+            "Category 3": 145,
+            "Category 3 Color": "hsl(238, 70%, 50%)",
+            "Category 4": 25,
+            "Category 4 Color": "hsl(280, 70%, 50%)"
         },
         {
-            "country": "AL",
-            "hot dog": 152,
-            "hot dogColor": "hsl(91, 70%, 50%)",
-            "burger": 76,
-            "burgerColor": "hsl(208, 70%, 50%)",
-            "sandwich": 175,
-            "sandwichColor": "hsl(164, 70%, 50%)",
-            "kebab": 98,
-            "kebabColor": "hsl(297, 70%, 50%)",
-            "fries": 101,
-            "friesColor": "hsl(359, 70%, 50%)",
-            "donut": 88,
-            "donutColor": "hsl(127, 70%, 50%)"
+            "country": "France",
+            "Category 1": 152,
+            "Category 1 Color": "hsl(91, 70%, 50%)",
+            "Category 2": 76,
+            "Category 2 Color": "hsl(208, 70%, 50%)",
+            "Category 3": 175,
+            "Category 3 Color": "hsl(164, 70%, 50%)",
+            "Category 4": 98,
+            "Category 4 Color": "hsl(297, 70%, 50%)"
         },
         {
-            "country": "AM",
-            "hot dog": 86,
-            "hot dogColor": "hsl(53, 70%, 50%)",
-            "burger": 123,
-            "burgerColor": "hsl(235, 70%, 50%)",
-            "sandwich": 153,
-            "sandwichColor": "hsl(146, 70%, 50%)",
-            "kebab": 153,
-            "kebabColor": "hsl(303, 70%, 50%)",
-            "fries": 13,
-            "friesColor": "hsl(13, 70%, 50%)",
-            "donut": 74,
-            "donutColor": "hsl(179, 70%, 50%)"
+            "country": "China",
+            "Category 1": 86,
+            "Category 1 Color": "hsl(53, 70%, 50%)",
+            "Category 2": 123,
+            "Category 2 Color": "hsl(235, 70%, 50%)",
+            "Category 3": 153,
+            "Category 3 Color": "hsl(146, 70%, 50%)",
+            "Category 4": 153,
+            "Category 4 Color": "hsl(303, 70%, 50%)"
         }
     ]
 
@@ -761,7 +733,10 @@ return (
             {!dataBar ? (
                 "Loading..."
             ) : (
-                <BarHorizontal data={dataBar} />
+                <div className='bar-grid'>
+                    <BarHorizontal data={dataBar} scenerioName={'Scenerio 1'}/>
+                    <BarHorizontal data={dataBar} scenerioName={'Scenerio 2'}/>
+                </div>
             )}
         </div>
     </>

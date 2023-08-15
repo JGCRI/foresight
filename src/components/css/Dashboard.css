@@ -203,10 +203,28 @@
   align-items: center;
 }
 
+.double-bar-text-wrapper {
+  font-size: 12px;
+  text-indent: 18%;
+  text-align: center;
+  color: rgb(218, 218, 218);
+}
+
+.bar-grid {
+  min-width: 0;
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
 .nivo-wrapper {
   min-width: 0;
   width: 100%;
-  height: 100%;
+  height: 75%;
 }
 
 .graph-grid-small {

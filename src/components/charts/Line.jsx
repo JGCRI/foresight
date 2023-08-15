@@ -5,7 +5,7 @@ const Line = ({ data }) => (
     <div className="nivo-wrapper">
         <ResponsiveLine
             data={data}
-            margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+            margin={{ top: 20, right: 15, bottom: 25, left: 25 }}
             xScale={{
                 type: 'linear',
                 min: 'auto',
@@ -134,6 +134,7 @@ const Line = ({ data }) => (
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
+                tickValues: 5,
                 legendOffset: 36,
                 legendPosition: 'middle'
             }}
@@ -160,8 +161,8 @@ const Line = ({ data }) => (
                     direction: 'row',
                     justify: false,
                     translateX: 0,
-                    translateY: 0,
-                    itemWidth: 74,
+                    translateY: -25,
+                    itemWidth: 100,
                     itemHeight: 28,
                     itemsSpacing: 0,
                     symbolSize: 12,
