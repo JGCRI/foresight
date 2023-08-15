@@ -120,7 +120,7 @@ const dataBar = [
 //<DashboardChoropleth data={getDashboardData("Scenario X", "spatialComparison")} />
 function ChoroplethImageSlider() {
   return (
-    <div className="slider">
+    <div className="slider grid-border">
       <div className="slider-container">
         <div className="image-container">
           <ReactCompareSlider

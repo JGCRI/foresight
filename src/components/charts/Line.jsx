@@ -2,7 +2,7 @@ import React from "react";
 import { ResponsiveLine } from '@nivo/line'
 
 const Line = ({ data }) => (
-    <div className="nivo-wrapper">
+    <div className="nivo-wrapper grid-border">
         <ResponsiveLine
             data={data}
             margin={{ top: 20, right: 15, bottom: 25, left: 25 }}

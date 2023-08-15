@@ -761,9 +761,9 @@ return (
             {!dataBar ? (
                 "Loading..."
             ) : (
-                <div className='bar-grid'>
-                    <BarHorizontal data={dataBar} scenerioName={'Scenerio 1'}/>
-                    <BarHorizontal data={dataBar} scenerioName={'Scenerio 2'}/>
+                <div className='bar-grid grid-border'>
+                    <BarHorizontal data={dataBar} scenerioName={'Scenerio X'}/>
+                    <BarHorizontal data={dataBar} scenerioName={'Scenerio Y'}/>
                 </div>
             )}
         </div>
