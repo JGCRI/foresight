@@ -90,6 +90,39 @@ function DashboardGraphs() {
             "Category 3 Color": "hsl(146, 70%, 50%)",
             "Category 4": 153,
             "Category 4 Color": "hsl(303, 70%, 50%)"
+        },
+        {
+            "country": "Canada",
+            "Category 1": 175,
+            "Category 1 Color": "hsl(53, 70%, 50%)",
+            "Category 2": 145,
+            "Category 2 Color": "hsl(235, 70%, 50%)",
+            "Category 3": 120,
+            "Category 3 Color": "hsl(146, 70%, 50%)",
+            "Category 4": 120,
+            "Category 4 Color": "hsl(280, 70%, 50%)"
+        },
+        {
+            "country": "Brazil",
+            "Category 1": 175,
+            "Category 1 Color": "hsl(53, 70%, 50%)",
+            "Category 2": 145,
+            "Category 2 Color": "hsl(235, 70%, 50%)",
+            "Category 3": 120,
+            "Category 3 Color": "hsl(146, 70%, 50%)",
+            "Category 4": 120,
+            "Category 4 Color": "hsl(297, 70%, 50%)"
+        },
+        {
+            "country": "Australia",
+            "Category 1": 140,
+            "Category 1 Color": "hsl(53, 70%, 50%)",
+            "Category 2": 120,
+            "Category 2 Color": "hsl(235, 70%, 50%)",
+            "Category 3": 110,
+            "Category 3 Color": "hsl(146, 70%, 50%)",
+            "Category 4": 80,
+            "Category 4 Color": "hsl(303, 70%, 50%)"
         }
     ]
 

@@ -91,8 +91,10 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     }
     if(searchParams.has("scenerios")) {
       let arr = searchParams.get("scenerios").toString().split(",");
-      for(var i = 0; i < openScenerios.length; i++)
-        updateScenerios(i, arr[i], openScenerios);
+      for(var i = 0; i < openScenerios.length; i++) {
+        if(scenarios.indexOf('' + arr[i]) != -1)
+          updateScenerios(i, arr[i], openScenerios);
+      }
     }
   }
 

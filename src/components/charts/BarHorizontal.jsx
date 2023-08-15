@@ -18,7 +18,7 @@ const MyResponsiveBar = ({ data, scenerioName }) => (
                 'Category 4'
             ]}
             indexBy="country"
-            margin={{ top: 0, right: 15, bottom: 25, left: 50 }}
+            margin={{ top: 0, right: 15, bottom: 25, left: 58 }}
             layout="horizontal"
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}
