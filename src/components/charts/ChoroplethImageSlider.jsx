@@ -124,8 +124,8 @@ function ChoroplethImageSlider() {
       <div className="slider-container">
         <div className="image-container">
           <ReactCompareSlider
-            itemOne={<DashboardChoropleth data={getDashboardData("Scenario X", "spatialComparison")} />}
-            itemTwo={<DashboardChoropleth data={getDashboardData("Scenario Y", "spatialComparison")} />}
+            itemOne={<DashboardChoropleth data={getDashboardData("Scenario X", "spatialComparison")} scenerioTitle={"Scenerio X"} isLeft={true} />}
+            itemTwo={<DashboardChoropleth data={getDashboardData("Scenario Y", "spatialComparison")} scenerioTitle={"Scenerio Y"} isLeft={false} />}
             className="test-wrapper"
           />
         </div>
