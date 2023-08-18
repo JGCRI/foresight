@@ -260,7 +260,6 @@ a {
 /****** Slider *******/
 
 .slider {
-  max-width: 60vw !important;
   position: relative;
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import './css/Home.css';
 import background from "../assets/img/globe_stars_medium.jpg";
+import earth from "../assets/img/globe_earth_night.jpg";
 
 const N = 50;
 const arcsData = [...Array(N).keys()].map(() => ({
@@ -73,7 +74,7 @@ function Home() {
           width={width}
           height={height}
           waitForGlobeReady={false}
-          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+          globeImageUrl={earth}
           arcAltitude={0.2}
           arcsData={arcsData}
           arcColor={"color"}

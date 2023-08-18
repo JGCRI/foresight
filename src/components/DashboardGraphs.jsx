@@ -627,23 +627,32 @@ function DashboardGraphs({ openedScenerios }) {
             }
         ]
     }];
-    
+
     return (
-        <div className="graph-grid">
-            <div>Global Trends</div>
-            <div>Spatial Composition</div>
-            <div>Top 10 Countries -- By Subsector</div>
-            {!dataBump ? (
-                "Loading..."
-            ) : (
+        <>
+            <div className="graph-grid">
+                <div>Global Trends</div>
+                <div>Spatial Composition</div>
+                <div>Top 10 Countries -- By Subsector</div>
                 <Line data={test} />
-            )}
-            <ChoroplethImageSlider />
-            <div className='bar-grid grid-border'>
-                <BarHorizontal data={getDashboardData(Scenerios.at(0).title, "top10Country")} scenerio={Scenerios.at(0).title} />
-                <BarHorizontal data={getDashboardData(Scenerios.at(0).title, "top10Country")} scenerio={Scenerios.at(1).title} />
+                <ChoroplethImageSlider />
+                <div className='bar-grid grid-border'>
+                    <BarHorizontal data={getDashboardData(Scenerios.at(0).title, "top10Country")} scenerio={Scenerios.at(0).title} />
+                    <BarHorizontal data={getDashboardData(Scenerios.at(1).title, "top10Country")} scenerio={Scenerios.at(1).title} />
+                </div>
             </div>
-        </div>
+            <div className="graph-grid-small">
+                <div>Global Trends</div>
+                <Line data={test} />
+                <div>Spatial Composition</div>
+                <ChoroplethImageSlider />
+                <div>Top 10 Countries -- By Subsector</div>
+                <div className='bar-grid grid-border'>
+                    <BarHorizontal data={getDashboardData(Scenerios.at(0).title, "top10Country")} scenerio={Scenerios.at(0).title} />
+                    <BarHorizontal data={getDashboardData(Scenerios.at(1).title, "top10Country")} scenerio={Scenerios.at(1).title} />
+                </div>
+            </div>
+        </>
     );
 }
 
