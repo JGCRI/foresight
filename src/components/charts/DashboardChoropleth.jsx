@@ -1,14 +1,14 @@
 import React from "react";
 import { ResponsiveChoropleth } from "@nivo/geo";
-import countries from "./world_countries.json";
+import countries from "./geopolitical_regions.json";
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-//<div style={isLeft?{textAlign:'left'}:{textAlign:'right'}}>{scenerioTitle}</div>
-const DashboardChoropleth = ({ data, scenerioTitle, isLeft }) => (
+//<div style={isLeft?{textAlign:'left'}:{textAlign:'right'}}>{scenarioTitle}</div>
+const DashboardChoropleth = ({ data }) => (
     <>
         
         <div className="nivo-wrapper">

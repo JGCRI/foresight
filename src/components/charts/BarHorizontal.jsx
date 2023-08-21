@@ -6,10 +6,10 @@ import { ResponsiveBar } from '@nivo/bar'
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveBar = ({ data, scenerio }) => {
-    var scenerioName = scenerio;
+const MyResponsiveBar = ({ data, scenerio, start, end }) => {
+    const [scenerioName, setScenerio] = useState(scenerio);
     useEffect(() => {
-        scenerioName = scenerio;
+        setScenerio(scenerio);
     }, [scenerio])
     return (
         <div className="nivo-wrapper">

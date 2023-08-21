@@ -133,7 +133,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             </div>
           </Row>
           <Row>
-            <DashboardGraphs></DashboardGraphs>
+            <DashboardGraphs/>
           </Row>
         </Container>
       </div>
