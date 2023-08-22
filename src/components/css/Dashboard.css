@@ -1,5 +1,15 @@
 /******* Dashboard ********/
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .dashboard {
   position: relative;
   padding-right: 20px !important;
@@ -256,6 +266,22 @@
   text-align: center;
   justify-items: center;
   align-items: center;
+}
+
+.scenerio-dropdown {
+  position: absolute;
+  display: none;
+  top: 100px;
+  left: 10%;
+  background-color: black;
+  border-radius: 10%;
+  margin: auto;
+  height: 40px;
+  width: 80%;
+  z-index: 1000000;
+  justify-items:center;
+  text-align: center;
+  animation: fadeIn 0.2s linear;
 }
 
 @media screen and (max-width: 1000px) {

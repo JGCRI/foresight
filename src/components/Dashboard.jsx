@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SidebarDashboard from "./SidebarDashboard.jsx";
+import TopbarDashboard from "./TopbarDashboard.jsx";
 import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
@@ -11,6 +12,19 @@ import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
 import { setdashboardSelection, setStartDate, setEndDate, setScenerios } from "./Store";
 import './css/Dashboard.css';
+
+const scrollHandler = () => {
+  let about1 = document.querySelector('.scenerio-dropdown');
+  let divider = document.querySelector('.selection-divider');
+  let y = window.scrollY + divider.getBoundingClientRect().bottom;
+  if (y < 120) {
+    about1.style.display = 'flex'
+  }
+  else {
+    about1.style.display = 'none'
+  }
+  console.log(y);
+};
 
 export const getIcon = (selection) => {
   switch (selection) {
@@ -91,9 +105,9 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     }
     if(searchParams.has("scenerios")) {
       let arr = searchParams.get("scenerios").toString().split(",");
-      for(var i = 0; i < openScenerios.length; i++) {
-        if(scenarios.indexOf('' + arr[i]) != -1)
-          updateScenerios(i, arr[i], openScenerios);
+      for(var j = 0; j < openScenerios.length; j++) {
+        if(scenarios.indexOf('' + arr[j]) !== -1)
+          updateScenerios(j, arr[j], openScenerios);
       }
     }
   }
@@ -101,8 +115,9 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
   return (
     <div className="body-page-dark">
       <SidebarDashboard></SidebarDashboard>
+      <TopbarDashboard></TopbarDashboard>
       {setDataParameters()}
-      <div className={open ? "dashboard" : "dashboardClosed"}>
+      <div className={open ? "dashboard" : "dashboardClosed" } onScroll={scrollHandler}>
         <Container fluid>
           <Row className="date-select-row">
             <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
