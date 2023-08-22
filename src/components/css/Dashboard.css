@@ -132,6 +132,7 @@
   grid-template-rows: repeat(2, auto);
   column-gap: 4px;
   row-gap: 0px;
+  margin: auto;
   margin-top: 2%;
   margin-bottom: 2%;
   justify-items: center;
