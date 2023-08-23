@@ -266,7 +266,7 @@ a {
 .slider-container {
   position: relative;
   height: auto;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   overflow: hidden;

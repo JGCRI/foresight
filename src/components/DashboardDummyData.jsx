@@ -2968,7 +2968,6 @@ function getDataset(Component) {
 }
 
 function getData(dataset, Scenario, Component) {
-    console.log(Scenario);
     if (Component === "spatialComparison") {
         for (var i = 0; i < dataset.length; i++) {
             if (dataset.at(i).scenario === Scenario) {

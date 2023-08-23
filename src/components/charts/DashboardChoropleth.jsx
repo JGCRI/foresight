@@ -21,8 +21,8 @@ const DashboardChoropleth = ({ data }) => (
                 unknownColor="#666666"
                 label="properties.name"
                 valueFormat=".2s"
-                projectionScale={50}
-                projectionTranslation={[0.5, 0.5]}
+                projectionScale={58}
+                projectionTranslation={[0.48, 0.55]}
                 projectionRotation={[0, 0, 0]}
                 borderWidth={0.5}
                 borderColor="#152538"

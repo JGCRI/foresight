@@ -23,7 +23,6 @@ const scrollHandler = () => {
   else {
     about1.style.display = 'none'
   }
-  console.log(y);
 };
 
 export const getIcon = (selection) => {

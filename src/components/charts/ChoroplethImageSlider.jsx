@@ -17,7 +17,7 @@ function ChoroplethImageSlider({scenario_1, scenario_2}) {
           <ReactCompareSlider
             itemOne={<DashboardChoropleth data={getDashboardData(scenario1, "spatialComparison")} scenarioTitle={scenario1} isLeft={true} />}
             itemTwo={<DashboardChoropleth data={getDashboardData(scenario2, "spatialComparison")} scenarioTitle={scenario2} isLeft={false} />}
-            className="test-wrapper"
+            className="map-wrapper"
             />
         </div>
       </div>

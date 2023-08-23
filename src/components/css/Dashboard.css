@@ -246,7 +246,7 @@
   border-radius: 7px;
 }
 
-.test-wrapper {
+.map-wrapper {
   position: relative;
   height: 60vh;
   width: 30vw;
@@ -295,10 +295,10 @@
     /*Change when small fixed.*/
   }
 
-  .test-wrapper {
+  .map-wrapper {
     position: relative;
     height: 60vh;
-    width: 100vw;
+    width: 100%;
     max-height: 30vw;
   }
 }
