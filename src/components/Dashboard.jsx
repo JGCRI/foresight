@@ -17,7 +17,7 @@ const scrollHandler = () => {
   let about1 = document.querySelector('.scenerio-dropdown');
   let divider = document.querySelector('.selection-divider');
   let y = window.scrollY + divider.getBoundingClientRect().bottom;
-  if (y < 120) {
+  if (y < 136) {
     about1.style.display = 'flex'
   }
   else {
