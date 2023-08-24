@@ -9,7 +9,6 @@ import getDashboardData from "../DashboardDummyData";
 function ChoroplethImageSlider({scenario_1, scenario_2}) {
   const scenario1 = scenario_1;
   const scenario2 = scenario_2;
-  console.log(scenario1);
   return (
     <div className="slider grid-border">
       <div className="slider-container">

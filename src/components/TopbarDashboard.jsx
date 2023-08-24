@@ -7,6 +7,7 @@ function TopbarDashboard({selection, openGuages, updateCurrentGuage }) {
     <div className="scenerio-dropdown">
       {openGuages.map((gauge, index) => (
           <Button
+            key={index}
             variant={gauge.title === selection ? "secondary" : "dark"}
             disabled={gauge.title === selection ? true : false}
             onClick={() => updateCurrentGuage(gauge.title)}

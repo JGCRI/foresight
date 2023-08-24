@@ -3,9 +3,10 @@ import BarHorizontal from "./charts/BarHorizontal";
 import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
 import getDashboardData from "./DashboardDummyData";
 import { connect } from 'react-redux';
+import { lineGraphReduce } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
-function DashboardGraphs({ openedScenerios, scenerioSpread, start, end }) {
+function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csv }) {
     const Scenerios = openedScenerios;
     const [startDate, setStartDate] = useState(start);
     const [endDate, setEndDate] = useState(end);
@@ -167,7 +168,9 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end }) {
             }
         ]
     }];
-
+    console.log(csv);
+    if(Scenerios.at(0).title === "Reference")
+        console.log(lineGraphReduce(csv, "GDP"));
     return (
         <>
             <div className="graph-grid">
@@ -208,6 +211,7 @@ function mapStateToProps(state) {
         scenerioSpread: { ...(state.scenerios) },
         start: state.startDate,
         end: state.endDate,
+        csv: state.parsedData,
     };
 }
 

@@ -36,7 +36,8 @@ const initialState = {
     {
       title: "gdp"
     }
-  ]
+  ],
+  parsedData: []
 };
 
 // Define a reducer function to update the state
@@ -56,6 +57,8 @@ function reducer(state = initialState, action) {
       return { ...state, scenerios: action.payload };
     case 'setGuages':
       return { ...state, guages: action.payload };
+    case 'setData':
+      return { ...state, parsedData: action.payload };
     default:
       return state;
   }
@@ -75,6 +78,10 @@ export function setDataset(dataset) {
   return { type: 'setDataset', payload: dataset };
 }
 
+// Read in parsed data once at the start of loading.
+export function setParsed(dataset) {
+  return { type: 'setData', payload: dataset };
+}
 // Change dashboard start date
 export function setStartDate(date) {
   updateHash("start", date);
