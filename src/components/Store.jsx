@@ -37,7 +37,7 @@ const initialState = {
       title: "gdp"
     }
   ],
-  parsedData: []
+  parsedData: "i"
 };
 
 // Define a reducer function to update the state
@@ -75,6 +75,7 @@ export function setdashboardSelection(num) {
 
 // Action creator function to update the dataset
 export function setDataset(dataset) {
+  console.log(dataset);
   return { type: 'setDataset', payload: dataset };
 }
 

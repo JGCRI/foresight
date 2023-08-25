@@ -3,7 +3,7 @@ import BarHorizontal from "./charts/BarHorizontal";
 import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
 import getDashboardData from "./DashboardDummyData";
 import { connect } from 'react-redux';
-import { lineGraphReduce } from '../assets/data/DataManager';
+import { lineGraphReduce, choroplethReduce } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
 function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csv }) {
@@ -170,7 +170,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csv }) {
     }];
     console.log(csv);
     if(Scenerios.at(0).title === "Reference")
-        console.log(lineGraphReduce(csv, "GDP"));
+        console.log(choroplethReduce(csv, "gdp"));
     return (
         <>
             <div className="graph-grid">

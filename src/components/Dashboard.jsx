@@ -68,7 +68,7 @@ export const updateListHash = (name, index, value) => {
 }
 
 function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, parse }) {
-  if (parse === []) {
+  if (parse === "i") {
     Papa.parse(gcamDataTable, {
       download: true,
       header: true,
