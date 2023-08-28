@@ -8,6 +8,26 @@ export const getParam = (data, param) => {
     return reducedData;
 }
 
+export const getSubcat = (data, subcat) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).subcat === subcat) {
+            reducedData.push(data.at(i));
+        }
+    }
+    return reducedData;
+}
+
+export const getRegion = (data, region) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).region === region) {
+            reducedData.push(data.at(i));
+        }
+    }
+    return reducedData;
+}
+
 export const mergeRegions = (data) => {
     var reducedData = [];
     var flag;
@@ -19,7 +39,7 @@ export const mergeRegions = (data) => {
                 flag = 1;
             }
         }
-        if(flag == 0)
+        if(flag === 0)
             reducedData.push(data.at(i));
     }
     return reducedData;
@@ -36,8 +56,40 @@ export const mergeDates = (data) => {
                 flag = 1;
             }
         }
-        if(flag == 0)
+        if(flag === 0)
             reducedData.push(data.at(i));
+    }
+    return reducedData;
+}
+
+export const filterSubcat = (data) => {
+    var reducedData = [];
+    var flag;
+    for(var i = 0; i < data.length; i++) {
+        flag = 0;
+        for(var j = 0; j < reducedData.length; j++) {
+            if(data.at(i).class1 === reducedData[j]) {
+                flag = 1;
+            }
+        }
+        if(flag === 0)
+            reducedData.push(data.at(i).class1);
+    }
+    return reducedData;
+}
+
+export const filterRegion = (data) => {
+    var reducedData = [];
+    var flag;
+    for(var i = 0; i < data.length; i++) {
+        flag = 0;
+        for(var j = 0; j < reducedData.length; j++) {
+            if(data.at(i).region === reducedData[j]) {
+                flag = 1;
+            }
+        }
+        if(flag === 0)
+            reducedData.push(data.at(i).region);
     }
     return reducedData;
 }
@@ -62,6 +114,25 @@ export const getNoSubcatChoropleth = (data) => {
         });   
     }
     return reducedData;
+}
+
+export const getBarHorizontal = (data, param) => {
+    var output = [];
+    var barData = getParam(data, param);
+    var subcatList = filterSubcat(barData);
+    var countryList = filterRegion(barData);
+    for(var i = 0; i < countryList.length; i++) {
+        var countryData = getRegion(barData, countryList[i]);
+        var obj = {
+            "country": countryList[i]
+        }
+        for(var j = 0; j < subcatList.length; j++) {
+            obj[subcatList[j]] = parseFloat(mergeDates(getSubcat(countryData)).at(0).value);
+            console.log(mergeDates(getSubcat(countryData)).at(0).value);
+        }
+        output.push(obj);   
+    }
+    return output;
 }
 
 export const lineGraphReduce = (data, param) => {
