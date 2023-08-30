@@ -6,7 +6,7 @@ import { ResponsiveBar } from '@nivo/bar'
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveBar = ({ data, scenerio, start, end }) => {
+const MyResponsiveBar = ({ listKeys, data, scenerio, start, end }) => {
     const [scenerioName, setScenerio] = useState(scenerio);
     useEffect(() => {
         setScenerio(scenerio);
@@ -16,12 +16,7 @@ const MyResponsiveBar = ({ data, scenerio, start, end }) => {
             <div className="double-bar-text-wrapper">  {scenerioName} </div>
             <ResponsiveBar
                 data={data}
-                keys={[
-                    'Category 1',
-                    'Category 2',
-                    'Category 3',
-                    'Category 4'
-                ]}
+                keys={listKeys}
                 indexBy="country"
                 margin={{ top: 0, right: 15, bottom: 42, left: 60 }}
                 layout="horizontal"

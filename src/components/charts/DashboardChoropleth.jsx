@@ -8,7 +8,7 @@ import countries from "./geopolitical_regions.json";
 // website examples showcase many properties,
 // you'll often use just a few of them.
 //<div style={isLeft?{textAlign:'left'}:{textAlign:'right'}}>{scenarioTitle}</div>
-const DashboardChoropleth = ({ data }) => (
+const DashboardChoropleth = ({ data, min, max }) => (
     <>
         
         <div className="nivo-wrapper">
@@ -17,7 +17,7 @@ const DashboardChoropleth = ({ data }) => (
                 features={countries.features}
                 margin={{ top: 25, right: 0, bottom: 0, left: 0 }}
                 colors="YlGn"
-                domain={[0, 1000000]}
+                domain={[min, max]}
                 unknownColor="#666666"
                 label="properties.name"
                 valueFormat=".2s"
