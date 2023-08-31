@@ -1,70 +1,70 @@
-import React from "react";
+import { React } from "react";
 import { Container, Row } from "react-bootstrap";
+import './css/About.css';
+
+const scrollHandler = (event) => {
+  let background = document.querySelector('.about-page');
+  let about1 = document.querySelector('.about-grid');
+  let x = background.scrollTop;
+  let y = window.scrollY + about1.getBoundingClientRect().bottom;
+  if (y > 530) {
+    background.style.backgroundSize = '' + (100 + x / 10) + '%';
+  }
+};
 
 function About() {
   return (
-    <div className="body-page about-page">
+    <div className="body-page about-page " onScroll={scrollHandler}>
       <Container>
         <Row className="justify-content-between">
-          <h1 className="page-title">About Foresight</h1>
-          <hr className="home-hr" />
-          <div className="page-subtitle">
-            Foresight is a community dashboard that curates key insights from the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>
+          <h1 className="about-title">About Foresight</h1>
+          <hr className="about-home-hr" />
+          <div className="about-page-subtitle">
+          Foresight is a community dashboard to share complex science through simplified, interactive visualizations
           </div>
         </Row>
-        <hr className="home-hr  lower-hr" />
+        <hr className="about-home-hr  lower-hr" />
         <Row className="justify-content-between">
-            <div className="page-text">
-              As scientific models continue to grow in complexity and the amount of detail they capture, so too does the size and complexity of their data outputs. Managing the overwhelming amounts of data and curating it into key insights and messages is a big responsibility for any scientific team. Foresight is an online community platform to visualize and interact with data outputs from the <a href="https://gcims.pnnl.gov/global-change-intersectoral-modeling-system" target="_blank" rel="noreferrer">Global Change Intersectoral Modeling System (GCIMS)</a>. Development of Foresight is a continuous process with regular feedback solicited from the community to improve its features. With Foresight, our team is addressing the challenges of managing data storage, selecting and curating key visualizations, as well as trying to strike a balance between providing simplified digestible results while still ensuring transparency and access to reproducible data and workflows.
-            </div>
-        </Row>
-        <Row className="justify-content-between">
-          <hr className="section-break-hr" />
-          <h2 className="page-section-break">Design Philosophy</h2>
-          <hr className="lower-section-break-hr" />
+          <h1 className="page-section-break">Design Philosophy</h1>         
+          <hr className="about-home-hr" />
         </Row>
         <Row className="about-grid">
           <div>
-            <hr className="home-hr" />
             <h3 className="about-grid-title">
               Single Point of Access
             </h3>
-            
           </div>
           <div>
-            <hr className="home-hr" />
             <h3 className="about-grid-title">
-              Community
+              Community: Share and engage! 
             </h3>
-            
+
           </div>
           <div>
-            <hr className="home-hr" />
             <h3 className="about-grid-title">
-              Gold Standard of Visualization
+              Visual Excellence
             </h3>
-            
+
           </div>
           <div>
-            <hr className="home-hr" />
             <h3 className="about-grid-title">
-              AI data insights
+              AI-Driven Insights
             </h3>
-            
+
           </div>
         </Row>
         <Row className="about-grid">
           <div className="about-grid-text">
-              We will have a landing page for each dataset/paper with key highlights but then behind that will be the full suite of insights across our tools of water, energy, land etc. This way we always benefit from our truly harmonized, integrated system.
-            </div>
+            Access analysis-specific highlights as well as broader insights across water, energy, land, and many other systems, leveraging the power of our integrated suite of tools.
+          </div>
           <div className="about-grid-text">
-              Each figure/page will be shareable (twitter, facebook, linkedin) and will allow community feedback, likes, and comments. This will let us improve our figures and gauge what works and doesn't.
-            </div>
+            All figures are shareable across platforms, inviting feedback and comments from the community to drive continuous improvement.
+          </div>
           <div className="about-grid-text">
-              Each figure is going to be a separate component and we will make sure each figure is the best in class out there. We will achieve this by building appropriate, simple/minimalistic, interactive figures that get the point across (Chord diagrams, sankeys, waterfall charts, maps with flows and globes). That title is something that will have to be earned but we will aim for this.
-            </div>
+            We strive to make each figure stand out as the best in class, featuring interactive, minimalistic, and powerful designs customized to convey each insight most effectively.
+          </div>
           <div className="about-grid-text">
-              We will use Artificial Intelligence to simplify searching for data, and to assist in generating new analysis.
+            Leverage AI-driven interactions to "talk" to our datasets and extract personalized insights and customized graphics.
           </div>
         </Row>
         <Row className="about-grid">
@@ -75,7 +75,8 @@ function About() {
         </Row>
       </Container>
     </div>
-  );
-}
 
+  );
+
+}
 export default About;

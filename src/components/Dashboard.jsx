@@ -1,261 +1,144 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SidebarDashboard from "./SidebarDashboard.jsx";
+import TopbarDashboard from "./TopbarDashboard.jsx";
 import { connect } from "react-redux";
-import AreaBump from "./charts/AreaBump";
-import Bar from "./charts/Bar";
-import Chord from "./charts/Chord";
-import Pie from "./charts/Pie";
-import TreeMap from "./charts/TreeMap";
-import Funnel from "./charts/Funnel";
-import Sankey from "./charts/Sankey";
+import DateDropdown from "./dropdowns/DashboardDate";
+import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
+import DashboardGraphs from "./DashboardGraphs.jsx";
+import { MdError, MdGroups } from "react-icons/md";
+import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
+import { TbCoins } from "react-icons/tb";
+import { FaThermometerHalf } from "react-icons/fa"
+import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParsed } from "./Store";
+import './css/Dashboard.css';
+import scenarios from "../assets/data/Scenarios.jsx";
+import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
 
-function Dashboard({ open, toggleOpen }) {
-  const dataBar = [
-    {
-      country: "AD",
-      "param 1": 100,
-      "param 1Color": "hsl(154, 70%, 50%)",
-      "param 2": 593,
-      "param 2Color": "hsl(304, 70%, 50%)",
-      "param 3": 10,
-      "param 3Color": "hsl(222, 70%, 50%)",
-      "param 4": 754,
-      "param 4Color": "hsl(241, 70%, 50%)",
-      "param 5": 28,
-      "param 5Color": "hsl(331, 70%, 50%)",
-      "param 6": 39,
-      "param 6Color": "hsl(259, 70%, 50%)",
-    },
-    {
-      country: "AE",
-      "param 1": 16,
-      "param 1Color": "hsl(33, 70%, 50%)",
-      "param 2": 206,
-      "param 2Color": "hsl(70, 70%, 50%)",
-      "param 3": 109,
-      "param 3Color": "hsl(348, 70%, 50%)",
-      "param 4": 38,
-      "param 4Color": "hsl(191, 70%, 50%)",
-      "param 5": 43,
-      "param 5Color": "hsl(262, 70%, 50%)",
-      "param 6": 34,
-      "param 6Color": "hsl(118, 70%, 50%)",
-    },
-    {
-      country: "AF",
-      "param 1": 523,
-      "param 1Color": "hsl(17, 70%, 50%)",
-      "param 2": 14,
-      "param 2Color": "hsl(122, 70%, 50%)",
-      "param 3": 72,
-      "param 3Color": "hsl(35, 70%, 50%)",
-      "param 4": 441,
-      "param 4Color": "hsl(102, 70%, 50%)",
-      "param 5": 93,
-      "param 5Color": "hsl(191, 70%, 50%)",
-      "param 6": 810,
-      "param 6Color": "hsl(183, 70%, 50%)",
-    },
-  ];
+import Papa from "papaparse";
+import gcamDataTable from '../assets/data/gcamDataTable.csv';
 
-  const dataAreaBump = [
-    {
-      id: "JavaScript",
-      data: [
-        {
-          x: 2000,
-          y: 15,
-        },
-        {
-          x: 2001,
-          y: 10,
-        },
-        {
-          x: 2002,
-          y: 27,
-        },
-        {
-          x: 2003,
-          y: 26,
-        },
-        {
-          x: 2004,
-          y: 14,
-        },
-        {
-          x: 2005,
-          y: 11,
-        },
-      ],
-    },
-    {
-      id: "ReasonML",
-      data: [
-        {
-          x: 2000,
-          y: 16,
-        },
-        {
-          x: 2001,
-          y: 13,
-        },
-        {
-          x: 2002,
-          y: 30,
-        },
-        {
-          x: 2003,
-          y: 28,
-        },
-        {
-          x: 2004,
-          y: 30,
-        },
-        {
-          x: 2005,
-          y: 28,
-        },
-      ],
-    },
-    {
-      id: "TypeScript",
-      data: [
-        {
-          x: 2000,
-          y: 25,
-        },
-        {
-          x: 2001,
-          y: 17,
-        },
-        {
-          x: 2002,
-          y: 24,
-        },
-        {
-          x: 2003,
-          y: 26,
-        },
-        {
-          x: 2004,
-          y: 16,
-        },
-        {
-          x: 2005,
-          y: 16,
-        },
-      ],
-    },
-    {
-      id: "Elm",
-      data: [
-        {
-          x: 2000,
-          y: 11,
-        },
-        {
-          x: 2001,
-          y: 29,
-        },
-        {
-          x: 2002,
-          y: 10,
-        },
-        {
-          x: 2003,
-          y: 24,
-        },
-        {
-          x: 2004,
-          y: 16,
-        },
-        {
-          x: 2005,
-          y: 19,
-        },
-      ],
-    },
-    {
-      id: "CoffeeScript",
-      data: [
-        {
-          x: 2000,
-          y: 29,
-        },
-        {
-          x: 2001,
-          y: 30,
-        },
-        {
-          x: 2002,
-          y: 11,
-        },
-        {
-          x: 2003,
-          y: 19,
-        },
-        {
-          x: 2004,
-          y: 10,
-        },
-        {
-          x: 2005,
-          y: 11,
-        },
-      ],
-    },
-  ];
+const scrollHandler = () => {
+  let divider = document.querySelector('.selection-divider');
+  let y = window.scrollY + divider.getBoundingClientRect().bottom;
+  if (y < 100) {
+    divider.style.top = '100'
+  }
+  else {
+    divider.style.top = 'auto'
+  }
+};
+
+export const getIcon = (selection) => {
+  switch (selection) {
+    case "runoff":
+      return <GiWaterDrop />;
+    case "yields":
+      return <GiCorn />;
+    case "temp":
+      return <FaThermometerHalf />;
+    case "emiss":
+      return <GiFactory />;
+    case "pop":
+      return <MdGroups />;
+    case "gdp":
+      return <TbCoins />;
+    default:
+      return <MdError />;
+  }
+}
+
+export const updateHash = (name, value) => {
+  var searchParams = new URLSearchParams(window.location.hash.substring(1));
+  if (!searchParams.has(name))
+    searchParams.append(name, value);
+  else
+    searchParams.set(name, value);
+  window.location.hash = searchParams.toString();
+}
+
+export const updateListHash = (name, index, value) => {
+  var searchParams = new URLSearchParams(window.location.hash.substring(1));
+  if (searchParams.has(name)) {
+    let arr = searchParams.get(name).toString().split(",");
+    arr[index] = value;
+    searchParams.set(name, arr.join(","));
+    window.location.hash = searchParams.toString();
+  }
+}
+
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, parse }) {
+  if (parse === "i") {
+    Papa.parse(gcamDataTable, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function (input) {
+        updateParse(input.data);
+      }
+    });
+  }
+
+  const setDataParameters = () => {
+    var searchParams = new URLSearchParams(window.location.hash.substring(1));
+    if (searchParams.has("start") && searchParams.has("end")) {
+      const newStart = Number(searchParams.get("start"));
+      const newEnd = Number(searchParams.get("end"));
+      if (newStart > 0 && newEnd > 0 && newStart < newEnd) {
+        updateStart(searchParams.get("start"));
+        updateEnd(searchParams.get("end"));
+      }
+    }
+    if (searchParams.has("selected")) {
+      for (var i = 0; i < openGuages.length; i++) {
+        if (openGuages.at(i).title === searchParams.get("selected")) {
+          updateCurrentGuage(searchParams.get("selected"));
+        }
+      }
+    }
+    if (searchParams.has("scenerios")) {
+      let arr = searchParams.get("scenerios").toString().split(",");
+      for (var j = 0; j < openScenerios.length; j++) {
+        if (scenarios.indexOf('' + arr[j]) !== -1)
+          updateScenerios(j, arr[j], openScenerios);
+      }
+    }
+  }
 
   return (
-    <div className="body-page"> 
-      <SidebarDashboard />
-      <div className={open ? "dashboard" : "dashboardClosed"}>
+    <div className="body-page-dark">
+      <SidebarDashboard></SidebarDashboard>
+      {setDataParameters()}
+      <div className={open ? "dashboard" : "dashboardClosed"} onScroll={scrollHandler}>
         <Container fluid>
-          <Row className="row">
-            <Col xs={12} sm={12} md={12} lg={12} xl={6}>
-              <div className="chart-areabump">
-                {!dataAreaBump ? (
-                  "Loading..."
-                ) : (
-                  <AreaBump data={dataAreaBump} />
-                )}
-              </div>
+          <Row className="date-select-row">
+            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              % Change from :
             </Col>
-            <Col xs={12} sm={12} md={12} lg={12} xl={6}>
-              <div className="chart-bar">
-                {!dataBar ? "Loading..." : <Bar data={dataBar} />}
-              </div>
+            <Col>
+              <DateDropdown
+                year={2015}
+                isOrNotStart={0}
+              />
+            </Col>
+            <Col className="date-select-text" xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              to
+            </Col>
+            <Col>
+              <DateDropdown
+                year={2100}
+                isOrNotStart={1}
+              />
             </Col>
           </Row>
-          <Row className="row">
-            <Col xs={12} sm={12} md={12} lg={12} xl={4}>
-              <div className="chart-chord">
-                <Chord/>
-              </div>
-            </Col>
-            <Col xs={12} sm={12} md={12} lg={12} xl={4}>
-              <div className="chart-pie">
-                <Pie />
-              </div>
-            </Col>
-            <Col xs={12} sm={12} md={12} lg={12} xl={4}>
-              <div className="chart-funnel">
-                <Funnel />
-              </div>
-            </Col>
+          <DashboardScenerioRows
+            Scenarios={scenarios}
+          />
+          <Row className="selection-divider">
+            <DashboardFloater />
           </Row>
           <Row>
-            <Col xs={12} sm={12} md={12} lg={12} xl={6}>
-              <div className="chart-choropleth">
-                <Sankey/>
-              </div>
-            </Col>
-            <Col xs={12} sm={12} md={12} lg={12} xl={6}>
-              <div className="chart-treemap">
-                <TreeMap />
-              </div>
-            </Col>
+            <DashboardGraphs />
           </Row>
         </Container>
       </div>
@@ -266,12 +149,21 @@ function Dashboard({ open, toggleOpen }) {
 function mapStateToProps(state) {
   return {
     open: state.open,
+    selection: state.dashboardSelection,
+    openScenerios: state.scenerios,
+    openGuages: state.guages,
+    parse: state.parsedData,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     toggleOpen: () => dispatch({ type: "toggleOpen" }),
+    updateStart: (start) => dispatch(setStartDate(start)),
+    updateEnd: (end) => dispatch(setEndDate(end)),
+    updateCurrentGuage: (guage) => dispatch(setdashboardSelection(guage)),
+    updateScenerios: (index, name, scenerios) => dispatch(setScenerios(index, name, scenerios)),
+    updateParse: (data) => dispatch(setParsed(data))
   };
 }
 

@@ -10,6 +10,8 @@ export { default as Globes } from "./Globes";
 export { default as SidebarDashboard } from "./SidebarDashboard";
 export { default as SidebarExperiment } from "./SidebarExperiment";
 export { default as Store } from "./Store";
+export { default as ScenerioGuage} from "./guages/ScenerioGuage"
+export { default as ScenerioGuageNegative} from "./guages/ScenerioGuageNegative"
 export { default as Footer } from "./Footer";
 export { default as Team } from "./Team";
 export { default as About } from "./About";
@@ -20,7 +22,6 @@ export { default as Bar } from "./charts/Bar";
 export { default as AreaBump } from "./charts/AreaBump";
 export { default as Choropleth } from "./charts/Choropleth";
 export { default as Chord } from "./charts/Chord";
-export { default as CustomGauge } from "./charts/CustomGauge";
 export { default as Pie } from "./charts/Pie";
 export { default as TreeMap } from "./charts/TreeMap";
 export { default as Funnel } from "./charts/Funnel";
@@ -31,4 +32,6 @@ export { default as MapPoint } from "./maps/MapPoint";
 export { default as MapChoropleth } from "./maps/MapChoropleth";
 /****Globe****/
 export { default as World } from "./globes/World";
+/**Dashboard**/
+export { default as DashboardDate } from "./dropdowns/DashboardDate";
 

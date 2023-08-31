@@ -10,8 +10,9 @@ import sankeyThumbnail from "../assets/img/icon_sankey.svg";
 import sliderThumbnail from "../assets/img/icon_slider.svg";
 import gaugeThumbnail from "../assets/img/icon_chart_gauge.svg";
 import SidebarExperiment from "./SidebarExperiment.jsx";
-import CustomGauge from "./charts/CustomGauge.jsx";
 import { connect } from "react-redux";
+import './css/Experiment.css';
+import ScenerioGuage from "./guages/ScenerioGuage";
 
 function Charts({ open, toggleOpen }) {
   const images = [
@@ -49,7 +50,10 @@ function Charts({ open, toggleOpen }) {
       originalClass: "chart-container-experiment", // Add custom CSS class to the slide container
       renderItem: () => (
         <div>
-          <CustomGauge height={"50vh"} value={-30}/>
+          <ScenerioGuage
+            guageText={'chart_demo'}
+            guageValue={30}
+          />
         </div>
       ),
       thumbnail: gaugeThumbnail,

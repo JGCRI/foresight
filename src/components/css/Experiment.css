@@ -1,0 +1,23 @@
+/******* Experiment ********/
+.experiment {
+    position: relative;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 100px;
+    height: calc(100vh - 150px);
+    overflow: auto !important;
+  }
+  
+  .page-title-experiment {
+    font-size: 30px;
+    margin-top: 0px !important;
+    color: rgb(255, 255, 255);
+  }
+  
+  .image-gallery-experiment {
+    max-width: 70% !important;
+    margin: 0 auto;
+    /* Center the gallery horizontally */
+  }

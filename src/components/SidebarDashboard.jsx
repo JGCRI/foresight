@@ -10,7 +10,6 @@ import { CiWheat } from "react-icons/ci"
 
 
 function SidebarDashboard({open, toggleOpen}) {
-
   return (
       <div className={open ? "sidenav" : "sidenavClosed"}>
         <button className={"menuBtn"} onClick={toggleOpen}>
