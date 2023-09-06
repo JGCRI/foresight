@@ -6,7 +6,7 @@
             "properties": {
                 "name": "Africa_Eastern"
             },
-            "id": "1",
+            "id": "Africa_Eastern",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -1838,7 +1838,7 @@
             "properties": {
                 "name": "Africa_Northern"
             },
-            "id": "2",
+            "id": "Africa_Northern",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -3006,7 +3006,7 @@
             "properties": {
                 "name": "Africa_Southern"
             },
-            "id": "3",
+            "id": "Africa_Southern",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -4798,7 +4798,7 @@
             "properties": {
                 "name": "Africa_Western"
             },
-            "id": "4",
+            "id": "Africa_Western",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -8790,7 +8790,7 @@
             "properties": {
                 "name": "Argentina"
             },
-            "id": "5",
+            "id": "Argentina",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -9294,7 +9294,7 @@
             "properties": {
                 "name": "Australia_NZ"
             },
-            "id": "6",
+            "id": "Australia_NZ",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -10550,7 +10550,7 @@
             "properties": {
                 "name": "Brazil"
             },
-            "id": "7",
+            "id": "Brazil",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -11376,7 +11376,7 @@
             "properties": {
                 "name": "Canada"
             },
-            "id": "8",
+            "id": "Canada",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -14688,7 +14688,7 @@
             "properties": {
                 "name": "Central American and the Caribbean"
             },
-            "id": "9",
+            "id": "Central American and the Caribbean",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -16364,7 +16364,7 @@
             "properties": {
                 "name": "Central Asia"
             },
-            "id": "10",
+            "id": "Central Asia",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -18252,7 +18252,7 @@
             "properties": {
                 "name": "China"
             },
-            "id": "11",
+            "id": "China",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -19232,7 +19232,7 @@
             "properties": {
                 "name": "Colombia"
             },
-            "id": "12",
+            "id": "Colombia",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -19646,7 +19646,7 @@
             "properties": {
                 "name": "EU-12"
             },
-            "id": "13",
+            "id": "EU-12",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -20998,7 +20998,7 @@
             "properties": {
                 "name": "EU-15"
             },
-            "id": "14",
+            "id": "EU-15",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -23998,7 +23998,7 @@
             "properties": {
                 "name": "Europe_Eastern"
             },
-            "id": "15",
+            "id": "Europe_Eastern",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -24698,7 +24698,7 @@
             "properties": {
                 "name": "European Free Trade Association"
             },
-            "id": "16",
+            "id": "European Free Trade Association",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -25262,7 +25262,7 @@
             "properties": {
                 "name": "Europe_Non_EU"
             },
-            "id": "17",
+            "id": "Europe_Non_EU",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -26330,7 +26330,7 @@
             "properties": {
                 "name": "India"
             },
-            "id": "18",
+            "id": "India",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -26888,7 +26888,7 @@
             "properties": {
                 "name": "Indonesia"
             },
-            "id": "19",
+            "id": "Indonesia",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -27952,7 +27952,7 @@
             "properties": {
                 "name": "Japan"
             },
-            "id": "20",
+            "id": "Japan",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -28236,7 +28236,7 @@
             "properties": {
                 "name": "Mexico"
             },
-            "id": "21",
+            "id": "Mexico",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -28930,7 +28930,7 @@
             "properties": {
                 "name": "Middle East"
             },
-            "id": "22",
+            "id": "Middle East",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -30562,7 +30562,7 @@
             "properties": {
                 "name": "Pakistan"
             },
-            "id": "23",
+            "id": "Pakistan",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -30840,7 +30840,7 @@
             "properties": {
                 "name": "Russia"
             },
-            "id": "24",
+            "id": "Russia",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -33296,7 +33296,7 @@
             "properties": {
                 "name": "South Africa"
             },
-            "id": "25",
+            "id": "South Africa",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -33688,7 +33688,7 @@
             "properties": {
                 "name": "South America_Northern"
             },
-            "id": "26",
+            "id": "South America_Northern",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -34424,7 +34424,7 @@
             "properties": {
                 "name": "South America_Southern"
             },
-            "id": "27",
+            "id": "South America_Southern",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -35812,7 +35812,7 @@
             "properties": {
                 "name": "South Asia"
             },
-            "id": "28",
+            "id": "South Asia",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -36448,7 +36448,7 @@
             "properties": {
                 "name": "Southeast Asia"
             },
-            "id": "29",
+            "id": "Southeast Asia",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -38732,7 +38732,7 @@
             "properties": {
                 "name": "Taiwan"
             },
-            "id": "31",
+            "id": "Taiwan",
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -38782,7 +38782,7 @@
             "properties": {
                 "name": "USA"
             },
-            "id": "32",
+            "id": "USA",
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [

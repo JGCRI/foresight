@@ -3,10 +3,11 @@ import BarHorizontal from "./charts/BarHorizontal";
 import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
 import getDashboardData from "./DashboardDummyData";
 import { connect } from 'react-redux';
-import { lineGraphReduce, choroplethReduce } from '../assets/data/DataManager';
+import { choroplethReduce, filterSubcat, getBarHorizontal } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
-function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csv }) {
+function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest }) {
+    const csv = csvTest;
     const Scenerios = openedScenerios;
     const [startDate, setStartDate] = useState(start);
     const [endDate, setEndDate] = useState(end);
@@ -168,38 +169,61 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csv }) {
             }
         ]
     }];
-    console.log(csv);
-    if(Scenerios.at(0).title === "Reference")
-        console.log(choroplethReduce(csv, "gdp"));
     return (
         <>
             <div className="graph-grid">
                 <div>Global Trends</div>
                 <div>Spatial Composition</div>
                 <div>Top 10 Countries -- By Subsector</div>
+                {csv === 'i' ? (
+                  "Loading..."
+                ) : (
                 <Line data={test} />
-                <ChoroplethImageSlider 
-                    scenario_1={Scenerios.at(0).title} 
-                    scenario_2={Scenerios.at(1).title} 
+                )}
+                {csv === 'i' ? (
+                  "Loading..."
+                ) : (
+                <ChoroplethImageSlider
+                    scenario_1={Scenerios.at(0).title}
+                    scenario_2={Scenerios.at(1).title}
+                    dataset={choroplethReduce(csv, "elecByTechTWh")}
                 />
+                )}
+                {csv === 'i' ? (
+                  "Loading..."
+                ) : (
                 <div className='bar-grid grid-border'>
-                    <BarHorizontal data={getDashboardData(Scenerios.at(0).title, "top10Country")} scenerio={Scenerios.at(0).title} />
-                    <BarHorizontal data={getDashboardData(Scenerios.at(1).title, "top10Country")} scenerio={Scenerios.at(1).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, "elecByTechTWh")} listKeys={filterSubcat(csv)} scenerio={Scenerios.at(0).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, "elecByTechTWh")} listKeys={filterSubcat(csv)} scenerio={Scenerios.at(1).title} />
                 </div>
+                )}
             </div>
             <div className="graph-grid-small">
                 <div>Global Trends</div>
+                {csv === 'i' ? (
+                  "Loading..."
+                ) : (
                 <Line data={test} />
+                )}
                 <div>Spatial Composition</div>
-                <ChoroplethImageSlider 
-                    scenario_1={Scenerios.at(0).title} 
-                    scenario_2={Scenerios.at(1).title} 
+                {csv === 'i' ? (
+                  "Loading..."
+                ) : (
+                <ChoroplethImageSlider
+                    scenario_1={Scenerios.at(0).title}
+                    scenario_2={Scenerios.at(1).title}
+                    dataset = {choroplethReduce(csv, "gdp")}
                 />
+                )}
                 <div>Top 10 Countries -- By Subsector</div>
+                {csv === 'i' ? (
+                  "Loading..."
+                ) : (
                 <div className='bar-grid grid-border'>
-                    <BarHorizontal data={getDashboardData(Scenerios.at(0).title, "top10Country")} scenerio={Scenerios.at(0).title} />
-                    <BarHorizontal data={getDashboardData(Scenerios.at(1).title, "top10Country")} scenerio={Scenerios.at(1).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, "elecByTechTWh")} listKeys={filterSubcat(csv)} scenerio={Scenerios.at(0).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, "elecByTechTWh")} listKeys={filterSubcat(csv)} scenerio={Scenerios.at(1).title} />
                 </div>
+                )}
             </div>
         </>
     );
@@ -211,7 +235,7 @@ function mapStateToProps(state) {
         scenerioSpread: { ...(state.scenerios) },
         start: state.startDate,
         end: state.endDate,
-        csv: state.parsedData,
+        csvTest: state.parsedData,
     };
 }
 
