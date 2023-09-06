@@ -40,14 +40,13 @@ def csv_to_dynamodb_json(file_name, table_name, data_types, batch_size=25, keep_
             if not keep_batch_files:
                 os.remove(f'{folder_out}/batch_{batch_index}.json')
 
-
-# Agg Param Global for Global Line charts
-file_name = 'C:/Z/models/foresight_data/gcamDataTable_aggParam_global.csv'
-table_name = 'gcamDataTable_aggParam_global'
+file_name = 'C:/Z/models/foresight/extras/data_prep/gcamDataTable_aggParam_regions.csv'
+table_name = 'gcamDataTable_aggParam_regions'
 data_types = {
     'id':'N',
     'scenario': 'S',
     'dataset': 'S', # foresight_v1_2023
+    'region': 'S',
     'param': 'S',
     'x': 'N',    
     'units': 'S',
@@ -58,20 +57,6 @@ data_types = {
 
 csv_to_dynamodb_json(file_name, table_name, data_types, folder_out='C:/Z/models/foresight_data/batch_files')
 
-# Agg Param Global for Global Bar Charts
-# file_name = 'C:/Z/models/foresight_data/gcamDataTable_aggParam_global.csv'
-# table_name = 'gcamDataTable_aggParam_global'
-# data_types = {
-#     'id':'N',
-#     'scenario': 'S',
-#     'dataset': 'S', # foresight_v1_2023
-#     'param': 'S',
-#     'x': 'N',    
-#     'units': 'S',
-#     'value':'N',
-#     'createdAt':'S',
-#     'updatedAt':'S'
-# }
 
-# csv_to_dynamodb_json(file_name, table_name, data_types, folder_out='C:/Z/models/foresight_data/batch_files')
-
+# To get count of all items in the table
+# aws dynamodb scan --table-name gcamDataTable_aggParam_regions --select "COUNT"
