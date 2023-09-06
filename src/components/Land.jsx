@@ -3,7 +3,7 @@ import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { Amplify, API, graphqlOperation } from "aws-amplify";
 import awsconfig from "../aws-exports";
-import { listForesightData } from "../graphql/queries";
+import { listGcamDataTableAggParamRegions } from "../graphql/queries";
 import { useState, useEffect } from "react";
 import SidebarDashboard from "./SidebarDashboard.jsx";
 import { connect } from "react-redux";
@@ -18,9 +18,9 @@ function Land({ open, toggleOpen }) {
   useEffect(() => {
     const fetchForesightData = async () => {
       try {
-        const { data } = await API.graphql(graphqlOperation(listForesightData));
+        const { data } = await API.graphql(graphqlOperation(listGcamDataTableAggParamRegions));
         setForesightData(
-          data.listForesightData.items.sort((a, b) => a.id - b.id)
+          data.listGcamDataTableAggParamRegions.items.sort((a, b) => a.id - b.id)
         );
       } catch (error) {
         console.log(error);
@@ -39,7 +39,7 @@ function Land({ open, toggleOpen }) {
         data: regions.map(
           (region) =>
             foresightData.find(
-              (item) => item.region === region && item.scenario === "scen1"
+              (item) => item.region === region && item.scenario === "GCAM_SSP3"
             ).value
         ),
         backgroundColor: "rgba(255, 99, 132, 0.2)",
@@ -51,7 +51,7 @@ function Land({ open, toggleOpen }) {
         data: regions.map(
           (region) =>
             foresightData.find(
-              (item) => item.region === region && item.scenario === "scen2"
+              (item) => item.region === region && item.scenario === "GCAM_SSP5"
             ).value
         ),
         backgroundColor: "rgba(54, 162, 235, 0.2)",
