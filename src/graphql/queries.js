@@ -71,3 +71,46 @@ export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
     }
   }
 `;
+export const getGcamDataTableAggParamRegions = /* GraphQL */ `
+  query GetGcamDataTableAggParamRegions($id: Int!, $region: String!) {
+    getGcamDataTableAggParamRegions(id: $id, region: $region) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggParamRegions = /* GraphQL */ `
+  query ListGcamDataTableAggParamRegions(
+    $filter: TableGcamDataTableAggParamRegionsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggParamRegions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        param
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

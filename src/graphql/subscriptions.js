@@ -115,3 +115,87 @@ export const onDeleteGcamDataTableAggParamGlobal = /* GraphQL */ `
     }
   }
 `;
+export const onCreateGcamDataTableAggParamRegions = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggParamRegions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onCreateGcamDataTableAggParamRegions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateGcamDataTableAggParamRegions = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggParamRegions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onUpdateGcamDataTableAggParamRegions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteGcamDataTableAggParamRegions = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggParamRegions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onDeleteGcamDataTableAggParamRegions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
