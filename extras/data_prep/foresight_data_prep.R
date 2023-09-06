@@ -48,18 +48,6 @@ gcamDataTable_aggParam_regions <- dataGCAM$dataAggParam %>%
 data.table::fwrite(gcamDataTable_aggParam_regions,"gcamDataTable_aggParam_regions.csv")
 
 
-# # Foresight Table 3: gcamDataTable_aggClass1_global
-# gcamDataTable_aggClass1_global <-  dataGCAM$dataAggClass1 %>%
-#   dplyr::select(-subRegion, -xLabel, -region) %>%
-#   dplyr::group_by(scenario,param,classLabel,class,x,units) %>%
-#   dplyr::summarize(value=sum(value))%>%
-#   dplyr::ungroup() %>%
-#   dplyr::mutate(id=starting_n:n(), dataset="foresight_v1")%>%
-#   dplyr::select(id,scenario,dataset,param,classLabel,class,x,units,value); gcamDataTable_aggClass1_global
-#
-# data.table::fwrite(gcamDataTable_aggClass1_global,"gcamDataTable_aggClass1_global.csv")
-
-
 # Foresight Table 3: gcamDataTable_aggParam_global (Dashboard: Linechart)
 gcamDataTable_aggParam_global <- dataGCAM$dataAggParam %>%
   dplyr::select(-subRegion, -xLabel, -region) %>%
@@ -70,4 +58,16 @@ gcamDataTable_aggParam_global <- dataGCAM$dataAggParam %>%
   dplyr::select(id,scenario,dataset,param,x,units,value); gcamDataTable_aggParam_global
 
 data.table::fwrite(gcamDataTable_aggParam_global,"gcamDataTable_aggParam_global.csv")
+
+# # Foresight Table 4: gcamDataTable_aggClass1_global
+# gcamDataTable_aggClass1_global <-  dataGCAM$dataAggClass1 %>%
+#   dplyr::select(-subRegion, -xLabel, -region) %>%
+#   dplyr::group_by(scenario,param,classLabel,class,x,units) %>%
+#   dplyr::summarize(value=sum(value))%>%
+#   dplyr::ungroup() %>%
+#   dplyr::mutate(id=starting_n:n(), dataset="foresight_v1")%>%
+#   dplyr::select(id,scenario,dataset,param,classLabel,class,x,units,value); gcamDataTable_aggClass1_global
+#
+# data.table::fwrite(gcamDataTable_aggClass1_global,"gcamDataTable_aggClass1_global.csv")
+
 
