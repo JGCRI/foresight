@@ -53,7 +53,7 @@ function LegendControl() {
   return null;
 }
 
-function MapChoropleth({ width, height, data }) {
+function MapChoropleth({ width, height, data}) {
   const [highlightedFeature, setHighlightedFeature] = useState(null);
 
   const geoJSONStyle = (feature) => {
@@ -87,8 +87,8 @@ function MapChoropleth({ width, height, data }) {
   };
 
   return (
-    <div className="chart-container">
       <MapContainer
+        className="chart-container"
         center={[39.8283, -98.5795]}
         zoom={4}
         style={{ width: width, height: height }}
@@ -119,7 +119,6 @@ function MapChoropleth({ width, height, data }) {
 
         <LegendControl />
       </MapContainer>
-    </div>
   );
 }
 

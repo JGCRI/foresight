@@ -186,6 +186,17 @@ export const getNoSubcatChoropleth = (data) => {
     return reducedData;
 }
 
+export const getBarTotal = (data, param, scenarios) => {
+    var ans = [];
+    for(var i = 0; i < scenarios.length; i++) {
+        ans.push({
+            id: scenarios.at(i).title,
+            data: getBarHorizontal(data, param)
+        })
+    }
+    return ans;
+}
+
 export const getBarHorizontal = (data, param) => {
     var output = [];
     var barData = getParam(data, param);

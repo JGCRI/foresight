@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { choroplethReduce, filterSubcat, getBarHorizontal } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
-function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest }) {
+function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest, selectedGuage }) {
     const csv = csvTest;
     const Scenerios = openedScenerios;
     const [startDate, setStartDate] = useState(start);
@@ -176,12 +176,12 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest 
                 <div>Spatial Composition</div>
                 <div>Top 10 Countries -- By Subsector</div>
                 {csv === 'i' ? (
-                  "Loading..."
+                  "Loading Dataset..."
                 ) : (
                 <Line data={test} />
                 )}
                 {csv === 'i' ? (
-                  "Loading..."
+                  "Loading Dataset..."
                 ) : (
                 <ChoroplethImageSlider
                     scenario_1={Scenerios.at(0).title}
@@ -190,7 +190,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest 
                 />
                 )}
                 {csv === 'i' ? (
-                  "Loading..."
+                  "Loading Dataset..."
                 ) : (
                 <div className='bar-grid grid-border'>
                     <BarHorizontal data={getBarHorizontal(csv, "elecByTechTWh")} listKeys={filterSubcat(csv)} scenerio={Scenerios.at(0).title} />
@@ -201,13 +201,13 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest 
             <div className="graph-grid-small">
                 <div>Global Trends</div>
                 {csv === 'i' ? (
-                  "Loading..."
+                  "Loading Dataset..."
                 ) : (
                 <Line data={test} />
                 )}
                 <div>Spatial Composition</div>
                 {csv === 'i' ? (
-                  "Loading..."
+                  "Loading Dataset..."
                 ) : (
                 <ChoroplethImageSlider
                     scenario_1={Scenerios.at(0).title}
@@ -217,7 +217,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest 
                 )}
                 <div>Top 10 Countries -- By Subsector</div>
                 {csv === 'i' ? (
-                  "Loading..."
+                  "Loading Dataset..."
                 ) : (
                 <div className='bar-grid grid-border'>
                     <BarHorizontal data={getBarHorizontal(csv, "elecByTechTWh")} listKeys={filterSubcat(csv)} scenerio={Scenerios.at(0).title} />
@@ -232,6 +232,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest 
 function mapStateToProps(state) {
     return {
         openedScenerios: state.scenerios,
+        selectedGuage: state.dashboardSelection,
         scenerioSpread: { ...(state.scenerios) },
         start: state.startDate,
         end: state.endDate,
