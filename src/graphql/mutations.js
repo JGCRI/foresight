@@ -43,36 +43,6 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const createForesightData = /* GraphQL */ `
-  mutation CreateForesightData($input: CreateForesightDataInput!) {
-    createForesightData(input: $input) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
-export const updateForesightData = /* GraphQL */ `
-  mutation UpdateForesightData($input: UpdateForesightDataInput!) {
-    updateForesightData(input: $input) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
-export const deleteForesightData = /* GraphQL */ `
-  mutation DeleteForesightData($input: DeleteForesightDataInput!) {
-    deleteForesightData(input: $input) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
 export const createGcamDataTableAggParamGlobal = /* GraphQL */ `
   mutation CreateGcamDataTableAggParamGlobal(
     $input: CreateGcamDataTableAggParamGlobalInput!
@@ -115,6 +85,60 @@ export const deleteGcamDataTableAggParamGlobal = /* GraphQL */ `
       id
       scenario
       dataset
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createGcamDataTableAggParamRegions = /* GraphQL */ `
+  mutation CreateGcamDataTableAggParamRegions(
+    $input: CreateGcamDataTableAggParamRegionsInput!
+  ) {
+    createGcamDataTableAggParamRegions(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateGcamDataTableAggParamRegions = /* GraphQL */ `
+  mutation UpdateGcamDataTableAggParamRegions(
+    $input: UpdateGcamDataTableAggParamRegionsInput!
+  ) {
+    updateGcamDataTableAggParamRegions(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteGcamDataTableAggParamRegions = /* GraphQL */ `
+  mutation DeleteGcamDataTableAggParamRegions(
+    $input: DeleteGcamDataTableAggParamRegionsInput!
+  ) {
+    deleteGcamDataTableAggParamRegions(input: $input) {
+      id
+      scenario
+      dataset
+      region
       param
       x
       units
