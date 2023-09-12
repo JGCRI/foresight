@@ -6,6 +6,9 @@ import DashboardChoropleth from "./DashboardChoropleth";
 import getDashboardData from "../DashboardDummyData";
 import { getSmallestChoropleth, getLargestChoropleth } from "../../assets/data/DataManager";
 
+import MapChoropleth from "../maps/MapChoropleth";
+import usstateData from "../maps/data/uststateData.js"
+
 //<DashboardChoropleth data={getDashboardData("Scenario X", "spatialComparison")} />
 function ChoroplethImageSlider({scenario_1, scenario_2, dataset}) {
   const scenario1 = scenario_1;
@@ -20,8 +23,9 @@ function ChoroplethImageSlider({scenario_1, scenario_2, dataset}) {
       <div className="slider-container">
         <div className="image-container">
           <ReactCompareSlider
-            itemOne={<DashboardChoropleth data={outputData} scenarioTitle={scenario1} isLeft={true} min={minimum} max={maximum}/>}
-            itemTwo={<DashboardChoropleth data={outputData} scenarioTitle={scenario2} isLeft={false} min={minimum} max={maximum}/>}
+            itemOne={<MapChoropleth width={"100%"} height={"100%"} data={usstateData} />}
+            itemTwo={<MapChoropleth width={"100%"} height={"100%"} data={usstateData} />}
+            onlyHandleDraggable
             className="map-wrapper"
             max={maximum}
             min={minimum}

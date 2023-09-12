@@ -131,6 +131,10 @@
   --bs-btn-padding-x: 0.25rem;
 }
 
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+  z-index: 0;
+}
+
 .dashboard-data-grid {
   position: relative;
   display: grid;
@@ -149,6 +153,9 @@
   align-items: center;
 }
 
+.chart-container {
+  z-index: 10;
+}
 .guageText {
   text-align: center;
   font-size: 1.25vw;
