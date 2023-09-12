@@ -59,6 +59,17 @@ data_types_i = {
     'value':'N',
     'createdAt':'S',
     'updatedAt':'S'
+#   id: Int!
+#   scenario: String!
+#   dataset: String!
+#   region: String!
+#   classLabel: String!
+#   class: String!
+#   x: Int!    
+#   units: String!
+#   value: Float!
+#   createdAt: String!
+#   updatedAt:String!
 }
 folder_out_i='C:/Z/models/foresight_data/batch_files/gcamDataTable_aggClass1_regions'
 
