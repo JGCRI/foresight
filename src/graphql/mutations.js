@@ -148,3 +148,60 @@ export const deleteGcamDataTableAggParamRegions = /* GraphQL */ `
     }
   }
 `;
+export const createGcamDataTableAggClass1Regions = /* GraphQL */ `
+  mutation CreateGcamDataTableAggClass1Regions(
+    $input: CreateGcamDataTableAggClass1RegionsInput!
+  ) {
+    createGcamDataTableAggClass1Regions(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateGcamDataTableAggClass1Regions = /* GraphQL */ `
+  mutation UpdateGcamDataTableAggClass1Regions(
+    $input: UpdateGcamDataTableAggClass1RegionsInput!
+  ) {
+    updateGcamDataTableAggClass1Regions(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteGcamDataTableAggClass1Regions = /* GraphQL */ `
+  mutation DeleteGcamDataTableAggClass1Regions(
+    $input: DeleteGcamDataTableAggClass1RegionsInput!
+  ) {
+    deleteGcamDataTableAggClass1Regions(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;

@@ -114,3 +114,48 @@ export const listGcamDataTableAggParamRegions = /* GraphQL */ `
     }
   }
 `;
+export const getGcamDataTableAggClass1Regions = /* GraphQL */ `
+  query GetGcamDataTableAggClass1Regions($id: Int!, $scenario: String!) {
+    getGcamDataTableAggClass1Regions(id: $id, scenario: $scenario) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggClass1Regions = /* GraphQL */ `
+  query ListGcamDataTableAggClass1Regions(
+    $filter: TableGcamDataTableAggClass1RegionsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggClass1Regions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        classLabel
+        class
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
