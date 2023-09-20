@@ -188,6 +188,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest,
                     scenario_1={Scenerios.at(0).title}
                     scenario_2={Scenerios.at(1).title}
                     dataset={choroplethReduce(csv, "elecByTechTWh")}
+                    dataset2={choroplethReduce(csv, "gdp")}
                 />
                 )}
                 {csv === 'i' ? (
@@ -215,6 +216,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest,
                     scenario_1={Scenerios.at(0).title}
                     scenario_2={Scenerios.at(1).title}
                     dataset={choroplethReduce(csv, "elecByTechTWh")}
+                    dataset2={choroplethReduce(csv, "gdp")}
                 />
                 )}
                 <div>Top 10 Countries -- By Subsector</div>

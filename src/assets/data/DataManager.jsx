@@ -39,7 +39,6 @@ export const getRegion = (data, region) => {
 }
 
 export const getLargestChoropleth = (data) => {
-    console.log(data);
     var ans = 0;
     for(var i = 0; i < data.length; i++) {
         if(ans < data.at(i).value)
@@ -220,9 +219,10 @@ export const getBarHorizontal = (data, param) => {
         for(var j = 0; j < subcatList.length; j++) {
             obj[subcatList[j]] = parseFloat(mergeDates(getSubcat(countryData)).at(0).value);
         }
-        output.push(obj);   
+        output.push(obj);  
     }
-    return output;
+    output.sort((a, b) => b["Aggregate of Subcategories"] - a["Aggregate of Subcategories"]);
+    return output.slice(0, 10);
 }
 
 export const lineGraphReduce = (data, param) => {

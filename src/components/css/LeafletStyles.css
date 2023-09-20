@@ -1,0 +1,41 @@
+.leaflet-container {
+    height: 1000px;
+    width: 100%;
+  }
+  
+  .leaflet-div-icon {
+    background: transparent;
+    border: none;
+  }
+  
+  .popup .leaflet-popup-content-wrapper {
+    background: none;
+    box-shadow: none;
+  }
+  
+  .leaflet-popup-tip-container {
+    display: none;
+  }
+  
+  .leaflet-popup-close-button {
+    display: none;
+  }
+  
+  .cardContent {
+    margin-top: 1em;
+  }
+  
+  .leaflet-div-icon {
+    background: transparent;
+    border: none;
+  }
+  
+  .leaflet-marker-icon .number {
+    position: relative;
+    color: white;
+    top: -33px;
+    font-size: 12px;
+    width: 27px;
+    text-align: center;
+  }
+  
