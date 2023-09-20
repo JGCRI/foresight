@@ -39,6 +39,7 @@ export const getRegion = (data, region) => {
 }
 
 export const getLargestChoropleth = (data) => {
+    console.log(data);
     var ans = 0;
     for(var i = 0; i < data.length; i++) {
         if(ans < data.at(i).value)
@@ -51,6 +52,15 @@ export const getSmallestChoropleth = (data) => {
     var ans = data.at(0).value;
     for(var i = 0; i < data.length; i++) {
         if(ans > data.at(i).value)
+            ans = data.at(i).value;
+    }
+    return ans;
+}
+
+export const getChoroplethValue = (data, id) => {
+    var ans = 0;
+    for(var i = 0; i < data.length; i++) {
+        if(id === data.at(i).id)
             ans = data.at(i).value;
     }
     return ans;

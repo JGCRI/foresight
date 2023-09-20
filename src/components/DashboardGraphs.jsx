@@ -184,6 +184,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest,
                   "Loading Dataset..."
                 ) : (
                 <ChoroplethImageSlider
+                    id={"Dashboard_Big"}
                     scenario_1={Scenerios.at(0).title}
                     scenario_2={Scenerios.at(1).title}
                     dataset={choroplethReduce(csv, "elecByTechTWh")}
@@ -210,9 +211,10 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, csvTest,
                   "Loading Dataset..."
                 ) : (
                 <ChoroplethImageSlider
+                    id={"Dashboard_Small"}
                     scenario_1={Scenerios.at(0).title}
                     scenario_2={Scenerios.at(1).title}
-                    dataset = {choroplethReduce(csv, "gdp")}
+                    dataset={choroplethReduce(csv, "elecByTechTWh")}
                 />
                 )}
                 <div>Top 10 Countries -- By Subsector</div>
