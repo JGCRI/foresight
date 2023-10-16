@@ -1,0 +1,364 @@
+id,scenario,dataset,region,param,classLabel,class,x,units,value
+1,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,1990,Electricity Generation by Fuel (TWh),46.706293216
+2,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2005,Electricity Generation by Fuel (TWh),128.587312127
+3,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2010,Electricity Generation by Fuel (TWh),220.437166357
+4,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2015,Electricity Generation by Fuel (TWh),305.130258169
+5,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2020,Electricity Generation by Fuel (TWh),341.449896507
+6,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2025,Electricity Generation by Fuel (TWh),557.521070255
+7,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2030,Electricity Generation by Fuel (TWh),777.439815295
+8,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2035,Electricity Generation by Fuel (TWh),1035.477242587
+9,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2040,Electricity Generation by Fuel (TWh),1318.717851937
+10,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2045,Electricity Generation by Fuel (TWh),1633.873580322
+11,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,biomass,2050,Electricity Generation by Fuel (TWh),1851.647661091
+12,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,1990,Electricity Generation by Fuel (TWh),4365.211229885
+13,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2005,Electricity Generation by Fuel (TWh),7211.520475234
+14,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2010,Electricity Generation by Fuel (TWh),8554.025220907
+15,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2015,Electricity Generation by Fuel (TWh),9434.60532206
+16,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2020,Electricity Generation by Fuel (TWh),11210.819265022
+17,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2025,Electricity Generation by Fuel (TWh),12887.414270044
+18,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2030,Electricity Generation by Fuel (TWh),14324.440688248
+19,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2035,Electricity Generation by Fuel (TWh),15464.575356047
+20,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2040,Electricity Generation by Fuel (TWh),16336.972064807
+21,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2045,Electricity Generation by Fuel (TWh),17160.803523718
+22,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,coal,2050,Electricity Generation by Fuel (TWh),17735.607402205
+23,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,1990,Electricity Generation by Fuel (TWh),1578.440580513
+24,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2005,Electricity Generation by Fuel (TWh),3489.427007386
+25,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2010,Electricity Generation by Fuel (TWh),4596.152337738
+26,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2015,Electricity Generation by Fuel (TWh),5348.087139962
+27,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2020,Electricity Generation by Fuel (TWh),6378.270004867
+28,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2025,Electricity Generation by Fuel (TWh),7225.839314166
+29,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2030,Electricity Generation by Fuel (TWh),8344.2020041
+30,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2035,Electricity Generation by Fuel (TWh),9503.180693033
+31,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2040,Electricity Generation by Fuel (TWh),10751.138722795
+32,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2045,Electricity Generation by Fuel (TWh),12124.600258656
+33,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,gas,2050,Electricity Generation by Fuel (TWh),13347.790093712
+34,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,1990,Electricity Generation by Fuel (TWh),36.367249488
+35,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2005,Electricity Generation by Fuel (TWh),58.218719448
+36,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2010,Electricity Generation by Fuel (TWh),68.047994444
+37,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2015,Electricity Generation by Fuel (TWh),80.45271751
+38,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2020,Electricity Generation by Fuel (TWh),227.516880908
+39,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2025,Electricity Generation by Fuel (TWh),360.215082303
+40,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2030,Electricity Generation by Fuel (TWh),491.022399483
+41,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2035,Electricity Generation by Fuel (TWh),617.833034999
+42,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2040,Electricity Generation by Fuel (TWh),739.438862686
+43,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2045,Electricity Generation by Fuel (TWh),801.348994574
+44,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2050,Electricity Generation by Fuel (TWh),830.865539194
+45,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,1990,Electricity Generation by Fuel (TWh),2141.637611098
+46,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2005,Electricity Generation by Fuel (TWh),2935.37233332
+47,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2010,Electricity Generation by Fuel (TWh),3443.74838887
+48,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2015,Electricity Generation by Fuel (TWh),3903.09155588
+49,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2020,Electricity Generation by Fuel (TWh),4025.270750349
+50,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2025,Electricity Generation by Fuel (TWh),4147.447472493
+51,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2030,Electricity Generation by Fuel (TWh),4269.626389264
+52,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2035,Electricity Generation by Fuel (TWh),4391.802333651
+53,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2040,Electricity Generation by Fuel (TWh),4513.979694878
+54,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2045,Electricity Generation by Fuel (TWh),4636.157833694
+55,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,hydro,2050,Electricity Generation by Fuel (TWh),4758.334611505
+56,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,1990,Electricity Generation by Fuel (TWh),2012.761898758
+57,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2005,Electricity Generation by Fuel (TWh),2767.853923971
+58,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2010,Electricity Generation by Fuel (TWh),2756.15753574
+59,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2015,Electricity Generation by Fuel (TWh),2568.695864172
+60,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2020,Electricity Generation by Fuel (TWh),2895.207582323
+61,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2025,Electricity Generation by Fuel (TWh),3323.320853334
+62,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2030,Electricity Generation by Fuel (TWh),3822.297715628
+63,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2035,Electricity Generation by Fuel (TWh),4327.934532203
+64,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2040,Electricity Generation by Fuel (TWh),4849.077766325
+65,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2045,Electricity Generation by Fuel (TWh),5468.423184002
+66,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2050,Electricity Generation by Fuel (TWh),6014.603099999
+67,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,1990,Electricity Generation by Fuel (TWh),1286.425267027
+68,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2005,Electricity Generation by Fuel (TWh),1070.912766498
+69,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2010,Electricity Generation by Fuel (TWh),929.914126305
+70,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2015,Electricity Generation by Fuel (TWh),938.362046953
+71,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2020,Electricity Generation by Fuel (TWh),948.047434948
+72,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2025,Electricity Generation by Fuel (TWh),1038.06584985
+73,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2030,Electricity Generation by Fuel (TWh),1189.226069106
+74,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2035,Electricity Generation by Fuel (TWh),1408.817597628
+75,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2040,Electricity Generation by Fuel (TWh),1648.96235759
+76,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2045,Electricity Generation by Fuel (TWh),1878.902741361
+77,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2050,Electricity Generation by Fuel (TWh),2191.992670531
+78,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,1990,Electricity Generation by Fuel (TWh),0.752993051
+79,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2005,Electricity Generation by Fuel (TWh),4.524792349
+80,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2010,Electricity Generation by Fuel (TWh),33.863880947
+81,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2015,Electricity Generation by Fuel (TWh),260.006525738
+82,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2020,Electricity Generation by Fuel (TWh),769.996620788
+83,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2025,Electricity Generation by Fuel (TWh),2012.512402916
+84,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2030,Electricity Generation by Fuel (TWh),3837.928961384
+85,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2035,Electricity Generation by Fuel (TWh),5762.00244323
+86,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2040,Electricity Generation by Fuel (TWh),7736.8127169
+87,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2045,Electricity Generation by Fuel (TWh),9625.910744
+88,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,solar,2050,Electricity Generation by Fuel (TWh),11466.95955663
+89,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,1990,Electricity Generation by Fuel (TWh),3.879946944
+90,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2005,Electricity Generation by Fuel (TWh),103.844160669
+91,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2010,Electricity Generation by Fuel (TWh),341.305965553
+92,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2015,Electricity Generation by Fuel (TWh),837.617400461
+93,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2020,Electricity Generation by Fuel (TWh),1541.164131218
+94,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2025,Electricity Generation by Fuel (TWh),2393.155005424
+95,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2030,Electricity Generation by Fuel (TWh),3559.277199543
+96,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2035,Electricity Generation by Fuel (TWh),4962.056404186
+97,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2040,Electricity Generation by Fuel (TWh),6647.13514708
+98,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2045,Electricity Generation by Fuel (TWh),7943.90580649
+99,GCAM_SSP2,foresight_v1,global,elecByTechTWh,Fuel,wind,2050,Electricity Generation by Fuel (TWh),9405.347908
+100,GCAM_SSP2,foresight_v1,global,pop,Population,class1,1975,Population (Millions),4075.522
+101,GCAM_SSP2,foresight_v1,global,pop,Population,class1,1990,Population (Millions),5321.687
+102,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2005,Population (Millions),6534.314
+103,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2010,Population (Millions),6947.252
+104,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2015,Population (Millions),7369.295
+105,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2020,Population (Millions),7739.743
+106,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2025,Population (Millions),8084.34
+107,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2030,Population (Millions),8396.881
+108,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2035,Population (Millions),8677.608
+109,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2040,Population (Millions),8924.749
+110,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2045,Population (Millions),9135.444
+111,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2050,Population (Millions),9305.449
+112,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2055,Population (Millions),9431.933
+113,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2060,Population (Millions),9516.32
+114,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2065,Population (Millions),9563.891
+115,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2070,Population (Millions),9579.816
+116,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2075,Population (Millions),9565.127
+117,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2080,Population (Millions),9521.116
+118,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2085,Population (Millions),9450.775
+119,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2090,Population (Millions),9359.357
+120,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2095,Population (Millions),9251.425
+121,GCAM_SSP2,foresight_v1,global,pop,Population,class1,2100,Population (Millions),9130.189
+122,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,1990,Electricity Generation by Fuel (TWh),46.706293216
+123,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2005,Electricity Generation by Fuel (TWh),128.587312127
+124,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2010,Electricity Generation by Fuel (TWh),220.437166357
+125,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2015,Electricity Generation by Fuel (TWh),305.130258169
+126,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2020,Electricity Generation by Fuel (TWh),290.146888407
+127,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2025,Electricity Generation by Fuel (TWh),469.403979049
+128,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2030,Electricity Generation by Fuel (TWh),620.173752735
+129,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2035,Electricity Generation by Fuel (TWh),778.360961991
+130,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2040,Electricity Generation by Fuel (TWh),929.470918576
+131,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2045,Electricity Generation by Fuel (TWh),1031.296897897
+132,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,biomass,2050,Electricity Generation by Fuel (TWh),1051.85678552
+133,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,1990,Electricity Generation by Fuel (TWh),4365.211229885
+134,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2005,Electricity Generation by Fuel (TWh),7211.520475234
+135,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2010,Electricity Generation by Fuel (TWh),8554.025220907
+136,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2015,Electricity Generation by Fuel (TWh),9434.60560006
+137,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2020,Electricity Generation by Fuel (TWh),11229.075100562
+138,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2025,Electricity Generation by Fuel (TWh),12788.725634963
+139,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2030,Electricity Generation by Fuel (TWh),14039.659705848
+140,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2035,Electricity Generation by Fuel (TWh),14863.820066139
+141,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2040,Electricity Generation by Fuel (TWh),15418.685957849
+142,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2045,Electricity Generation by Fuel (TWh),16075.528788492
+143,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,coal,2050,Electricity Generation by Fuel (TWh),16557.404815986
+144,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,1990,Electricity Generation by Fuel (TWh),1578.440580513
+145,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2005,Electricity Generation by Fuel (TWh),3489.427007386
+146,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2010,Electricity Generation by Fuel (TWh),4596.152337738
+147,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2015,Electricity Generation by Fuel (TWh),5348.087139962
+148,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2020,Electricity Generation by Fuel (TWh),6382.087891896
+149,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2025,Electricity Generation by Fuel (TWh),7209.428744493
+150,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2030,Electricity Generation by Fuel (TWh),8251.351962083
+151,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2035,Electricity Generation by Fuel (TWh),9299.993783025
+152,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2040,Electricity Generation by Fuel (TWh),10373.649063323
+153,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2045,Electricity Generation by Fuel (TWh),11576.458816599
+154,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,gas,2050,Electricity Generation by Fuel (TWh),12616.968150505
+155,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,1990,Electricity Generation by Fuel (TWh),36.367249488
+156,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2005,Electricity Generation by Fuel (TWh),58.218719448
+157,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2010,Electricity Generation by Fuel (TWh),68.047994444
+158,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2015,Electricity Generation by Fuel (TWh),80.45271751
+159,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2020,Electricity Generation by Fuel (TWh),232.691366252
+160,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2025,Electricity Generation by Fuel (TWh),346.355712079
+161,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2030,Electricity Generation by Fuel (TWh),451.514990243
+162,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2035,Electricity Generation by Fuel (TWh),550.533436335
+163,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2040,Electricity Generation by Fuel (TWh),642.067652857
+164,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2045,Electricity Generation by Fuel (TWh),688.44276703
+165,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2050,Electricity Generation by Fuel (TWh),702.42949065
+166,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,1990,Electricity Generation by Fuel (TWh),2141.637611098
+167,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2005,Electricity Generation by Fuel (TWh),2935.37233332
+168,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2010,Electricity Generation by Fuel (TWh),3443.74838887
+169,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2015,Electricity Generation by Fuel (TWh),3903.09155588
+170,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2020,Electricity Generation by Fuel (TWh),4025.270750349
+171,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2025,Electricity Generation by Fuel (TWh),4147.447472493
+172,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2030,Electricity Generation by Fuel (TWh),4269.626389264
+173,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2035,Electricity Generation by Fuel (TWh),4391.802333651
+174,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2040,Electricity Generation by Fuel (TWh),4513.979694878
+175,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2045,Electricity Generation by Fuel (TWh),4636.157833694
+176,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,hydro,2050,Electricity Generation by Fuel (TWh),4753.327111505
+177,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,1990,Electricity Generation by Fuel (TWh),2012.761898758
+178,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2005,Electricity Generation by Fuel (TWh),2767.853923971
+179,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2010,Electricity Generation by Fuel (TWh),2756.15753574
+180,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2015,Electricity Generation by Fuel (TWh),2568.695891952
+181,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2020,Electricity Generation by Fuel (TWh),2861.861915504
+182,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2025,Electricity Generation by Fuel (TWh),3152.526498183
+183,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2030,Electricity Generation by Fuel (TWh),3454.742090336
+184,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2035,Electricity Generation by Fuel (TWh),3706.059225451
+185,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2040,Electricity Generation by Fuel (TWh),3914.143985207
+186,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2045,Electricity Generation by Fuel (TWh),4193.865999794
+187,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2050,Electricity Generation by Fuel (TWh),4402.885002936
+188,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,1990,Electricity Generation by Fuel (TWh),1286.425267027
+189,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2005,Electricity Generation by Fuel (TWh),1070.912766498
+190,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2010,Electricity Generation by Fuel (TWh),929.914126305
+191,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2015,Electricity Generation by Fuel (TWh),938.362074733
+192,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2020,Electricity Generation by Fuel (TWh),898.48161509
+193,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2025,Electricity Generation by Fuel (TWh),1026.238715262
+194,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2030,Electricity Generation by Fuel (TWh),1198.290120134
+195,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2035,Electricity Generation by Fuel (TWh),1406.647456504
+196,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2040,Electricity Generation by Fuel (TWh),1628.775246493
+197,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2045,Electricity Generation by Fuel (TWh),1846.65962778
+198,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2050,Electricity Generation by Fuel (TWh),2104.655032565
+199,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,1990,Electricity Generation by Fuel (TWh),0.752993051
+200,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2005,Electricity Generation by Fuel (TWh),4.524792349
+201,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2010,Electricity Generation by Fuel (TWh),33.863880947
+202,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2015,Electricity Generation by Fuel (TWh),260.006525738
+203,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2020,Electricity Generation by Fuel (TWh),1126.517706976
+204,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2025,Electricity Generation by Fuel (TWh),1867.216063214
+205,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2030,Electricity Generation by Fuel (TWh),2661.873218796
+206,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2035,Electricity Generation by Fuel (TWh),3455.284238784
+207,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2040,Electricity Generation by Fuel (TWh),4287.873551562
+208,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2045,Electricity Generation by Fuel (TWh),4983.249380307
+209,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,solar,2050,Electricity Generation by Fuel (TWh),5331.743120733
+210,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,1990,Electricity Generation by Fuel (TWh),3.879946944
+211,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2005,Electricity Generation by Fuel (TWh),103.844160669
+212,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2010,Electricity Generation by Fuel (TWh),341.305965553
+213,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2015,Electricity Generation by Fuel (TWh),837.617678241
+214,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2020,Electricity Generation by Fuel (TWh),1440.513487756
+215,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2025,Electricity Generation by Fuel (TWh),2000.730602266
+216,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2030,Electricity Generation by Fuel (TWh),2687.312288757
+217,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2035,Electricity Generation by Fuel (TWh),3428.542668916
+218,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2040,Electricity Generation by Fuel (TWh),4263.433691322
+219,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2045,Electricity Generation by Fuel (TWh),4516.213688963
+220,GCAM_SSP3,foresight_v1,global,elecByTechTWh,Fuel,wind,2050,Electricity Generation by Fuel (TWh),4968.6786638
+221,GCAM_SSP3,foresight_v1,global,pop,Population,class1,1975,Population (Millions),4075.522
+222,GCAM_SSP3,foresight_v1,global,pop,Population,class1,1990,Population (Millions),5321.687
+223,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2005,Population (Millions),6534.314
+224,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2010,Population (Millions),6947.252
+225,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2015,Population (Millions),7369.295
+226,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2020,Population (Millions),7788.592
+227,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2025,Population (Millions),8203.816
+228,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2030,Population (Millions),8609.754
+229,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2035,Population (Millions),8990.598
+230,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2040,Population (Millions),9356.453
+231,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2045,Population (Millions),9713.167
+232,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2050,Population (Millions),10059.593
+233,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2055,Population (Millions),10382.092
+234,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2060,Population (Millions),10679.922
+235,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2065,Population (Millions),10958.612
+236,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2070,Population (Millions),11226.065
+237,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2075,Population (Millions),11487.979
+238,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2080,Population (Millions),11745.578
+239,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2085,Population (Millions),12000.045
+240,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2090,Population (Millions),12250.02
+241,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2095,Population (Millions),12497.238
+242,GCAM_SSP3,foresight_v1,global,pop,Population,class1,2100,Population (Millions),12738.443
+243,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,1990,Electricity Generation by Fuel (TWh),46.706293216
+244,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2005,Electricity Generation by Fuel (TWh),128.587312127
+245,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2010,Electricity Generation by Fuel (TWh),220.437166357
+246,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2015,Electricity Generation by Fuel (TWh),305.130258169
+247,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2020,Electricity Generation by Fuel (TWh),351.192171541
+248,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2025,Electricity Generation by Fuel (TWh),607.916191899
+249,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2030,Electricity Generation by Fuel (TWh),909.563862035
+250,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2035,Electricity Generation by Fuel (TWh),1281.389095395
+251,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2040,Electricity Generation by Fuel (TWh),1659.751328315
+252,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2045,Electricity Generation by Fuel (TWh),2012.389996873
+253,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,biomass,2050,Electricity Generation by Fuel (TWh),2276.42632531
+254,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,1990,Electricity Generation by Fuel (TWh),4365.211229885
+255,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2005,Electricity Generation by Fuel (TWh),7211.520475234
+256,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2010,Electricity Generation by Fuel (TWh),8554.025220907
+257,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2015,Electricity Generation by Fuel (TWh),9434.60532206
+258,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2020,Electricity Generation by Fuel (TWh),11499.011120447
+259,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2025,Electricity Generation by Fuel (TWh),14059.644718283
+260,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2030,Electricity Generation by Fuel (TWh),16888.592345978
+261,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2035,Electricity Generation by Fuel (TWh),19600.534055813
+262,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2040,Electricity Generation by Fuel (TWh),21840.102960357
+263,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2045,Electricity Generation by Fuel (TWh),23857.096195026
+264,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,coal,2050,Electricity Generation by Fuel (TWh),25380.297563262
+265,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,1990,Electricity Generation by Fuel (TWh),1578.440580513
+266,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2005,Electricity Generation by Fuel (TWh),3489.427007386
+267,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2010,Electricity Generation by Fuel (TWh),4596.152337738
+268,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2015,Electricity Generation by Fuel (TWh),5348.087084402
+269,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2020,Electricity Generation by Fuel (TWh),6750.87816229
+270,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2025,Electricity Generation by Fuel (TWh),8257.168872762
+271,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2030,Electricity Generation by Fuel (TWh),10421.042456403
+272,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2035,Electricity Generation by Fuel (TWh),13063.147808666
+273,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2040,Electricity Generation by Fuel (TWh),16103.415857166
+274,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2045,Electricity Generation by Fuel (TWh),19459.288532648
+275,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,gas,2050,Electricity Generation by Fuel (TWh),22777.79523331
+276,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,1990,Electricity Generation by Fuel (TWh),36.367249488
+277,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2005,Electricity Generation by Fuel (TWh),58.218719448
+278,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2010,Electricity Generation by Fuel (TWh),68.047994444
+279,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2015,Electricity Generation by Fuel (TWh),80.45271751
+280,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2020,Electricity Generation by Fuel (TWh),235.328125733
+281,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2025,Electricity Generation by Fuel (TWh),384.570816479
+282,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2030,Electricity Generation by Fuel (TWh),535.225838695
+283,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2035,Electricity Generation by Fuel (TWh),681.577813714
+284,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2040,Electricity Generation by Fuel (TWh),797.848689221
+285,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2045,Electricity Generation by Fuel (TWh),843.781080536
+286,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,geothermal,2050,Electricity Generation by Fuel (TWh),863.749767889
+287,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,1990,Electricity Generation by Fuel (TWh),2141.637611098
+288,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2005,Electricity Generation by Fuel (TWh),2935.37233332
+289,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2010,Electricity Generation by Fuel (TWh),3443.74838887
+290,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2015,Electricity Generation by Fuel (TWh),3903.09155588
+291,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2020,Electricity Generation by Fuel (TWh),4025.270750349
+292,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2025,Electricity Generation by Fuel (TWh),4147.447472493
+293,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2030,Electricity Generation by Fuel (TWh),4269.626389264
+294,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2035,Electricity Generation by Fuel (TWh),4391.802333651
+295,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2040,Electricity Generation by Fuel (TWh),4513.979694878
+296,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2045,Electricity Generation by Fuel (TWh),4636.157833694
+297,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,hydro,2050,Electricity Generation by Fuel (TWh),4758.334611505
+298,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,1990,Electricity Generation by Fuel (TWh),2012.761898758
+299,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2005,Electricity Generation by Fuel (TWh),2767.853923971
+300,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2010,Electricity Generation by Fuel (TWh),2756.15753574
+301,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2015,Electricity Generation by Fuel (TWh),2568.695864172
+302,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2020,Electricity Generation by Fuel (TWh),2938.166419941
+303,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2025,Electricity Generation by Fuel (TWh),3504.666354878
+304,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2030,Electricity Generation by Fuel (TWh),4243.626969488
+305,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2035,Electricity Generation by Fuel (TWh),5037.245956496
+306,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2040,Electricity Generation by Fuel (TWh),5789.75102257
+307,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2045,Electricity Generation by Fuel (TWh),6579.460258582
+308,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,nuclear,2050,Electricity Generation by Fuel (TWh),7230.527307504
+309,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,1990,Electricity Generation by Fuel (TWh),1286.425267027
+310,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2005,Electricity Generation by Fuel (TWh),1070.912766498
+311,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2010,Electricity Generation by Fuel (TWh),929.914126305
+312,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2015,Electricity Generation by Fuel (TWh),938.362046953
+313,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2020,Electricity Generation by Fuel (TWh),972.454434268
+314,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2025,Electricity Generation by Fuel (TWh),1101.33453676
+315,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2030,Electricity Generation by Fuel (TWh),1362.289301655
+316,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2035,Electricity Generation by Fuel (TWh),1837.393138466
+317,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2040,Electricity Generation by Fuel (TWh),2367.855365845
+318,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2045,Electricity Generation by Fuel (TWh),2854.952522537
+319,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,refined liquids,2050,Electricity Generation by Fuel (TWh),3327.946175378
+320,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,1990,Electricity Generation by Fuel (TWh),0.752993051
+321,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2005,Electricity Generation by Fuel (TWh),4.524792349
+322,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2010,Electricity Generation by Fuel (TWh),33.863880947
+323,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2015,Electricity Generation by Fuel (TWh),260.006525738
+324,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2020,Electricity Generation by Fuel (TWh),786.888919511
+325,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2025,Electricity Generation by Fuel (TWh),2190.065420427
+326,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2030,Electricity Generation by Fuel (TWh),4543.58018786
+327,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2035,Electricity Generation by Fuel (TWh),7328.2120572
+328,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2040,Electricity Generation by Fuel (TWh),10250.13148863
+329,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2045,Electricity Generation by Fuel (TWh),13082.67634734
+330,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,solar,2050,Electricity Generation by Fuel (TWh),15692.77103647
+331,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,1990,Electricity Generation by Fuel (TWh),3.879946944
+332,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2005,Electricity Generation by Fuel (TWh),103.844160669
+333,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2010,Electricity Generation by Fuel (TWh),341.305965553
+334,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2015,Electricity Generation by Fuel (TWh),837.617400461
+335,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2020,Electricity Generation by Fuel (TWh),1598.39498403
+336,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2025,Electricity Generation by Fuel (TWh),2647.206302939
+337,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2030,Electricity Generation by Fuel (TWh),4231.050612713
+338,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2035,Electricity Generation by Fuel (TWh),6244.19299209
+339,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2040,Electricity Generation by Fuel (TWh),8555.30171658
+340,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2045,Electricity Generation by Fuel (TWh),10427.62936473
+341,GCAM_SSP5,foresight_v1,global,elecByTechTWh,Fuel,wind,2050,Electricity Generation by Fuel (TWh),12299.74241674
+342,GCAM_SSP5,foresight_v1,global,pop,Population,class1,1975,Population (Millions),4075.522
+343,GCAM_SSP5,foresight_v1,global,pop,Population,class1,1990,Population (Millions),5321.687
+344,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2005,Population (Millions),6534.314
+345,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2010,Population (Millions),6947.252
+346,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2015,Population (Millions),7369.295
+347,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2020,Population (Millions),7687.545
+348,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2025,Population (Millions),7965.902
+349,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2030,Population (Millions),8197.079
+350,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2035,Population (Millions),8394.206
+351,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2040,Population (Millions),8550.791
+352,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2045,Population (Millions),8662.553
+353,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2050,Population (Millions),8727.836
+354,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2055,Population (Millions),8751.579
+355,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2060,Population (Millions),8736.307
+356,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2065,Population (Millions),8684.849
+357,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2070,Population (Millions),8599.48
+358,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2075,Population (Millions),8482.525
+359,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2080,Population (Millions),8335.649
+360,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2085,Population (Millions),8159.448
+361,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2090,Population (Millions),7958.087
+362,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2095,Population (Millions),7735.189
+363,GCAM_SSP5,foresight_v1,global,pop,Population,class1,2100,Population (Millions),7492.472
