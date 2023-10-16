@@ -6,17 +6,20 @@ import landcells from "./maps/data/landcells.json"
 import {
   ReactCompareSlider
 } from "react-compare-slider";
-import { getChoroplethValue } from '../assets/data/DataManager';
+import { getChoroplethValue, getSmallestChoropleth, getLargestChoropleth } from '../assets/data/DataManager';
 
-const LeafletSync = ({ maxval, minval, data, uniqueValue, props }) => {
+const LeafletSync = ({ data, data2, uniqueValue, props }) => {
 
   const mapData = data
+  const mapData2 = data2
   // Map state:
   const [mapInstance, setMapInstance] = useState(null);
   const [mapInstance2, setMapInstance2] = useState(null);
 
-  function getColor(d) {
-    var seg = (maxval - minval) / 50
+  function getColor(d, data) {
+    var minval = getSmallestChoropleth(data);
+    var maxval = getLargestChoropleth(data);
+    var seg = (maxval - minval) / 50;
     return d > minval + seg * 49 ? '#005A32' :
       d > minval + seg * 25 ? '#238B45' :
         d > minval + seg * 10 ? '#41AB5D' :
@@ -28,9 +31,19 @@ const LeafletSync = ({ maxval, minval, data, uniqueValue, props }) => {
   }
 
   function style(feature) {
-    console.log(getChoroplethValue(mapData, feature.id))
     return {
-      fillColor: getColor(getChoroplethValue(mapData, feature.id)),
+      fillColor: getColor(getChoroplethValue(mapData, feature.id), mapData),
+      weight: 2,
+      opacity: 1,
+      color: 'white',
+      dashArray: '3',
+      fillOpacity: 0.7
+    };
+  }
+
+  function style2(feature) {
+    return {
+      fillColor: getColor(getChoroplethValue(mapData2, feature.id), mapData2),
       weight: 2,
       opacity: 1,
       color: 'white',
@@ -126,7 +139,7 @@ const LeafletSync = ({ maxval, minval, data, uniqueValue, props }) => {
       });
     }
     L.geoJSON(landcells, {style: style}).addTo(mapInstance);
-    L.geoJSON(landcells, {style: style}).addTo(mapInstance2);
+    L.geoJSON(landcells, {style: style2}).addTo(mapInstance2);
     mapInstance.sync(mapInstance2)
     mapInstance2.sync(mapInstance)
   }, [mapInstance, mapInstance2]);

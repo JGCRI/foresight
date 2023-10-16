@@ -7,6 +7,9 @@ const initialState = {
   startDate: 2015,
   endDate: 2100,
   dashboardSelection: "yields",
+  dashboardYear: 2100,
+  dashboardRegion: "Global",
+  dashboardSubsector: "Aggregate of Subsectors",
   scenerios: [
     {
       title: "Scenerio X",
@@ -59,13 +62,36 @@ function reducer(state = initialState, action) {
       return { ...state, guages: action.payload };
     case 'setData':
       return { ...state, parsedData: action.payload };
+      case 'setDashYear':
+        return { ...state, dashboardYear: action.payload };
+      case 'setDashRegions':
+        return { ...state, dashboardRegion: action.payload };
+      case 'setDashSubsectors':
+        return { ...state, dashboardSubsector: action.payload };
     default:
       return state;
   }
 }
+// Update Dashboard Parameters
+export function setdashboardGraphParams(date, region, subsector) {
+  updateHash("dashdate", date);
+  updateHash("dashreg", region);
+  updateHash("dashsub", subsector);
+  setDashReg(region);
+  setDashSubs(subsector);
+  return { type: 'setDashYear', payload: date };
+}
 
-export function getHash() {
+export function setDashDate(date) {
+  return { type: 'setDashYear', payload: date };
+}
 
+function setDashReg(region) {
+  return { type: 'setDashRegions', payload: region };
+}
+
+export function setDashSubs(subsector) {
+  return { type: 'setDashSubsectors', payload: subsector };
 }
 // Change currently selected guage
 export function setdashboardSelection(num) {
