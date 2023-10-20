@@ -135,3 +135,4 @@ csv_to_dynamodb_json(file_name=file_name_i, table_name=table_name_i, data_types=
 
 # # To get count of all items in the table
 # # aws dynamodb scan --table-name gcamDataTable_aggParam_regions --select "COUNT"
+# # aws dynamodb scan --table-name gcamDataTable_aggClass1_regions --select "COUNT"
