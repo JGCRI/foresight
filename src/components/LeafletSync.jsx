@@ -8,7 +8,10 @@ import {
 } from "react-compare-slider";
 import { getChoroplethValue, getSmallestChoropleth, getLargestChoropleth } from '../assets/data/DataManager';
 
-const LeafletSync = ({ data, data2, uniqueValue, props }) => {
+import { connect } from 'react-redux';
+import { setDashReg } from './Store';
+
+const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
 
   const mapData = data
   const mapData2 = data2
@@ -78,26 +81,24 @@ const LeafletSync = ({ data, data2, uniqueValue, props }) => {
 
   const mapStyles = {
     width: '100%',
-    height: '80vh',
+    height: '100%',
   };
 
   // Options for our map instance:
   const mapParams = {
-    center: [0, 0],
+    center: [45, 0],
     zoom: 0.6,
     zoomControl: false,
     zoomSnap: 0.75,
-    maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     closePopupOnClick: false,
     layers: [tileRef.current], // Start with just the base layer
   };
 
   const mapParams2 = {
-    center: [0, 0], // USA
+    center: [45, 0], // USA
     zoom: 0.6,
     zoomControl: false,
     zoomSnap: 0.75,
-    maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     closePopupOnClick: false,
     layers: [tileRef2.current], // Start with just the base layer
   };
@@ -105,18 +106,11 @@ const LeafletSync = ({ data, data2, uniqueValue, props }) => {
   // Map creation:
   useEffect(() => {
     mapRef.current = L.map(mapkey + '_1', mapParams);
-    mapRef.current.on('click', () => {
-      alert('map clicked');
-    });
     // Set map instance to state:
     if (!mapInstance) {
       setMapInstance(mapRef.current);
     }
-
     mapRef2.current = L.map(mapkey + '_2', mapParams2);
-    mapRef2.current.on('click', () => {
-      alert('map clicked');
-    });
     // Set map instance to state:
     if (!mapInstance2)
       setMapInstance2(mapRef2.current);
@@ -138,12 +132,48 @@ const LeafletSync = ({ data, data2, uniqueValue, props }) => {
         console.log('Zooming2!!!');
       });
     }
-    L.geoJSON(landcells, {style: style}).addTo(mapInstance);
-    L.geoJSON(landcells, {style: style2}).addTo(mapInstance2);
+    L.geoJSON(landcells, { style: style, onEachFeature: onEachFeature }).addTo(mapInstance);
+    L.geoJSON(landcells, { style: style2, onEachFeature: onEachFeature }).addTo(mapInstance2);
     mapInstance.sync(mapInstance2)
     mapInstance2.sync(mapInstance)
   }, [mapInstance, mapInstance2]);
-  console.log(mapkey + '1')
+
+  function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+      weight: 5,
+      color: '#666',
+      dashArray: '',
+      fillOpacity: 0.7
+    });
+
+    layer.bringToFront();
+  }
+
+  function resetHighlight(e) {
+    var layer = e.target;
+    layer.setStyle({
+      weight: 2,
+      opacity: 1,
+      color: 'white',
+      dashArray: '3',
+      fillOpacity: 0.7
+    });
+  }
+
+  function setCountry(e) {
+    setdashboardReg(e.sourceTarget.feature.id);
+  }
+
+  function onEachFeature(feature, layer) {
+    layer.on({
+      mouseover: highlightFeature,
+      mouseout: resetHighlight,
+      click: setCountry
+  });
+}
+
   // Toggle marker on button click:
   return (
     <div className="slider grid-border">
@@ -162,4 +192,16 @@ const LeafletSync = ({ data, data2, uniqueValue, props }) => {
   );
 };
 
-export default LeafletSync;
+function mapStateToProps(state) {
+  return {
+
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+      setdashboardReg: (reg) => dispatch(setDashReg(reg)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LeafletSync);

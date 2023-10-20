@@ -18,7 +18,7 @@ export const getParam = (data, param) => {
 export const getSubcat = (data, subcat) => {
     var reducedData = [];
     for(var i = 0; i < data.length; i++) {
-        if(data.at(i).subcat === subcat) {
+        if(data.at(i).class === subcat) {
             reducedData.push(data.at(i));
         }
     }
@@ -32,6 +32,26 @@ export const getRegion = (data, region) => {
     var reducedData = [];
     for(var i = 0; i < data.length; i++) {
         if(data.at(i).region === region) {
+            reducedData.push(data.at(i));
+        }
+    }
+    return reducedData;
+}
+
+export const getScenerio = (data, scenario) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).scenario === scenario) {
+            reducedData.push(data.at(i));
+        }
+    }
+    return reducedData;
+}
+
+export const filterDateRange = (data, start, end) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).x >= start && data.at(i).x <= end) {
             reducedData.push(data.at(i));
         }
     }
@@ -74,7 +94,7 @@ export const mergeRegions = (data) => {
     for(var i = 0; i < data.length; i++) {
         flag = 0;
         for(var j = 0; j < reducedData.length; j++) {
-            if(data.at(i).x === reducedData.at(j).x) {
+            if(data.at(i).region === reducedData.at(j).region) {
                 reducedData.at(j).value = parseFloat(reducedData.at(j).value) + parseFloat(data.at(i).value);
                 flag = 1;
             }
@@ -82,52 +102,33 @@ export const mergeRegions = (data) => {
         if(flag === 0)
             reducedData.push(data.at(i));
     }
+    reducedData.sort((a,b) => a.x - b.x);
     return reducedData;
 }
 
-// mergeDates aggregates data by summing all data with the same region.
+export const reduceRegion = (data, region) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).region === region) {
+            reducedData.push(data.at(i));
+        }   
+    }
+    reducedData.sort((a,b) => a.x - b.x);
+    return reducedData;
+}
+
+// getDates aggregates data by summing all data with the same region.
 // This results in an output where dates are merged and data is only
 // sorted by region. This is useful for charts like the bar chart where
 // dates are disregarded. 
 //
 // NOTE: Expect this function to change as date range functionality is added.
-export const mergeDates = (data) => {
+export const getDates = (data, year) => {
     var reducedData = [];
-    var flag;
     for(var i = 0; i < data.length; i++) {
-        flag = 0;
-        for(var j = 0; j < reducedData.length; j++) {
-            if(data.at(i).region === reducedData.at(j).region) {
-                reducedData.at(j).value = (parseFloat(reducedData.at(j).value) + parseFloat(data.at(i).value))/2;
-                flag = 1;
-            }
-        }
-        if(flag === 0)
+        if(data.at(i).x === year.toString() ) {
             reducedData.push(data.at(i));
-    }
-    return reducedData;
-}
-
-// mergeSubcat aggregates data by summing all data with the same parameter and date.
-// This results in an output where subcategory values are summed.
-//
-// NOTE: This function may have unexpected results if params
-// have not been previously filtered.
-export const mergeSubcat = (data) => {
-    var reducedData = [];
-    var flag;
-    for(var i = 0; i < data.length; i++) {
-        flag = 0;
-        for(var j = 0; j < reducedData.length; j++) {
-            if(data.at(i).region === reducedData.at(j).region && data.at(i).x === reducedData.at(j).x) {
-                reducedData.at(j).value = (parseFloat(reducedData.at(j).value) + parseFloat(data.at(i).value))/2;
-                flag = 1;
-            }
-        }
-        if(flag === 0) {
-            data.at(i).class1 = "Aggregate of Subcategories";
-            reducedData.push(data.at(i));
-        }
+        }   
     }
     return reducedData;
 }
@@ -144,13 +145,24 @@ export const filterSubcat = (data) => {
     for(var i = 0; i < data.length; i++) {
         flag = 0;
         for(var j = 0; j < reducedData.length; j++) {
-            if(data.at(i).class1 === reducedData[j]) {
+            if(data.at(i).class === reducedData[j]) {
                 flag = 1;
             }
         }
         if(flag === 0)
-            reducedData.push(data.at(i).class1);
+            reducedData.push(data.at(i).class);
     }
+    return reducedData;
+}
+
+export const reduceSubcat = (data, subcat) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).class === subcat) {
+            reducedData.push(data.at(i));
+        }   
+    }
+    reducedData.sort((a,b) => a.x - b.x);
     return reducedData;
 }
 
@@ -160,6 +172,9 @@ export const filterSubcat = (data) => {
 export const filterRegion = (data) => {
     var reducedData = [];
     var flag;
+    data.sort((a,b) => b.value - a.value);
+    data = data.slice(0, 10);
+    data.sort((a,b) => a.value - b.value);
     for(var i = 0; i < data.length; i++) {
         flag = 0;
         for(var j = 0; j < reducedData.length; j++) {
@@ -169,17 +184,6 @@ export const filterRegion = (data) => {
         }
         if(flag === 0)
             reducedData.push(data.at(i).region);
-    }
-    return reducedData;
-}
-
-export const getNoSubcatLine = (data) => {
-    var reducedData = [];
-    for(var i = 0; i < data.length; i++) {
-        reducedData.push({
-            "x": parseFloat(data.at(i).x),
-            "y": parseFloat(data.at(i).value)
-        });   
     }
     return reducedData;
 }
@@ -206,40 +210,69 @@ export const getBarTotal = (data, param, scenarios) => {
     return ans;
 }
 
-export const getBarHorizontal = (data, param) => {
+export const getBarHorizontal = (data, dataAgg, scenerio, param, year) => {
     var output = [];
-    var barData = getParam(data, param);
+    var barData = getDates(getScenerio(getParam(data, param), scenerio), year);
+    var aggregates = getDates(getScenerio(getParam(dataAgg, param), scenerio), year);
     var subcatList = filterSubcat(barData);
-    var countryList = filterRegion(barData);
+    var countryList = filterRegion(aggregates);
     for(var i = 0; i < countryList.length; i++) {
-        var countryData = getRegion(barData, countryList[i]);
+        var countryData = getRegion(barData, countryList[i], year);
         var obj = {
             "country": countryList[i]
         }
         for(var j = 0; j < subcatList.length; j++) {
-            obj[subcatList[j]] = parseFloat(mergeDates(getSubcat(countryData)).at(0).value);
+            obj[subcatList[j]] = parseFloat(getSubcat(countryData, subcatList.at(j)).at(0).value);
         }
         output.push(obj);  
     }
-    output.sort((a, b) => b["Aggregate of Subcategories"] - a["Aggregate of Subcategories"]);
-    return output.slice(0, 10);
+    console.log("!", output)
+    return output
 }
 
-export const lineGraphReduce = (data, param) => {
-    var final = getParam(data, param);
-    if(final.at(0).class1 === "class1") //No subclasses
-        final = getNoSubcatLine(mergeRegions(final));
+export const lineGraphReduce = (data, param, scenerios, region, subcat) => {
+    console.log(data);
+    var output = []
+    for (var i = 0; i < scenerios.length; i++) {
+        var obj = {
+            "id": scenerios.at(i).title,
+            "data": getLineGraphReduce(data),
+        }
+        output.push(obj);
+    }
+    console.log(output)
+    return output
+}
+
+export const getLineGraphReduce = (data) => {
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        reducedData.push({
+            "x": parseFloat(data.at(i).x),
+            "y": data.at(i).value,
+        });
+    }
+    return reducedData;
+}
+
+export const choroplethReduce = (data, scenario, param, year) => {
+    var final = getDates(getScenerio(getParam(data, param), scenario), year);
+    return getNoSubcatChoropleth(final);
+}
+
+export const processData = (aggNone, aggReg, aggSub, aggRegSub, scenario, param, region, subcat) => {
+    let data = [];
+    if(region === "Global") {
+        if(subcat === "Aggregate of Subsectors") {  //Agg Subcat agg Region
+            data = getParam(aggRegSub, param);
+        }
+        else  //Agg Region no agg Subcat
+            data = getSubcat(getParam(aggReg, param), subcat);
+    }
+    else if(subcat === "Aggregate of Subsectors") { //Agg Subcat no agg Region
+        data = getRegion(getParam(aggSub, param), region);
+    }
     else
-        final = getNoSubcatLine(mergeRegions(mergeSubcat(final)));
-
-    return final;
-}
-
-export const choroplethReduce = (data, param) => {
-    var final = getParam(data, param);
-    if(final.at(0).class1 === "class1") //No subclasses
-        final = getNoSubcatChoropleth(mergeDates(final));
-    else 
-        final = getNoSubcatChoropleth(mergeDates(mergeSubcat(final)));
-    return final;
-}
+        data = getSubcat(getRegion(getParam(aggNone, param), region), subcat);
+    return getScenerio(data, scenario);
+};
