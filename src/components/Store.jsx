@@ -12,11 +12,11 @@ const initialState = {
   dashboardSubsector: "Aggregate of Subsectors",
   scenerios: [
     {
-      title: "Scenerio X",
+      title: "GCAM_SSP2",
       pos: 1,
     },
     {
-      title: "Scenerio Y",
+      title: "GCAM_SSP3",
       pos: 2,
     }
   ],

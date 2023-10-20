@@ -70,16 +70,16 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
                     id={"Dashboard_Big"}
                     scenario_1={Scenerios.at(0).title}
                     scenario_2={Scenerios.at(1).title}
-                    dataset={choroplethReduce(csv2, "GCAM_SSP2", "elecByTechTWh", curYear)}
-                    dataset2={choroplethReduce(csv2, "GCAM_SSP2", "elecByTechTWh", curYear)}
+                    dataset={choroplethReduce(csv2, Scenerios.at(0).title, "elecByTechTWh", curYear)}
+                    dataset2={choroplethReduce(csv2, Scenerios.at(1).title, "elecByTechTWh", curYear)}
                 />
                 )}
                 {rawData === 'i' ? (
                   "Loading Dataset..."
                 ) : (
                 <div className='bar-grid grid-border'>
-                    <BarHorizontal data={getBarHorizontal(csv, csv2, "GCAM_SSP2", "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
-                    <BarHorizontal data={getBarHorizontal(csv, csv2, "GCAM_SSP2", "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(0).title, "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(1).title, "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
                 </div>
                 )}
             </div>
@@ -98,8 +98,8 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
                     id={"Dashboard_Small"}
                     scenario_1={Scenerios.at(0).title}
                     scenario_2={Scenerios.at(1).title}
-                    dataset={choroplethReduce(csv2, "GCAM_SSP2", "elecByTechTWh", curYear)}
-                    dataset2={choroplethReduce(csv2, "GCAM_SSP2", "elecByTechTWh", curYear)}
+                    dataset={choroplethReduce(csv2, Scenerios.at(0).title, "elecByTechTWh", curYear)}
+                    dataset2={choroplethReduce(csv2, Scenerios.at(1).title, "elecByTechTWh", curYear)}
                 />
                 )}
                 <div>Top 10 Countries -- By Subsector</div>
@@ -107,8 +107,8 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
                   "Loading Dataset..."
                 ) : (
                 <div className='bar-grid grid-border'>
-                    <BarHorizontal data={getBarHorizontal(csv, csv2, "GCAM_SSP2", "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
-                    <BarHorizontal data={getBarHorizontal(csv, csv2, "GCAM_SSP2", "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(0).title, "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
+                    <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(1).title, "elecByTechTWh", curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
                 </div>
                 )}
             </div>

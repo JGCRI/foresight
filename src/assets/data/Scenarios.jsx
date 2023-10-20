@@ -1,24 +1,12 @@
 const scenarios = [
     {
-        title: "Scenerio X",
+        title: "GCAM_SSP2",
     },
     {
-        title: "Scenerio Y",
+        title: "GCAM_SSP3",
     },
     {
-        title: "Reference",
-    },
-    {
-        title: "1.5 Degrees",
-    },
-    {
-        title: "2.0 Degrees",
-    },
-    {
-        title: "2.5 Degrees",
-    },
-    {
-        title: "3.0 Degrees",
+        title: "GCAM_SSP5",
     }
 ];
 

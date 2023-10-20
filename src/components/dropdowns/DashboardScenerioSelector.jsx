@@ -19,92 +19,92 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
 
     const dummyData = [
         {
-            scenerio: "Scenerio X",
+            scenerio: "GCAM_SSP2",
             field: "runoff",
             data: -75
         },
         {
-            scenerio: "Scenerio X",
+            scenerio: "GCAM_SSP2",
             field: "yields",
             data: 50
         },
         {
-            scenerio: "Scenerio X",
+            scenerio: "GCAM_SSP2",
             field: "temp",
             data: 25
         },
         {
-            scenerio: "Scenerio X",
+            scenerio: "GCAM_SSP2",
             field: "emiss",
             data: 75
         },
         {
-            scenerio: "Scenerio X",
+            scenerio: "GCAM_SSP2",
             field: "pop",
             data: -50
         },
         {
-            scenerio: "Scenerio X",
+            scenerio: "GCAM_SSP2",
             field: "gdp",
             data: -35
         },
         {
-            scenerio: "Scenerio Y",
+            scenerio: "GCAM_SSP3",
             field: "runoff",
             data: -45
         },
         {
-            scenerio: "Scenerio Y",
+            scenerio: "GCAM_SSP3",
             field: "yields",
             data: 30
         },
         {
-            scenerio: "Scenerio Y",
+            scenerio: "GCAM_SSP3",
             field: "temp",
             data: 45
         },
         {
-            scenerio: "Scenerio Y",
+            scenerio: "GCAM_SSP3",
             field: "emiss",
             data: 85
         },
         {
-            scenerio: "Scenerio Y",
+            scenerio: "GCAM_SSP3",
             field: "pop",
             data: -50
         },
         {
-            scenerio: "Scenerio Y",
+            scenerio: "GCAM_SSP3",
             field: "gdp",
             data: -35
         },
         {
-            scenerio: "1.5 Degrees",
+            scenerio: "GCAM_SSP5",
             field: "runoff",
             data: -50
         },
         {
-            scenerio: "1.5 Degrees",
+            scenerio: "GCAM_SSP5",
             field: "yields",
             data: 20
         },
         {
-            scenerio: "1.5 Degrees",
+            scenerio: "GCAM_SSP5",
             field: "temp",
             data: 50
         },
         {
-            scenerio: "1.5 Degrees",
+            scenerio: "GCAM_SSP5",
             field: "emiss",
             data: 90
         },
         {
-            scenerio: "1.5 Degrees",
+            scenerio: "GCAM_SSP5",
             field: "pop",
             data: -25
         },
         {
-            scenerio: "1.5 Degrees",
+            scenerio: "GCAM_SSP5",
             field: "gdp",
             data: -40
         },

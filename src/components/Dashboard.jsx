@@ -128,7 +128,14 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     if (searchParams.has("scenerios")) {
       let arr = searchParams.get("scenerios").toString().split(",");
       for (var j = 0; j < openScenerios.length; j++) {
-        if (scenarios.indexOf('' + arr[j]) !== -1)
+        console.log(arr[j], scenarios);
+        var flag = 0;
+        for(var k = 0; k < scenarios.length; k++) {
+          if(arr[j].at(k).title === arr[j])
+            flag = 1;
+        }
+        if (flag === 1)
+          console.log("!");
           updateScenerios(j, arr[j], openScenerios);
       }
     }

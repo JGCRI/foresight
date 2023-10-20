@@ -236,7 +236,7 @@ export const lineGraphReduce = (data, param, scenerios, region, subcat) => {
     for (var i = 0; i < scenerios.length; i++) {
         var obj = {
             "id": scenerios.at(i).title,
-            "data": getLineGraphReduce(data),
+            "data": getLineGraphReduce(getScenerio(data, scenerios.at(i).title)),
         }
         output.push(obj);
     }
@@ -274,5 +274,5 @@ export const processData = (aggNone, aggReg, aggSub, aggRegSub, scenario, param,
     }
     else
         data = getSubcat(getRegion(getParam(aggNone, param), region), subcat);
-    return getScenerio(data, scenario);
+    return data;
 };
