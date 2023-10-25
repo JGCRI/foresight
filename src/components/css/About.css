@@ -1,0 +1,171 @@
+/**** About ********/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-page-text {
+  margin-top: 150vh;
+  animation: fadeIn 2s;
+  color: rgb(192, 192, 192);
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  z-index: 2 !important;
+}
+
+.about-page {
+  background-color:black;
+  background-image: url(../../assets/img/about_globe.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-position-y: 225px;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 150px);
+  overflow: auto !important;
+}
+
+.about-page .about-page-text {
+  max-width: 80%;
+  width: 100%;
+  mix-blend-mode: difference;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-title {
+  font-size: 100px;
+  mix-blend-mode: difference;
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+  text-align: center;
+  line-height: 1.2;
+  padding-bottom: 25px;
+  z-index: 2 !important;
+  opacity: 1;
+}
+
+.about-home-hr {
+  height: 8px;
+  mix-blend-mode: difference;
+  border-top: 2px solid rgba(214, 214, 214, 0.95) !important;
+  opacity: 1;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 2 !important;
+}
+
+.about-page-subtitle {
+  color: rgb(226, 226, 226) !important;
+  opacity: 1;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2 !important;
+}
+
+.globe_above {
+  display: block;
+  object-fit: cover;
+  width: 100vh;
+}
+
+
+/*Grey title text smaller than titles but larger than subtitles.*/
+.page-section-break {
+  margin: 0 auto;
+  margin-top: 125vh;
+  mix-blend-mode: difference;
+  font-size: 50px;
+  font-weight: 400;
+  color: rgb(236, 236, 236) !important;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  line-height: 1.2;
+  padding-bottom: 25px;
+  z-index: 2 !important;
+}
+
+/* Four grid cells for design philosophy */
+.about-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Title texts for the grid */
+.about-grid-title {
+  font-size: 18px;  
+  mix-blend-mode: difference;
+  color:rgb(255, 255, 255);
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  z-index: 2 !important;
+}
+
+/* Body text in the grid */
+.about-grid-text {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0.8;
+  z-index: 2 !important;
+}
+
+.about-section-break-hr {
+  height: 2px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 125vh;
+  border-top: 2px solid rgb(255, 255, 255) !important;
+  opacity: 1;
+  z-index: 2 !important;
+}
+
+.about-lower-section-break-hr {
+  height: 2px;
+  width: 35%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-top: 2px solid rgb(255, 255, 255) !important;
+  opacity: 1;
+  z-index: 2 !important;
+}
+
+.small-home-hr {
+  height: 2px;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 50vh;
+  border-top: 2px solid rgb(255, 255, 255) !important;
+  z-index: 2 !important;
+}

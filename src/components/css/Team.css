@@ -1,0 +1,40 @@
+/**** Team ********/
+
+.teams-page {
+  position: relative;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 150px);
+  overflow: auto !important;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member-name {
+  font-size: 20px;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-member h3 {
+  margin-top: 1rem;
+}
+
+.team-member p {
+  margin-bottom: 0;
+}

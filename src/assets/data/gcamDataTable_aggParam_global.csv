@@ -1,0 +1,100 @@
+id,scenario,dataset,region,param,x,units,value
+1,GCAM_SSP2,foresight_v1,global,elecByTechTWh,1990,Electricity Generation by Fuel (TWh),11472.18307
+2,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2005,Electricity Generation by Fuel (TWh),17770.26149
+3,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2010,Electricity Generation by Fuel (TWh),20943.65262
+4,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2015,Electricity Generation by Fuel (TWh),23676.04883
+5,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2020,Electricity Generation by Fuel (TWh),28337.74257
+6,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2025,Electricity Generation by Fuel (TWh),33945.49132
+7,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2030,Electricity Generation by Fuel (TWh),40615.46124
+8,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2035,Electricity Generation by Fuel (TWh),47473.67964
+9,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2040,Electricity Generation by Fuel (TWh),54542.23518
+10,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2045,Electricity Generation by Fuel (TWh),61273.92667
+11,GCAM_SSP2,foresight_v1,global,elecByTechTWh,2050,Electricity Generation by Fuel (TWh),67603.14854
+12,GCAM_SSP2,foresight_v1,global,pop,1975,Population (Millions),4075.522
+13,GCAM_SSP2,foresight_v1,global,pop,1990,Population (Millions),5321.687
+14,GCAM_SSP2,foresight_v1,global,pop,2005,Population (Millions),6534.314
+15,GCAM_SSP2,foresight_v1,global,pop,2010,Population (Millions),6947.252
+16,GCAM_SSP2,foresight_v1,global,pop,2015,Population (Millions),7369.295
+17,GCAM_SSP2,foresight_v1,global,pop,2020,Population (Millions),7739.743
+18,GCAM_SSP2,foresight_v1,global,pop,2025,Population (Millions),8084.34
+19,GCAM_SSP2,foresight_v1,global,pop,2030,Population (Millions),8396.881
+20,GCAM_SSP2,foresight_v1,global,pop,2035,Population (Millions),8677.608
+21,GCAM_SSP2,foresight_v1,global,pop,2040,Population (Millions),8924.749
+22,GCAM_SSP2,foresight_v1,global,pop,2045,Population (Millions),9135.444
+23,GCAM_SSP2,foresight_v1,global,pop,2050,Population (Millions),9305.449
+24,GCAM_SSP2,foresight_v1,global,pop,2055,Population (Millions),9431.933
+25,GCAM_SSP2,foresight_v1,global,pop,2060,Population (Millions),9516.32
+26,GCAM_SSP2,foresight_v1,global,pop,2065,Population (Millions),9563.891
+27,GCAM_SSP2,foresight_v1,global,pop,2070,Population (Millions),9579.816
+28,GCAM_SSP2,foresight_v1,global,pop,2075,Population (Millions),9565.127
+29,GCAM_SSP2,foresight_v1,global,pop,2080,Population (Millions),9521.116
+30,GCAM_SSP2,foresight_v1,global,pop,2085,Population (Millions),9450.775
+31,GCAM_SSP2,foresight_v1,global,pop,2090,Population (Millions),9359.357
+32,GCAM_SSP2,foresight_v1,global,pop,2095,Population (Millions),9251.425
+33,GCAM_SSP2,foresight_v1,global,pop,2100,Population (Millions),9130.189
+34,GCAM_SSP3,foresight_v1,global,elecByTechTWh,1990,Electricity Generation by Fuel (TWh),11472.18307
+35,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2005,Electricity Generation by Fuel (TWh),17770.26149
+36,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2010,Electricity Generation by Fuel (TWh),20943.65262
+37,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2015,Electricity Generation by Fuel (TWh),23676.04944
+38,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2020,Electricity Generation by Fuel (TWh),28486.64672
+39,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2025,Electricity Generation by Fuel (TWh),33008.07342
+40,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2030,Electricity Generation by Fuel (TWh),37634.54452
+41,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2035,Electricity Generation by Fuel (TWh),41881.04417
+42,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2040,Electricity Generation by Fuel (TWh),45972.07976
+43,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2045,Electricity Generation by Fuel (TWh),49547.8738
+44,GCAM_SSP3,foresight_v1,global,elecByTechTWh,2050,Electricity Generation by Fuel (TWh),52489.94817
+45,GCAM_SSP3,foresight_v1,global,pop,1975,Population (Millions),4075.522
+46,GCAM_SSP3,foresight_v1,global,pop,1990,Population (Millions),5321.687
+47,GCAM_SSP3,foresight_v1,global,pop,2005,Population (Millions),6534.314
+48,GCAM_SSP3,foresight_v1,global,pop,2010,Population (Millions),6947.252
+49,GCAM_SSP3,foresight_v1,global,pop,2015,Population (Millions),7369.295
+50,GCAM_SSP3,foresight_v1,global,pop,2020,Population (Millions),7788.592
+51,GCAM_SSP3,foresight_v1,global,pop,2025,Population (Millions),8203.816
+52,GCAM_SSP3,foresight_v1,global,pop,2030,Population (Millions),8609.754
+53,GCAM_SSP3,foresight_v1,global,pop,2035,Population (Millions),8990.598
+54,GCAM_SSP3,foresight_v1,global,pop,2040,Population (Millions),9356.453
+55,GCAM_SSP3,foresight_v1,global,pop,2045,Population (Millions),9713.167
+56,GCAM_SSP3,foresight_v1,global,pop,2050,Population (Millions),10059.593
+57,GCAM_SSP3,foresight_v1,global,pop,2055,Population (Millions),10382.092
+58,GCAM_SSP3,foresight_v1,global,pop,2060,Population (Millions),10679.922
+59,GCAM_SSP3,foresight_v1,global,pop,2065,Population (Millions),10958.612
+60,GCAM_SSP3,foresight_v1,global,pop,2070,Population (Millions),11226.065
+61,GCAM_SSP3,foresight_v1,global,pop,2075,Population (Millions),11487.979
+62,GCAM_SSP3,foresight_v1,global,pop,2080,Population (Millions),11745.578
+63,GCAM_SSP3,foresight_v1,global,pop,2085,Population (Millions),12000.045
+64,GCAM_SSP3,foresight_v1,global,pop,2090,Population (Millions),12250.02
+65,GCAM_SSP3,foresight_v1,global,pop,2095,Population (Millions),12497.238
+66,GCAM_SSP3,foresight_v1,global,pop,2100,Population (Millions),12738.443
+67,GCAM_SSP5,foresight_v1,global,elecByTechTWh,1990,Electricity Generation by Fuel (TWh),11472.18307
+68,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2005,Electricity Generation by Fuel (TWh),17770.26149
+69,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2010,Electricity Generation by Fuel (TWh),20943.65262
+70,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2015,Electricity Generation by Fuel (TWh),23676.04878
+71,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2020,Electricity Generation by Fuel (TWh),29157.58509
+72,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2025,Electricity Generation by Fuel (TWh),36900.02069
+73,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2030,Electricity Generation by Fuel (TWh),47404.59796
+74,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2035,Electricity Generation by Fuel (TWh),59465.49525
+75,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2040,Electricity Generation by Fuel (TWh),71878.13812
+76,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2045,Electricity Generation by Fuel (TWh),83753.43213
+77,GCAM_SSP5,foresight_v1,global,elecByTechTWh,2050,Electricity Generation by Fuel (TWh),94607.59044
+78,GCAM_SSP5,foresight_v1,global,pop,1975,Population (Millions),4075.522
+79,GCAM_SSP5,foresight_v1,global,pop,1990,Population (Millions),5321.687
+80,GCAM_SSP5,foresight_v1,global,pop,2005,Population (Millions),6534.314
+81,GCAM_SSP5,foresight_v1,global,pop,2010,Population (Millions),6947.252
+82,GCAM_SSP5,foresight_v1,global,pop,2015,Population (Millions),7369.295
+83,GCAM_SSP5,foresight_v1,global,pop,2020,Population (Millions),7687.545
+84,GCAM_SSP5,foresight_v1,global,pop,2025,Population (Millions),7965.902
+85,GCAM_SSP5,foresight_v1,global,pop,2030,Population (Millions),8197.079
+86,GCAM_SSP5,foresight_v1,global,pop,2035,Population (Millions),8394.206
+87,GCAM_SSP5,foresight_v1,global,pop,2040,Population (Millions),8550.791
+88,GCAM_SSP5,foresight_v1,global,pop,2045,Population (Millions),8662.553
+89,GCAM_SSP5,foresight_v1,global,pop,2050,Population (Millions),8727.836
+90,GCAM_SSP5,foresight_v1,global,pop,2055,Population (Millions),8751.579
+91,GCAM_SSP5,foresight_v1,global,pop,2060,Population (Millions),8736.307
+92,GCAM_SSP5,foresight_v1,global,pop,2065,Population (Millions),8684.849
+93,GCAM_SSP5,foresight_v1,global,pop,2070,Population (Millions),8599.48
+94,GCAM_SSP5,foresight_v1,global,pop,2075,Population (Millions),8482.525
+95,GCAM_SSP5,foresight_v1,global,pop,2080,Population (Millions),8335.649
+96,GCAM_SSP5,foresight_v1,global,pop,2085,Population (Millions),8159.448
+97,GCAM_SSP5,foresight_v1,global,pop,2090,Population (Millions),7958.087
+98,GCAM_SSP5,foresight_v1,global,pop,2095,Population (Millions),7735.189
+99,GCAM_SSP5,foresight_v1,global,pop,2100,Population (Millions),7492.472
