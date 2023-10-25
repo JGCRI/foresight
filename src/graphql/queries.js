@@ -30,33 +30,6 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
-export const getForesightData = /* GraphQL */ `
-  query GetForesightData($id: Int!, $region: String!) {
-    getForesightData(id: $id, region: $region) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
-export const listForesightData = /* GraphQL */ `
-  query ListForesightData(
-    $filter: TableForesightDataFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listForesightData(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        region
-        scenario
-        value
-      }
-      nextToken
-    }
-  }
-`;
 export const getGcamDataTableAggParamGlobal = /* GraphQL */ `
   query GetGcamDataTableAggParamGlobal($id: Int!, $scenario: String!) {
     getGcamDataTableAggParamGlobal(id: $id, scenario: $scenario) {
@@ -88,6 +61,94 @@ export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
         scenario
         dataset
         param
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getGcamDataTableAggParamRegions = /* GraphQL */ `
+  query GetGcamDataTableAggParamRegions($id: Int!, $region: String!) {
+    getGcamDataTableAggParamRegions(id: $id, region: $region) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggParamRegions = /* GraphQL */ `
+  query ListGcamDataTableAggParamRegions(
+    $filter: TableGcamDataTableAggParamRegionsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggParamRegions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        param
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getGcamDataTableAggClass1Regions = /* GraphQL */ `
+  query GetGcamDataTableAggClass1Regions($id: Int!, $scenario: String!) {
+    getGcamDataTableAggClass1Regions(id: $id, scenario: $scenario) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggClass1Regions = /* GraphQL */ `
+  query ListGcamDataTableAggClass1Regions(
+    $filter: TableGcamDataTableAggClass1RegionsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggClass1Regions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        classLabel
+        class
         x
         units
         value

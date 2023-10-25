@@ -7,13 +7,16 @@ const initialState = {
   startDate: 2015,
   endDate: 2100,
   dashboardSelection: "yields",
+  dashboardYear: 2020,
+  dashboardRegion: "Global",
+  dashboardSubsector: "Aggregate of Subsectors",
   scenerios: [
     {
-      title: "Scenerio X",
+      title: "GCAM_SSP2",
       pos: 1,
     },
     {
-      title: "Scenerio Y",
+      title: "GCAM_SSP3",
       pos: 2,
     }
   ],
@@ -37,7 +40,10 @@ const initialState = {
       title: "gdp"
     }
   ],
-  parsedData: "i"
+  parsedData: "i",
+  parsedDataReg: "i",
+  parsedDataSub: "i",
+  parsedDataRegSub: "i"
 };
 
 // Define a reducer function to update the state
@@ -59,13 +65,42 @@ function reducer(state = initialState, action) {
       return { ...state, guages: action.payload };
     case 'setData':
       return { ...state, parsedData: action.payload };
+    case 'setDataReg':
+      return { ...state, parsedDataReg: action.payload };
+    case 'setDataSub':
+      return { ...state, parsedDataSub: action.payload };
+    case 'setDataRegSub':
+      return { ...state, parsedDataRegSub: action.payload };
+    case 'setDashYear':
+      return { ...state, dashboardYear: action.payload };
+    case 'setDashRegions':
+      return { ...state, dashboardRegion: action.payload };
+    case 'setDashSubsectors':
+      return { ...state, dashboardSubsector: action.payload };
     default:
       return state;
   }
 }
+// Update Dashboard Parameters
+export function setdashboardGraphParams(date, region, subsector) {
+  updateHash("dashdate", date);
+  updateHash("dashreg", region);
+  updateHash("dashsub", subsector);
+  setDashReg(region);
+  setDashSubs(subsector);
+  return { type: 'setDashYear', payload: date };
+}
 
-export function getHash() {
+export function setDashDate(date) {
+  return { type: 'setDashYear', payload: date };
+}
 
+export function setDashReg(region) {
+  return { type: 'setDashRegions', payload: region };
+}
+
+export function setDashSubs(subsector) {
+  return { type: 'setDashSubsectors', payload: subsector };
 }
 // Change currently selected guage
 export function setdashboardSelection(num) {
@@ -82,6 +117,18 @@ export function setDataset(dataset) {
 // Read in parsed data once at the start of loading.
 export function setParsed(dataset) {
   return { type: 'setData', payload: dataset };
+}
+
+export function setParsedReg(dataset) {
+  return { type: 'setDataReg', payload: dataset };
+}
+
+export function setParsedSub(dataset) {
+  return { type: 'setDataSub', payload: dataset };
+}
+
+export function setParsedRegSub(dataset) {
+  return { type: 'setDataRegSub', payload: dataset };
 }
 // Change dashboard start date
 export function setStartDate(date) {

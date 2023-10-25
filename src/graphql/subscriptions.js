@@ -34,80 +34,20 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const onCreateForesightData = /* GraphQL */ `
-  subscription OnCreateForesightData(
-    $id: Int
-    $region: String
-    $scenario: String
-    $value: Float
-  ) {
-    onCreateForesightData(
-      id: $id
-      region: $region
-      scenario: $scenario
-      value: $value
-    ) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
-export const onUpdateForesightData = /* GraphQL */ `
-  subscription OnUpdateForesightData(
-    $id: Int
-    $region: String
-    $scenario: String
-    $value: Float
-  ) {
-    onUpdateForesightData(
-      id: $id
-      region: $region
-      scenario: $scenario
-      value: $value
-    ) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
-export const onDeleteForesightData = /* GraphQL */ `
-  subscription OnDeleteForesightData(
-    $id: Int
-    $region: String
-    $scenario: String
-    $value: Float
-  ) {
-    onDeleteForesightData(
-      id: $id
-      region: $region
-      scenario: $scenario
-      value: $value
-    ) {
-      id
-      region
-      scenario
-      value
-    }
-  }
-`;
 export const onCreateGcamDataTableAggParamGlobal = /* GraphQL */ `
   subscription OnCreateGcamDataTableAggParamGlobal(
     $id: Int
     $scenario: String
+    $dataset: String
     $param: String
     $x: Int
-    $units: String
   ) {
     onCreateGcamDataTableAggParamGlobal(
       id: $id
       scenario: $scenario
+      dataset: $dataset
       param: $param
       x: $x
-      units: $units
     ) {
       id
       scenario
@@ -125,16 +65,16 @@ export const onUpdateGcamDataTableAggParamGlobal = /* GraphQL */ `
   subscription OnUpdateGcamDataTableAggParamGlobal(
     $id: Int
     $scenario: String
+    $dataset: String
     $param: String
     $x: Int
-    $units: String
   ) {
     onUpdateGcamDataTableAggParamGlobal(
       id: $id
       scenario: $scenario
+      dataset: $dataset
       param: $param
       x: $x
-      units: $units
     ) {
       id
       scenario
@@ -152,21 +92,192 @@ export const onDeleteGcamDataTableAggParamGlobal = /* GraphQL */ `
   subscription OnDeleteGcamDataTableAggParamGlobal(
     $id: Int
     $scenario: String
+    $dataset: String
     $param: String
     $x: Int
-    $units: String
   ) {
     onDeleteGcamDataTableAggParamGlobal(
       id: $id
       scenario: $scenario
+      dataset: $dataset
       param: $param
       x: $x
-      units: $units
     ) {
       id
       scenario
       dataset
       param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateGcamDataTableAggParamRegions = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggParamRegions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onCreateGcamDataTableAggParamRegions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateGcamDataTableAggParamRegions = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggParamRegions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onUpdateGcamDataTableAggParamRegions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteGcamDataTableAggParamRegions = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggParamRegions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onDeleteGcamDataTableAggParamRegions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateGcamDataTableAggClass1Regions = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggClass1Regions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $classLabel: String
+  ) {
+    onCreateGcamDataTableAggClass1Regions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      classLabel: $classLabel
+    ) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateGcamDataTableAggClass1Regions = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggClass1Regions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $classLabel: String
+  ) {
+    onUpdateGcamDataTableAggClass1Regions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      classLabel: $classLabel
+    ) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteGcamDataTableAggClass1Regions = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggClass1Regions(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $classLabel: String
+  ) {
+    onDeleteGcamDataTableAggClass1Regions(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      classLabel: $classLabel
+    ) {
+      id
+      scenario
+      dataset
+      region
+      classLabel
+      class
       x
       units
       value

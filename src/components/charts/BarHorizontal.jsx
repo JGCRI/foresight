@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { ResponsiveBar } from '@nivo/bar'
+import { connect } from 'react-redux';
+import { setDashSubs } from "../Store";
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveBar = ({ listKeys, data, scenerio, start, end }) => {
+const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
     const [scenerioName, setScenerio] = useState(scenerio);
     useEffect(() => {
         setScenerio(scenerio);
@@ -42,6 +44,11 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, start, end }) => {
                     legend: '',
                     legendPosition: 'middle',
                     legendOffset: 32
+                }}
+                onClick={(data) => {
+                    setdashboardSub(
+                        `${data["id"]}`
+                    );
                 }}
                 axisLeft={{
                     tickSize: 5,
@@ -168,4 +175,16 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, start, end }) => {
     );
 }
 
-export default MyResponsiveBar
+function mapStateToProps(state) {
+    return {
+
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        setdashboardSub: (subs) => dispatch(setDashSubs(subs)),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyResponsiveBar);

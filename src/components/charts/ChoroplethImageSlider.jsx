@@ -1,41 +1,20 @@
 import React from "react";
-import {
-  ReactCompareSlider
-} from "react-compare-slider";
-import DashboardChoropleth from "./DashboardChoropleth";
-import getDashboardData from "../DashboardDummyData";
-import { getSmallestChoropleth, getLargestChoropleth } from "../../assets/data/DataManager";
+import LeafletSync from "../LeafletSync";
 
 //<DashboardChoropleth data={getDashboardData("Scenario X", "spatialComparison")} />
-function ChoroplethImageSlider({scenario_1, scenario_2, dataset}) {
+function ChoroplethImageSlider( {id, scenario_1, scenario_2, dataset, dataset2} ) {
+  const mapkey = id;
   const scenario1 = scenario_1;
   const scenario2 = scenario_2;
   const outputData = dataset;
-  const maximum = getLargestChoropleth(outputData);
-  const minimum = getSmallestChoropleth(outputData);
-  console.log(maximum);
-  console.log(minimum);
+  const outputData2 = dataset2;
   return (
-    <div className="slider grid-border">
-      <div className="slider-container">
-        <div className="image-container">
-          <ReactCompareSlider
-            itemOne={<DashboardChoropleth data={outputData} scenarioTitle={scenario1} isLeft={true} min={minimum} max={maximum}/>}
-            itemTwo={<DashboardChoropleth data={outputData} scenarioTitle={scenario2} isLeft={false} min={minimum} max={maximum}/>}
-            className="map-wrapper"
-            max={maximum}
-            min={minimum}
-            />
-        </div>
-      </div>
-    </div>
+    <LeafletSync
+      data = {outputData}
+      data2 = {outputData2}
+      uniqueValue = {mapkey}
+    />
   );
 }
-/*
-function getData({scenario, data}) {
-  if(scenario === "Reference")
-    return 
-  return getDashboardData(scenario, "spatialComparison");
-}
-*/
+
 export default ChoroplethImageSlider;

@@ -1,7 +1,8 @@
 import React from "react";
 import { ResponsiveLine } from '@nivo/line'
-
-const Line = ({ data }) => (
+import { connect } from 'react-redux';
+import { setDashDate } from "../Store";
+const Line = ({ data, date, setdashboardDate }) => (
     <div className="nivo-wrapper grid-border">
         <ResponsiveLine
             data={data}
@@ -20,6 +21,11 @@ const Line = ({ data }) => (
                 stacked: false,
                 reverse: false
             }}
+            onClick={(data) => {
+                setdashboardDate(
+                    parseInt(`${data["data"]["x"]}`)
+                );
+              }}
             theme={{
                 "text": {
                     "fontSize": 11,
@@ -184,4 +190,16 @@ const Line = ({ data }) => (
     </div >
 )
 
-export default Line;
+function mapStateToProps(state) {
+    return {
+        date: state.dashboardYear,
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        setdashboardDate: (date) => dispatch(setDashDate(date)),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Line);

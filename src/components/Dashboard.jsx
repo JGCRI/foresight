@@ -10,13 +10,18 @@ import { MdError, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
-import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParsed } from "./Store";
+import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParsed, setParsedSub, setParsedReg, setParsedRegSub} from "./Store";
 import './css/Dashboard.css';
 import scenarios from "../assets/data/Scenarios.jsx";
 import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
 
 import Papa from "papaparse";
 import gcamDataTable from '../assets/data/gcamDataTable.csv';
+
+import gcamDataTable_aggParam_regions from '../assets/data/gcamDataTable_aggParam_regions.csv'
+import gcamDataTable_aggParam_global from '../assets/data/gcamDataTable_aggParam_global.csv'
+import gcamDataTable_aggClass1_regions from '../assets/data/gcamDataTable_aggClass1_regions.csv'
+import gcamDataTable_aggClass1_global from '../assets/data/gcamDataTable_aggClass1_global.csv'
 
 const scrollHandler = () => {
   let divider = document.querySelector('.selection-divider');
@@ -67,14 +72,38 @@ export const updateListHash = (name, index, value) => {
   }
 }
 
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, parse }) {
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub, parse }) {
   if (parse === "i") {
-    Papa.parse(gcamDataTable, {
+    Papa.parse(gcamDataTable_aggClass1_regions, {
       download: true,
       header: true,
       skipEmptyLines: true,
       complete: function (input) {
         updateParse(input.data);
+      }
+    });
+    Papa.parse(gcamDataTable_aggClass1_global, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function (input) {
+        updateParseReg(input.data);
+      }
+    });
+    Papa.parse(gcamDataTable_aggParam_regions, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function (input) {
+        updateParseSub(input.data);
+      }
+    });
+    Papa.parse(gcamDataTable_aggParam_global, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function (input) {
+        updateParseRegSub(input.data);
       }
     });
   }
@@ -99,7 +128,14 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     if (searchParams.has("scenerios")) {
       let arr = searchParams.get("scenerios").toString().split(",");
       for (var j = 0; j < openScenerios.length; j++) {
-        if (scenarios.indexOf('' + arr[j]) !== -1)
+        console.log(arr[j], scenarios);
+        var flag = 0;
+        for(var k = 0; k < scenarios.length; k++) {
+          if(arr[j].at(k).title === arr[j])
+            flag = 1;
+        }
+        if (flag === 1)
+          console.log("!");
           updateScenerios(j, arr[j], openScenerios);
       }
     }
@@ -163,7 +199,10 @@ function mapDispatchToProps(dispatch) {
     updateEnd: (end) => dispatch(setEndDate(end)),
     updateCurrentGuage: (guage) => dispatch(setdashboardSelection(guage)),
     updateScenerios: (index, name, scenerios) => dispatch(setScenerios(index, name, scenerios)),
-    updateParse: (data) => dispatch(setParsed(data))
+    updateParse: (data) => dispatch(setParsed(data)),
+    updateParseReg: (data) => dispatch(setParsedReg(data)),
+    updateParseSub: (data) => dispatch(setParsedSub(data)),
+    updateParseRegSub: (data) => dispatch(setParsedRegSub(data)),
   };
 }
 
