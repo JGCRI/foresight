@@ -30,90 +30,6 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
-export const getGcamDataTableAggParamGlobal = /* GraphQL */ `
-  query GetGcamDataTableAggParamGlobal($id: Int!, $scenario: String!) {
-    getGcamDataTableAggParamGlobal(id: $id, scenario: $scenario) {
-      id
-      scenario
-      dataset
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
-  query ListGcamDataTableAggParamGlobals(
-    $filter: TableGcamDataTableAggParamGlobalFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listGcamDataTableAggParamGlobals(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        scenario
-        dataset
-        param
-        x
-        units
-        value
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getGcamDataTableAggParamRegions = /* GraphQL */ `
-  query GetGcamDataTableAggParamRegions($id: Int!, $region: String!) {
-    getGcamDataTableAggParamRegions(id: $id, region: $region) {
-      id
-      scenario
-      dataset
-      region
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listGcamDataTableAggParamRegions = /* GraphQL */ `
-  query ListGcamDataTableAggParamRegions(
-    $filter: TableGcamDataTableAggParamRegionsFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listGcamDataTableAggParamRegions(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        scenario
-        dataset
-        region
-        param
-        x
-        units
-        value
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
 export const getGcamDataTableAggClass1Regions = /* GraphQL */ `
   query GetGcamDataTableAggClass1Regions($id: Int!, $scenario: String!) {
     getGcamDataTableAggClass1Regions(id: $id, scenario: $scenario) {
@@ -125,6 +41,7 @@ export const getGcamDataTableAggClass1Regions = /* GraphQL */ `
       class
       x
       units
+      param
       value
       createdAt
       updatedAt
@@ -151,6 +68,7 @@ export const listGcamDataTableAggClass1Regions = /* GraphQL */ `
         class
         x
         units
+        param
         value
         createdAt
         updatedAt

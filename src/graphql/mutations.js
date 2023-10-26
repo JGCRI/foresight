@@ -43,111 +43,6 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const createGcamDataTableAggParamGlobal = /* GraphQL */ `
-  mutation CreateGcamDataTableAggParamGlobal(
-    $input: CreateGcamDataTableAggParamGlobalInput!
-  ) {
-    createGcamDataTableAggParamGlobal(input: $input) {
-      id
-      scenario
-      dataset
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateGcamDataTableAggParamGlobal = /* GraphQL */ `
-  mutation UpdateGcamDataTableAggParamGlobal(
-    $input: UpdateGcamDataTableAggParamGlobalInput!
-  ) {
-    updateGcamDataTableAggParamGlobal(input: $input) {
-      id
-      scenario
-      dataset
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteGcamDataTableAggParamGlobal = /* GraphQL */ `
-  mutation DeleteGcamDataTableAggParamGlobal(
-    $input: DeleteGcamDataTableAggParamGlobalInput!
-  ) {
-    deleteGcamDataTableAggParamGlobal(input: $input) {
-      id
-      scenario
-      dataset
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createGcamDataTableAggParamRegions = /* GraphQL */ `
-  mutation CreateGcamDataTableAggParamRegions(
-    $input: CreateGcamDataTableAggParamRegionsInput!
-  ) {
-    createGcamDataTableAggParamRegions(input: $input) {
-      id
-      scenario
-      dataset
-      region
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateGcamDataTableAggParamRegions = /* GraphQL */ `
-  mutation UpdateGcamDataTableAggParamRegions(
-    $input: UpdateGcamDataTableAggParamRegionsInput!
-  ) {
-    updateGcamDataTableAggParamRegions(input: $input) {
-      id
-      scenario
-      dataset
-      region
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteGcamDataTableAggParamRegions = /* GraphQL */ `
-  mutation DeleteGcamDataTableAggParamRegions(
-    $input: DeleteGcamDataTableAggParamRegionsInput!
-  ) {
-    deleteGcamDataTableAggParamRegions(input: $input) {
-      id
-      scenario
-      dataset
-      region
-      param
-      x
-      units
-      value
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const createGcamDataTableAggClass1Regions = /* GraphQL */ `
   mutation CreateGcamDataTableAggClass1Regions(
     $input: CreateGcamDataTableAggClass1RegionsInput!
@@ -161,6 +56,7 @@ export const createGcamDataTableAggClass1Regions = /* GraphQL */ `
       class
       x
       units
+      param
       value
       createdAt
       updatedAt
@@ -180,6 +76,7 @@ export const updateGcamDataTableAggClass1Regions = /* GraphQL */ `
       class
       x
       units
+      param
       value
       createdAt
       updatedAt
@@ -199,6 +96,7 @@ export const deleteGcamDataTableAggClass1Regions = /* GraphQL */ `
       class
       x
       units
+      param
       value
       createdAt
       updatedAt
