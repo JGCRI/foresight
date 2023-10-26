@@ -77,3 +77,136 @@ export const listGcamDataTableAggClass1Regions = /* GraphQL */ `
     }
   }
 `;
+export const getGcamDataTableAggParamRegions = /* GraphQL */ `
+  query GetGcamDataTableAggParamRegions($id: Int!, $scenario: String!) {
+    getGcamDataTableAggParamRegions(id: $id, scenario: $scenario) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggParamRegions = /* GraphQL */ `
+  query ListGcamDataTableAggParamRegions(
+    $filter: TableGcamDataTableAggParamRegionsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggParamRegions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        param
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getGcamDataTableAggParamGlobal = /* GraphQL */ `
+  query GetGcamDataTableAggParamGlobal($id: Int!, $scenario: String!) {
+    getGcamDataTableAggParamGlobal(id: $id, scenario: $scenario) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
+  query ListGcamDataTableAggParamGlobals(
+    $filter: TableGcamDataTableAggParamGlobalFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggParamGlobals(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        param
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getGcamDataTableAggClass1Global = /* GraphQL */ `
+  query GetGcamDataTableAggClass1Global($id: Int!, $scenario: String!) {
+    getGcamDataTableAggClass1Global(id: $id, scenario: $scenario) {
+      id
+      scenario
+      dataset
+      region
+      param
+      classLabel
+      class
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listGcamDataTableAggClass1Globals = /* GraphQL */ `
+  query ListGcamDataTableAggClass1Globals(
+    $filter: TableGcamDataTableAggClass1GlobalFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGcamDataTableAggClass1Globals(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        scenario
+        dataset
+        region
+        param
+        classLabel
+        class
+        x
+        units
+        value
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
