@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import { setDashReg } from './Store';
 
 const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
-
+  //console.log("***", data, data2);
   const mapData = data
   const mapData2 = data2
   // Map state:
@@ -20,6 +20,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
   const [mapInstance2, setMapInstance2] = useState(null);
 
   function getColor(d, data) {
+    //console.log("**", d, data);
     var minval = getSmallestChoropleth(data);
     var maxval = getLargestChoropleth(data);
     var seg = (maxval - minval) / 50;

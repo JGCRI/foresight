@@ -1,11 +1,18 @@
 import React from "react";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { setdashboardSelection } from "../Store";
+import { setdashboardSelection, setDashDate, setDashReg, setDashSubs} from "../Store";
 import { connect } from 'react-redux';
 import { getIcon } from "../Dashboard";
 
-function DashboardFloater({ updateGuage, selection, openGuages, year, region, subsector }) {
+function DashboardFloater({ updateGuage, selection, openGuages, year, region, subsector, dashDate, dashReg, dashSubs }) {
+    function resetParams() {
+        dashDate(2020);
+        dashReg("Global");
+        dashSubs("Aggregate of Subsectors");
+    }
+    
     const links = openGuages.map((guage) => (
         <div key={guage.title}>
             <Dropdown.Item as="button" active={selection === guage.title ? true : false}
@@ -31,14 +38,22 @@ function DashboardFloater({ updateGuage, selection, openGuages, year, region, su
                 </Dropdown>
             </div>
             <div>
-                Year: {year}     Region: {region}     Subsector: {subsector}
+                Year: {year}     Region: {region}     Subsector: {subsector}     :
+                <Button 
+                    variant="danger"
+                    onClick={() => resetParams()}>
+                    Reset
+                </Button>
             </div>
         </>
     );
 }
 function mapDispatchToProps(dispatch) {
     return {
-        updateGuage: (newSelectedGuage) => dispatch(setdashboardSelection(newSelectedGuage))
+        updateGuage: (newSelectedGuage) => dispatch(setdashboardSelection(newSelectedGuage)),
+        dashDate: (date) => dispatch(setDashDate(date)),
+        dashReg: (date) => dispatch(setDashReg(date)),
+        dashSubs: (date) => dispatch(setDashSubs(date))
     };
 }
 
