@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useCallback} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SidebarDashboard from "./SidebarDashboard.jsx";
 import TopbarDashboard from "./TopbarDashboard.jsx";
@@ -14,6 +14,8 @@ import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParse
 import './css/Dashboard.css';
 import scenarios from "../assets/data/Scenarios.jsx";
 import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
+
+import { API, graphqlOperation } from "aws-amplify";
 
 import Papa from "papaparse";
 import gcamDataTable from '../assets/data/gcamDataTable.csv';
@@ -72,8 +74,138 @@ export const updateListHash = (name, index, value) => {
   }
 }
 
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub, parse }) {
-  if (parse === "i") {
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {
+  const queryRegSub = `
+    query MyQuery($param: String!) {
+      listGcamDataTableAggParamGlobals(filter: {param: {eq: $param}}, limit: 1000000) {
+        items {
+          id
+          value
+          x
+          scenario
+          param
+        }
+      }
+    }
+  `;
+  const querySub = `
+    query MyQuery($param: String!) {
+      listGcamDataTableAggParamRegions(filter: {param: {eq: $param}}, limit: 1000000) {
+        items {
+          id
+          value
+          x
+          scenario
+          param
+          region
+        }
+      }
+    }
+  `;
+  const queryReg = `
+    query MyQuery($param: String!) {
+      listGcamDataTableAggClass1Globals(filter: {param: {eq: $param}}, limit: 1000000) {
+        items {
+          id
+          value
+          x
+          scenario
+          param
+          region
+          classLabel
+          class
+        }
+      }
+    }
+  `;
+  const query = `
+  query MyQuery($param: String!) {
+    listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 2000000) {
+      items {
+        id
+        value
+        x
+        scenario
+        param
+        region
+        classLabel
+        class
+      }
+    }
+  }
+`;
+
+  const fetchForesightRegSub = useCallback(async () => {
+    try {
+      const { data } = await API.graphql(
+        graphqlOperation(queryRegSub, {
+          param: selection,
+        })
+      );
+      console.log(selection);
+      console.log("Foresight regsub data response:", data); // Print the response data
+      let input = data.listGcamDataTableAggParamGlobals.items;
+      input.sort((a,b) => a.x - b.x);
+      updateParseRegSub(input);
+    } catch (error) {
+      console.log(error);
+  }
+  }, [selection, queryRegSub, updateParseRegSub]);
+  const fetchForesightSub = useCallback(async () => {
+    try {
+      const { data } = await API.graphql(
+        graphqlOperation(querySub, {
+          param: selection,
+        })
+      );
+      console.log(selection);
+      console.log("Foresight sub data response:", data); // Print the response data
+      let input = data.listGcamDataTableAggParamRegions.items;
+      input.sort((a,b) => a.x - b.x);
+      updateParseSub(input);
+    } catch (error) {
+      console.log(error);
+  }
+  }, [selection, querySub, updateParseSub]);
+  const fetchForesightReg = useCallback(async () => {
+    try {
+      const { data } = await API.graphql(
+        graphqlOperation(queryReg, {
+          param: selection,
+        })
+      );
+      console.log(selection);
+      console.log("Foresight reg data response:", data); // Print the response data
+      let input = data.listGcamDataTableAggClass1Globals.items;
+      input.sort((a,b) => a.x - b.x);
+      updateParseReg(input);
+    } catch (error) {
+      console.log(error);
+  }
+  }, [selection, queryReg, updateParseReg]);
+  const fetchForesight = useCallback(async () => {
+    try {
+      const { data } = await API.graphql(
+        graphqlOperation(query, {
+          param: selection,
+        })
+      );
+      console.log(selection);
+      console.log("Foresight data response:", data); // Print the response data
+      let input = data.listGcamDataTableAggClass1Regions.items;
+      input.sort((a,b) => a.x - b.x);
+      updateParse(input);
+    } catch (error) {
+      console.log(error);
+  }
+  }, [selection, query, updateParse]);
+
+  useEffect(() => {
+    fetchForesightRegSub();
+    fetchForesightSub();
+    fetchForesightReg();
+    fetchForesight();
+    /*
     Papa.parse(gcamDataTable_aggClass1_regions, {
       download: true,
       header: true,
@@ -82,31 +214,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
         updateParse(input.data);
       }
     });
-    Papa.parse(gcamDataTable_aggClass1_global, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: function (input) {
-        updateParseReg(input.data);
-      }
-    });
-    Papa.parse(gcamDataTable_aggParam_regions, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: function (input) {
-        updateParseSub(input.data);
-      }
-    });
-    Papa.parse(gcamDataTable_aggParam_global, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: function (input) {
-        updateParseRegSub(input.data);
-      }
-    });
-  }
+    */
+  }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub]);
 
   const setDataParameters = () => {
     var searchParams = new URLSearchParams(window.location.hash.substring(1));
@@ -128,14 +237,12 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     if (searchParams.has("scenerios")) {
       let arr = searchParams.get("scenerios").toString().split(",");
       for (var j = 0; j < openScenerios.length; j++) {
-        console.log(arr[j], scenarios);
         var flag = 0;
         for(var k = 0; k < scenarios.length; k++) {
           if(arr[j].at(k).title === arr[j])
             flag = 1;
         }
         if (flag === 1)
-          console.log("!");
           updateScenerios(j, arr[j], openScenerios);
       }
     }

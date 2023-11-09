@@ -20,182 +20,182 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     const dummyData = [
         {
             scenerio: "GCAM_SSP2",
-            field: "runoff",
+            field: "elecByTechTWh",
             data: -75
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "yields",
+            field: "pop",
             data: 50
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "temp",
+            field: "test1",
             data: 25
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "emiss",
+            field: "test2",
             data: 75
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "pop",
+            field: "test3",
             data: -50
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "gdp",
+            field: "test4",
             data: -35
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "runoff",
+            field: "elecByTechTWh",
             data: -45
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "yields",
+            field: "pop",
             data: 30
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "temp",
+            field: "test1",
             data: 45
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "emiss",
+            field: "test2",
             data: 85
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "pop",
+            field: "test3",
             data: -50
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "gdp",
+            field: "test4",
             data: -35
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "runoff",
+            field: "elecByTechTWh",
             data: -50
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "yields",
+            field: "pop",
             data: 20
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "temp",
+            field: "test1",
             data: 50
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "emiss",
+            field: "test2",
             data: 90
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "pop",
+            field: "test3",
             data: -25
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "gdp",
+            field: "test4",
             data: -40
         },
         {
             scenerio: "2.0 Degrees",
-            field: "runoff",
+            field: "elecByTechTWh",
             data: -55
         },
         {
             scenerio: "2.0 Degrees",
-            field: "yields",
+            field: "pop",
             data: -30
         },
         {
             scenerio: "2.0 Degrees",
-            field: "temp",
+            field: "test1",
             data: 95
         },
         {
             scenerio: "2.0 Degrees",
-            field: "emiss",
+            field: "test2",
             data: 90
         },
         {
             scenerio: "2.0 Degrees",
-            field: "pop",
+            field: "test3",
             data: -80
         },
         {
             scenerio: "2.0 Degrees",
-            field: "gdp",
+            field: "test4",
             data: -70
         },
         {
             scenerio: "2.5 Degrees",
-            field: "runoff",
+            field: "elecByTechTWh",
             data: -80
         },
         {
             scenerio: "2.5 Degrees",
-            field: "yields",
+            field: "pop",
             data: -70
         },
         {
             scenerio: "2.5 Degrees",
-            field: "temp",
+            field: "test1",
             data: 150
         },
         {
             scenerio: "2.5 Degrees",
-            field: "emiss",
+            field: "test2",
             data: 200
         },
         {
             scenerio: "2.5 Degrees",
-            field: "pop",
+            field: "test3",
             data: -99
         },
         {
             scenerio: "2.5 Degrees",
-            field: "gdp",
+            field: "test4",
             data: -80
         },
         {
             scenerio: "3.0 Degrees",
-            field: "runoff",
+            field: "elecByTechTWh",
             data: -150
         },
         {
             scenerio: "3.0 Degrees",
-            field: "yields",
+            field: "pop",
             data: -200
         },
         {
             scenerio: "3.0 Degrees",
-            field: "temp",
+            field: "test1",
             data: 300
         },
         {
             scenerio: "3.0 Degrees",
-            field: "emiss",
+            field: "test2",
             data: 500
         },
         {
             scenerio: "3.0 Degrees",
-            field: "pop",
+            field: "test3",
             data: -500
         },
         {
             scenerio: "3.0 Degrees",
-            field: "gdp",
+            field: "test4",
             data: -150
         }
     ]

@@ -8,6 +8,7 @@ function ChoroplethImageSlider( {id, scenario_1, scenario_2, dataset, dataset2} 
   const scenario2 = scenario_2;
   const outputData = dataset;
   const outputData2 = dataset2;
+  //console.log("****", dataset, dataset2);
   return (
     <LeafletSync
       data = {outputData}
