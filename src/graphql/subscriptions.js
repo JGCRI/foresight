@@ -34,81 +34,90 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const onCreateGcamDataTableAggParamGlobal = /* GraphQL */ `
-  subscription OnCreateGcamDataTableAggParamGlobal(
+export const onCreateGcamDataTableAggClass1Regions = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggClass1Regions(
     $id: Int
     $scenario: String
     $dataset: String
-    $param: String
-    $x: Int
+    $region: String
+    $classLabel: String
   ) {
-    onCreateGcamDataTableAggParamGlobal(
+    onCreateGcamDataTableAggClass1Regions(
       id: $id
       scenario: $scenario
       dataset: $dataset
-      param: $param
-      x: $x
+      region: $region
+      classLabel: $classLabel
     ) {
       id
       scenario
       dataset
-      param
+      region
+      classLabel
+      class
       x
       units
+      param
       value
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateGcamDataTableAggParamGlobal = /* GraphQL */ `
-  subscription OnUpdateGcamDataTableAggParamGlobal(
+export const onUpdateGcamDataTableAggClass1Regions = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggClass1Regions(
     $id: Int
     $scenario: String
     $dataset: String
-    $param: String
-    $x: Int
+    $region: String
+    $classLabel: String
   ) {
-    onUpdateGcamDataTableAggParamGlobal(
+    onUpdateGcamDataTableAggClass1Regions(
       id: $id
       scenario: $scenario
       dataset: $dataset
-      param: $param
-      x: $x
+      region: $region
+      classLabel: $classLabel
     ) {
       id
       scenario
       dataset
-      param
+      region
+      classLabel
+      class
       x
       units
+      param
       value
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteGcamDataTableAggParamGlobal = /* GraphQL */ `
-  subscription OnDeleteGcamDataTableAggParamGlobal(
+export const onDeleteGcamDataTableAggClass1Regions = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggClass1Regions(
     $id: Int
     $scenario: String
     $dataset: String
-    $param: String
-    $x: Int
+    $region: String
+    $classLabel: String
   ) {
-    onDeleteGcamDataTableAggParamGlobal(
+    onDeleteGcamDataTableAggClass1Regions(
       id: $id
       scenario: $scenario
       dataset: $dataset
-      param: $param
-      x: $x
+      region: $region
+      classLabel: $classLabel
     ) {
       id
       scenario
       dataset
-      param
+      region
+      classLabel
+      class
       x
       units
+      param
       value
       createdAt
       updatedAt
@@ -199,25 +208,110 @@ export const onDeleteGcamDataTableAggParamRegions = /* GraphQL */ `
     }
   }
 `;
-export const onCreateGcamDataTableAggClass1Regions = /* GraphQL */ `
-  subscription OnCreateGcamDataTableAggClass1Regions(
+export const onCreateGcamDataTableAggParamGlobal = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggParamGlobal(
     $id: Int
     $scenario: String
     $dataset: String
     $region: String
-    $classLabel: String
+    $param: String
   ) {
-    onCreateGcamDataTableAggClass1Regions(
+    onCreateGcamDataTableAggParamGlobal(
       id: $id
       scenario: $scenario
       dataset: $dataset
       region: $region
-      classLabel: $classLabel
+      param: $param
     ) {
       id
       scenario
       dataset
       region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateGcamDataTableAggParamGlobal = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggParamGlobal(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onUpdateGcamDataTableAggParamGlobal(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteGcamDataTableAggParamGlobal = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggParamGlobal(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onDeleteGcamDataTableAggParamGlobal(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateGcamDataTableAggClass1Global = /* GraphQL */ `
+  subscription OnCreateGcamDataTableAggClass1Global(
+    $id: Int
+    $scenario: String
+    $dataset: String
+    $region: String
+    $param: String
+  ) {
+    onCreateGcamDataTableAggClass1Global(
+      id: $id
+      scenario: $scenario
+      dataset: $dataset
+      region: $region
+      param: $param
+    ) {
+      id
+      scenario
+      dataset
+      region
+      param
       classLabel
       class
       x
@@ -228,25 +322,26 @@ export const onCreateGcamDataTableAggClass1Regions = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateGcamDataTableAggClass1Regions = /* GraphQL */ `
-  subscription OnUpdateGcamDataTableAggClass1Regions(
+export const onUpdateGcamDataTableAggClass1Global = /* GraphQL */ `
+  subscription OnUpdateGcamDataTableAggClass1Global(
     $id: Int
     $scenario: String
     $dataset: String
     $region: String
-    $classLabel: String
+    $param: String
   ) {
-    onUpdateGcamDataTableAggClass1Regions(
+    onUpdateGcamDataTableAggClass1Global(
       id: $id
       scenario: $scenario
       dataset: $dataset
       region: $region
-      classLabel: $classLabel
+      param: $param
     ) {
       id
       scenario
       dataset
       region
+      param
       classLabel
       class
       x
@@ -257,25 +352,26 @@ export const onUpdateGcamDataTableAggClass1Regions = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteGcamDataTableAggClass1Regions = /* GraphQL */ `
-  subscription OnDeleteGcamDataTableAggClass1Regions(
+export const onDeleteGcamDataTableAggClass1Global = /* GraphQL */ `
+  subscription OnDeleteGcamDataTableAggClass1Global(
     $id: Int
     $scenario: String
     $dataset: String
     $region: String
-    $classLabel: String
+    $param: String
   ) {
-    onDeleteGcamDataTableAggClass1Regions(
+    onDeleteGcamDataTableAggClass1Global(
       id: $id
       scenario: $scenario
       dataset: $dataset
       region: $region
-      classLabel: $classLabel
+      param: $param
     ) {
       id
       scenario
       dataset
       region
+      param
       classLabel
       class
       x

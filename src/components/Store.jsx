@@ -6,7 +6,7 @@ const initialState = {
   dataset: "foresight_v1",
   startDate: 2015,
   endDate: 2100,
-  dashboardSelection: "yields",
+  dashboardSelection: "elecByTechTWh",
   dashboardYear: 2020,
   dashboardRegion: "Global",
   dashboardSubsector: "Aggregate of Subsectors",
@@ -22,22 +22,22 @@ const initialState = {
   ],
   guages: [
     {
-      title: "runoff"
-    },
-    {
-      title: "yields"
-    },
-    {
-      title: "temp"
-    },
-    {
-      title: "emiss"
+      title: "elecByTechTWh"
     },
     {
       title: "pop"
     },
     {
-      title: "gdp"
+      title: "test1"
+    },
+    {
+      title: "test2"
+    },
+    {
+      title: "test3"
+    },
+    {
+      title: "test4"
     }
   ],
   parsedData: "i",
@@ -105,12 +105,14 @@ export function setDashSubs(subsector) {
 // Change currently selected guage
 export function setdashboardSelection(num) {
   updateHash("selected", num);
+  setDashDate(2015);
+  setDashReg("Global");
+  setDashSubs("Aggregate of Subsectors");
   return { type: 'dashboardSelection', payload: num };
 }
 
 // Action creator function to update the dataset
 export function setDataset(dataset) {
-  console.log(dataset);
   return { type: 'setDataset', payload: dataset };
 }
 

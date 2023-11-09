@@ -43,51 +43,60 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const createGcamDataTableAggParamGlobal = /* GraphQL */ `
-  mutation CreateGcamDataTableAggParamGlobal(
-    $input: CreateGcamDataTableAggParamGlobalInput!
+export const createGcamDataTableAggClass1Regions = /* GraphQL */ `
+  mutation CreateGcamDataTableAggClass1Regions(
+    $input: CreateGcamDataTableAggClass1RegionsInput!
   ) {
-    createGcamDataTableAggParamGlobal(input: $input) {
+    createGcamDataTableAggClass1Regions(input: $input) {
       id
       scenario
       dataset
-      param
+      region
+      classLabel
+      class
       x
       units
+      param
       value
       createdAt
       updatedAt
     }
   }
 `;
-export const updateGcamDataTableAggParamGlobal = /* GraphQL */ `
-  mutation UpdateGcamDataTableAggParamGlobal(
-    $input: UpdateGcamDataTableAggParamGlobalInput!
+export const updateGcamDataTableAggClass1Regions = /* GraphQL */ `
+  mutation UpdateGcamDataTableAggClass1Regions(
+    $input: UpdateGcamDataTableAggClass1RegionsInput!
   ) {
-    updateGcamDataTableAggParamGlobal(input: $input) {
+    updateGcamDataTableAggClass1Regions(input: $input) {
       id
       scenario
       dataset
-      param
+      region
+      classLabel
+      class
       x
       units
+      param
       value
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteGcamDataTableAggParamGlobal = /* GraphQL */ `
-  mutation DeleteGcamDataTableAggParamGlobal(
-    $input: DeleteGcamDataTableAggParamGlobalInput!
+export const deleteGcamDataTableAggClass1Regions = /* GraphQL */ `
+  mutation DeleteGcamDataTableAggClass1Regions(
+    $input: DeleteGcamDataTableAggClass1RegionsInput!
   ) {
-    deleteGcamDataTableAggParamGlobal(input: $input) {
+    deleteGcamDataTableAggClass1Regions(input: $input) {
       id
       scenario
       dataset
-      param
+      region
+      classLabel
+      class
       x
       units
+      param
       value
       createdAt
       updatedAt
@@ -148,15 +157,70 @@ export const deleteGcamDataTableAggParamRegions = /* GraphQL */ `
     }
   }
 `;
-export const createGcamDataTableAggClass1Regions = /* GraphQL */ `
-  mutation CreateGcamDataTableAggClass1Regions(
-    $input: CreateGcamDataTableAggClass1RegionsInput!
+export const createGcamDataTableAggParamGlobal = /* GraphQL */ `
+  mutation CreateGcamDataTableAggParamGlobal(
+    $input: CreateGcamDataTableAggParamGlobalInput!
   ) {
-    createGcamDataTableAggClass1Regions(input: $input) {
+    createGcamDataTableAggParamGlobal(input: $input) {
       id
       scenario
       dataset
       region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateGcamDataTableAggParamGlobal = /* GraphQL */ `
+  mutation UpdateGcamDataTableAggParamGlobal(
+    $input: UpdateGcamDataTableAggParamGlobalInput!
+  ) {
+    updateGcamDataTableAggParamGlobal(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteGcamDataTableAggParamGlobal = /* GraphQL */ `
+  mutation DeleteGcamDataTableAggParamGlobal(
+    $input: DeleteGcamDataTableAggParamGlobalInput!
+  ) {
+    deleteGcamDataTableAggParamGlobal(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      param
+      x
+      units
+      value
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createGcamDataTableAggClass1Global = /* GraphQL */ `
+  mutation CreateGcamDataTableAggClass1Global(
+    $input: CreateGcamDataTableAggClass1GlobalInput!
+  ) {
+    createGcamDataTableAggClass1Global(input: $input) {
+      id
+      scenario
+      dataset
+      region
+      param
       classLabel
       class
       x
@@ -167,15 +231,16 @@ export const createGcamDataTableAggClass1Regions = /* GraphQL */ `
     }
   }
 `;
-export const updateGcamDataTableAggClass1Regions = /* GraphQL */ `
-  mutation UpdateGcamDataTableAggClass1Regions(
-    $input: UpdateGcamDataTableAggClass1RegionsInput!
+export const updateGcamDataTableAggClass1Global = /* GraphQL */ `
+  mutation UpdateGcamDataTableAggClass1Global(
+    $input: UpdateGcamDataTableAggClass1GlobalInput!
   ) {
-    updateGcamDataTableAggClass1Regions(input: $input) {
+    updateGcamDataTableAggClass1Global(input: $input) {
       id
       scenario
       dataset
       region
+      param
       classLabel
       class
       x
@@ -186,15 +251,16 @@ export const updateGcamDataTableAggClass1Regions = /* GraphQL */ `
     }
   }
 `;
-export const deleteGcamDataTableAggClass1Regions = /* GraphQL */ `
-  mutation DeleteGcamDataTableAggClass1Regions(
-    $input: DeleteGcamDataTableAggClass1RegionsInput!
+export const deleteGcamDataTableAggClass1Global = /* GraphQL */ `
+  mutation DeleteGcamDataTableAggClass1Global(
+    $input: DeleteGcamDataTableAggClass1GlobalInput!
   ) {
-    deleteGcamDataTableAggClass1Regions(input: $input) {
+    deleteGcamDataTableAggClass1Global(input: $input) {
       id
       scenario
       dataset
       region
+      param
       classLabel
       class
       x

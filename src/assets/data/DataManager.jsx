@@ -38,6 +38,9 @@ export const getRegion = (data, region) => {
     return reducedData;
 }
 
+// getRegion filters a dataset by scenerio. Two inputs are given,
+// the dataset to modify and the scenerio to filter by. The modified
+// dataset is returned.
 export const getScenerio = (data, scenario) => {
     var reducedData = [];
     for(var i = 0; i < data.length; i++) {
@@ -48,6 +51,8 @@ export const getScenerio = (data, scenario) => {
     return reducedData;
 }
 
+// filterDateRange filters a dataset between two provided dates. Three inputs
+// are given, the dataset to modify and the dates to filter by. This is used for guages.
 export const filterDateRange = (data, start, end) => {
     var reducedData = [];
     for(var i = 0; i < data.length; i++) {
@@ -58,6 +63,8 @@ export const filterDateRange = (data, start, end) => {
     return reducedData;
 }
 
+// getLargestChoropleth gets the largest value from a dataset to calculate the shading
+// for the Choropleth map. Takes in an already choropleth formated dataset.
 export const getLargestChoropleth = (data) => {
     var ans = 0;
     for(var i = 0; i < data.length; i++) {
@@ -67,6 +74,8 @@ export const getLargestChoropleth = (data) => {
     return ans;
 }
 
+// getSmallestChoropleth gets the smallest value from a dataset to calculate the shading
+// for the Choropleth map. Takes in an already choropleth formated dataset.
 export const getSmallestChoropleth = (data) => {
     var ans = data.at(0).value;
     for(var i = 0; i < data.length; i++) {
@@ -76,34 +85,15 @@ export const getSmallestChoropleth = (data) => {
     return ans;
 }
 
+// getChoroplethValue gets the value for a choropleth region with the id given by id.
 export const getChoroplethValue = (data, id) => {
+    //console.log("*", data);
     var ans = 0;
     for(var i = 0; i < data.length; i++) {
         if(id === data.at(i).id)
             ans = data.at(i).value;
     }
     return ans;
-}
-// mergeRegions aggregates data by summing all data with the same date.
-// This results in an output where regions are merged and data is only
-// sorted by date. This is useful for charts like the line chart where
-// it is helpful to merge regions.
-export const mergeRegions = (data) => {
-    var reducedData = [];
-    var flag;
-    for(var i = 0; i < data.length; i++) {
-        flag = 0;
-        for(var j = 0; j < reducedData.length; j++) {
-            if(data.at(i).region === reducedData.at(j).region) {
-                reducedData.at(j).value = parseFloat(reducedData.at(j).value) + parseFloat(data.at(i).value);
-                flag = 1;
-            }
-        }
-        if(flag === 0)
-            reducedData.push(data.at(i));
-    }
-    reducedData.sort((a,b) => a.x - b.x);
-    return reducedData;
 }
 
 export const reduceRegion = (data, region) => {
@@ -126,7 +116,7 @@ export const reduceRegion = (data, region) => {
 export const getDates = (data, year) => {
     var reducedData = [];
     for(var i = 0; i < data.length; i++) {
-        if(data.at(i).x === year.toString() ) {
+        if(data.at(i).x.toString() === year.toString() ) {
             reducedData.push(data.at(i));
         }   
     }
@@ -193,7 +183,7 @@ export const getNoSubcatChoropleth = (data) => {
     for(var i = 0; i < data.length; i++) {
         reducedData.push({
             id: data.at(i).region,
-            value: parseFloat(data.at(i).value)
+            value: data.at(i).value
         });   
     }
     return reducedData;
@@ -212,26 +202,29 @@ export const getBarTotal = (data, param, scenarios) => {
 
 export const getBarHorizontal = (data, dataAgg, scenerio, param, year) => {
     var output = [];
-    var barData = getDates(getScenerio(getParam(data, param), scenerio), year);
-    var aggregates = getDates(getScenerio(getParam(dataAgg, param), scenerio), year);
+    var barData = getDates(getScenerio(data, scenerio), year);
+    var aggregates = getDates(getScenerio(dataAgg, scenerio), year);
     var subcatList = filterSubcat(barData);
     var countryList = filterRegion(aggregates);
+    console.log("!!!!", barData, aggregates);
     for(var i = 0; i < countryList.length; i++) {
         var countryData = getRegion(barData, countryList[i], year);
+        console.log("!!!!!", countryData);
         var obj = {
             "country": countryList[i]
         }
         for(var j = 0; j < subcatList.length; j++) {
-            obj[subcatList[j]] = parseFloat(getSubcat(countryData, subcatList.at(j)).at(0).value);
+            if(getSubcat(countryData, subcatList.at(j)) != 0)
+                obj[subcatList[j]] = parseFloat(getSubcat(countryData, subcatList.at(j)).at(0).value);
+            else 
+                obj[subcatList[j]] = 0;
         }
         output.push(obj);  
     }
-    console.log("!", output)
     return output
 }
 
-export const lineGraphReduce = (data, param, scenerios, region, subcat) => {
-    console.log(data);
+export const lineGraphReduce = (data, param, scenerios, region, subcat, start, end) => {
     var output = []
     for (var i = 0; i < scenerios.length; i++) {
         var obj = {
@@ -240,7 +233,6 @@ export const lineGraphReduce = (data, param, scenerios, region, subcat) => {
         }
         output.push(obj);
     }
-    console.log(output)
     return output
 }
 
@@ -256,7 +248,8 @@ export const getLineGraphReduce = (data) => {
 }
 
 export const choroplethReduce = (data, scenario, param, year) => {
-    var final = getDates(getScenerio(getParam(data, param), scenario), year);
+    var final = getDates(getScenerio(data, scenario), year);
+    //console.log("******", getNoSubcatChoropleth(final));
     return getNoSubcatChoropleth(final);
 }
 
