@@ -77,17 +77,20 @@ export const getLargestChoropleth = (data) => {
 // getSmallestChoropleth gets the smallest value from a dataset to calculate the shading
 // for the Choropleth map. Takes in an already choropleth formated dataset.
 export const getSmallestChoropleth = (data) => {
-    var ans = data.at(0).value;
-    for(var i = 0; i < data.length; i++) {
-        if(ans > data.at(i).value)
-            ans = data.at(i).value;
+    var ans = 0;
+    if(data.length != 0) {
+        console.log(":->", data);
+        ans = data.at(0).value;
+        for(var i = 0; i < data.length; i++) {
+            if(ans > data.at(i).value)
+                ans = data.at(i).value;
+        }
     }
     return ans;
 }
 
 // getChoroplethValue gets the value for a choropleth region with the id given by id.
 export const getChoroplethValue = (data, id) => {
-    //console.log("*", data);
     var ans = 0;
     for(var i = 0; i < data.length; i++) {
         if(id === data.at(i).id)
