@@ -105,9 +105,6 @@ export function setDashSubs(subsector) {
 // Change currently selected guage
 export function setdashboardSelection(num) {
   updateHash("selected", num);
-  setDashDate(2015);
-  setDashReg("Global");
-  setDashSubs("Aggregate of Subsectors");
   return { type: 'dashboardSelection', payload: num };
 }
 

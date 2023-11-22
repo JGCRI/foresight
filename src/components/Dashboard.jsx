@@ -1,12 +1,11 @@
 import React, {useEffect, useCallback} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SidebarDashboard from "./SidebarDashboard.jsx";
-import TopbarDashboard from "./TopbarDashboard.jsx";
 import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
 import DashboardGraphs from "./DashboardGraphs.jsx";
-import { MdError, MdGroups } from "react-icons/md";
+import { MdError, MdElectricBolt, MdGroups } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
@@ -17,14 +16,8 @@ import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
 
 import { API, graphqlOperation } from "aws-amplify";
 
-import Papa from "papaparse";
-import gcamDataTable from '../assets/data/gcamDataTable.csv';
-
-import gcamDataTable_aggParam_regions from '../assets/data/gcamDataTable_aggParam_regions.csv'
-import gcamDataTable_aggParam_global from '../assets/data/gcamDataTable_aggParam_global.csv'
-import gcamDataTable_aggClass1_regions from '../assets/data/gcamDataTable_aggClass1_regions.csv'
-import gcamDataTable_aggClass1_global from '../assets/data/gcamDataTable_aggClass1_global.csv'
-
+//UNUSED, Only For testing: Keeps track of the distance of the selection-divider and the top of the screen.
+//Allows divider to scroll with page.
 const scrollHandler = () => {
   let divider = document.querySelector('.selection-divider');
   let y = window.scrollY + divider.getBoundingClientRect().bottom;
@@ -36,6 +29,7 @@ const scrollHandler = () => {
   }
 };
 
+//Gets the icon of each category by name. Shows up next to the guages and the selection.
 export const getIcon = (selection) => {
   switch (selection) {
     case "runoff":
@@ -50,11 +44,15 @@ export const getIcon = (selection) => {
       return <MdGroups />;
     case "gdp":
       return <TbCoins />;
+    case "elecByTechTWh":
+      return <MdElectricBolt />
     default:
       return <MdError />;
   }
 }
 
+//Updates the URL hash for single parameter hashes. Takes in the name and value of the hash.
+//Does not guarentee order of placement.
 export const updateHash = (name, value) => {
   var searchParams = new URLSearchParams(window.location.hash.substring(1));
   if (!searchParams.has(name))
@@ -64,6 +62,8 @@ export const updateHash = (name, value) => {
   window.location.hash = searchParams.toString();
 }
 
+//Updates the URL hash for a hash comprising of a list. Each element of the list must be added
+//through this function and will be seperated by commas.
 export const updateListHash = (name, index, value) => {
   var searchParams = new URLSearchParams(window.location.hash.substring(1));
   if (searchParams.has(name)) {
@@ -75,6 +75,7 @@ export const updateListHash = (name, index, value) => {
 }
 
 function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {
+  //GraphQL Querries for dahsboard data.
   const queryRegSub = `
     query MyQuery($param: String!) {
       listGcamDataTableAggParamGlobals(filter: {param: {eq: $param}}, limit: 1000000) {
@@ -134,7 +135,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     }
   }
 `;
-
+  //Retrieves data for all four needed categories.
+  //Raw data, Aggregate Region, Aggregate Subcategory, and Aggregate Region and Subcategory.
   const fetchForesightRegSub = useCallback(async () => {
     try {
       const { data } = await API.graphql(
@@ -200,23 +202,16 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
   }
   }, [selection, query, updateParse]);
 
+  //For each change in selection, parses from AWS.
   useEffect(() => {
     fetchForesightRegSub();
     fetchForesightSub();
     fetchForesightReg();
     fetchForesight();
-    /*
-    Papa.parse(gcamDataTable_aggClass1_regions, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: function (input) {
-        updateParse(input.data);
-      }
-    });
-    */
-  }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub]);
+  }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub, fetchForesightRegSub, fetchForesightSub, fetchForesightReg, fetchForesight]);
 
+  //Ran at the beginning of loading the dashboard right from an URL. Takes items in the hash and populates
+  //the dashboard with them.
   const setDataParameters = () => {
     var searchParams = new URLSearchParams(window.location.hash.substring(1));
     if (searchParams.has("start") && searchParams.has("end")) {
