@@ -38,8 +38,9 @@ function DashboardFloater({ updateGuage, selection, openGuages, year, region, su
                 </Dropdown>
             </div>
             <div>
-                Year: {year}     Region: {region}     Subsector: {subsector}     :
-                <Button 
+                Year: {year}     Region: {region}     Subsector: {subsector}
+                <Button
+                    className="floater-button" 
                     variant="danger"
                     onClick={() => resetParams()}>
                     Reset
