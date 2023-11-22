@@ -1,7 +1,6 @@
 import React, {useEffect, useCallback} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SidebarDashboard from "./SidebarDashboard.jsx";
-import TopbarDashboard from "./TopbarDashboard.jsx";
 import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
@@ -16,14 +15,6 @@ import scenarios from "../assets/data/Scenarios.jsx";
 import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
 
 import { API, graphqlOperation } from "aws-amplify";
-
-import Papa from "papaparse";
-import gcamDataTable from '../assets/data/gcamDataTable.csv';
-
-import gcamDataTable_aggParam_regions from '../assets/data/gcamDataTable_aggParam_regions.csv'
-import gcamDataTable_aggParam_global from '../assets/data/gcamDataTable_aggParam_global.csv'
-import gcamDataTable_aggClass1_regions from '../assets/data/gcamDataTable_aggClass1_regions.csv'
-import gcamDataTable_aggClass1_global from '../assets/data/gcamDataTable_aggClass1_global.csv'
 
 const scrollHandler = () => {
   let divider = document.querySelector('.selection-divider');
@@ -205,17 +196,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     fetchForesightSub();
     fetchForesightReg();
     fetchForesight();
-    /*
-    Papa.parse(gcamDataTable_aggClass1_regions, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      complete: function (input) {
-        updateParse(input.data);
-      }
-    });
-    */
-  }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub]);
+  }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub, fetchForesightRegSub, fetchForesightSub, fetchForesightReg, fetchForesight]);
 
   const setDataParameters = () => {
     var searchParams = new URLSearchParams(window.location.hash.substring(1));
