@@ -10,11 +10,6 @@
       "StackName": "amplify-foresight-dev-202911",
       "StackId": "arn:aws:cloudformation:us-east-1:293048970508:stack/amplify-foresight-dev-202911/b75043d0-d736-11ed-8ef6-12debebeafd5",
       "AmplifyAppId": "d1v6phfo3bkkj4"
-    },
-    "categories": {
-      "api": {
-        "foresight": {}
-      }
     }
   }
 }

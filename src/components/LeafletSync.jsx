@@ -133,11 +133,21 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
         console.log('Zooming2!!!');
       });
     }
+    mapInstance.eachLayer(function (layer) {
+      mapInstance.removeLayer(layer);
+    });
+    mapInstance2.eachLayer(function (layer) {
+      mapInstance2.removeLayer(layer);
+    });
+    var map_base = L.layerGroup([tileRef.current]);
+    var map2_base = L.layerGroup([tileRef2.current]);
+    map_base.addTo(mapInstance);
+    map2_base.addTo(mapInstance2);
     L.geoJSON(landcells, { style: style, onEachFeature: onEachFeature }).addTo(mapInstance);
     L.geoJSON(landcells, { style: style2, onEachFeature: onEachFeature }).addTo(mapInstance2);
     mapInstance.sync(mapInstance2)
     mapInstance2.sync(mapInstance)
-  }, [mapInstance, mapInstance2]);
+  }, [mapInstance, mapInstance2, mapData, mapData2]);
 
   function highlightFeature(e) {
     var layer = e.target;

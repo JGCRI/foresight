@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { setScenerios } from "../Store";
+import { setDashDate, setDashReg, setDashSubs, setScenerios } from "../Store";
 import { connect } from 'react-redux';
 import ScenerioGuage from "../guages/ScenerioGuage"
 import ScenerioGuageNegative from "../guages/ScenerioGuageNegative"
 import Dropdown from 'react-bootstrap/Dropdown';
 import { getIcon } from "../Dashboard";
 
-function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update }) {
+function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update, updateDate, updateRegion, updateSubcat }) {
     const list = scenerios; //List of all possible scenerios
     const cIndex = curIndex; //Number of current row
     const cOpen = curOpen; //Currently open scenerios
@@ -202,6 +202,9 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
 
     const handlePress = (scenerioTitle) => {
         setValue(scenerioTitle);
+        updateDate(2020);
+        updateRegion("Global");
+        updateSubcat("Aggregate of Subsectors");
         updateScenerios(cIndex, scenerioTitle, cOpen);
     }
 
@@ -317,6 +320,9 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
 //and the list of current open scenerios for positioning purposes.
 function mapDispatchToProps(dispatch) {
     return {
+        updateDate: (date) => dispatch(setDashDate(date)),
+        updateRegion: (reg) => dispatch(setDashReg(reg)),
+        updateSubcat: (subcat) => dispatch(setDashSubs(subcat)),
         updateScenerios: (newIndex, newTitle, openScenerio) => dispatch(setScenerios(newIndex, newTitle, openScenerio))
     };
 }
