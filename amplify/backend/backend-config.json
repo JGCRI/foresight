@@ -1,3 +1,22 @@
 {
-  "api": {}
+  "api": {
+    "foresight": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDate": "2024-11-22T15:12:12.986Z",
+              "apiKeyExpirationDays": 365,
+              "description": "default"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  }
 }

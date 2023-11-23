@@ -3,10 +3,10 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-1",
-    "aws_appsync_graphqlEndpoint": "https://4ujdxlts3ncd3b6lhzqsyh3sz4.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_graphqlEndpoint": "https://curvy74tqbhapewxsr55fhyuje.appsync-api.us-east-1.amazonaws.com/graphql",
     "aws_appsync_region": "us-east-1",
     "aws_appsync_authenticationType": "API_KEY",
-    "aws_appsync_apiKey": "da2-c5ax7qzxpnh3njkf3kyx5s5ttu"
+    "aws_appsync_apiKey": "da2-xh2whpbftzehfa7fak3zqi4esm"
 };
 
 

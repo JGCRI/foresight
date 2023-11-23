@@ -121,7 +121,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
   `;
   const query = `
   query MyQuery($param: String!) {
-    listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 2000000) {
+    listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 3000000) {
       items {
         id
         value

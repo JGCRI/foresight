@@ -7,10 +7,10 @@
 /* eslint-disable */
 import * as React from "react";
 import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Todo } from "../models";
-import { fetchByPath, validateField } from "./utils";
-import { DataStore } from "aws-amplify";
+import { fetchByPath, getOverrideProps, validateField } from "./utils";
+import { API } from "aws-amplify";
+import { getTodo } from "../graphql/queries";
+import { updateTodo } from "../graphql/mutations";
 export default function TodoUpdateForm(props) {
   const {
     id: idProp,
@@ -44,7 +44,12 @@ export default function TodoUpdateForm(props) {
   React.useEffect(() => {
     const queryData = async () => {
       const record = idProp
-        ? await DataStore.query(Todo, idProp)
+        ? (
+            await API.graphql({
+              query: getTodo.replaceAll("__typename", ""),
+              variables: { id: idProp },
+            })
+          )?.data?.getTodo
         : todoModelProp;
       setTodoRecord(record);
     };
@@ -82,7 +87,7 @@ export default function TodoUpdateForm(props) {
         event.preventDefault();
         let modelFields = {
           name,
-          description,
+          description: description ?? null,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -108,21 +113,26 @@ export default function TodoUpdateForm(props) {
         }
         try {
           Object.entries(modelFields).forEach(([key, value]) => {
-            if (typeof value === "string" && value.trim() === "") {
-              modelFields[key] = undefined;
+            if (typeof value === "string" && value === "") {
+              modelFields[key] = null;
             }
           });
-          await DataStore.save(
-            Todo.copyOf(todoRecord, (updated) => {
-              Object.assign(updated, modelFields);
-            })
-          );
+          await API.graphql({
+            query: updateTodo.replaceAll("__typename", ""),
+            variables: {
+              input: {
+                id: todoRecord.id,
+                ...modelFields,
+              },
+            },
+          });
           if (onSuccess) {
             onSuccess(modelFields);
           }
         } catch (err) {
           if (onError) {
-            onError(modelFields, err.message);
+            const messages = err.errors.map((e) => e.message).join("\n");
+            onError(modelFields, messages);
           }
         }
       }}
