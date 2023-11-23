@@ -11,5 +11,23 @@
       "StackId": "arn:aws:cloudformation:us-east-1:293048970508:stack/amplify-foresight-dev-202911/b75043d0-d736-11ed-8ef6-12debebeafd5",
       "AmplifyAppId": "d1v6phfo3bkkj4"
     }
+  },
+  "foresight": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-foresight-foresight-95017-authRole",
+      "UnauthRoleArn": "arn:aws:iam::293048970508:role/amplify-foresight-foresight-95017-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::293048970508:role/amplify-foresight-foresight-95017-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-foresight-foresight-95017-deployment",
+      "UnauthRoleName": "amplify-foresight-foresight-95017-unauthRole",
+      "StackName": "amplify-foresight-foresight-95017",
+      "StackId": "arn:aws:cloudformation:us-east-1:293048970508:stack/amplify-foresight-foresight-95017/a6315ee0-8a0f-11ee-a50a-0ed0de35a883",
+      "AmplifyAppId": "d1v6phfo3bkkj4"
+    },
+    "categories": {
+      "api": {
+        "foresight": {}
+      }
+    }
   }
 }
