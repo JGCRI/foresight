@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import BarHorizontal from "./charts/BarHorizontal";
 import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
-import getDashboardData from "./DashboardDummyData";
 import { connect } from 'react-redux';
-import { choroplethReduce, filterSubcat, getBarHorizontal, lineGraphReduce, processData, getParam } from '../assets/data/DataManager';
-import Papa from "papaparse";
+import { choroplethReduce, filterSubcat, getBarHorizontal, lineGraphReduce, processData } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
 
@@ -42,6 +40,12 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
     const csv2 = dataSub;
     const csv3 = dataRegSub;
     let rawData = "i"
+    let subcatDisplay = ""
+    let regionDisplay = ""
+    if(subcat !== "Aggregate of Subsectors")
+      subcatDisplay = subcat;
+    if(region !== "class1")
+      regionDisplay = region;
     const Scenerios = openedScenerios;
     const [startDate, setStartDate] = useState(start);
     const [endDate, setEndDate] = useState(end);
@@ -57,9 +61,9 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
     return (
         <>
             <div className="graph-grid">
-                <div>Global Trends</div>
-                <div>Spatial Composition</div>
-                <div>Top 10 Countries -- By Subsector</div>
+                <div>{regionDisplay} {subcatDisplay} Trends</div>
+                <div>Spatial Composition {"(" + curYear + " " + subcatDisplay + ")"} </div>
+                <div>Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>
                 {rawData === 'i' ? (
                   "Loading Dataset..."
                 ) : (
@@ -86,13 +90,13 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
                 )}
             </div>
             <div className="graph-grid-small">
-                <div>Global Trends</div>
+                <div>{regionDisplay} {subcatDisplay} Trends</div>
                 {rawData === 'i' ? (
                   "Loading Dataset..."
                 ) : (
                 <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} />
                 )}
-                <div>Spatial Composition</div>
+                <div>Spatial Composition {"(" + curYear + " " + subcatDisplay + ")"}</div>
                 {csv2 === 'i' ? (
                   "Loading Dataset..."
                 ) : (
@@ -104,7 +108,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
                     dataset2={choroplethReduce(csv2, Scenerios.at(1).title, selectedGuage, curYear)}
                 />
                 )}
-                <div>Top 10 Countries -- By Subsector</div>
+                <div>Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>
                 {(csv === 'i' || csv2 === 'i') ? (
                   "Loading Dataset..."
                 ) : (
