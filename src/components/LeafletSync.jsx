@@ -117,6 +117,19 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
       setMapInstance2(mapRef2.current);
   }, []);
 
+  var legend = L.control();
+
+  legend.onAdd = function (map) {
+      this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+      this.update();
+      return this._div;
+  };
+
+  legend.update = function (props) {
+    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+    '<b>' + props.name + '</b><br />' + getChoroplethValue(mapData, props.id) + ' people / mi<sup>2</sup>'
+    : 'Hover over a state');
+  };
   // If you want to use the mapInstance in a useEffect hook,
   // you first have to make sure the map exists. Then, you can add your logic.
   useEffect(() => {
@@ -145,6 +158,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
     map2_base.addTo(mapInstance2);
     L.geoJSON(landcells, { style: style, onEachFeature: onEachFeature }).addTo(mapInstance);
     L.geoJSON(landcells, { style: style2, onEachFeature: onEachFeature }).addTo(mapInstance2);
+    //legend.addTo(mapInstance);
     mapInstance.sync(mapInstance2)
     mapInstance2.sync(mapInstance)
   }, [mapInstance, mapInstance2, mapData, mapData2]);
