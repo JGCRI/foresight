@@ -156,8 +156,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             param: selection, nextToken
           })
         );
-        console.log("PAGINATION:" + response.data.listGcamDataTableAggParamGlobals.nextToken);
-        console.log("Foresight data reg sub response:", response.data); // Print the response data
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamGlobals.nextToken);
+        //console.log("Foresight data reg sub response:", response.data); // Print the response data
 
         const items = response.data.listGcamDataTableAggParamGlobals.items;
         allItems = allItems.concat(items);
@@ -182,8 +182,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             param: selection, nextToken
           })
         );
-        console.log("PAGINATION:" + response.data.listGcamDataTableAggParamRegions.nextToken);
-        console.log("Foresight data sub response:", response.data); // Print the response data
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamRegions.nextToken);
+        //console.log("Foresight data sub response:", response.data); // Print the response data
 
         const items = response.data.listGcamDataTableAggParamRegions.items;
         allItems = allItems.concat(items);
@@ -208,8 +208,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             param: selection, nextToken
           })
         );
-        console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Globals.nextToken);
-        console.log("Foresight data reg response:", response.data); // Print the response data
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Globals.nextToken);
+        //console.log("Foresight data reg response:", response.data); // Print the response data
 
         const items = response.data.listGcamDataTableAggClass1Globals.items;
         allItems = allItems.concat(items);
@@ -234,8 +234,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             param: selection, nextToken
           })
         );
-        console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Regions.nextToken);
-        console.log("Foresight data response:", response.data); // Print the response data
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Regions.nextToken);
+        //console.log("Foresight data response:", response.data); // Print the response data
 
         const items = response.data.listGcamDataTableAggClass1Regions.items;
         allItems = allItems.concat(items);
@@ -252,6 +252,10 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
 
   //For each change in selection, parses from AWS.
   useEffect(() => {
+    updateParse("i");
+    updateParseReg("i");
+    updateParseSub("i");
+    updateParseRegSub("i");
     fetchForesightRegSub();
     fetchForesightSub();
     fetchForesightReg();

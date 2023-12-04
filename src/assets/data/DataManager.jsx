@@ -207,14 +207,14 @@ export const getBarHorizontal = (data, dataAgg, scenerio, param, year) => {
     var barData = getDates(getScenerio(data, scenerio), year);
     var aggregates = getDates(getScenerio(dataAgg, scenerio), year);
     var subcatList = filterSubcat(barData);
-    var countryList = filterRegion(barData);
+    var countryList = filterRegion(aggregates);
     for(var i = 0; i < countryList.length; i++) {
         var countryData = getRegion(barData, countryList[i], year);
         var obj = {
             "country": countryList[i]
-        }
+        };
         for(var j = 0; j < subcatList.length; j++) {
-            if(getSubcat(countryData, subcatList.at(j)) !== 0)
+            if(getSubcat(countryData, subcatList.at(j)).length > 0)
                 obj[subcatList[j]] = parseFloat(getSubcat(countryData, subcatList.at(j)).at(0).value);
             else 
                 obj[subcatList[j]] = 0;
