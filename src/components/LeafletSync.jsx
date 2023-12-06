@@ -87,20 +87,22 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
 
   // Options for our map instance:
   const mapParams = {
-    center: [45, 0],
+    center: [0, 0],
     zoom: 0.6,
     zoomControl: false,
     zoomSnap: 0.75,
     closePopupOnClick: false,
+    maxBoundsViscosity: 1.0,
     layers: [tileRef.current], // Start with just the base layer
   };
 
   const mapParams2 = {
-    center: [45, 0], // USA
+    center: [0, 0], // USA
     zoom: 0.6,
     zoomControl: false,
     zoomSnap: 0.75,
     closePopupOnClick: false,
+    maxBoundsViscosity: 1.0,
     layers: [tileRef2.current], // Start with just the base layer
   };
 
