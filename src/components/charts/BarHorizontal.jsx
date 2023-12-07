@@ -20,7 +20,7 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                 data={data}
                 keys={listKeys}
                 indexBy="country"
-                margin={{ top: 0, right: 15, bottom: 42, left: 60 }}
+                margin={{ top: 0, right: 15, bottom: 42, left: 70 }}
                 layout="horizontal"
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}

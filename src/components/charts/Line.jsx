@@ -6,7 +6,7 @@ const Line = ({ data, date, setdashboardDate }) => (
     <div className="nivo-wrapper grid-border">
         <ResponsiveLine
             data={data}
-            margin={{ top: 20, right: 15, bottom: 25, left: 25 }}
+            margin={{ top: 20, right: 15, bottom: 25, left: 80 }}
             xScale={{
                 type: 'linear',
                 min: 'auto',
@@ -145,11 +145,18 @@ const Line = ({ data, date, setdashboardDate }) => (
                 legendPosition: 'middle'
             }}
             axisLeft={{
+                format: (v) => {
+                    return v.toString().length > 2 ? (
+                        v.toString().substring(0, 1) + "." + v.toString().substring(1, 2) + "x10^" + (v.toString().length - 1)
+                    ) : (
+                        v
+                    );
+                },
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
                 legend: "Scenerio",
-                legendOffset: -40,
+                legendOffset: -70,
                 legendPosition: 'middle'
             }}
             colors={{ scheme: 'set1' }}
