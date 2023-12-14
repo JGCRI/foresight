@@ -30,22 +30,22 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "test1",
+            field: "watConsumBySec",
             data: 25
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "test2",
+            field: "agProdByCrop",
             data: 75
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "test3",
+            field: "landAlloc",
             data: -50
         },
         {
             scenerio: "GCAM_SSP2",
-            field: "test4",
+            field: "watWithdrawBySec",
             data: -35
         },
         {
@@ -60,22 +60,22 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "test1",
+            field: "watConsumBySec",
             data: 45
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "test2",
+            field: "agProdByCrop",
             data: 85
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "test3",
+            field: "landAlloc",
             data: -50
         },
         {
             scenerio: "GCAM_SSP3",
-            field: "test4",
+            field: "watWithdrawBySec",
             data: -35
         },
         {
@@ -90,22 +90,22 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "test1",
+            field: "watConsumBySec",
             data: 50
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "test2",
+            field: "agProdByCrop",
             data: 90
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "test3",
+            field: "landAlloc",
             data: -25
         },
         {
             scenerio: "GCAM_SSP5",
-            field: "test4",
+            field: "watWithdrawBySec",
             data: -40
         },
         {
@@ -120,22 +120,22 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         },
         {
             scenerio: "2.0 Degrees",
-            field: "test1",
+            field: "watConsumBySec",
             data: 95
         },
         {
             scenerio: "2.0 Degrees",
-            field: "test2",
+            field: "agProdByCrop",
             data: 90
         },
         {
             scenerio: "2.0 Degrees",
-            field: "test3",
+            field: "landAlloc",
             data: -80
         },
         {
             scenerio: "2.0 Degrees",
-            field: "test4",
+            field: "watWithdrawBySec",
             data: -70
         },
         {
@@ -150,22 +150,22 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         },
         {
             scenerio: "2.5 Degrees",
-            field: "test1",
+            field: "watConsumBySec",
             data: 150
         },
         {
             scenerio: "2.5 Degrees",
-            field: "test2",
+            field: "agProdByCrop",
             data: 200
         },
         {
             scenerio: "2.5 Degrees",
-            field: "test3",
+            field: "landAlloc",
             data: -99
         },
         {
             scenerio: "2.5 Degrees",
-            field: "test4",
+            field: "watWithdrawBySec",
             data: -80
         },
         {
@@ -180,22 +180,22 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         },
         {
             scenerio: "3.0 Degrees",
-            field: "test1",
+            field: "watConsumBySec",
             data: 300
         },
         {
             scenerio: "3.0 Degrees",
-            field: "test2",
+            field: "agProdByCrop",
             data: 500
         },
         {
             scenerio: "3.0 Degrees",
-            field: "test3",
+            field: "landAlloc",
             data: -500
         },
         {
             scenerio: "3.0 Degrees",
-            field: "test4",
+            field: "watWithdrawBySec",
             data: -150
         }
     ]
@@ -234,6 +234,9 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     const guageNumber = (number, guageTitle) => {
         const num = number;
         const title = guageTitle;
+        var displayTitle = guageTitle;
+        if(displayTitle.length > 10)
+        displayTitle = displayTitle.substring(0, 10) + "...";
         if (number < 0) {
             return (
                 <>
@@ -241,7 +244,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
                         guageText={'' + title + cIndex}
                         guageValue={num}
                     />
-                    <div className="guageText"> {getIcon(title)}  {title}</div>
+                    <div className="guageText"> {getIcon(title)}  {displayTitle}</div>
                 </>
             )
         }
@@ -251,7 +254,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
                     guageText={'' + title + cIndex}
                     guageValue={num}
                 />
-                <div className="guageText"> {getIcon(title)}  {title}</div>
+                <div className="guageText"> {getIcon(title)}  {displayTitle}</div>
             </>
         )
     };

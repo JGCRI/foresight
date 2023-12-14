@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
 import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
 import DashboardGraphs from "./DashboardGraphs.jsx";
-import { MdError, MdElectricBolt, MdGroups } from "react-icons/md";
+import { MdError, MdElectricBolt, MdGroups, MdFilterHdr } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
@@ -32,9 +32,11 @@ const scrollHandler = () => {
 //Gets the icon of each category by name. Shows up next to the guages and the selection.
 export const getIcon = (selection) => {
   switch (selection) {
-    case "runoff":
+    case "watConsumBySec":
       return <GiWaterDrop />;
-    case "yields":
+    case "watWithdrawBySec":
+      return <GiWaterDrop />;
+    case "agProdByCrop":
       return <GiCorn />;
     case "temp":
       return <FaThermometerHalf />;
@@ -46,6 +48,8 @@ export const getIcon = (selection) => {
       return <TbCoins />;
     case "elecByTechTWh":
       return <MdElectricBolt />
+    case "landAlloc":
+      return <MdFilterHdr />
     default:
       return <MdError />;
   }
@@ -74,11 +78,11 @@ export const updateListHash = (name, index, value) => {
   }
 }
 
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {  
   //GraphQL Querries for dahsboard data.
   const queryRegSub = `
-    query MyQuery($param: String!) {
-      listGcamDataTableAggParamGlobals(filter: {param: {eq: $param}}, limit: 1000000) {
+    query MyQuery($param: String!, $nextToken: String) {
+      listGcamDataTableAggParamGlobals(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
         items {
           id
           value
@@ -86,12 +90,13 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
           scenario
           param
         }
+        nextToken
       }
     }
   `;
   const querySub = `
-    query MyQuery($param: String!) {
-      listGcamDataTableAggParamRegions(filter: {param: {eq: $param}}, limit: 1000000) {
+    query MyQuery($param: String!, $nextToken: String) {
+      listGcamDataTableAggParamRegions(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
         items {
           id
           value
@@ -100,12 +105,13 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
           param
           region
         }
+        nextToken
       }
     }
   `;
   const queryReg = `
-    query MyQuery($param: String!) {
-      listGcamDataTableAggClass1Globals(filter: {param: {eq: $param}}, limit: 1000000) {
+    query MyQuery($param: String!, $nextToken: String) {
+      listGcamDataTableAggClass1Globals(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
         items {
           id
           value
@@ -116,87 +122,129 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
           classLabel
           class
         }
+        nextToken
       }
     }
   `;
   const query = `
-  query MyQuery($param: String!) {
-    listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 3000000) {
-      items {
-        id
-        value
-        x
-        scenario
-        param
-        region
-        classLabel
-        class
+    query MyQuery($param: String!, $nextToken: String) {
+      listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
+        items {
+          id
+          value
+          x
+          scenario
+          param
+          region
+          classLabel
+          class
+        }
+        nextToken
       }
     }
-  }
-`;
+  `;
   //Retrieves data for all four needed categories.
   //Raw data, Aggregate Region, Aggregate Subcategory, and Aggregate Region and Subcategory.
   const fetchForesightRegSub = useCallback(async () => {
+    let nextToken = null;
+    let allItems = [];
+
     try {
-      const { data } = await API.graphql(
-        graphqlOperation(queryRegSub, {
-          param: selection,
-        })
-      );
-      console.log(selection);
-      console.log("Foresight regsub data response:", data); // Print the response data
-      let input = data.listGcamDataTableAggParamGlobals.items;
-      input.sort((a,b) => a.x - b.x);
-      updateParseRegSub(input);
+      do {
+        const response = await API.graphql(
+          graphqlOperation(queryRegSub, {
+            param: selection, nextToken
+          })
+        );
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamGlobals.nextToken);
+        //console.log("Foresight data reg sub response:", response.data); // Print the response data
+
+        const items = response.data.listGcamDataTableAggParamGlobals.items;
+        allItems = allItems.concat(items);
+
+        nextToken = response.data.listGcamDataTableAggParamGlobals.nextToken;
+      } while(nextToken);
+      
+      allItems.sort((a,b) => a.x - b.x);
+      updateParseRegSub(allItems);
     } catch (error) {
       console.log(error);
   }
   }, [selection, queryRegSub, updateParseRegSub]);
   const fetchForesightSub = useCallback(async () => {
+    let nextToken = null;
+    let allItems = [];
+
     try {
-      const { data } = await API.graphql(
-        graphqlOperation(querySub, {
-          param: selection,
-        })
-      );
-      console.log(selection);
-      console.log("Foresight sub data response:", data); // Print the response data
-      let input = data.listGcamDataTableAggParamRegions.items;
-      input.sort((a,b) => a.x - b.x);
-      updateParseSub(input);
+      do {
+        const response = await API.graphql(
+          graphqlOperation(querySub, {
+            param: selection, nextToken
+          })
+        );
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamRegions.nextToken);
+        //console.log("Foresight data sub response:", response.data); // Print the response data
+
+        const items = response.data.listGcamDataTableAggParamRegions.items;
+        allItems = allItems.concat(items);
+
+        nextToken = response.data.listGcamDataTableAggParamRegions.nextToken;
+      } while(nextToken);
+      
+      allItems.sort((a,b) => a.x - b.x);
+      updateParseSub(allItems);
     } catch (error) {
       console.log(error);
   }
   }, [selection, querySub, updateParseSub]);
   const fetchForesightReg = useCallback(async () => {
+    let nextToken = null;
+    let allItems = [];
+
     try {
-      const { data } = await API.graphql(
-        graphqlOperation(queryReg, {
-          param: selection,
-        })
-      );
-      console.log(selection);
-      console.log("Foresight reg data response:", data); // Print the response data
-      let input = data.listGcamDataTableAggClass1Globals.items;
-      input.sort((a,b) => a.x - b.x);
-      updateParseReg(input);
+      do {
+        const response = await API.graphql(
+          graphqlOperation(queryReg, {
+            param: selection, nextToken
+          })
+        );
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Globals.nextToken);
+        //console.log("Foresight data reg response:", response.data); // Print the response data
+
+        const items = response.data.listGcamDataTableAggClass1Globals.items;
+        allItems = allItems.concat(items);
+
+        nextToken = response.data.listGcamDataTableAggClass1Globals.nextToken;
+      } while(nextToken);
+      
+      allItems.sort((a,b) => a.x - b.x);
+      updateParseReg(allItems);
     } catch (error) {
       console.log(error);
   }
   }, [selection, queryReg, updateParseReg]);
   const fetchForesight = useCallback(async () => {
+    let nextToken = null;
+    let allItems = [];
+
     try {
-      const { data } = await API.graphql(
-        graphqlOperation(query, {
-          param: selection,
-        })
-      );
-      console.log(selection);
-      console.log("Foresight data response:", data); // Print the response data
-      let input = data.listGcamDataTableAggClass1Regions.items;
-      input.sort((a,b) => a.x - b.x);
-      updateParse(input);
+      do {
+        const response = await API.graphql(
+          graphqlOperation(query, {
+            param: selection, nextToken
+          })
+        );
+        //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Regions.nextToken);
+        //console.log("Foresight data response:", response.data); // Print the response data
+
+        const items = response.data.listGcamDataTableAggClass1Regions.items;
+        allItems = allItems.concat(items);
+
+        nextToken = response.data.listGcamDataTableAggClass1Regions.nextToken;
+      } while(nextToken);
+      
+      allItems.sort((a,b) => a.x - b.x);
+      updateParse(allItems);
     } catch (error) {
       console.log(error);
   }
@@ -204,6 +252,10 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
 
   //For each change in selection, parses from AWS.
   useEffect(() => {
+    updateParse("i");
+    updateParseReg("i");
+    updateParseSub("i");
+    updateParseRegSub("i");
     fetchForesightRegSub();
     fetchForesightSub();
     fetchForesightReg();

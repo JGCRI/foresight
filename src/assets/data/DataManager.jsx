@@ -78,8 +78,7 @@ export const getLargestChoropleth = (data) => {
 // for the Choropleth map. Takes in an already choropleth formated dataset.
 export const getSmallestChoropleth = (data) => {
     var ans = 0;
-    if(data.length != 0) {
-        console.log(":->", data);
+    if(data.length !== 0) {
         ans = data.at(0).value;
         for(var i = 0; i < data.length; i++) {
             if(ans > data.at(i).value)
@@ -208,16 +207,14 @@ export const getBarHorizontal = (data, dataAgg, scenerio, param, year) => {
     var barData = getDates(getScenerio(data, scenerio), year);
     var aggregates = getDates(getScenerio(dataAgg, scenerio), year);
     var subcatList = filterSubcat(barData);
-    var countryList = filterRegion(barData);
-    console.log("!!!!", barData);
+    var countryList = filterRegion(aggregates);
     for(var i = 0; i < countryList.length; i++) {
         var countryData = getRegion(barData, countryList[i], year);
-        console.log("!!!!!", countryData);
         var obj = {
             "country": countryList[i]
-        }
+        };
         for(var j = 0; j < subcatList.length; j++) {
-            if(getSubcat(countryData, subcatList.at(j)) != 0)
+            if(getSubcat(countryData, subcatList.at(j)).length > 0)
                 obj[subcatList[j]] = parseFloat(getSubcat(countryData, subcatList.at(j)).at(0).value);
             else 
                 obj[subcatList[j]] = 0;
@@ -252,7 +249,6 @@ export const getLineGraphReduce = (data) => {
 
 export const choroplethReduce = (data, scenario, param, year) => {
     var final = getDates(getScenerio(data, scenario), year);
-    //console.log("******", getNoSubcatChoropleth(final));
     return getNoSubcatChoropleth(final);
 }
 

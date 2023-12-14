@@ -20,7 +20,7 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                 data={data}
                 keys={listKeys}
                 indexBy="country"
-                margin={{ top: 0, right: 15, bottom: 42, left: 60 }}
+                margin={{ top: 0, right: 15, bottom: 42, left: 70 }}
                 layout="horizontal"
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}
@@ -40,7 +40,7 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                     tickSize: 5,
                     tickPadding: 5,
                     tickRotation: 0,
-                    tickValues: 3,
+                    tickValues: 2,
                     legend: '',
                     legendPosition: 'middle',
                     legendOffset: 32
@@ -51,7 +51,14 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                     );
                 }}
                 axisLeft={{
-                    tickSize: 5,
+                    format: (v) => {
+                        return v.length > 10 ? (
+                            v.substring(0, 7) + "..."
+                        ) : (
+                            v
+                        );
+                    },
+                    tickSize: 4,
                     tickPadding: 5,
                     tickRotation: 0,
                     legend: '',
