@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BarHorizontal from "./charts/BarHorizontal";
 import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
 import { connect } from 'react-redux';
-import { choroplethReduce, filterSubcat, getBarHorizontal, lineGraphReduce, processData } from '../assets/data/DataManager';
+import { choroplethReduce, filterSubcat, getBarHorizontal, lineGraphReduce, processData, getUnits } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
 
@@ -42,8 +42,9 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
   let rawData = "i"
   let subcatDisplay = ""
   let regionDisplay = ""
+  let units = "ERROR: Units not loaded";
   if (subcat !== "Aggregate of Subsectors")
-    subcatDisplay = subcat;
+    subcatDisplay = " " + subcat;
   if (region !== "class1")
     regionDisplay = region;
   const Scenerios = openedScenerios;
@@ -53,17 +54,19 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
     setStartDate(start);
     setEndDate(end);
   }, [scenerioSpread, start, end]);
-  console.log("!!", csv, csv1, csv2, csv3);
+  //console.log("!!", csv, csv1, csv2, csv3);
   if (csv !== "i" && csv1 !== "i" && csv2 !== "i" && csv3 !== "i") {
     //console.log("!!", csv, csv1, csv2, csv3);
     rawData = processData(csv, csv1, csv2, csv3, "GCAM_SSP2", selectedGuage, region, subcat);
     //console.log("!!!", rawData);
+    units = getUnits(csv3, selectedGuage);
+    console.log("Units: " + units);
   }
   return (
     <>
       <div className="graph-grid">
         <div>{regionDisplay} {subcatDisplay} Trends</div>
-        <div>Spatial Composition {"(" + curYear + " " + subcatDisplay + ")"} </div>
+        <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"} </div>
         <div>Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>
         {rawData === 'i' ? (
           "Loading Dataset..."
@@ -97,7 +100,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
         ) : (
           <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} />
         )}
-        <div>Spatial Composition {"(" + curYear + " " + subcatDisplay + ")"}</div>
+        <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
         {csv2 === 'i' ? (
           "Loading Dataset..."
         ) : (

@@ -51,6 +51,17 @@ export const getScenerio = (data, scenario) => {
     return reducedData;
 }
 
+export const getUnits = (data, param) => {
+    console.log("!" + param);
+    var reducedData = [];
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).param === param) {
+            console.log(data.at(i));
+            return data.at(i).units;
+        }
+    }
+    return "";
+}
 // filterDateRange filters a dataset between two provided dates. Three inputs
 // are given, the dataset to modify and the dates to filter by. This is used for guages.
 export const filterDateRange = (data, start, end) => {

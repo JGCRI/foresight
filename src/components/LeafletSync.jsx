@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
-import styled from "styled-components";
 import "leaflet.sync";
 import landcells from "./maps/data/landcells.json"
 import {
