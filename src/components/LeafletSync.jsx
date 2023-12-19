@@ -138,11 +138,20 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
     // If no map, return:
     if (!mapInstance || !mapInstance2) return;
     if (mapInstance) {
+      var bounds = L.latLngBounds(L.latLng(-89.98155760646617, -180), L.latLng(89.99346179538875, 180));
+      mapInstance.setMaxBounds(bounds);
+      mapInstance.on('drag', function() {
+        mapInstance.panInsideBounds(bounds, { animate: false });
+      });
       mapInstance.on('zoomstart', () => {
         console.log('Zooming1!!!');
       });
     }
     if (mapInstance2) {
+      mapInstance2.setMaxBounds(bounds);
+      mapInstance2.on('drag', function() {
+        mapInstance2.panInsideBounds(bounds, { animate: false });
+      });
       mapInstance2.on('zoomstart', () => {
         console.log('Zooming2!!!');
       });
