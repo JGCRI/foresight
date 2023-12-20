@@ -66,7 +66,10 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
     <>
       <div className="graph-grid">
         <div>{regionDisplay} {subcatDisplay} Trends</div>
-        <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"} </div>
+        <div>
+          <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
+          <div>{Scenerios.at(0).title} vs. {Scenerios.at(1).title}</div>
+        </div>
         <div>Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>
         {rawData === 'i' ? (
           "Loading Dataset..."

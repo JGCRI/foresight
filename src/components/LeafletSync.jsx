@@ -216,8 +216,12 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
         <div className="image-container">
           <div id="map" />
           <ReactCompareSlider
-            itemOne={<div id={mapkey + '_1'} style={mapStyles} />}
-            itemTwo={<div id={mapkey + '_2'} style={mapStyles} />}
+            itemOne={
+              <div id={mapkey + '_1'} style={mapStyles} />
+            }
+            itemTwo={
+              <div id={mapkey + '_2'} style={mapStyles} />
+            }
             onlyHandleDraggable
             className="map-wrapper"
           />
