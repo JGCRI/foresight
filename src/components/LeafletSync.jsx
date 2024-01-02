@@ -9,6 +9,7 @@ import { getChoroplethValue, getSmallestChoropleth, getLargestChoropleth } from 
 
 import { connect } from 'react-redux';
 import { setDashReg } from './Store';
+import ChoroplethControl from './dropdowns/ChoroplethControl';
 
 const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
   //console.log("***", data, data2);
@@ -216,6 +217,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
     <div className="slider grid-border">
       <div className="slider-container">
         <div className="image-container">
+          <ChoroplethControl/>
           <div id="map" />
           <ReactCompareSlider
             itemOne={

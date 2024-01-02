@@ -340,3 +340,9 @@
 .floater-button {
   margin: 0px 24px;
 }
+
+.choropleth-control {
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+}
