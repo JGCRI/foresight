@@ -26,18 +26,23 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
     ['#005A32', '#238B45', '#41AB5D', '#74C476', '#A1D99B', '#C7E9C0', '#E5F5E0', '#F7FCF5']]
     return colorValues[parseInt(color)][seg];
   }
+
+  function getScaleValues(scale, seg) {
+    let scaleValues = [[43, 37, 31, 25, 19, 12, 6],[30, 19, 12, 7, 4, 2, 1],[49, 25, 10, 5, 3, 2, 1]]
+    return scaleValues[parseInt(scale)][seg]
+  }
   function getColor(d, data) {
     //console.log("**", d, data);
     var minval = getSmallestChoropleth(data);
     var maxval = getLargestChoropleth(data);
     var seg = (maxval - minval) / 50;
-    return d > minval + seg * 49 ? getColorValues(color, 0) :
-      d > minval + seg * 25 ? getColorValues(color, 1) :
-        d > minval + seg * 10 ? getColorValues(color, 2) :
-          d > minval + seg * 5 ? getColorValues(color, 3) :
-            d > minval + seg * 3 ? getColorValues(color, 4) :
-              d > minval + seg * 2 ? getColorValues(color, 5) :
-                d > minval + seg ? getColorValues(color, 6) :
+    return d > minval + seg * getScaleValues(scale, 0) ? getColorValues(color, 0) :
+      d > minval + seg * getScaleValues(scale, 1) ? getColorValues(color, 1) :
+        d > minval + seg * getScaleValues(scale, 2) ? getColorValues(color, 2) :
+          d > minval + seg * getScaleValues(scale, 3) ? getColorValues(color, 3) :
+            d > minval + seg * getScaleValues(scale, 4) ? getColorValues(color, 4) :
+              d > minval + seg * getScaleValues(scale, 5) ? getColorValues(color, 5) :
+                d > minval + seg * getScaleValues(scale, 6) ? getColorValues(color, 6) :
                   getColorValues(color, 7);
   }
 

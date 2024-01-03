@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 function ChoroplethControl({color, scale, updateColor, updateScale}) {
   console.log(color, scale);
   const colorList = ["Spectral", "Rd-Yl-Gr", "Contrast", "Green"];
-  const scaleList = ["Linear", "Log"];
+  const scaleList = ["Linear", "Log", "Pretty Log"];
   let colors = [];
   let scales = [];
   for (let i = 0; i < colorList.length; i++) {

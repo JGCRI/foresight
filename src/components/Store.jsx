@@ -11,7 +11,7 @@ const initialState = {
   dashboardRegion: "Global",
   dashboardSubsector: "Aggregate of Subsectors",
   choroplethColor: 3,
-  choroplethScale: 1,
+  choroplethScale: 2,
   scenerios: [
     {
       title: "GCAM_SSP2",
