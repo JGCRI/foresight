@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { setDashReg } from './Store';
 import ChoroplethControl from './dropdowns/ChoroplethControl';
 
-const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
+const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }) => {
   //console.log("***", data, data2);
   const mapData = data
   const mapData2 = data2
@@ -19,19 +19,26 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
   const [mapInstance, setMapInstance] = useState(null);
   const [mapInstance2, setMapInstance2] = useState(null);
 
+  function getColorValues(color, seg) {
+    let colorValues = [['#D7191C', '#FDAE61', '#FFFFBG', '#4575B4', '#D1E5F0', '#1B7837', '#E7D4E8', '#762A83'],
+    ['#D73027', '#F46D43', '#FDAE61', '#FEE08B', '#D9EF8B', '#A6D96A', '#66BD63', '#1A9850'],
+    ['#E41A1C', '#377EB8', '#4DAF4A', '#984EA3', '#FF7F00', '#FFFF33', '#A65628', '#F781BF'],
+    ['#005A32', '#238B45', '#41AB5D', '#74C476', '#A1D99B', '#C7E9C0', '#E5F5E0', '#F7FCF5']]
+    return colorValues[parseInt(color)][seg];
+  }
   function getColor(d, data) {
     //console.log("**", d, data);
     var minval = getSmallestChoropleth(data);
     var maxval = getLargestChoropleth(data);
     var seg = (maxval - minval) / 50;
-    return d > minval + seg * 49 ? '#005A32' :
-      d > minval + seg * 25 ? '#238B45' :
-        d > minval + seg * 10 ? '#41AB5D' :
-          d > minval + seg * 5 ? '#74C476' :
-            d > minval + seg * 3 ? '#A1D99B' :
-              d > minval + seg * 2 ? '#C7E9C0' :
-                d > minval + seg ? '#E5F5E0' :
-                  '#F7FCF5';
+    return d > minval + seg * 49 ? getColorValues(color, 0) :
+      d > minval + seg * 25 ? getColorValues(color, 1) :
+        d > minval + seg * 10 ? getColorValues(color, 2) :
+          d > minval + seg * 5 ? getColorValues(color, 3) :
+            d > minval + seg * 3 ? getColorValues(color, 4) :
+              d > minval + seg * 2 ? getColorValues(color, 5) :
+                d > minval + seg ? getColorValues(color, 6) :
+                  getColorValues(color, 7);
   }
 
   function style(feature) {
@@ -237,7 +244,8 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg }) => {
 
 function mapStateToProps(state) {
   return {
-
+    color: state.choroplethColor,
+    scale: state.choroplethScale,
   };
 }
 
