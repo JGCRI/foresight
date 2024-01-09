@@ -51,6 +51,7 @@ export const getScenerio = (data, scenario) => {
     return reducedData;
 }
 
+//Gets the units of a parameter for dashboard display
 export const getUnits = (data, param) => {
     console.log("!" + param);
     var reducedData = [];
@@ -74,6 +75,16 @@ export const filterDateRange = (data, start, end) => {
     return reducedData;
 }
 
+// isValidDate takes in a year and determines if it is a valid date for the parameter in the dataset.
+// This is uesed in DashboardDate to grey out dates not available in the dataset.
+
+export const isValidDate = (data, date) => {
+    for(var i = 0; i < data.length; i++) {
+        if(data.at(i).x === date)
+            return true;
+    }
+    return false;
+}
 // getLargestChoropleth gets the largest value from a dataset to calculate the shading
 // for the Choropleth map. Takes in an already choropleth formated dataset.
 export const getLargestChoropleth = (data) => {

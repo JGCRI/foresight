@@ -4,8 +4,9 @@ import { setStartDate, setEndDate } from "../Store";
 import { connect } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../css/DashboardDate.css';
+import { isValidDate } from "../../assets/data/DataManager";
 
-function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end }) {
+function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end, dataRegSub }) {
     const [startDate, setStartDate] = useState(new Date().setFullYear(year));
     const isStart = isOrNotStart
     function dateHandler(date, isStart) {
@@ -32,8 +33,8 @@ function DashboardDate({ year, isOrNotStart, updateStart, updateEnd, start, end 
         if(date != null)
             selectedYear = date.getFullYear();
         if (isStart == 0)
-            return selectedYear < end && selectedYear > 0;
-        return selectedYear > start && selectedYear > 0;
+            return selectedYear < end && selectedYear > 0 && isValidDate(dataRegSub, selectedYear);
+        return selectedYear > start && selectedYear > 0 && isValidDate(dataRegSub, selectedYear);
     }
 
     return (
@@ -51,6 +52,7 @@ function mapStateToProps(state) {
     return {
         start: state.startDate,
         end: state.endDate,
+        dataRegSub: state.parsedDataRegSub,
     };
 }
 

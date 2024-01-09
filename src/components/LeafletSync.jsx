@@ -183,7 +183,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
     map2_base.addTo(mapInstance2);
     L.geoJSON(landcells, { style: style, onEachFeature: onEachFeature }).addTo(mapInstance);
     L.geoJSON(landcells, { style: style2, onEachFeature: onEachFeature }).addTo(mapInstance2);
-    //legend.addTo(mapInstance);
+    legend.addTo(mapInstance);
     mapInstance.sync(mapInstance2)
     mapInstance2.sync(mapInstance)
   }, [mapInstance, mapInstance2, mapData, mapData2]);
