@@ -7,8 +7,9 @@ import ScenerioGuage from "../guages/ScenerioGuage"
 import ScenerioGuageNegative from "../guages/ScenerioGuageNegative"
 import Dropdown from 'react-bootstrap/Dropdown';
 import { getIcon } from "../Dashboard";
+import { getGuage } from '../../assets/data/DataManager';
 
-function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update, updateDate, updateRegion, updateSubcat }) {
+function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update, updateDate, updateRegion, updateSubcat, start, end, data }) {
     const list = scenerios; //List of all possible scenerios
     const cIndex = curIndex; //Number of current row
     const cOpen = curOpen; //Currently open scenerios
@@ -214,6 +215,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     //set for a parameter matching the passed in scenerio and guage title.
     //If the vlaue is found it is returned. Otherwise the function returns -1.
     const getDataValue = (fieldTitle) => {
+        const guageData = getGuage(data, value, fieldTitle, start, end) * 100;
         const field = fieldTitle;
         var ans = -1;
         for (var i = 0; i < dummyData.length; ++i) {
@@ -223,6 +225,8 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
                 break;
             }
         }
+        if(guageData !== 0)
+            return guageData;
         return ans;
     };
 
@@ -321,6 +325,14 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
 
 //Maps the newly selected scenerio to storage. Also takes the current index
 //and the list of current open scenerios for positioning purposes.
+function mapStateToProps(state) {
+    return {
+        start: state.startDate,
+        end: state.endDate,
+        data: state.parsedDataRegSub,
+    }
+}
+
 function mapDispatchToProps(dispatch) {
     return {
         updateDate: (date) => dispatch(setDashDate(date)),
@@ -330,4 +342,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(null, mapDispatchToProps)(DashboardScenerioSelector);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardScenerioSelector);

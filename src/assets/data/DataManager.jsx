@@ -85,6 +85,40 @@ export const isValidDate = (data, date) => {
     }
     return false;
 }
+
+//Returns the first date in the Dataset. Used for default dateranges in the dashboard.
+export const getFirstDate = (data) => {
+    for(var i = 0; i < data.length; i++) {
+        return new Date(data.at(i).x);
+    }
+    return new Date(0);
+}
+
+//Returns the last date in the Dataset. Used for default dateranges in the dashboard.
+export const getLastDate = (data) => {
+    for(var i = data.length - 1; i >= 0; i--) {
+        return new Date(data.at(i).x);
+    }
+    return new Date(0);
+}
+
+export const getDataDate = (data, scenerio, param, date) => {
+    for(var i = 0; i < data.length; i++) {
+        let row = data.at(i);
+        if(row.x === parseInt(date) && row.scenario === scenerio && row.param === param)
+            return row.value;
+    }
+    return 0;
+}
+
+// Gets the percentage for guages
+export const getGuage = (data, scenerio, param, start, end) => {
+    let initial = getDataDate(data, scenerio, param, start);
+    console.log("!!!", initial);
+    if(initial !== 0)
+        return Math.round((getDataDate(data, scenerio, param, end) - initial)/initial);
+    return 0; 
+}
 // getLargestChoropleth gets the largest value from a dataset to calculate the shading
 // for the Choropleth map. Takes in an already choropleth formated dataset.
 export const getLargestChoropleth = (data) => {
