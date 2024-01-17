@@ -81,8 +81,8 @@ export const updateListHash = (name, index, value) => {
 function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {  
   //GraphQL Querries for dahsboard data.
   const queryRegSub = `
-    query MyQuery($param: String!, $nextToken: String) {
-      listGcamDataTableAggParamGlobals(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
+    query MyQuery($nextToken: String) {
+      listGcamDataTableAggParamGlobals(limit: 100000, nextToken: $nextToken) {
         items {
           id
           value
@@ -153,7 +153,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       do {
         const response = await API.graphql(
           graphqlOperation(queryRegSub, {
-            param: selection, nextToken
+           nextToken
           })
         );
         //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamGlobals.nextToken);

@@ -114,7 +114,7 @@ export const getDataDate = (data, scenerio, param, date) => {
 // Gets the percentage for guages
 export const getGuage = (data, scenerio, param, start, end) => {
     let initial = getDataDate(data, scenerio, param, start);
-    console.log("!!!", initial);
+    console.log("!!!", data, scenerio, param, start, end);
     if(initial !== 0)
         return Math.round((getDataDate(data, scenerio, param, end) - initial)/initial);
     return 0; 

@@ -225,7 +225,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
                 break;
             }
         }
-        if(guageData !== 0)
+        if (guageData !== 0)
             return guageData;
         return ans;
     };
@@ -239,8 +239,8 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
         const num = number;
         const title = guageTitle;
         var displayTitle = guageTitle;
-        if(displayTitle.length > 10)
-        displayTitle = displayTitle.substring(0, 10) + "...";
+        if (displayTitle.length > 10)
+            displayTitle = displayTitle.substring(0, 10) + "...";
         if (number < 0) {
             return (
                 <>
@@ -318,7 +318,9 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
                     {links}
                 </Dropdown.Menu>
             </Dropdown>
-            {col()}
+            {data === 'i' ? (
+                "Loading Dataset..."
+            ) : (col())}
         </>
     );
 }
