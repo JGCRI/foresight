@@ -60,7 +60,6 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
     rawData = processData(csv, csv1, csv2, csv3, "GCAM_SSP2", selectedGuage, region, subcat);
     //console.log("!!!", rawData);
     units = getUnits(csv3, selectedGuage);
-    console.log("Units: " + units);
   }
   return (
     <>
@@ -136,7 +135,6 @@ function mapStateToProps(state) {
     scenerioSpread: { ...(state.scenerios) },
     start: state.startDate,
     end: state.endDate,
-    reg: state.parsedData,
     data: state.parsedData,
     dataReg: state.parsedDataReg,
     dataSub: state.parsedDataSub,

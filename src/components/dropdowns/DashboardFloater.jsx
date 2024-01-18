@@ -12,11 +12,16 @@ function DashboardFloater({ updateGuage, selection, openGuages, year, region, su
         dashReg("Global");
         dashSubs("Aggregate of Subsectors");
     }
+
+    function updateScenerio(scenerio) {
+        resetParams();
+        updateGuage(scenerio);
+    }
     
     const links = openGuages.map((guage) => (
         <div key={guage.title}>
             <Dropdown.Item as="button" active={selection === guage.title ? true : false}
-                onClick={() => updateGuage(guage.title)}>
+                onClick={() => updateScenerio(guage.title)}>
                 {guage.title}
             </Dropdown.Item>
         </div >

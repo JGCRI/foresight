@@ -53,11 +53,8 @@ export const getScenerio = (data, scenario) => {
 
 //Gets the units of a parameter for dashboard display
 export const getUnits = (data, param) => {
-    console.log("!" + param);
-    var reducedData = [];
     for(var i = 0; i < data.length; i++) {
         if(data.at(i).param === param) {
-            console.log(data.at(i));
             return data.at(i).units;
         }
     }
@@ -114,7 +111,6 @@ export const getDataDate = (data, scenerio, param, date) => {
 // Gets the percentage for guages
 export const getGuage = (data, scenerio, param, start, end) => {
     let initial = getDataDate(data, scenerio, param, start);
-    console.log("!!!", data, scenerio, param, start, end);
     if(initial !== 0)
         return Math.round((getDataDate(data, scenerio, param, end) - initial)/initial);
     return 0; 
