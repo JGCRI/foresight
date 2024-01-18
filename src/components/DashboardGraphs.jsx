@@ -74,7 +74,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
         {rawData === 'i' ? (
           "Loading Dataset..."
         ) : (
-          <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} />
+          <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} unit={units} />
         )}
         {csv2 === 'i' ? (
           "Loading Dataset..."
@@ -101,7 +101,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
         {rawData === 'i' ? (
           "Loading Dataset..."
         ) : (
-          <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} />
+          <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} unit={units} />
         )}
         <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
         {csv2 === 'i' ? (

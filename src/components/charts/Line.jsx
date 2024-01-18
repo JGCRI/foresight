@@ -2,7 +2,7 @@ import React from "react";
 import { ResponsiveLine } from '@nivo/line'
 import { connect } from 'react-redux';
 import { setDashDate } from "../Store";
-const Line = ({ data, date, setdashboardDate }) => (
+const Line = ({ data, date, setdashboardDate, unit }) => (
     <div className="nivo-wrapper grid-border">
         <ResponsiveLine
             data={data}
@@ -155,7 +155,7 @@ const Line = ({ data, date, setdashboardDate }) => (
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: "Scenerio",
+                legend: unit,
                 legendOffset: -70,
                 legendPosition: 'middle'
             }}

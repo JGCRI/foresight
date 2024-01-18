@@ -88,6 +88,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
           value
           x
           scenario
+          units
           param
         }
         nextToken
