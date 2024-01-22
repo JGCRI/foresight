@@ -105,7 +105,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
     zoomSnap: 0.75,
     closePopupOnClick: false,
     maxBoundsViscosity: 1.0,
-    maxZoom: 1.5,
+    minZoom: 0.8,
     layers: [tileRef.current], // Start with just the base layer
   };
 
@@ -116,7 +116,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
     zoomSnap: 0.75,
     closePopupOnClick: false,
     maxBoundsViscosity: 1.0,
-    maxZoom: 1.5,
+    minZoom: 0.8,
     layers: [tileRef2.current], // Start with just the base layer
   };
 

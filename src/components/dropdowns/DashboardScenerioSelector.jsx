@@ -9,7 +9,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { getIcon } from "../Dashboard";
 import { getGuage } from '../../assets/data/DataManager';
 
-function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update, updateDate, updateRegion, updateSubcat, start, end, data }) {
+function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, updateScenerios, guages, openGuage, update, dashDate, dashReg, dashSubs, start, end, data }) {
     const list = scenerios; //List of all possible scenerios
     const cIndex = curIndex; //Number of current row
     const cOpen = curOpen; //Currently open scenerios
@@ -202,14 +202,16 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     ]
 
     const handlePress = (scenerioTitle) => {
-        setValue(scenerioTitle);
-        updateDate(2020);
-        updateRegion("Global");
-        updateSubcat("Aggregate of Subsectors");
+        setValue(scenerioTitle)
         updateScenerios(cIndex, scenerioTitle, cOpen);
     }
 
-
+    function resetAndUpdate(title) {
+        dashDate(2020);
+        dashReg("Global");
+        dashSubs("Aggregate of Subsectors");
+        updateSelect(title);
+    }
 
     //This function gets data from a current dummy set. It searches the dummy
     //set for a parameter matching the passed in scenerio and guage title.
@@ -288,7 +290,7 @@ function DashboardScenerioSelector({ curIndex, curOpen, scenerios, current, upda
     const col = () => {
         return (
             guageLists.map((guage, index) => (
-                <div className={getGuageCSS(guage.title)} key={index} onClick={() => updateSelect(guage.title)}>
+                <div className={getGuageCSS(guage.title)} key={index} onClick={() => resetAndUpdate(guage.title)}>
                     {guageNumber(getDataValue(guage.title), guage.title)}
                 </div>
             ))
@@ -337,10 +339,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        updateDate: (date) => dispatch(setDashDate(date)),
-        updateRegion: (reg) => dispatch(setDashReg(reg)),
-        updateSubcat: (subcat) => dispatch(setDashSubs(subcat)),
-        updateScenerios: (newIndex, newTitle, openScenerio) => dispatch(setScenerios(newIndex, newTitle, openScenerio))
+        updateScenerios: (newIndex, newTitle, openScenerio) => dispatch(setScenerios(newIndex, newTitle, openScenerio)),
+        dashDate: (date) => dispatch(setDashDate(date)),
+        dashReg: (reg) => dispatch(setDashReg(reg)),
+        dashSubs: (sub) => dispatch(setDashSubs(sub))
     };
 }
 
