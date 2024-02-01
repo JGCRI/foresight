@@ -78,7 +78,7 @@ export const updateListHash = (name, index, value) => {
   }
 }
 
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {  
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub, curYear }) {  
   //GraphQL Querries for dahsboard data.
   const queryRegSub = `
     query MyQuery($nextToken: String) {
@@ -128,8 +128,8 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
     }
   `;
   const query = `
-    query MyQuery($param: String!, $nextToken: String) {
-      listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
+    query MyQuery($param: String!, $year: Int!, $nextToken: String) {
+      listGcamDataTableAggClass1Regions(filter: {x: {eq: $year}, param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
         items {
           id
           value
@@ -169,7 +169,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       allItems.sort((a,b) => a.x - b.x);
       updateParseRegSub(allItems);
     } catch (error) {
-      console.log(error);
+      console.error(error);
   }
   }, [selection, queryRegSub, updateParseRegSub]);
   const fetchForesightSub = useCallback(async () => {
@@ -183,9 +183,6 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             param: selection, nextToken
           })
         );
-        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamRegions.nextToken);
-        //console.log("Foresight data sub response:", response.data); // Print the response data
-
         const items = response.data.listGcamDataTableAggParamRegions.items;
         allItems = allItems.concat(items);
 
@@ -195,7 +192,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       allItems.sort((a,b) => a.x - b.x);
       updateParseSub(allItems);
     } catch (error) {
-      console.log(error);
+      console.error(error);
   }
   }, [selection, querySub, updateParseSub]);
   const fetchForesightReg = useCallback(async () => {
@@ -221,7 +218,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       allItems.sort((a,b) => a.x - b.x);
       updateParseReg(allItems);
     } catch (error) {
-      console.log(error);
+      console.error(error);
   }
   }, [selection, queryReg, updateParseReg]);
   const fetchForesight = useCallback(async () => {
@@ -232,7 +229,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       do {
         const response = await API.graphql(
           graphqlOperation(query, {
-            param: selection, nextToken
+            param: selection, year: curYear, nextToken
           })
         );
         //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Regions.nextToken);
@@ -247,21 +244,27 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       allItems.sort((a,b) => a.x - b.x);
       updateParse(allItems);
     } catch (error) {
-      console.log(error);
+      console.error(error);
   }
-  }, [selection, query, updateParse]);
+  }, [curYear, selection, query, updateParse]);
 
   //For each change in selection, parses from AWS.
   useEffect(() => {
-    updateParse("i");
     updateParseReg("i");
     updateParseSub("i");
     updateParseRegSub("i");
     fetchForesightRegSub();
     fetchForesightSub();
     fetchForesightReg();
-    fetchForesight();
   }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub, fetchForesightRegSub, fetchForesightSub, fetchForesightReg, fetchForesight]);
+
+  useEffect(() => {
+    console.log("UPDATE QUERRY DATE:", curYear);
+    updateParse("i");
+    fetchForesight();
+  }, [curYear, selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub, fetchForesightRegSub, fetchForesightSub, fetchForesightReg, fetchForesight]);
+
+  
 
   //Ran at the beginning of loading the dashboard right from an URL. Takes items in the hash and populates
   //the dashboard with them.
@@ -344,6 +347,7 @@ function mapStateToProps(state) {
     openScenerios: state.scenerios,
     openGuages: state.guages,
     parse: state.parsedData,
+    curYear: state.dashboardYear,
   };
 }
 

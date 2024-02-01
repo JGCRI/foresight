@@ -56,7 +56,7 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
   }, [scenerioSpread, start, end]);
   //console.log("!!", csv, csv1, csv2, csv3);
   if (csv !== "i" && csv1 !== "i" && csv2 !== "i" && csv3 !== "i") {
-    //console.log("!!", csv, csv1, csv2, csv3);
+    console.log("!!", csv, csv1, csv2, csv3);
     rawData = processData(csv, csv1, csv2, csv3, "GCAM_SSP2", selectedGuage, region, subcat);
     //console.log("!!!", rawData);
     units = getUnits(csv3, selectedGuage);
