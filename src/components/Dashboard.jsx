@@ -9,12 +9,12 @@ import { MdError, MdElectricBolt, MdGroups, MdFilterHdr } from "react-icons/md";
 import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
 import { TbCoins } from "react-icons/tb";
 import { FaThermometerHalf } from "react-icons/fa"
-import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParsed, setParsedSub, setParsedReg, setParsedRegSub} from "./Store";
+import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParsed, setParsedSub, setParsedReg, setParsedRegSub, setBarCountries} from "./Store";
 import './css/Dashboard.css';
 import scenarios from "../assets/data/Scenarios.jsx";
 import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
-
 import { API, graphqlOperation } from "aws-amplify";
+import { filterRegion, getDates, getScenerio } from "../assets/data/DataManager.jsx";
 
 //UNUSED, Only For testing: Keeps track of the distance of the selection-divider and the top of the screen.
 //Allows divider to scroll with page.
@@ -78,7 +78,7 @@ export const updateListHash = (name, index, value) => {
   }
 }
 
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub, curYear }) {  
+function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub, curYear, setCountries }) {  
   //GraphQL Querries for dahsboard data.
   const queryRegSub = `
     query MyQuery($nextToken: String) {
@@ -144,6 +144,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       }
     }
   `;
+  
   //Retrieves data for all four needed categories.
   //Raw data, Aggregate Region, Aggregate Subcategory, and Aggregate Region and Subcategory.
   const fetchForesightRegSub = useCallback(async () => {
@@ -190,6 +191,10 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
       } while(nextToken);
       
       allItems.sort((a,b) => a.x - b.x);
+      let countries1 = filterRegion(getDates(getScenerio(allItems, openScenerios.at(0).title), curYear));
+      let countries2 = filterRegion(getDates(getScenerio(allItems, openScenerios.at(1).title), curYear));
+      countries1 = countries1.concat(countries2);
+      setCountries([...new Set(countries1)]);
       updateParseSub(allItems);
     } catch (error) {
       console.error(error);
@@ -362,6 +367,7 @@ function mapDispatchToProps(dispatch) {
     updateParseReg: (data) => dispatch(setParsedReg(data)),
     updateParseSub: (data) => dispatch(setParsedSub(data)),
     updateParseRegSub: (data) => dispatch(setParsedRegSub(data)),
+    setCountries: (color) => dispatch(setBarCountries(color)),
   };
 }
 

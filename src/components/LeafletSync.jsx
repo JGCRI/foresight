@@ -19,6 +19,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
   const [mapInstance, setMapInstance] = useState(null);
   const [mapInstance2, setMapInstance2] = useState(null);
 
+  const [country, setCountryDisplay] = useState("");
   function getColorValues(color, seg) {
     let colorValues = [['#D7191C', '#FDAE61', '#FFFFBG', '#4575B4', '#D1E5F0', '#1B7837', '#E7D4E8', '#762A83'],
     ['#D73027', '#F46D43', '#FDAE61', '#FEE08B', '#D9EF8B', '#A6D96A', '#66BD63', '#1A9850'],
@@ -183,14 +184,15 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
     map2_base.addTo(mapInstance2);
     L.geoJSON(landcells, { style: style, onEachFeature: onEachFeature }).addTo(mapInstance);
     L.geoJSON(landcells, { style: style2, onEachFeature: onEachFeature }).addTo(mapInstance2);
-    //legend.addTo(mapInstance);
-    mapInstance.sync(mapInstance2)
-    mapInstance2.sync(mapInstance)
+    
+    //mapInstance.addControl(legend);
+    mapInstance.sync(mapInstance2);
+    mapInstance2.sync(mapInstance);
   }, [mapInstance, mapInstance2, mapData, mapData2]);
 
   function highlightFeature(e) {
     var layer = e.target;
-
+    setCountryDisplay(e.sourceTarget.feature.id);
     layer.setStyle({
       weight: 5,
       color: '#666',
@@ -203,6 +205,7 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
 
   function resetHighlight(e) {
     var layer = e.target;
+    setCountryDisplay("");
     layer.setStyle({
       weight: 2,
       opacity: 1,
@@ -229,6 +232,10 @@ const LeafletSync = ({ data, data2, uniqueValue, setdashboardReg, color, scale }
     <div className="slider grid-border">
       <div className="slider-container">
         <div className="image-container">
+          <div className="choropleth-data-info">
+            {country}
+            {country===""?"":" - " + getChoroplethValue(mapData, country).toFixed(2)}
+          </div>
           <ChoroplethControl/>
           <div id="map" />
           <ReactCompareSlider

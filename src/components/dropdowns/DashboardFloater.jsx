@@ -43,7 +43,7 @@ function DashboardFloater({ updateGuage, selection, openGuages, year, region, su
                 </Dropdown>
             </div>
             <div>
-                Year: {year}     Region: {region}     Subsector: {subsector}
+                Year: {year}     Region: {region}     Subsector: {subsector.charAt(0).toUpperCase() + subsector.slice(1)}
                 <Button
                     className="floater-button" 
                     variant="danger"

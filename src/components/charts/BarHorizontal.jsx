@@ -2,29 +2,35 @@ import React, { useEffect, useState } from "react";
 import { ResponsiveBar } from '@nivo/bar'
 import { connect } from 'react-redux';
 import { setDashSubs } from "../Store";
+import { getBarHorizontal } from "../../assets/data/DataManager";
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
+const MyResponsiveBar = ({color, listKeys, scenerio, setdashboardSub, selectedGuage, curYear, csv, csv2, countries }) => {
     const [scenerioName, setScenerio] = useState(scenerio);
+    const [barData, setData] = useState(getBarHorizontal(countries, csv, csv2, scenerio, selectedGuage, curYear));
     useEffect(() => {
         setScenerio(scenerio);
     }, [scenerio])
+    useEffect(() => {
+        setData(getBarHorizontal(countries, csv, csv2, scenerio, selectedGuage, curYear));
+        console.log(getBarHorizontal(countries, csv, csv2, scenerio, selectedGuage, curYear));
+    }, [countries, csv, csv2, curYear, scenerio, selectedGuage])
     return (
         <div className="nivo-wrapper">
             <div className="double-bar-text-wrapper">  {scenerioName} </div>
             <ResponsiveBar
-                data={data}
+                data={barData}
                 keys={listKeys}
                 indexBy="country"
                 margin={{ top: 0, right: 15, bottom: 42, left: 70 }}
                 layout="horizontal"
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}
-                colors={{ scheme: 'spectral' }}
+                colors={color.length === 0 ? { scheme: 'spectral' } : color}
                 borderColor={{
                     from: 'color',
                     modifiers: [
@@ -184,7 +190,11 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
 
 function mapStateToProps(state) {
     return {
-
+        countries: state.barCountries,
+        selectedGuage: state.dashboardSelection,
+        curYear: state.dashboardYear,
+        csv: state.parsedData,
+        csv2: state.parsedDataSub,
     };
 }
 

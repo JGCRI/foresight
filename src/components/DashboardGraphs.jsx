@@ -2,39 +2,14 @@ import React, { useEffect, useState } from 'react';
 import BarHorizontal from "./charts/BarHorizontal";
 import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
 import { connect } from 'react-redux';
-import { choroplethReduce, filterSubcat, getBarHorizontal, lineGraphReduce, processData, getUnits } from '../assets/data/DataManager';
+import { choroplethReduce, getDates, getScenerio, filterRegion, filterSubcat, getBarHorizontal, lineGraphReduce, processData, getUnits } from '../assets/data/DataManager';
 
 import Line from './charts/Line';
+import BarCountryControl from './dropdowns/BarCountryControl';
+import { setBarCountries } from './Store';
+import { getBarColors } from './GcamColors';
 
-function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, dataReg, dataSub, dataRegSub, selectedGuage, curYear, region, subcat }) {
-  /*
-  let aggNone = [];  
-  let aggRegion = [];  
-  let aggSubcat = [];  
-  let aggRegionSubcat = [];  
-  function parseCSV(file, key) {
-      Papa.parse(file, {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        complete: function (input) {
-          console.log(input.data);
-          if (key === 0)
-            aggNone = input.data;
-          if (key === 1)
-            aggRegion = input.data;
-          if (key === 2)
-            aggSubcat = input.data;
-          if (key === 3)
-            aggRegionSubcat = input.data;
-        }
-      });
-    }
-    parseCSV(gcamDataTable_aggParam_regions, 0);
-    parseCSV(gcamDataTable_aggParam_global, 1);
-    parseCSV(gcamDataTable_aggClass1_regions, 2);
-    parseCSV(gcamDataTable_aggClass1_global, 3);
-    */
+function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, dataReg, dataSub, dataRegSub, selectedGuage, curYear, region, subcat, countries, setCountries }) {
   const csv = data;
   const csv1 = dataReg;
   const csv2 = dataSub;
@@ -56,10 +31,12 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
   }, [scenerioSpread, start, end]);
   //console.log("!!", csv, csv1, csv2, csv3);
   if (csv !== "i" && csv1 !== "i" && csv2 !== "i" && csv3 !== "i") {
-    console.log("!!", csv, csv1, csv2, csv3);
     rawData = processData(csv, csv1, csv2, csv3, "GCAM_SSP2", selectedGuage, region, subcat);
     //console.log("!!!", rawData);
     units = getUnits(csv3, selectedGuage);
+
+    //Generate list of countries for bar chart.
+    
   }
   return (
     <>
@@ -90,8 +67,9 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
           "Loading Dataset..."
         ) : (
           <div className='bar-grid grid-border'>
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(0).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(1).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
+            <BarCountryControl csv = {csv2} scenerio = {Scenerios.at(0).title} scenerio2 = {Scenerios.at(1).title} year = {curYear} className="choropleth-control"/>
+            <BarHorizontal color ={getBarColors(csv, Scenerios.at(0).title, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
+            <BarHorizontal color ={getBarColors(csv, Scenerios.at(0).title, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
           </div>
         )}
       </div>
@@ -119,8 +97,9 @@ function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, da
           "Loading Dataset..."
         ) : (
           <div className='bar-grid grid-border'>
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(0).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(1).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
+            <BarCountryControl csv = {csv2} scenerio = {Scenerios.at(0).title} scenerio2 = {Scenerios.at(1).title} year = {curYear} className="choropleth-control"/>
+            <BarHorizontal color ={getBarColors(csv, Scenerios.at(0).title, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
+            <BarHorizontal color ={getBarColors(csv, Scenerios.at(0).title, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
           </div>
         )}
       </div>
@@ -142,7 +121,14 @@ function mapStateToProps(state) {
     curYear: state.dashboardYear,
     region: state.dashboardRegion,
     subcat: state.dashboardSubsector,
+    countries: state.barCountries,
   };
 }
 
-export default connect(mapStateToProps)(DashboardGraphs);
+function mapDispatchToProps(dispatch) {
+  return {
+      setCountries: (color) => dispatch(setBarCountries(color)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardGraphs);

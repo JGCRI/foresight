@@ -12,6 +12,7 @@ const initialState = {
   dashboardSubsector: "Aggregate of Subsectors",
   choroplethColor: 3,
   choroplethScale: 2,
+  barCountries: [],
   scenerios: [
     {
       title: "GCAM_SSP2",
@@ -83,6 +84,8 @@ function reducer(state = initialState, action) {
       return { ...state, choroplethColor: action.payload };
     case 'setChoroplethScale':
       return { ...state, choroplethScale: action.payload };
+    case 'setBarCountries':
+      return { ...state, barCountries: action.payload };
     default:
       return state;
   }
@@ -161,6 +164,11 @@ export function setChoroplethColor(color) {
 export function setChoroplethScale(scale) {
   return { type: 'setChoroplethScale', payload: scale };
 }
+
+export function setBarCountries(scale) {
+  return { type: 'setBarCountries', payload: scale };
+}
+
 // Create the Redux store
 const store = createStore(reducer);
 

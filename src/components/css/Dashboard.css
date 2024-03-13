@@ -343,6 +343,19 @@
 
 .choropleth-control {
   position: absolute;
+  left: 0px;
+  z-index: 100;
+}
+
+.choropleth-data-info {
+  position: absolute;
+  border-radius: 5px;
+  background: #dce4e8;
   right: 0px;
   z-index: 100;
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow-y: scroll;
 }
