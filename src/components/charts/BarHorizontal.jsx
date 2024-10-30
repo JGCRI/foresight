@@ -19,7 +19,7 @@ import { updateHash } from "../sharing/DashboardUrl.jsx";
  * @param {string} props.selectedGuage - Currently selected data variable.
  * @returns {ReactElement} The rendered component.
  */
-const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, selectedGuage }) => {
+const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, selectedGuage, maxVal }) => {
     //console.log("!!!!", csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, selectedGuage); 
     const [scenerioName, setScenerio] = useState(scenerio);
     const [barData, setData] = useState(getBarHorizontal(countries, csv, scenerio));
@@ -41,7 +41,7 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left
                 indexBy="country"
                 margin={{ top: 0, right: 15, bottom: 42, left: 70 }}
                 layout="horizontal"
-                valueScale={{ type: 'linear' }}
+                valueScale={{ type: 'linear', max: maxVal }}
                 indexScale={{ type: 'band', round: true }}
                 colors={color.length === 0 ? { scheme: 'spectral' } : color}
                 //colorBy="key"

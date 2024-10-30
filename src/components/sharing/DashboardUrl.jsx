@@ -75,6 +75,7 @@ export const loadDataURL = (result, setAllScenarios, setScenariosTotal, setGuage
   setAllScenarios(scenarios.map(obj => ({ title: obj })));
 
   //Prepare opened scenarios
+  console.log("CURRENT SCENARIOS:", storedScenarios);
   const currentScenarios = checkScenarioURL(urlLoaded, scenarios, storedScenarios);
   //console.log("STORE CURRENT SCENARIOS:", currentScenarios);
   setScenariosTotal(currentScenarios);
@@ -152,8 +153,10 @@ const checkScenarioURL = (urlLoaded, scenarios, storedScenarios) => {
   let scenarioList = scenarios.filter(scenario => scenario === 'GCAM_SSP2' || scenario === 'GCAM_SSP3').length === 2 ? scenarios.filter(scenario => scenario === 'GCAM_SSP2' || scenario === 'GCAM_SSP3') : scenarios.slice(0, 2);
   let scenarioOutput = [];
   //console.log(scenarioList, storedScenarios)
-  if(storedScenarios.length > 0 && storedScenarios.every(s => scenarios.includes(s.title)))
+  if(storedScenarios.length > 0 && storedScenarios.every(s => scenarios.includes(s.title))) {
     scenarioList = storedScenarios.map(obj => obj.title);
+    updateHash("scenarios", scenarioList.toString());
+  }
   else if(!urlLoaded && searchParams.has("scenarios") && searchParams.get("scenarios").toString().split(",").every((scenario) => scenarios.includes(scenario)))
     scenarioList = searchParams.get("scenarios").toString().split(",");
   else

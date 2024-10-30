@@ -11,7 +11,7 @@ const initialState = {
   startDate: 2015,
   endDate: 2100,
   dashboardSelection: "gdp",
-  dashboardYear: 2050,
+  dashboardYear: 2100,
   dashboardRegion: "",
   dashboardSubsector: "",
   barCountries: [],

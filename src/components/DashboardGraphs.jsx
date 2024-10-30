@@ -120,7 +120,11 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
     units = getUnits(guageData, selectedGuage);
   }
 
-
+  let barMax = aggSub === "i" ? 0 : Math.max(...aggSub.map(item => item.value));
+  console.log(aggSub, barMax);
+  if(!barMax || barMax < 0) {
+    barMax = 0;
+  }
   // Labels
   let lineChartLabel = 
   (<div className="text-centered">{regionDisplay} {subcatDisplay} Trends</div>)
@@ -198,13 +202,15 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
         openedGuages.find(guage => guage.title === selectedGuage) ? openedGuages.find(guage => guage.title === selectedGuage).group : ["#error"]) : ["#666666"]} 
         listKeys={filterSubcat(barData)} scenerio={Scenerios.at(0).title} 
         setdashboardSub={setSubcategory} left={true} 
-        selectedGuage = {selectedGuage}/>
+        selectedGuage = {selectedGuage}
+        maxVal = {barMax}/>
       <BarHorizontal csv={barData} color={openedGuages ? 
         getBarColors(barData, Scenerios.at(0).title, 
         openedGuages.find(guage => guage.title === selectedGuage) ? openedGuages.find(guage => guage.title === selectedGuage).group : ["error"]) : ["#666666"]} 
         listKeys={filterSubcat(barData)} scenerio={Scenerios.at(1).title} 
         setdashboardSub={setSubcategory} left={false} 
-        selectedGuage = {selectedGuage}/>
+        selectedGuage = {selectedGuage}
+        maxVal = {barMax}/>
     </div>
   )
 
