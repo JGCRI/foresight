@@ -20,7 +20,7 @@ function Help() {
             <ul>
               <li>            
                   <span className={styles.linkText}>Email</span>
-                <a href="mailto:zarrar.khan@pnnl.gov" target="_blank" rel="noreferrer"> <FiMail size={30} /> zarrar.khan@pnnl.gov</a>
+                <a href="mailto:benjamin.knight@pnnl.gov" target="_blank" rel="noreferrer"> <FiMail size={30} /> benjamin.knight@pnnl.gov</a>
               </li>
               <li>
                   <span className={styles.linkText}>Post an</span>

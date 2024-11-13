@@ -2,44 +2,54 @@ import React from "react";
 import { connect } from 'react-redux';
 // In Sidenav.js
 import { NavLink } from "react-router-dom";
-import { AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { RiDashboardFill } from "react-icons/ri";
 import { MdElectricBolt } from "react-icons/md";
 import { GiWaterDrop } from "react-icons/gi";
 import { CiWheat } from "react-icons/ci"
+import { setOpen } from "./Store";
 
 
-function SidebarDashboard({open, toggleOpen}) {
+function SidebarDashboard({ open, toggleOpen, setOpen }) {
+  if (open === 2) {
+    if (window.innerWidth < 700)
+      setOpen(0);
+    else
+      setOpen(1);
+  }
   return (
-      <div className={open ? "sidenav" : "sidenavClosed"}>
-        <button className={"menuBtn"} onClick={toggleOpen}>
-          {open ? (
-            <AiFillCaretLeft />
-          ) : (
-            <AiFillCaretRight />
-          )}
-        </button>
-        <NavLink className="sideitem" to="/dashboard">
-          <RiDashboardFill/>
-          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Dashboard"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/energy">
-          <MdElectricBolt />
-          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Energy"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/water">
-          <GiWaterDrop/>
-          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Water"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/land">
-          <CiWheat/>
-          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Land"}</span>
-        </NavLink>
-        <NavLink className="sideitem" to="/test">
-          <CiWheat/>
-          <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Test"}</span>
-        </NavLink>
+    <div className={open ? "sidenav" : "sidenavClosed"}>
+      <button className={"menuBtn"} onClick={toggleOpen}>
+        {open ? (
+          <AiFillCaretLeft />
+        ) : (
+          <AiFillCaretRight />
+        )}
+      </button>
+      {
+        (open) ? (
+          <div className="sideitem">
+            (Subpages Coming Soon!)
+          </div>
+        ) : (<div />)
+      }
+      <NavLink className="sideitem" >
+        <RiDashboardFill />
+        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Dashboard"}</span>
+      </NavLink>
+      <div className="sideitem" >
+        <MdElectricBolt />
+        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Energy"}</span>
       </div>
+      <div className="sideitem" >
+        <GiWaterDrop />
+        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Water"}</span>
+      </div>
+      <div className="sideitem" >
+        <CiWheat />
+        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Land"}</span>
+      </div>
+    </div>
   );
 }
 
@@ -51,7 +61,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    toggleOpen: () => dispatch({ type: 'toggleOpen' })
+    toggleOpen: () => dispatch({ type: 'toggleOpen' }),
+    setOpen: (opened) => dispatch(setOpen(opened))
   };
 }
 

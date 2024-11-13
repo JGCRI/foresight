@@ -8,18 +8,18 @@ import logo from "../assets/img/PNNL_CENTER_White.png";
 import { RiDashboardFill } from "react-icons/ri";
 import { AiFillGithub, AiFillHome, AiFillExperiment } from "react-icons/ai";
 import { BsFillInfoCircleFill, BsFillDatabaseFill } from "react-icons/bs";
+import { MdFileUpload } from "react-icons/md";
 import { RiTeamFill } from "react-icons/ri";
 import { MdHelp } from "react-icons/md";
 import { connect } from "react-redux";
 import { setDataset } from "./Store";
-import {updateHash} from './Dashboard';
 import './css/Navigation.css';
 
-function Navigation({ dataset, updateDataset }) {
+function Navigation({ dataset, datasets, updateDataset }) {
   const handleDatasetChange = (selectedDataset) => {
     console.log("Selected dataset:", selectedDataset);
     // Call updateDataset to dispatch the action
-    updateDataset(selectedDataset);
+    updateDataset(selectedDataset.data);
   };
 
   const [expanded, setExpanded] = useState(false);
@@ -31,6 +31,19 @@ function Navigation({ dataset, updateDataset }) {
   const handleClose = () => {
     setExpanded(false);
   };
+
+  let datasetList = [];
+  //console.log(datasets)
+  for (let i = 0; i < datasets.length; i++) {
+    let data = datasets.at(i);
+    datasetList.push(
+      <NavDropdown.Item
+        onClick={() => handleDatasetChange({ data })}
+      >
+        {data}
+      </NavDropdown.Item>
+    )
+  }
 
   return (
     <Navbar
@@ -59,28 +72,13 @@ function Navigation({ dataset, updateDataset }) {
                   <div className="nav-icon nav-icon-drop">
                     <BsFillDatabaseFill />
                   </div>
-                  <span className="nav-dropdown-title">{`${
-                    dataset || "None"
-                  }`}</span>
+                  <span className="nav-dropdown-title">{`${dataset || "None"
+                    }`}</span>
                 </span>
               }
               id="dataset-dropdown"
             >
-              <NavDropdown.Item
-                onClick={() => handleDatasetChange("foresight_v1")}
-              >
-                foresight_v1
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleDatasetChange("Dataset 1")}
-              >
-                Dataset 1
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleDatasetChange("Dataset 2")}
-              >
-                Dataset 2
-              </NavDropdown.Item>
+              {datasetList}
             </NavDropdown>
             <NavLink className="nav-link" to="/dashboard" onClick={handleClose}>
               <div className="nav-icon">
@@ -97,6 +95,16 @@ function Navigation({ dataset, updateDataset }) {
                 <AiFillExperiment />
               </div>
               Experiment
+            </NavLink>
+            <NavLink
+              className="nav-link"
+              to="/dataupload"
+              onClick={handleClose}
+            >
+              <div className="nav-icon">
+                <MdFileUpload />
+              </div>
+              Upload Data
             </NavLink>
           </Nav>
           <Nav className="ms-auto nav-right">
@@ -139,6 +147,7 @@ function Navigation({ dataset, updateDataset }) {
 const mapStateToProps = (state) => {
   return {
     dataset: state.dataset,
+    datasets: state.datasets,
   };
 };
 

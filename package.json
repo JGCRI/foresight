@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts --max_old_space_size=8192 build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -45,6 +45,7 @@
     "d3-force": "^3.0.0",
     "d3-selection": "^3.0.0",
     "d3-zoom": "^3.0.0",
+    "file-saver": "^2.0.5",
     "justgage": "^1.6.1",
     "leaflet": "^1.7.1",
     "leaflet.sync": "^0.2.4",
@@ -76,5 +77,9 @@
     "redux": "^4.2.1",
     "styled-components": "^6.0.8",
     "web-vitals": "^3.3.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.62.0",
+    "typescript": "^4.9.5"
   }
 }

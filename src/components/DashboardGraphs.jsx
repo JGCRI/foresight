@@ -1,150 +1,165 @@
 import React, { useEffect, useState } from 'react';
+
 import BarHorizontal from "./charts/BarHorizontal";
-import ChoroplethImageSlider from './charts/ChoroplethImageSlider';
 import { connect } from 'react-redux';
-import { choroplethReduce, filterSubcat, getBarHorizontal, lineGraphReduce, processData, getUnits } from '../assets/data/DataManager';
-
+import { choroplethReduce, filterSubcat, lineGraphReduce, getUnits, getBasinAggregate } from '../assets/data/DataManager';
 import Line from './charts/Line';
+import BarCountryControl from './dropdowns/BarCountryControl';
+import { getBarColors } from '../assets/data/GcamColors';
+import { setBasinAggregation, setDashDate, setDashReg, setDashSubs } from './Store';
+import LeafletSync from "./maps/LeafletSync";
+import LineControl from './dropdowns/LineControl';
 
-function DashboardGraphs({ openedScenerios, scenerioSpread, start, end, data, dataReg, dataSub, dataRegSub, selectedGuage, curYear, region, subcat }) {
-  /*
-  let aggNone = [];  
-  let aggRegion = [];  
-  let aggSubcat = [];  
-  let aggRegionSubcat = [];  
-  function parseCSV(file, key) {
-      Papa.parse(file, {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        complete: function (input) {
-          console.log(input.data);
-          if (key === 0)
-            aggNone = input.data;
-          if (key === 1)
-            aggRegion = input.data;
-          if (key === 2)
-            aggSubcat = input.data;
-          if (key === 3)
-            aggRegionSubcat = input.data;
-        }
-      });
-    }
-    parseCSV(gcamDataTable_aggParam_regions, 0);
-    parseCSV(gcamDataTable_aggParam_global, 1);
-    parseCSV(gcamDataTable_aggClass1_regions, 2);
-    parseCSV(gcamDataTable_aggClass1_global, 3);
-    */
-  const csv = data;
-  const csv1 = dataReg;
-  const csv2 = dataSub;
-  const csv3 = dataRegSub;
-  let rawData = "i"
-  let subcatDisplay = ""
-  let regionDisplay = ""
-  let units = "ERROR: Units not loaded";
+function DashboardGraphs({ openedScenerios, selectedGuage, curYear, region, subcat, lineData, guageData, choroplethData, barData, aggSub, setDashboardDate, setDashboardReg, setDashboardSubs, choroplethColorPalette, setChoroplethColorPalette, choroplethInterpolation, setInterpolation, basinAggregation }) {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const [dashYear, setYear] = useState(curYear);
+  const [dashRegion, setRegion] = useState(region);
+  const [dashSubcategory, setSubcategory] = useState(subcat);
+
+  useEffect(() => {
+    setDashboardDate(dashYear)
+  }, [dashYear, setDashboardDate]);
+
+  useEffect(() => {
+    setDashboardReg(dashRegion)
+  }, [dashRegion, setDashboardReg]);
+
+  useEffect(() => {
+    setDashboardSubs(dashSubcategory)
+  }, [dashSubcategory, setDashboardSubs]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const Scenerios = (openedScenerios && openedScenerios.length > 1) ? openedScenerios : [{ title: "ERR" }, { title: "ERR" }];
+
+  // Display label text. Setting default display text for aggregates.
+  let subcatDisplay = "";
+  let regionDisplay = "";
   if (subcat !== "Aggregate of Subsectors")
     subcatDisplay = " " + subcat;
   if (region !== "class1")
     regionDisplay = region;
-  const Scenerios = openedScenerios;
-  const [startDate, setStartDate] = useState(start);
-  const [endDate, setEndDate] = useState(end);
-  useEffect(() => {
-    setStartDate(start);
-    setEndDate(end);
-  }, [scenerioSpread, start, end]);
-  //console.log("!!", csv, csv1, csv2, csv3);
-  if (csv !== "i" && csv1 !== "i" && csv2 !== "i" && csv3 !== "i") {
-    //console.log("!!", csv, csv1, csv2, csv3);
-    rawData = processData(csv, csv1, csv2, csv3, "GCAM_SSP2", selectedGuage, region, subcat);
-    //console.log("!!!", rawData);
-    units = getUnits(csv3, selectedGuage);
-    console.log("Units: " + units);
+
+
+  // Load Units for Display
+  let units = "ERROR: Units not loaded";
+  if (guageData !== "i") {
+    units = getUnits(guageData, selectedGuage);
   }
-  return (
+
+
+  // Labels
+  const lineChartLabel = (<div className="text-centered">{regionDisplay} {subcatDisplay} Trends</div>)
+  //console.log(Scenerios.at(0), Scenerios.at(1));
+  let choroplethLabel = (<div className="text-centered">
+    <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
+    <div>{Scenerios.at(0).title} vs. {Scenerios.at(1).title}</div>
+  </div>)
+  let barChartLabel = (<div className="text-centered"> Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>)
+
+
+  // Line Chart Visualization
+  const lineChart = (lineData === 'i') ? (
+    <div className="grid-border-hidden text-centered">
+      Loading Dataset...
+    </div>
+  ) : (
     <>
-      <div className="graph-grid">
-        <div>{regionDisplay} {subcatDisplay} Trends</div>
-        <div>
-          <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
-          <div>{Scenerios.at(0).title} vs. {Scenerios.at(1).title}</div>
-        </div>
-        <div>Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>
-        {rawData === 'i' ? (
-          "Loading Dataset..."
-        ) : (
-          <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} />
-        )}
-        {csv2 === 'i' ? (
-          "Loading Dataset..."
-        ) : (
-          <ChoroplethImageSlider
-            id={"Dashboard_Big"}
-            scenario_1={Scenerios.at(0).title}
-            scenario_2={Scenerios.at(1).title}
-            dataset={choroplethReduce(csv2, Scenerios.at(0).title, selectedGuage, curYear)}
-            dataset2={choroplethReduce(csv2, Scenerios.at(1).title, selectedGuage, curYear)}
-          />
-        )}
-        {(csv === 'i' || csv2 === 'i') ? (
-          "Loading Dataset..."
-        ) : (
-          <div className='bar-grid grid-border'>
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(0).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(1).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
-          </div>
-        )}
-      </div>
-      <div className="graph-grid-small">
-        <div>{regionDisplay} {subcatDisplay} Trends</div>
-        {rawData === 'i' ? (
-          "Loading Dataset..."
-        ) : (
-          <Line data={lineGraphReduce(rawData, selectedGuage, Scenerios, region, subcat, start, end)} />
-        )}
-        <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
-        {csv2 === 'i' ? (
-          "Loading Dataset..."
-        ) : (
-          <ChoroplethImageSlider
-            id={"Dashboard_Small"}
-            scenario_1={Scenerios.at(0).title}
-            scenario_2={Scenerios.at(1).title}
-            dataset={choroplethReduce(csv2, Scenerios.at(0).title, selectedGuage, curYear)}
-            dataset2={choroplethReduce(csv2, Scenerios.at(1).title, selectedGuage, curYear)}
-          />
-        )}
-        <div>Top 10 Countries {"(" + curYear + ")"} -- By Subsector</div>
-        {(csv === 'i' || csv2 === 'i') ? (
-          "Loading Dataset..."
-        ) : (
-          <div className='bar-grid grid-border'>
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(0).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(0).title} />
-            <BarHorizontal data={getBarHorizontal(csv, csv2, Scenerios.at(1).title, selectedGuage, curYear)} listKeys={filterSubcat(csv1)} scenerio={Scenerios.at(1).title} />
-          </div>
-        )}
-      </div>
+      <Line data={lineGraphReduce(lineData, selectedGuage, Scenerios, dashSubcategory)} unit={units} date={dashYear} setDate={setYear} />
     </>
-  );
+  )
+
+
+  // Choropleth Visualization
+  const choropleth = (choroplethData === 'i') ? (
+    <div className="grid-border-hidden text-centered">
+      Loading Dataset...
+    </div>
+  ) : (
+    <LeafletSync
+      basinAggregation={basinAggregation}
+      setRegion={setRegion}
+      region={region}
+      choroplethData={choroplethData}
+      Scenerios={Scenerios}
+      data={choroplethReduce(choroplethData, Scenerios.at(0).title, basinAggregation)}
+      data2={choroplethReduce(choroplethData, Scenerios.at(1).title, basinAggregation)}
+      uniqueValue={"Dashboard_Big"}
+      choroplethColorPalette={choroplethColorPalette}
+      setChoroplethColorPalette={setChoroplethColorPalette}
+      choroplethInterpolation={choroplethInterpolation}
+      setInterpolation={setInterpolation}
+    />
+  )
+
+
+  // Bar Chart Visualization
+  const barChart = (barData === "i" || aggSub === 'i') ? (
+    <div className="grid-border-hidden text-centered">
+      Loading Dataset...
+    </div>
+  ) : (
+    <div className='bar-grid grid-border'>
+      <BarCountryControl csv={getBasinAggregate(aggSub, basinAggregation)} scenario={Scenerios.at(0).title} scenerio2={Scenerios.at(1).title} year={dashYear} className="choropleth-control" />
+      <BarHorizontal csv={getBasinAggregate(barData, basinAggregation)} color={getBarColors(getBasinAggregate(barData, basinAggregation), Scenerios.at(0).title, dashYear)} listKeys={filterSubcat(getBasinAggregate(barData, basinAggregation))} scenerio={Scenerios.at(0).title} setdashboardSub={setSubcategory} left={true} />
+      <BarHorizontal csv={getBasinAggregate(barData, basinAggregation)} color={getBarColors(getBasinAggregate(barData, basinAggregation), Scenerios.at(0).title, dashYear)} listKeys={filterSubcat(getBasinAggregate(barData, basinAggregation))} scenerio={Scenerios.at(1).title} setdashboardSub={setSubcategory} left={false} />
+    </div>
+  )
+
+
+  //Display the grid. Below 1000 pixels results in its upright form.
+  return (
+    (width >= 1000) ? (
+      <div className="graph-grid">
+        {lineChartLabel}
+        {choroplethLabel}
+        {barChartLabel}
+        {lineChart}
+        {choropleth}
+        {barChart}
+      </div>
+    ) : (
+      <div className="graph-grid-small">
+        {lineChartLabel}
+        {lineChart}
+        {choroplethLabel}
+        {choropleth}
+        {barChartLabel}
+        {barChart}
+      </div>
+    ));
 }
+
 
 function mapStateToProps(state) {
   return {
     openedScenerios: state.scenerios,
     selectedGuage: state.dashboardSelection,
-    scenerioSpread: { ...(state.scenerios) },
-    start: state.startDate,
-    end: state.endDate,
-    reg: state.parsedData,
-    data: state.parsedData,
-    dataReg: state.parsedDataReg,
-    dataSub: state.parsedDataSub,
-    dataRegSub: state.parsedDataRegSub,
     curYear: state.dashboardYear,
     region: state.dashboardRegion,
     subcat: state.dashboardSubsector,
+    countries: state.barCountries,
+    basinAggregation: state.basinAggregation,
   };
 }
 
-export default connect(mapStateToProps)(DashboardGraphs);
+function mapDispatchToProps(dispatch) {
+  return {
+    setDashboardDate: (date) => dispatch(setDashDate(date)),
+    setDashboardReg: (reg) => dispatch(setDashReg(reg)),
+    setDashboardSubs: (subs) => dispatch(setDashSubs(subs)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardGraphs);

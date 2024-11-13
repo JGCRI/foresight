@@ -1,6 +1,7 @@
 export { default as Navigation } from "./Navigation";
 export { default as Home } from "./Home";
 export { default as Dashboard } from "./Dashboard";
+export { default as UploadData } from "./UploadData";
 export { default as Energy } from "./Energy";
 export { default as Water } from "./Water";
 export { default as Land } from "./Land";

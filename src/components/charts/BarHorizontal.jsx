@@ -1,30 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { ResponsiveBar } from '@nivo/bar'
 import { connect } from 'react-redux';
-import { setDashSubs } from "../Store";
+import { getBarHorizontal, getBasinAggregate } from "../../assets/data/DataManager";
+import { updateHash } from "../sharing/DashboardUrl.jsx";
+import { setBasinAggregation } from "../Store.jsx";
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
+
+const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, basinAggregation }) => {
+    //console.log("!!!!", listKeys); 
     const [scenerioName, setScenerio] = useState(scenerio);
+    const [barData, setData] = useState(getBarHorizontal(countries, csv, scenerio));
     useEffect(() => {
         setScenerio(scenerio);
+        //console.log("Scenario:", scenerio);
     }, [scenerio])
+    useEffect(() => {
+        setData(getBarHorizontal(countries, csv, scenerio));
+        //console.log("BAR DATA:", barData);
+    }, [countries, csv, scenerio])
+    //console.log(csv, getBasinAggregate(csv, basinAggregation));
     return (
-        <div className="nivo-wrapper">
+        <div className="bar-wrapper">
             <div className="double-bar-text-wrapper">  {scenerioName} </div>
             <ResponsiveBar
-                data={data}
+                data={barData}
                 keys={listKeys}
                 indexBy="country"
                 margin={{ top: 0, right: 15, bottom: 42, left: 70 }}
                 layout="horizontal"
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}
-                colors={{ scheme: 'spectral' }}
+                colors={color.length === 0 ? { scheme: 'spectral' } : color}
+                //colorBy="key"
                 borderColor={{
                     from: 'color',
                     modifiers: [
@@ -46,9 +58,12 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                     legendOffset: 32
                 }}
                 onClick={(data) => {
-                    setdashboardSub(
-                        `${data["id"]}`
-                    );
+                    if (data["id"] !== "class1") {
+                        setdashboardSub(
+                            `${data["id"]}`
+                        );
+                        updateHash("class", `${data["id"]}`)
+                    }
                 }}
                 axisLeft={{
                     format: (v) => {
@@ -67,6 +82,16 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                 }}
                 enableLabel={false}
                 legends={[]}
+                markers={[
+                    {
+                        axis: 'x',
+                        value: 0,
+                        lineStyle: {
+                            stroke: 'white',
+                        },
+                    },
+                ]}
+                the value determine
                 role="application"
                 theme={{
                     "text": {
@@ -175,23 +200,90 @@ const MyResponsiveBar = ({ listKeys, data, scenerio, setdashboardSub }) => {
                         "tableCellValue": {}
                     }
                 }}
+                tooltip={e => {
+                    return (
+                        <div
+                            style={(left) ? {
+                                pointerEvents: "none",
+                                position: "absolute",
+                                zIndex: "9999",
+                                top: "0px",
+                                left: "0px"
+                            } : {
+                                pointerEvents: "none",
+                                position: "absolute",
+                                zIndex: "9999",
+                                top: "0px",
+                                right: "0px"
+                            }}
+                        >
+                            <div
+                                style={{
+                                    background: "rgb(218, 218, 218)",
+                                    color: "inherit",
+                                    fontSize: "12px",
+                                    borderRadius: "2px",
+                                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 1px 2px",
+                                    padding: "5px 9px"
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        whiteSpace: "pre",
+                                        display: "flex",
+                                        alignItems: "center"
+                                    }}
+                                >
+                                    <span style={{
+                                        display: "block",
+                                        width: "12px",
+                                        height: "12px",
+                                        background: e.color,
+                                        marginRight: "7px"
+                                    }} />
+                                    <span>
+                                        {e.label}:{" "}
+                                        <strong>{e.value.toFixed(2)}</strong>
+                                    </span>
+                                </div>
+                                {(subcat !== "Aggregate of Subsectors") ?
+                                    <div
+                                        style={{
+                                            whiteSpace: "pre",
+                                            display: "flex",
+                                            alignItems: "center"
+                                        }}
+                                    >
+                                        <span style={{
+                                            display: "block",
+                                            width: "12px",
+                                            height: "12px",
+                                            marginRight: "7px"
+                                        }} />
+                                        <span>
+                                            {(e.data[subcat] !== undefined) ? subcat + ": " + e.data[subcat].toFixed(2) : "No data for " + subcat}
+                                        </span>
+                                    </div> : <></>
+                                }
+
+                            </div>
+                        </div>
+                    );
+                }}
                 ariaLabel="Nivo bar chart demo"
                 barAriaLabel={e => e.id + ": " + e.formattedValue + " in country: " + e.indexValue}
             />
         </div>
+
     );
 }
 
 function mapStateToProps(state) {
     return {
-
+        subcat: state.dashboardSubsector,
+        countries: state.barCountries,
+        basinAggregation: state.basinAggregation,
     };
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        setdashboardSub: (subs) => dispatch(setDashSubs(subs)),
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MyResponsiveBar);
+export default connect(mapStateToProps)(MyResponsiveBar);

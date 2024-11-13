@@ -75,6 +75,10 @@ a {
   z-index: 2 !important;
 }
 
+.page-smaller-title {
+  font-size: 25px !important;
+}
+
 .page-subtitle {
   font-size: 17px;
   font-weight: 500;
@@ -92,6 +96,10 @@ a {
   font-size: 15px;
   line-height: 1.5;
   z-index: 2 !important;
+}
+
+.page-text-dark {
+  color: rgb(254, 254, 254) !important;
 }
 
 .page-image-container {
@@ -132,6 +140,18 @@ a {
   z-index: 2 !important;
 }
 
+.form-gap {
+  margin-bottom: 25px !important;
+}
+
+.buffer-top{
+  margin-top: 5px;
+}
+
+.color-important {
+  display: inline;
+  color: red;
+}
 /* Solid line above a section break */
 .section-break-hr {
   height: 2px;

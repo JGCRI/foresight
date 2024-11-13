@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import team_zarrar from "../assets/img/team_zarrar.png";
 import team_chris from "../assets/img/team_chris.png";
 import team_mengqi from "../assets/img/team_mengqi.jpg";
 import team_taryn from "../assets/img/team_taryn.png";
@@ -12,12 +11,6 @@ import team_benjamin from "../assets/img/team_benjamin.jpg";
 import './css/Team.css';
 
 const teamMembers = [
-  {
-    name: "Zarrar Khan",
-    position: "Computational Scientist",
-    photo: team_zarrar,
-    email: "zarrar.khan@pnnl.gov"
-  },
   {
     name: "Chris Vernon",
     position: "Data Scientist",

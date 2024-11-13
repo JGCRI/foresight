@@ -1,0 +1,72 @@
+.data-upload-page {
+  height: calc(100vh - 150px);
+}
+
+.data-black-info-box {
+  position: relative;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0;
+  border-radius: 9px;
+  background-color: black;
+  align-items: center;
+  color: rgb(254, 254, 254);
+  font-size: 100%;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+
+.title-info-gap {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.data-text-thick {
+  font-weight: 700;
+  font-size: 150%;
+}
+
+.text-left {
+  text-align: left ;
+}
+
+.region-button-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  justify-items: center;
+}
+
+.region-button {
+  width: 100%;
+  height: 100%;
+}
+
+.upload-page-gap {
+  margin-top: 30px !important;
+}
+
+.param-edit-background {
+  align-items: center;
+  margin: 10px auto 10px auto;
+  background-color: rgb(60, 60, 60);
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.upload-data-variable-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin: auto 30% auto 30%;
+}
+
+.inline-success {
+  padding-top: 5px;
+  margin-left: 10px;
+  display:inline;
+  color:green;
+}

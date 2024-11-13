@@ -34,7 +34,7 @@ export const listTodos = /* GraphQL */ `
   }
 `;
 export const getGcamDataTableAggClass1Regions = /* GraphQL */ `
-  query GetGcamDataTableAggClass1Regions($id: Int!, $param: String!) {
+  query GetGcamDataTableAggClass1Regions($id: String!, $param: String!) {
     getGcamDataTableAggClass1Regions(id: $id, param: $param) {
       id
       param
@@ -84,7 +84,7 @@ export const listGcamDataTableAggClass1Regions = /* GraphQL */ `
   }
 `;
 export const getGcamDataTableAggParamRegions = /* GraphQL */ `
-  query GetGcamDataTableAggParamRegions($id: Int!, $param: String!) {
+  query GetGcamDataTableAggParamRegions($id: String!, $param: String!) {
     getGcamDataTableAggParamRegions(id: $id, param: $param) {
       id
       param
@@ -130,7 +130,7 @@ export const listGcamDataTableAggParamRegions = /* GraphQL */ `
   }
 `;
 export const getGcamDataTableAggParamGlobal = /* GraphQL */ `
-  query GetGcamDataTableAggParamGlobal($id: Int!, $param: String!) {
+  query GetGcamDataTableAggParamGlobal($id: String!, $param: String!) {
     getGcamDataTableAggParamGlobal(id: $id, param: $param) {
       id
       param
@@ -176,7 +176,7 @@ export const listGcamDataTableAggParamGlobals = /* GraphQL */ `
   }
 `;
 export const getGcamDataTableAggClass1Global = /* GraphQL */ `
-  query GetGcamDataTableAggClass1Global($id: Int!, $param: String!) {
+  query GetGcamDataTableAggClass1Global($id: String!, $param: String!) {
     getGcamDataTableAggClass1Global(id: $id, param: $param) {
       id
       param

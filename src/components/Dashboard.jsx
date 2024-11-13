@@ -1,305 +1,73 @@
-import React, {useEffect, useCallback} from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SidebarDashboard from "./SidebarDashboard.jsx";
+import DataQuerries from "../assets/data/DataQuerries.jsx";
 import { connect } from "react-redux";
 import DateDropdown from "./dropdowns/DashboardDate";
-import DashboardScenerioRows from "./dropdowns/DashboardScenerioRows";
 import DashboardGraphs from "./DashboardGraphs.jsx";
-import { MdError, MdElectricBolt, MdGroups, MdFilterHdr } from "react-icons/md";
-import { GiCorn, GiFactory, GiWaterDrop } from "react-icons/gi";
-import { TbCoins } from "react-icons/tb";
-import { FaThermometerHalf } from "react-icons/fa"
-import { setdashboardSelection, setStartDate, setEndDate, setScenerios, setParsed, setParsedSub, setParsedReg, setParsedRegSub} from "./Store";
+import { setdashboardSelection, setStartDate, setEndDate } from "./Store";
 import './css/Dashboard.css';
-import scenarios from "../assets/data/Scenarios.jsx";
 import DashboardFloater from "./dropdowns/DashboardFloater.jsx";
+import DashboardGuageBar from "./dropdowns/DashboardGuageBar.jsx";
+import UserDataQuerries from "../assets/data/UserDataQuerries.jsx";
+import { datasets } from "../assets/data/Scenarios.jsx";
 
-import { API, graphqlOperation } from "aws-amplify";
+function Dashboard({ open, dataset, scenarios }) {
+  const [guageData, setGuageData] = useState("i");
+  const [datesData, setDatesData] = useState("i");
+  const [lineData, setLineData] = useState("i");
+  const [choroplethData, setChoroplethData] = useState("i");
+  const [barData, setBarData] = useState("i");
+  const [aggSub, setAggSub] = useState("i");
+  const [regionList, setRegionList] = useState("i");
+  const [subcategoriesList, setSubcategoriesList] = useState("i");
 
-//UNUSED, Only For testing: Keeps track of the distance of the selection-divider and the top of the screen.
-//Allows divider to scroll with page.
-const scrollHandler = () => {
-  let divider = document.querySelector('.selection-divider');
-  let y = window.scrollY + divider.getBoundingClientRect().bottom;
-  if (y < 100) {
-    divider.style.top = '100'
-  }
-  else {
-    divider.style.top = 'auto'
-  }
-};
+  const [choroplethColorPalette, setChoroplethColorPalette] = useState("pal_green");
+  const [choroplethInterpolation, setInterpolation] = useState("VALUE - LOG");
 
-//Gets the icon of each category by name. Shows up next to the guages and the selection.
-export const getIcon = (selection) => {
-  switch (selection) {
-    case "watConsumBySec":
-      return <GiWaterDrop />;
-    case "watWithdrawBySec":
-      return <GiWaterDrop />;
-    case "agProdByCrop":
-      return <GiCorn />;
-    case "temp":
-      return <FaThermometerHalf />;
-    case "emiss":
-      return <GiFactory />;
-    case "pop":
-      return <MdGroups />;
-    case "gdp":
-      return <TbCoins />;
-    case "elecByTechTWh":
-      return <MdElectricBolt />
-    case "landAlloc":
-      return <MdFilterHdr />
-    default:
-      return <MdError />;
-  }
-}
-
-//Updates the URL hash for single parameter hashes. Takes in the name and value of the hash.
-//Does not guarentee order of placement.
-export const updateHash = (name, value) => {
-  var searchParams = new URLSearchParams(window.location.hash.substring(1));
-  if (!searchParams.has(name))
-    searchParams.append(name, value);
-  else
-    searchParams.set(name, value);
-  window.location.hash = searchParams.toString();
-}
-
-//Updates the URL hash for a hash comprising of a list. Each element of the list must be added
-//through this function and will be seperated by commas.
-export const updateListHash = (name, index, value) => {
-  var searchParams = new URLSearchParams(window.location.hash.substring(1));
-  if (searchParams.has(name)) {
-    let arr = searchParams.get(name).toString().split(",");
-    arr[index] = value;
-    searchParams.set(name, arr.join(","));
-    window.location.hash = searchParams.toString();
-  }
-}
-
-function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd, updateScenerios, openScenerios, openGuages, updateParse, updateParseReg, updateParseSub, updateParseRegSub }) {  
-  //GraphQL Querries for dahsboard data.
-  const queryRegSub = `
-    query MyQuery($param: String!, $nextToken: String) {
-      listGcamDataTableAggParamGlobals(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
-        items {
-          id
-          value
-          x
-          scenario
-          param
-        }
-        nextToken
-      }
-    }
-  `;
-  const querySub = `
-    query MyQuery($param: String!, $nextToken: String) {
-      listGcamDataTableAggParamRegions(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
-        items {
-          id
-          value
-          x
-          scenario
-          param
-          region
-        }
-        nextToken
-      }
-    }
-  `;
-  const queryReg = `
-    query MyQuery($param: String!, $nextToken: String) {
-      listGcamDataTableAggClass1Globals(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
-        items {
-          id
-          value
-          x
-          scenario
-          param
-          region
-          classLabel
-          class
-        }
-        nextToken
-      }
-    }
-  `;
-  const query = `
-    query MyQuery($param: String!, $nextToken: String) {
-      listGcamDataTableAggClass1Regions(filter: {param: {eq: $param}}, limit: 100000, nextToken: $nextToken) {
-        items {
-          id
-          value
-          x
-          scenario
-          param
-          region
-          classLabel
-          class
-        }
-        nextToken
-      }
-    }
-  `;
-  //Retrieves data for all four needed categories.
-  //Raw data, Aggregate Region, Aggregate Subcategory, and Aggregate Region and Subcategory.
-  const fetchForesightRegSub = useCallback(async () => {
-    let nextToken = null;
-    let allItems = [];
-
-    try {
-      do {
-        const response = await API.graphql(
-          graphqlOperation(queryRegSub, {
-            param: selection, nextToken
-          })
-        );
-        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamGlobals.nextToken);
-        //console.log("Foresight data reg sub response:", response.data); // Print the response data
-
-        const items = response.data.listGcamDataTableAggParamGlobals.items;
-        allItems = allItems.concat(items);
-
-        nextToken = response.data.listGcamDataTableAggParamGlobals.nextToken;
-      } while(nextToken);
-      
-      allItems.sort((a,b) => a.x - b.x);
-      updateParseRegSub(allItems);
-    } catch (error) {
-      console.log(error);
-  }
-  }, [selection, queryRegSub, updateParseRegSub]);
-  const fetchForesightSub = useCallback(async () => {
-    let nextToken = null;
-    let allItems = [];
-
-    try {
-      do {
-        const response = await API.graphql(
-          graphqlOperation(querySub, {
-            param: selection, nextToken
-          })
-        );
-        //console.log("PAGINATION:" + response.data.listGcamDataTableAggParamRegions.nextToken);
-        //console.log("Foresight data sub response:", response.data); // Print the response data
-
-        const items = response.data.listGcamDataTableAggParamRegions.items;
-        allItems = allItems.concat(items);
-
-        nextToken = response.data.listGcamDataTableAggParamRegions.nextToken;
-      } while(nextToken);
-      
-      allItems.sort((a,b) => a.x - b.x);
-      updateParseSub(allItems);
-    } catch (error) {
-      console.log(error);
-  }
-  }, [selection, querySub, updateParseSub]);
-  const fetchForesightReg = useCallback(async () => {
-    let nextToken = null;
-    let allItems = [];
-
-    try {
-      do {
-        const response = await API.graphql(
-          graphqlOperation(queryReg, {
-            param: selection, nextToken
-          })
-        );
-        //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Globals.nextToken);
-        //console.log("Foresight data reg response:", response.data); // Print the response data
-
-        const items = response.data.listGcamDataTableAggClass1Globals.items;
-        allItems = allItems.concat(items);
-
-        nextToken = response.data.listGcamDataTableAggClass1Globals.nextToken;
-      } while(nextToken);
-      
-      allItems.sort((a,b) => a.x - b.x);
-      updateParseReg(allItems);
-    } catch (error) {
-      console.log(error);
-  }
-  }, [selection, queryReg, updateParseReg]);
-  const fetchForesight = useCallback(async () => {
-    let nextToken = null;
-    let allItems = [];
-
-    try {
-      do {
-        const response = await API.graphql(
-          graphqlOperation(query, {
-            param: selection, nextToken
-          })
-        );
-        //console.log("PAGINATION:" + response.data.listGcamDataTableAggClass1Regions.nextToken);
-        //console.log("Foresight data response:", response.data); // Print the response data
-
-        const items = response.data.listGcamDataTableAggClass1Regions.items;
-        allItems = allItems.concat(items);
-
-        nextToken = response.data.listGcamDataTableAggClass1Regions.nextToken;
-      } while(nextToken);
-      
-      allItems.sort((a,b) => a.x - b.x);
-      updateParse(allItems);
-    } catch (error) {
-      console.log(error);
-  }
-  }, [selection, query, updateParse]);
-
-  //For each change in selection, parses from AWS.
-  useEffect(() => {
-    updateParse("i");
-    updateParseReg("i");
-    updateParseSub("i");
-    updateParseRegSub("i");
-    fetchForesightRegSub();
-    fetchForesightSub();
-    fetchForesightReg();
-    fetchForesight();
-  }, [selection, updateParse, updateParseReg, updateParseSub, updateParseRegSub, fetchForesightRegSub, fetchForesightSub, fetchForesightReg, fetchForesight]);
-
-  //Ran at the beginning of loading the dashboard right from an URL. Takes items in the hash and populates
-  //the dashboard with them.
-  const setDataParameters = () => {
-    var searchParams = new URLSearchParams(window.location.hash.substring(1));
-    if (searchParams.has("start") && searchParams.has("end")) {
-      const newStart = Number(searchParams.get("start"));
-      const newEnd = Number(searchParams.get("end"));
-      if (newStart > 0 && newEnd > 0 && newStart < newEnd) {
-        updateStart(searchParams.get("start"));
-        updateEnd(searchParams.get("end"));
-      }
-    }
-    if (searchParams.has("selected")) {
-      for (var i = 0; i < openGuages.length; i++) {
-        if (openGuages.at(i).title === searchParams.get("selected")) {
-          updateCurrentGuage(searchParams.get("selected"));
-        }
-      }
-    }
-    if (searchParams.has("scenerios")) {
-      let arr = searchParams.get("scenerios").toString().split(",");
-      for (var j = 0; j < openScenerios.length; j++) {
-        var flag = 0;
-        for(var k = 0; k < scenarios.length; k++) {
-          if(arr[j].at(k).title === arr[j])
-            flag = 1;
-        }
-        if (flag === 1)
-          updateScenerios(j, arr[j], openScenerios);
-      }
-    }
+  const resetData = () => {
+    setGuageData("i");
+    setDatesData("i");
+    setLineData("i");
+    setChoroplethData("i");
+    setBarData("i");
+    setAggSub("i");
+    setRegionList("i");
+    setSubcategoriesList("i");
   }
 
+  //<DashboardScenerioRows
+  //Scenarios={scenarios}
+  ///>
   return (
     <div className="body-page-dark">
       <SidebarDashboard></SidebarDashboard>
-      {setDataParameters()}
-      <div className={open ? "dashboard" : "dashboardClosed"} onScroll={scrollHandler}>
+      {(datasets.some(e => e.dataset === dataset)) ? (
+        <DataQuerries
+          dataset={dataset}
+          setGuage={setGuageData}
+          setDates={setDatesData}
+          setLine={setLineData}
+          setChoropleth={setChoroplethData}
+          setBar={setBarData}
+          setAggSub={setAggSub}
+          setRegions={setRegionList}
+          setSubcategories={setSubcategoriesList}
+        />
+      ) : (
+        <UserDataQuerries
+          dataset={dataset}
+          setGuage={setGuageData}
+          setDates={setDatesData}
+          setLine={setLineData}
+          setChoropleth={setChoroplethData}
+          setBar={setBarData}
+          setAggSub={setAggSub}
+          setRegions={setRegionList}
+          setSubcategories={setSubcategoriesList}
+        />
+      )}
+      <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
           <Row className="date-select-row">
             <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
@@ -307,6 +75,7 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             </Col>
             <Col>
               <DateDropdown
+                data={datesData}
                 year={2015}
                 isOrNotStart={0}
               />
@@ -316,19 +85,39 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
             </Col>
             <Col>
               <DateDropdown
+                data={datesData}
                 year={2100}
                 isOrNotStart={1}
               />
             </Col>
           </Row>
-          <DashboardScenerioRows
+          <DashboardGuageBar
+            data={guageData}
+            dateData={datesData}
             Scenarios={scenarios}
+            reset={resetData}
           />
           <Row className="selection-divider">
-            <DashboardFloater />
+            <DashboardFloater 
+              data={guageData}
+              downloadableData={barData}
+              dates={datesData}
+              regions={regionList}
+              subcats={subcategoriesList}
+            />
           </Row>
           <Row>
-            <DashboardGraphs />
+            <DashboardGraphs
+              lineData={lineData}
+              choroplethData={choroplethData}
+              barData={barData}
+              aggSub={aggSub}
+              guageData={guageData}
+              choroplethColorPalette={choroplethColorPalette}
+              setChoroplethColorPalette={setChoroplethColorPalette}
+              choroplethInterpolation={choroplethInterpolation}
+              setInterpolation={setInterpolation}
+            />
           </Row>
         </Container>
       </div>
@@ -339,10 +128,13 @@ function Dashboard({ open, selection, updateCurrentGuage, updateStart, updateEnd
 function mapStateToProps(state) {
   return {
     open: state.open,
+    dataset: state.dataset,
     selection: state.dashboardSelection,
     openScenerios: state.scenerios,
     openGuages: state.guages,
     parse: state.parsedData,
+    curYear: state.dashboardYear,
+    scenarios: state.allScenarios,
   };
 }
 
@@ -352,11 +144,6 @@ function mapDispatchToProps(dispatch) {
     updateStart: (start) => dispatch(setStartDate(start)),
     updateEnd: (end) => dispatch(setEndDate(end)),
     updateCurrentGuage: (guage) => dispatch(setdashboardSelection(guage)),
-    updateScenerios: (index, name, scenerios) => dispatch(setScenerios(index, name, scenerios)),
-    updateParse: (data) => dispatch(setParsed(data)),
-    updateParseReg: (data) => dispatch(setParsedReg(data)),
-    updateParseSub: (data) => dispatch(setParsedSub(data)),
-    updateParseRegSub: (data) => dispatch(setParsedRegSub(data)),
   };
 }
 

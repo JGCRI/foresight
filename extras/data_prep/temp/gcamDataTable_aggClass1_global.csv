@@ -1,0 +1,1381 @@
+"id","param","scenario","dataset","region","classLabel","class","x","units","value"
+1,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",1990,"Primary Energy Consumption by Fuel (EJ)",72.70134942
+2,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2005,"Primary Energy Consumption by Fuel (EJ)",80.23121425
+3,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2010,"Primary Energy Consumption by Fuel (EJ)",88.253983276
+4,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2015,"Primary Energy Consumption by Fuel (EJ)",90.3894724223
+5,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2020,"Primary Energy Consumption by Fuel (EJ)",98.75614279
+6,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2025,"Primary Energy Consumption by Fuel (EJ)",96.3484765
+7,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2030,"Primary Energy Consumption by Fuel (EJ)",93.7105543
+8,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2035,"Primary Energy Consumption by Fuel (EJ)",92.6847975
+9,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2040,"Primary Energy Consumption by Fuel (EJ)",89.8577367
+10,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2045,"Primary Energy Consumption by Fuel (EJ)",85.4158578
+11,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2050,"Primary Energy Consumption by Fuel (EJ)",80.781435
+12,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2055,"Primary Energy Consumption by Fuel (EJ)",78.2485396
+13,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2060,"Primary Energy Consumption by Fuel (EJ)",77.01274707
+14,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2065,"Primary Energy Consumption by Fuel (EJ)",76.19304202
+15,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2070,"Primary Energy Consumption by Fuel (EJ)",76.88314624
+16,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2075,"Primary Energy Consumption by Fuel (EJ)",76.92649424
+17,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2080,"Primary Energy Consumption by Fuel (EJ)",74.98268018
+18,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2085,"Primary Energy Consumption by Fuel (EJ)",72.5034302
+19,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2090,"Primary Energy Consumption by Fuel (EJ)",69.979490805
+20,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2095,"Primary Energy Consumption by Fuel (EJ)",67.689399595
+21,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","a oil",2100,"Primary Energy Consumption by Fuel (EJ)",65.726666116
+22,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",1975,"Primary Energy Consumption by Fuel (EJ)",19.45834586
+23,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",1990,"Primary Energy Consumption by Fuel (EJ)",57.9401669
+24,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2005,"Primary Energy Consumption by Fuel (EJ)",74.9921853
+25,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2010,"Primary Energy Consumption by Fuel (EJ)",88.71974
+26,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2015,"Primary Energy Consumption by Fuel (EJ)",91.9008007
+27,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2020,"Primary Energy Consumption by Fuel (EJ)",102.4220586
+28,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2025,"Primary Energy Consumption by Fuel (EJ)",110.20445111
+29,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2030,"Primary Energy Consumption by Fuel (EJ)",120.84244628
+30,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2035,"Primary Energy Consumption by Fuel (EJ)",130.301463185
+31,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2040,"Primary Energy Consumption by Fuel (EJ)",136.761544603
+32,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2045,"Primary Energy Consumption by Fuel (EJ)",142.842037616
+33,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2050,"Primary Energy Consumption by Fuel (EJ)",147.294956023
+34,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2055,"Primary Energy Consumption by Fuel (EJ)",151.515515487
+35,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2060,"Primary Energy Consumption by Fuel (EJ)",153.802592233
+36,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2065,"Primary Energy Consumption by Fuel (EJ)",149.856678555
+37,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2070,"Primary Energy Consumption by Fuel (EJ)",146.989634712
+38,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2075,"Primary Energy Consumption by Fuel (EJ)",142.426832848
+39,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2080,"Primary Energy Consumption by Fuel (EJ)",136.607355205
+40,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2085,"Primary Energy Consumption by Fuel (EJ)",130.440115127
+41,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2090,"Primary Energy Consumption by Fuel (EJ)",125.45344095
+42,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2095,"Primary Energy Consumption by Fuel (EJ)",122.136543031
+43,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","b natural gas",2100,"Primary Energy Consumption by Fuel (EJ)",119.667147591
+44,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",1975,"Primary Energy Consumption by Fuel (EJ)",23.9890080265
+45,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",1990,"Primary Energy Consumption by Fuel (EJ)",82.2551282201
+46,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2005,"Primary Energy Consumption by Fuel (EJ)",108.4579367419
+47,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2010,"Primary Energy Consumption by Fuel (EJ)",127.4856196648
+48,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2015,"Primary Energy Consumption by Fuel (EJ)",127.169981497013
+49,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2020,"Primary Energy Consumption by Fuel (EJ)",140.706074587
+50,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2025,"Primary Energy Consumption by Fuel (EJ)",147.429740539
+51,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2030,"Primary Energy Consumption by Fuel (EJ)",148.096330033
+52,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2035,"Primary Energy Consumption by Fuel (EJ)",144.789941008
+53,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2040,"Primary Energy Consumption by Fuel (EJ)",138.692894499
+54,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2045,"Primary Energy Consumption by Fuel (EJ)",130.77653348
+55,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2050,"Primary Energy Consumption by Fuel (EJ)",122.3399417
+56,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2055,"Primary Energy Consumption by Fuel (EJ)",113.09764789
+57,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2060,"Primary Energy Consumption by Fuel (EJ)",104.36514506
+58,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2065,"Primary Energy Consumption by Fuel (EJ)",96.68009439
+59,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2070,"Primary Energy Consumption by Fuel (EJ)",89.764720557
+60,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2075,"Primary Energy Consumption by Fuel (EJ)",80.895632549
+61,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2080,"Primary Energy Consumption by Fuel (EJ)",67.726975153
+62,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2085,"Primary Energy Consumption by Fuel (EJ)",57.630666018
+63,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2090,"Primary Energy Consumption by Fuel (EJ)",48.6948068195
+64,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2095,"Primary Energy Consumption by Fuel (EJ)",41.2040862023
+65,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","c coal",2100,"Primary Energy Consumption by Fuel (EJ)",35.04654743315
+66,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",1975,"Primary Energy Consumption by Fuel (EJ)",4.17529461
+67,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",1990,"Primary Energy Consumption by Fuel (EJ)",35.7580939896
+68,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2005,"Primary Energy Consumption by Fuel (EJ)",41.9127598507
+69,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2010,"Primary Energy Consumption by Fuel (EJ)",46.6025835672
+70,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2015,"Primary Energy Consumption by Fuel (EJ)",49.787283719
+71,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2020,"Primary Energy Consumption by Fuel (EJ)",53.3119674756789
+72,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2025,"Primary Energy Consumption by Fuel (EJ)",61.0360813804481
+73,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2030,"Primary Energy Consumption by Fuel (EJ)",69.1641516337748
+74,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2035,"Primary Energy Consumption by Fuel (EJ)",79.2931448841381
+75,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2040,"Primary Energy Consumption by Fuel (EJ)",94.2003061779159
+76,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2045,"Primary Energy Consumption by Fuel (EJ)",113.510317505196
+77,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2050,"Primary Energy Consumption by Fuel (EJ)",132.346113373694
+78,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2055,"Primary Energy Consumption by Fuel (EJ)",140.554081621298
+79,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2060,"Primary Energy Consumption by Fuel (EJ)",142.893818973939
+80,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2065,"Primary Energy Consumption by Fuel (EJ)",143.590366516704
+81,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2070,"Primary Energy Consumption by Fuel (EJ)",141.718192457737
+82,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2075,"Primary Energy Consumption by Fuel (EJ)",139.406215214798
+83,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2080,"Primary Energy Consumption by Fuel (EJ)",137.7257534792
+84,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2085,"Primary Energy Consumption by Fuel (EJ)",136.006544789167
+85,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2090,"Primary Energy Consumption by Fuel (EJ)",133.952768338152
+86,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2095,"Primary Energy Consumption by Fuel (EJ)",131.247399030927
+87,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","d bioenergy",2100,"Primary Energy Consumption by Fuel (EJ)",126.889701587603
+88,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",1990,"Primary Energy Consumption by Fuel (EJ)",7.2459284725
+89,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2005,"Primary Energy Consumption by Fuel (EJ)",9.964242726
+90,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2010,"Primary Energy Consumption by Fuel (EJ)",9.922119719
+91,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2015,"Primary Energy Consumption by Fuel (EJ)",9.247351843
+92,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2020,"Primary Energy Consumption by Fuel (EJ)",10.0884945264162
+93,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2025,"Primary Energy Consumption by Fuel (EJ)",11.2142646741603
+94,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2030,"Primary Energy Consumption by Fuel (EJ)",12.4999199441352
+95,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2035,"Primary Energy Consumption by Fuel (EJ)",13.7648865832553
+96,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2040,"Primary Energy Consumption by Fuel (EJ)",14.7817518327295
+97,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2045,"Primary Energy Consumption by Fuel (EJ)",15.7981893502796
+98,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2050,"Primary Energy Consumption by Fuel (EJ)",16.7211086120892
+99,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2055,"Primary Energy Consumption by Fuel (EJ)",17.4643046293472
+100,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2060,"Primary Energy Consumption by Fuel (EJ)",18.337881652811
+101,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2065,"Primary Energy Consumption by Fuel (EJ)",19.3072241977262
+102,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2070,"Primary Energy Consumption by Fuel (EJ)",20.1622588356636
+103,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2075,"Primary Energy Consumption by Fuel (EJ)",20.767206017444
+104,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2080,"Primary Energy Consumption by Fuel (EJ)",20.766960349186
+105,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2085,"Primary Energy Consumption by Fuel (EJ)",20.538712295532
+106,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2090,"Primary Energy Consumption by Fuel (EJ)",19.924173803331
+107,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2095,"Primary Energy Consumption by Fuel (EJ)",18.997243601096
+108,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","e nuclear",2100,"Primary Energy Consumption by Fuel (EJ)",17.890790135596
+109,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",1990,"Primary Energy Consumption by Fuel (EJ)",7.7098954
+110,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2005,"Primary Energy Consumption by Fuel (EJ)",10.5673404
+111,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2010,"Primary Energy Consumption by Fuel (EJ)",12.3974942
+112,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2015,"Primary Energy Consumption by Fuel (EJ)",14.0511296
+113,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2020,"Primary Energy Consumption by Fuel (EJ)",14.4909747
+114,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2025,"Primary Energy Consumption by Fuel (EJ)",14.9308109
+115,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2030,"Primary Energy Consumption by Fuel (EJ)",15.370655
+116,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2035,"Primary Energy Consumption by Fuel (EJ)",15.8104884
+117,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2040,"Primary Energy Consumption by Fuel (EJ)",16.2503269
+118,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2045,"Primary Energy Consumption by Fuel (EJ)",16.6901682
+119,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2050,"Primary Energy Consumption by Fuel (EJ)",17.1300046
+120,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2055,"Primary Energy Consumption by Fuel (EJ)",17.569847
+121,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2060,"Primary Energy Consumption by Fuel (EJ)",18.0096831
+122,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2065,"Primary Energy Consumption by Fuel (EJ)",18.4495293
+123,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2070,"Primary Energy Consumption by Fuel (EJ)",18.8893555
+124,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2075,"Primary Energy Consumption by Fuel (EJ)",19.3291855
+125,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2080,"Primary Energy Consumption by Fuel (EJ)",19.7690387
+126,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2085,"Primary Energy Consumption by Fuel (EJ)",20.208873
+127,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2090,"Primary Energy Consumption by Fuel (EJ)",20.6487121
+128,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2095,"Primary Energy Consumption by Fuel (EJ)",21.0885442
+129,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","f hydro",2100,"Primary Energy Consumption by Fuel (EJ)",21.5283995
+130,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",1990,"Primary Energy Consumption by Fuel (EJ)",0.01396779499
+131,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2005,"Primary Energy Consumption by Fuel (EJ)",0.3738380283
+132,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2010,"Primary Energy Consumption by Fuel (EJ)",1.22869505602
+133,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2015,"Primary Energy Consumption by Fuel (EJ)",3.0154911797
+134,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2020,"Primary Energy Consumption by Fuel (EJ)",8.49731026376698
+135,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2025,"Primary Energy Consumption by Fuel (EJ)",13.249574455915
+136,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2030,"Primary Energy Consumption by Fuel (EJ)",19.8326826890269
+137,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2035,"Primary Energy Consumption by Fuel (EJ)",27.6588971550812
+138,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2040,"Primary Energy Consumption by Fuel (EJ)",36.1377518131629
+139,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2045,"Primary Energy Consumption by Fuel (EJ)",43.1636705646456
+140,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2050,"Primary Energy Consumption by Fuel (EJ)",48.8764600488754
+141,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2055,"Primary Energy Consumption by Fuel (EJ)",54.8757572197906
+142,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2060,"Primary Energy Consumption by Fuel (EJ)",59.734827935015
+143,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2065,"Primary Energy Consumption by Fuel (EJ)",63.727002130334
+144,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2070,"Primary Energy Consumption by Fuel (EJ)",65.770232488034
+145,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2075,"Primary Energy Consumption by Fuel (EJ)",66.898546604225
+146,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2080,"Primary Energy Consumption by Fuel (EJ)",68.900086057611
+147,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2085,"Primary Energy Consumption by Fuel (EJ)",69.573479215224
+148,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2090,"Primary Energy Consumption by Fuel (EJ)",69.135934535015
+149,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2095,"Primary Energy Consumption by Fuel (EJ)",67.733832328833
+150,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","g wind",2100,"Primary Energy Consumption by Fuel (EJ)",65.570606073127
+151,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",1990,"Primary Energy Consumption by Fuel (EJ)",0.00271075487
+152,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2005,"Primary Energy Consumption by Fuel (EJ)",0.01628922641
+153,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2010,"Primary Energy Consumption by Fuel (EJ)",0.12190938197
+154,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2015,"Primary Energy Consumption by Fuel (EJ)",0.93604056536
+155,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2020,"Primary Energy Consumption by Fuel (EJ)",3.24869860531721
+156,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2025,"Primary Energy Consumption by Fuel (EJ)",10.7687032003676
+157,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2030,"Primary Energy Consumption by Fuel (EJ)",20.0606056273629
+158,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2035,"Primary Energy Consumption by Fuel (EJ)",30.1112848237306
+159,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2040,"Primary Energy Consumption by Fuel (EJ)",40.7145089369246
+160,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2045,"Primary Energy Consumption by Fuel (EJ)",51.3770556265227
+161,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2050,"Primary Energy Consumption by Fuel (EJ)",62.1635895655555
+162,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2055,"Primary Energy Consumption by Fuel (EJ)",71.0348939648963
+163,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2060,"Primary Energy Consumption by Fuel (EJ)",79.1233917025347
+164,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2065,"Primary Energy Consumption by Fuel (EJ)",87.353254421555
+165,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2070,"Primary Energy Consumption by Fuel (EJ)",93.2825564931829
+166,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2075,"Primary Energy Consumption by Fuel (EJ)",97.7899030231048
+167,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2080,"Primary Energy Consumption by Fuel (EJ)",102.471081221748
+168,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2085,"Primary Energy Consumption by Fuel (EJ)",104.756977597237
+169,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2090,"Primary Energy Consumption by Fuel (EJ)",104.964529135672
+170,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2095,"Primary Energy Consumption by Fuel (EJ)",103.199895107769
+171,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","h solar",2100,"Primary Energy Consumption by Fuel (EJ)",101.005632070108
+172,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",1990,"Primary Energy Consumption by Fuel (EJ)",0.13092182906
+173,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2005,"Primary Energy Consumption by Fuel (EJ)",0.209586759
+174,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2010,"Primary Energy Consumption by Fuel (EJ)",0.24497185
+175,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2015,"Primary Energy Consumption by Fuel (EJ)",0.289629778
+176,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2020,"Primary Energy Consumption by Fuel (EJ)",0.9688865174
+177,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2025,"Primary Energy Consumption by Fuel (EJ)",1.7310494874
+178,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2030,"Primary Energy Consumption by Fuel (EJ)",2.5521843824
+179,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2035,"Primary Energy Consumption by Fuel (EJ)",3.3423753981
+180,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2040,"Primary Energy Consumption by Fuel (EJ)",4.060723487
+181,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2045,"Primary Energy Consumption by Fuel (EJ)",4.5593670078
+182,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2050,"Primary Energy Consumption by Fuel (EJ)",4.832093445
+183,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2055,"Primary Energy Consumption by Fuel (EJ)",4.959229084
+184,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2060,"Primary Energy Consumption by Fuel (EJ)",5.031270309
+185,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2065,"Primary Energy Consumption by Fuel (EJ)",5.119736358
+186,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2070,"Primary Energy Consumption by Fuel (EJ)",5.080343757
+187,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2075,"Primary Energy Consumption by Fuel (EJ)",5.02467879
+188,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2080,"Primary Energy Consumption by Fuel (EJ)",5.034149795
+189,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2085,"Primary Energy Consumption by Fuel (EJ)",4.95121022
+190,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2090,"Primary Energy Consumption by Fuel (EJ)",4.829660257
+191,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2095,"Primary Energy Consumption by Fuel (EJ)",4.640933685
+192,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","i geothermal",2100,"Primary Energy Consumption by Fuel (EJ)",4.46661394
+193,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2025,"Primary Energy Consumption by Fuel (EJ)",0.0038750745225
+194,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2030,"Primary Energy Consumption by Fuel (EJ)",0.0276578741
+195,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2035,"Primary Energy Consumption by Fuel (EJ)",0.04290717907
+196,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2040,"Primary Energy Consumption by Fuel (EJ)",0.0761568262
+197,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2045,"Primary Energy Consumption by Fuel (EJ)",0.1191241266
+198,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2050,"Primary Energy Consumption by Fuel (EJ)",0.1231737081
+199,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2055,"Primary Energy Consumption by Fuel (EJ)",0.0893932051
+200,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2060,"Primary Energy Consumption by Fuel (EJ)",0.05404321557
+201,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2065,"Primary Energy Consumption by Fuel (EJ)",0.04567842387
+202,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2070,"Primary Energy Consumption by Fuel (EJ)",0.04240424552
+203,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2075,"Primary Energy Consumption by Fuel (EJ)",0.06276154026
+204,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2080,"Primary Energy Consumption by Fuel (EJ)",0.0789322695
+205,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2085,"Primary Energy Consumption by Fuel (EJ)",0.0779040977
+206,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2090,"Primary Energy Consumption by Fuel (EJ)",0.06373236698
+207,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2095,"Primary Energy Consumption by Fuel (EJ)",0.0485598555
+208,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","j hydrogen",2100,"Primary Energy Consumption by Fuel (EJ)",0.041300373
+209,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",1975,"Primary Energy Consumption by Fuel (EJ)",1.5594107398
+210,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",1990,"Primary Energy Consumption by Fuel (EJ)",2.0922640726
+211,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2005,"Primary Energy Consumption by Fuel (EJ)",3.60040152
+212,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2010,"Primary Energy Consumption by Fuel (EJ)",4.2438637247
+213,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2015,"Primary Energy Consumption by Fuel (EJ)",4.4986756889
+214,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2020,"Primary Energy Consumption by Fuel (EJ)",4.91537403
+215,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2025,"Primary Energy Consumption by Fuel (EJ)",5.1945689193
+216,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2030,"Primary Energy Consumption by Fuel (EJ)",5.4939568896
+217,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2035,"Primary Energy Consumption by Fuel (EJ)",5.810891741
+218,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2040,"Primary Energy Consumption by Fuel (EJ)",6.079529612
+219,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2045,"Primary Energy Consumption by Fuel (EJ)",6.256464116
+220,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2050,"Primary Energy Consumption by Fuel (EJ)",6.361832982
+221,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2055,"Primary Energy Consumption by Fuel (EJ)",6.432357727
+222,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2060,"Primary Energy Consumption by Fuel (EJ)",6.472063089
+223,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2065,"Primary Energy Consumption by Fuel (EJ)",6.482194341
+224,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2070,"Primary Energy Consumption by Fuel (EJ)",6.468821218
+225,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2075,"Primary Energy Consumption by Fuel (EJ)",6.429686932
+226,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2080,"Primary Energy Consumption by Fuel (EJ)",6.361376451
+227,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2085,"Primary Energy Consumption by Fuel (EJ)",6.266417343
+228,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2090,"Primary Energy Consumption by Fuel (EJ)",6.146922028
+229,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2095,"Primary Energy Consumption by Fuel (EJ)",6.002685703
+230,"energyPrimaryByFuelEJ","GCAM_SSP1","gcamv7p0","global","Fuel","woodpulp_energy",2100,"Primary Energy Consumption by Fuel (EJ)",5.838741151
+231,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",1990,"Primary Energy Consumption by Fuel (EJ)",72.70134942
+232,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2005,"Primary Energy Consumption by Fuel (EJ)",80.23121425
+233,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2010,"Primary Energy Consumption by Fuel (EJ)",88.253983276
+234,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2015,"Primary Energy Consumption by Fuel (EJ)",90.3894724223
+235,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2020,"Primary Energy Consumption by Fuel (EJ)",95.90051164
+236,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2025,"Primary Energy Consumption by Fuel (EJ)",95.3564259
+237,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2030,"Primary Energy Consumption by Fuel (EJ)",93.6039517
+238,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2035,"Primary Energy Consumption by Fuel (EJ)",92.5942421
+239,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2040,"Primary Energy Consumption by Fuel (EJ)",90.8882929
+240,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2045,"Primary Energy Consumption by Fuel (EJ)",88.0243817
+241,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2050,"Primary Energy Consumption by Fuel (EJ)",85.6345941
+242,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2055,"Primary Energy Consumption by Fuel (EJ)",86.1620099
+243,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2060,"Primary Energy Consumption by Fuel (EJ)",88.60129358
+244,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2065,"Primary Energy Consumption by Fuel (EJ)",92.17183422
+245,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2070,"Primary Energy Consumption by Fuel (EJ)",95.26872464
+246,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2075,"Primary Energy Consumption by Fuel (EJ)",96.77055939
+247,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2080,"Primary Energy Consumption by Fuel (EJ)",97.1454954
+248,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2085,"Primary Energy Consumption by Fuel (EJ)",98.426053391
+249,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2090,"Primary Energy Consumption by Fuel (EJ)",99.661257986
+250,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2095,"Primary Energy Consumption by Fuel (EJ)",101.605701189
+251,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","a oil",2100,"Primary Energy Consumption by Fuel (EJ)",104.329810289
+252,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",1975,"Primary Energy Consumption by Fuel (EJ)",19.45834586
+253,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",1990,"Primary Energy Consumption by Fuel (EJ)",57.9401669
+254,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2005,"Primary Energy Consumption by Fuel (EJ)",74.9921853
+255,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2010,"Primary Energy Consumption by Fuel (EJ)",88.71974
+256,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2015,"Primary Energy Consumption by Fuel (EJ)",91.9008007
+257,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2020,"Primary Energy Consumption by Fuel (EJ)",106.20855637
+258,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2025,"Primary Energy Consumption by Fuel (EJ)",115.730078694
+259,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2030,"Primary Energy Consumption by Fuel (EJ)",127.206980081
+260,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2035,"Primary Energy Consumption by Fuel (EJ)",136.293557304
+261,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2040,"Primary Energy Consumption by Fuel (EJ)",142.839719539
+262,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2045,"Primary Energy Consumption by Fuel (EJ)",149.806294535
+263,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2050,"Primary Energy Consumption by Fuel (EJ)",155.828711711
+264,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2055,"Primary Energy Consumption by Fuel (EJ)",162.800590102
+265,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2060,"Primary Energy Consumption by Fuel (EJ)",168.463506103
+266,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2065,"Primary Energy Consumption by Fuel (EJ)",166.5377359871
+267,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2070,"Primary Energy Consumption by Fuel (EJ)",166.6373650538
+268,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2075,"Primary Energy Consumption by Fuel (EJ)",164.3839288213
+269,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2080,"Primary Energy Consumption by Fuel (EJ)",160.5896611309
+270,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2085,"Primary Energy Consumption by Fuel (EJ)",156.0017997398
+271,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2090,"Primary Energy Consumption by Fuel (EJ)",152.3665854371
+272,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2095,"Primary Energy Consumption by Fuel (EJ)",148.6594860101
+273,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","b natural gas",2100,"Primary Energy Consumption by Fuel (EJ)",145.1909874639
+274,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",1975,"Primary Energy Consumption by Fuel (EJ)",23.9890080265
+275,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",1990,"Primary Energy Consumption by Fuel (EJ)",82.2551282201
+276,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2005,"Primary Energy Consumption by Fuel (EJ)",108.4579367419
+277,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2010,"Primary Energy Consumption by Fuel (EJ)",127.4856196648
+278,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2015,"Primary Energy Consumption by Fuel (EJ)",127.169981497013
+279,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2020,"Primary Energy Consumption by Fuel (EJ)",145.901315924
+280,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2025,"Primary Energy Consumption by Fuel (EJ)",157.835516191
+281,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2030,"Primary Energy Consumption by Fuel (EJ)",162.127225132
+282,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2035,"Primary Energy Consumption by Fuel (EJ)",162.791277931
+283,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2040,"Primary Energy Consumption by Fuel (EJ)",161.455238867
+284,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2045,"Primary Energy Consumption by Fuel (EJ)",158.572771
+285,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2050,"Primary Energy Consumption by Fuel (EJ)",153.98688012
+286,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2055,"Primary Energy Consumption by Fuel (EJ)",147.56765273
+287,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2060,"Primary Energy Consumption by Fuel (EJ)",141.6016978
+288,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2065,"Primary Energy Consumption by Fuel (EJ)",138.37126051
+289,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2070,"Primary Energy Consumption by Fuel (EJ)",135.920808518
+290,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2075,"Primary Energy Consumption by Fuel (EJ)",132.713019242
+291,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2080,"Primary Energy Consumption by Fuel (EJ)",124.763654405
+292,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2085,"Primary Energy Consumption by Fuel (EJ)",117.143724107
+293,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2090,"Primary Energy Consumption by Fuel (EJ)",110.099300135
+294,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2095,"Primary Energy Consumption by Fuel (EJ)",104.3255536818
+295,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","c coal",2100,"Primary Energy Consumption by Fuel (EJ)",98.53585989663
+296,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",1975,"Primary Energy Consumption by Fuel (EJ)",4.17529461
+297,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",1990,"Primary Energy Consumption by Fuel (EJ)",35.7580939896
+298,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2005,"Primary Energy Consumption by Fuel (EJ)",41.9127598507
+299,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2010,"Primary Energy Consumption by Fuel (EJ)",46.6025835672
+300,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2015,"Primary Energy Consumption by Fuel (EJ)",49.787283719
+301,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2020,"Primary Energy Consumption by Fuel (EJ)",55.6952417511001
+302,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2025,"Primary Energy Consumption by Fuel (EJ)",66.7176849433468
+303,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2030,"Primary Energy Consumption by Fuel (EJ)",76.9578684811698
+304,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2035,"Primary Energy Consumption by Fuel (EJ)",87.963491762616
+305,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2040,"Primary Energy Consumption by Fuel (EJ)",103.703332954182
+306,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2045,"Primary Energy Consumption by Fuel (EJ)",125.053288329277
+307,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2050,"Primary Energy Consumption by Fuel (EJ)",145.267551983646
+308,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2055,"Primary Energy Consumption by Fuel (EJ)",154.890917398995
+309,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2060,"Primary Energy Consumption by Fuel (EJ)",160.00671458809
+310,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2065,"Primary Energy Consumption by Fuel (EJ)",163.18404373451
+311,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2070,"Primary Energy Consumption by Fuel (EJ)",163.456520084342
+312,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2075,"Primary Energy Consumption by Fuel (EJ)",162.497253840468
+313,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2080,"Primary Energy Consumption by Fuel (EJ)",160.939009948498
+314,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2085,"Primary Energy Consumption by Fuel (EJ)",159.443587886171
+315,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2090,"Primary Energy Consumption by Fuel (EJ)",157.877637204456
+316,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2095,"Primary Energy Consumption by Fuel (EJ)",156.681876878098
+317,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","d bioenergy",2100,"Primary Energy Consumption by Fuel (EJ)",154.698171783407
+318,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",1990,"Primary Energy Consumption by Fuel (EJ)",7.2459284725
+319,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2005,"Primary Energy Consumption by Fuel (EJ)",9.964242726
+320,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2010,"Primary Energy Consumption by Fuel (EJ)",9.922119719
+321,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2015,"Primary Energy Consumption by Fuel (EJ)",9.247351843
+322,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2020,"Primary Energy Consumption by Fuel (EJ)",10.3764165547142
+323,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2025,"Primary Energy Consumption by Fuel (EJ)",12.1032912489557
+324,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2030,"Primary Energy Consumption by Fuel (EJ)",14.0760769518286
+325,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2035,"Primary Energy Consumption by Fuel (EJ)",16.0999494300048
+326,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2040,"Primary Energy Consumption by Fuel (EJ)",18.1208894028653
+327,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2045,"Primary Energy Consumption by Fuel (EJ)",20.4607712740808
+328,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2050,"Primary Energy Consumption by Fuel (EJ)",22.4621572751501
+329,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2055,"Primary Energy Consumption by Fuel (EJ)",24.4019352661776
+330,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2060,"Primary Energy Consumption by Fuel (EJ)",26.513029334201
+331,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2065,"Primary Energy Consumption by Fuel (EJ)",29.0357841056627
+332,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2070,"Primary Energy Consumption by Fuel (EJ)",31.436141181881
+333,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2075,"Primary Energy Consumption by Fuel (EJ)",33.7144744937495
+334,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2080,"Primary Energy Consumption by Fuel (EJ)",35.3912978863
+335,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2085,"Primary Energy Consumption by Fuel (EJ)",36.487420639814
+336,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2090,"Primary Energy Consumption by Fuel (EJ)",36.9709570002323
+337,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2095,"Primary Energy Consumption by Fuel (EJ)",37.0813322769947
+338,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","e nuclear",2100,"Primary Energy Consumption by Fuel (EJ)",36.8292341047225
+339,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",1990,"Primary Energy Consumption by Fuel (EJ)",7.7098954
+340,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2005,"Primary Energy Consumption by Fuel (EJ)",10.5673404
+341,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2010,"Primary Energy Consumption by Fuel (EJ)",12.3974942
+342,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2015,"Primary Energy Consumption by Fuel (EJ)",14.0511296
+343,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2020,"Primary Energy Consumption by Fuel (EJ)",14.4909747
+344,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2025,"Primary Energy Consumption by Fuel (EJ)",14.9308109
+345,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2030,"Primary Energy Consumption by Fuel (EJ)",15.370655
+346,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2035,"Primary Energy Consumption by Fuel (EJ)",15.8104884
+347,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2040,"Primary Energy Consumption by Fuel (EJ)",16.2503269
+348,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2045,"Primary Energy Consumption by Fuel (EJ)",16.6901682
+349,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2050,"Primary Energy Consumption by Fuel (EJ)",17.1300046
+350,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2055,"Primary Energy Consumption by Fuel (EJ)",17.569847
+351,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2060,"Primary Energy Consumption by Fuel (EJ)",18.0096831
+352,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2065,"Primary Energy Consumption by Fuel (EJ)",18.4495293
+353,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2070,"Primary Energy Consumption by Fuel (EJ)",18.8893555
+354,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2075,"Primary Energy Consumption by Fuel (EJ)",19.3291855
+355,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2080,"Primary Energy Consumption by Fuel (EJ)",19.7690387
+356,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2085,"Primary Energy Consumption by Fuel (EJ)",20.208873
+357,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2090,"Primary Energy Consumption by Fuel (EJ)",20.6487121
+358,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2095,"Primary Energy Consumption by Fuel (EJ)",21.0885442
+359,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","f hydro",2100,"Primary Energy Consumption by Fuel (EJ)",21.5283995
+360,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",1990,"Primary Energy Consumption by Fuel (EJ)",0.01396779499
+361,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2005,"Primary Energy Consumption by Fuel (EJ)",0.3738380283
+362,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2010,"Primary Energy Consumption by Fuel (EJ)",1.22869505602
+363,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2015,"Primary Energy Consumption by Fuel (EJ)",3.0154911797
+364,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2020,"Primary Energy Consumption by Fuel (EJ)",5.5198070427351
+365,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2025,"Primary Energy Consumption by Fuel (EJ)",8.7985403096624
+366,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2030,"Primary Energy Consumption by Fuel (EJ)",13.2142546612686
+367,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2035,"Primary Energy Consumption by Fuel (EJ)",18.505483233792
+368,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2040,"Primary Energy Consumption by Fuel (EJ)",24.6984219793384
+369,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2045,"Primary Energy Consumption by Fuel (EJ)",29.4510754027492
+370,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2050,"Primary Energy Consumption by Fuel (EJ)",34.7341699515304
+371,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2055,"Primary Energy Consumption by Fuel (EJ)",39.9743701919623
+372,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2060,"Primary Energy Consumption by Fuel (EJ)",45.092277240855
+373,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2065,"Primary Energy Consumption by Fuel (EJ)",50.840047346199
+374,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2070,"Primary Energy Consumption by Fuel (EJ)",55.936507889447
+375,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2075,"Primary Energy Consumption by Fuel (EJ)",60.917303062603
+376,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2080,"Primary Energy Consumption by Fuel (EJ)",67.881637947444
+377,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2085,"Primary Energy Consumption by Fuel (EJ)",73.83658517465
+378,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2090,"Primary Energy Consumption by Fuel (EJ)",78.5560502938
+379,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2095,"Primary Energy Consumption by Fuel (EJ)",82.24403262547
+380,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","g wind",2100,"Primary Energy Consumption by Fuel (EJ)",85.22587732643
+381,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",1990,"Primary Energy Consumption by Fuel (EJ)",0.00271075487
+382,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2005,"Primary Energy Consumption by Fuel (EJ)",0.01628922641
+383,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2010,"Primary Energy Consumption by Fuel (EJ)",0.12190938197
+384,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2015,"Primary Energy Consumption by Fuel (EJ)",0.93604056536
+385,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2020,"Primary Energy Consumption by Fuel (EJ)",2.75886182084248
+386,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2025,"Primary Energy Consumption by Fuel (EJ)",7.41492255344085
+387,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2030,"Primary Energy Consumption by Fuel (EJ)",14.1397169332433
+388,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2035,"Primary Energy Consumption by Fuel (EJ)",21.208272080695
+389,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2040,"Primary Energy Consumption by Fuel (EJ)",28.3549334501937
+390,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2045,"Primary Energy Consumption by Fuel (EJ)",35.174077265469
+391,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2050,"Primary Energy Consumption by Fuel (EJ)",41.7566527462263
+392,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2055,"Primary Energy Consumption by Fuel (EJ)",47.682024342093
+393,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2060,"Primary Energy Consumption by Fuel (EJ)",53.1520236726153
+394,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2065,"Primary Energy Consumption by Fuel (EJ)",58.9626529896037
+395,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2070,"Primary Energy Consumption by Fuel (EJ)",64.0383197483639
+396,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2075,"Primary Energy Consumption by Fuel (EJ)",69.1334676988712
+397,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2080,"Primary Energy Consumption by Fuel (EJ)",75.0558824522917
+398,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2085,"Primary Energy Consumption by Fuel (EJ)",80.2809132258795
+399,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2090,"Primary Energy Consumption by Fuel (EJ)",84.841346945892
+400,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2095,"Primary Energy Consumption by Fuel (EJ)",88.6327423279905
+401,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","h solar",2100,"Primary Energy Consumption by Fuel (EJ)",92.1534786237831
+402,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",1990,"Primary Energy Consumption by Fuel (EJ)",0.13092182906
+403,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2005,"Primary Energy Consumption by Fuel (EJ)",0.209586759
+404,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2010,"Primary Energy Consumption by Fuel (EJ)",0.24497185
+405,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2015,"Primary Energy Consumption by Fuel (EJ)",0.289629778
+406,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2020,"Primary Energy Consumption by Fuel (EJ)",0.81233983
+407,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2025,"Primary Energy Consumption by Fuel (EJ)",1.311780907
+408,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2030,"Primary Energy Consumption by Fuel (EJ)",1.7970335912
+409,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2035,"Primary Energy Consumption by Fuel (EJ)",2.2664620068
+410,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2040,"Primary Energy Consumption by Fuel (EJ)",2.7127537063
+411,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2045,"Primary Energy Consumption by Fuel (EJ)",2.9463141174
+412,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2050,"Primary Energy Consumption by Fuel (EJ)",3.0648018312
+413,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2055,"Primary Energy Consumption by Fuel (EJ)",3.1646051503
+414,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2060,"Primary Energy Consumption by Fuel (EJ)",3.2362878907
+415,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2065,"Primary Energy Consumption by Fuel (EJ)",3.3475090198
+416,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2070,"Primary Energy Consumption by Fuel (EJ)",3.4014580415
+417,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2075,"Primary Energy Consumption by Fuel (EJ)",3.4507774122
+418,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2080,"Primary Energy Consumption by Fuel (EJ)",3.4933580735
+419,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2085,"Primary Energy Consumption by Fuel (EJ)",3.5405505232
+420,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2090,"Primary Energy Consumption by Fuel (EJ)",3.5817739012
+421,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2095,"Primary Energy Consumption by Fuel (EJ)",3.6029394754
+422,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","i geothermal",2100,"Primary Energy Consumption by Fuel (EJ)",3.6276925961
+423,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2025,"Primary Energy Consumption by Fuel (EJ)",0.0045873712294
+424,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2030,"Primary Energy Consumption by Fuel (EJ)",0.02554024645
+425,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2035,"Primary Energy Consumption by Fuel (EJ)",0.03364893331
+426,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2040,"Primary Energy Consumption by Fuel (EJ)",0.06226332891
+427,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2045,"Primary Energy Consumption by Fuel (EJ)",0.1050046719
+428,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2050,"Primary Energy Consumption by Fuel (EJ)",0.1070400862
+429,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2055,"Primary Energy Consumption by Fuel (EJ)",0.0776374886
+430,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2060,"Primary Energy Consumption by Fuel (EJ)",0.04948701369
+431,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2065,"Primary Energy Consumption by Fuel (EJ)",0.04100642246
+432,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2070,"Primary Energy Consumption by Fuel (EJ)",0.03706123392
+433,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2075,"Primary Energy Consumption by Fuel (EJ)",0.04893498412
+434,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2080,"Primary Energy Consumption by Fuel (EJ)",0.05821907282
+435,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2085,"Primary Energy Consumption by Fuel (EJ)",0.05696921338
+436,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2090,"Primary Energy Consumption by Fuel (EJ)",0.04881226832
+437,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2095,"Primary Energy Consumption by Fuel (EJ)",0.03922681175
+438,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","j hydrogen",2100,"Primary Energy Consumption by Fuel (EJ)",0.03395299351
+439,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",1975,"Primary Energy Consumption by Fuel (EJ)",1.5594107398
+440,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",1990,"Primary Energy Consumption by Fuel (EJ)",2.0922640726
+441,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2005,"Primary Energy Consumption by Fuel (EJ)",3.60040152
+442,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2010,"Primary Energy Consumption by Fuel (EJ)",4.2438637247
+443,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2015,"Primary Energy Consumption by Fuel (EJ)",4.4986756889
+444,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2020,"Primary Energy Consumption by Fuel (EJ)",4.9090465568
+445,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2025,"Primary Energy Consumption by Fuel (EJ)",5.1872255813
+446,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2030,"Primary Energy Consumption by Fuel (EJ)",5.4673706633
+447,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2035,"Primary Energy Consumption by Fuel (EJ)",5.76832523
+448,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2040,"Primary Energy Consumption by Fuel (EJ)",6.037873979
+449,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2045,"Primary Energy Consumption by Fuel (EJ)",6.227438192
+450,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2050,"Primary Energy Consumption by Fuel (EJ)",6.361778795
+451,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2055,"Primary Energy Consumption by Fuel (EJ)",6.473351455
+452,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2060,"Primary Energy Consumption by Fuel (EJ)",6.560966786
+453,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2065,"Primary Energy Consumption by Fuel (EJ)",6.623111832
+454,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2070,"Primary Energy Consumption by Fuel (EJ)",6.662994982
+455,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2075,"Primary Energy Consumption by Fuel (EJ)",6.676342986
+456,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2080,"Primary Energy Consumption by Fuel (EJ)",6.666087901
+457,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2085,"Primary Energy Consumption by Fuel (EJ)",6.637598265
+458,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2090,"Primary Energy Consumption by Fuel (EJ)",6.595786826
+459,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2095,"Primary Energy Consumption by Fuel (EJ)",6.537163912
+460,"energyPrimaryByFuelEJ","GCAM_SSP2","gcamv7p0","global","Fuel","woodpulp_energy",2100,"Primary Energy Consumption by Fuel (EJ)",6.465452157
+461,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",1990,"Primary Energy Consumption by Fuel (EJ)",72.70134942
+462,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2005,"Primary Energy Consumption by Fuel (EJ)",80.23121425
+463,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2010,"Primary Energy Consumption by Fuel (EJ)",88.253983276
+464,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2015,"Primary Energy Consumption by Fuel (EJ)",90.3894724223
+465,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2020,"Primary Energy Consumption by Fuel (EJ)",100.14226146
+466,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2025,"Primary Energy Consumption by Fuel (EJ)",98.6590447
+467,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2030,"Primary Energy Consumption by Fuel (EJ)",96.4069625
+468,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2035,"Primary Energy Consumption by Fuel (EJ)",94.0142252
+469,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2040,"Primary Energy Consumption by Fuel (EJ)",90.0983147
+470,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2045,"Primary Energy Consumption by Fuel (EJ)",84.7188136
+471,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2050,"Primary Energy Consumption by Fuel (EJ)",80.9893062
+472,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2055,"Primary Energy Consumption by Fuel (EJ)",80.603369
+473,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2060,"Primary Energy Consumption by Fuel (EJ)",82.24866587
+474,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2065,"Primary Energy Consumption by Fuel (EJ)",84.22506903
+475,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2070,"Primary Energy Consumption by Fuel (EJ)",87.93465695
+476,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2075,"Primary Energy Consumption by Fuel (EJ)",91.3534648
+477,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2080,"Primary Energy Consumption by Fuel (EJ)",92.19700298
+478,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2085,"Primary Energy Consumption by Fuel (EJ)",92.480459119
+479,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2090,"Primary Energy Consumption by Fuel (EJ)",92.878816754
+480,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2095,"Primary Energy Consumption by Fuel (EJ)",94.453875511
+481,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","a oil",2100,"Primary Energy Consumption by Fuel (EJ)",97.852785485
+482,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",1975,"Primary Energy Consumption by Fuel (EJ)",19.45834586
+483,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",1990,"Primary Energy Consumption by Fuel (EJ)",57.9401669
+484,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2005,"Primary Energy Consumption by Fuel (EJ)",74.9921853
+485,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2010,"Primary Energy Consumption by Fuel (EJ)",88.71974
+486,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2015,"Primary Energy Consumption by Fuel (EJ)",91.9008007
+487,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2020,"Primary Energy Consumption by Fuel (EJ)",106.81450684
+488,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2025,"Primary Energy Consumption by Fuel (EJ)",116.25185779
+489,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2030,"Primary Energy Consumption by Fuel (EJ)",126.528855748
+490,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2035,"Primary Energy Consumption by Fuel (EJ)",133.835908557
+491,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2040,"Primary Energy Consumption by Fuel (EJ)",138.033932933
+492,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2045,"Primary Energy Consumption by Fuel (EJ)",142.313456201
+493,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2050,"Primary Energy Consumption by Fuel (EJ)",146.430555115
+494,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2055,"Primary Energy Consumption by Fuel (EJ)",150.84572693
+495,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2060,"Primary Energy Consumption by Fuel (EJ)",154.47855334458
+496,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2065,"Primary Energy Consumption by Fuel (EJ)",150.56647667066
+497,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2070,"Primary Energy Consumption by Fuel (EJ)",149.84845258986
+498,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2075,"Primary Energy Consumption by Fuel (EJ)",148.32750305263
+499,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2080,"Primary Energy Consumption by Fuel (EJ)",145.8610920724
+500,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2085,"Primary Energy Consumption by Fuel (EJ)",143.13566379233
+501,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2090,"Primary Energy Consumption by Fuel (EJ)",141.54895508275
+502,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2095,"Primary Energy Consumption by Fuel (EJ)",139.93120736925
+503,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","b natural gas",2100,"Primary Energy Consumption by Fuel (EJ)",137.09703085791
+504,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",1975,"Primary Energy Consumption by Fuel (EJ)",23.9890080265
+505,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",1990,"Primary Energy Consumption by Fuel (EJ)",82.2551282201
+506,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2005,"Primary Energy Consumption by Fuel (EJ)",108.4579367419
+507,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2010,"Primary Energy Consumption by Fuel (EJ)",127.4856196648
+508,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2015,"Primary Energy Consumption by Fuel (EJ)",127.169981497013
+509,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2020,"Primary Energy Consumption by Fuel (EJ)",147.811608815
+510,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2025,"Primary Energy Consumption by Fuel (EJ)",160.756928224
+511,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2030,"Primary Energy Consumption by Fuel (EJ)",165.471798978
+512,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2035,"Primary Energy Consumption by Fuel (EJ)",166.191324688
+513,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2040,"Primary Energy Consumption by Fuel (EJ)",164.957269105
+514,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2045,"Primary Energy Consumption by Fuel (EJ)",162.97855834
+515,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2050,"Primary Energy Consumption by Fuel (EJ)",160.38935542
+516,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2055,"Primary Energy Consumption by Fuel (EJ)",155.12588842
+517,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2060,"Primary Energy Consumption by Fuel (EJ)",149.6230837
+518,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2065,"Primary Energy Consumption by Fuel (EJ)",147.8645762
+519,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2070,"Primary Energy Consumption by Fuel (EJ)",146.81501852
+520,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2075,"Primary Energy Consumption by Fuel (EJ)",145.829380105
+521,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2080,"Primary Energy Consumption by Fuel (EJ)",141.589559882
+522,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2085,"Primary Energy Consumption by Fuel (EJ)",138.657358291
+523,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2090,"Primary Energy Consumption by Fuel (EJ)",136.019271528
+524,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2095,"Primary Energy Consumption by Fuel (EJ)",134.311395622
+525,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","c coal",2100,"Primary Energy Consumption by Fuel (EJ)",132.38275449813
+526,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",1975,"Primary Energy Consumption by Fuel (EJ)",4.17529461
+527,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",1990,"Primary Energy Consumption by Fuel (EJ)",35.7580939896
+528,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2005,"Primary Energy Consumption by Fuel (EJ)",41.9127598507
+529,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2010,"Primary Energy Consumption by Fuel (EJ)",46.6025835672
+530,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2015,"Primary Energy Consumption by Fuel (EJ)",49.787283719
+531,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2020,"Primary Energy Consumption by Fuel (EJ)",63.8596286617418
+532,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2025,"Primary Energy Consumption by Fuel (EJ)",80.9795897589252
+533,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2030,"Primary Energy Consumption by Fuel (EJ)",94.5515949188467
+534,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2035,"Primary Energy Consumption by Fuel (EJ)",107.904011592717
+535,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2040,"Primary Energy Consumption by Fuel (EJ)",126.797418815653
+536,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2045,"Primary Energy Consumption by Fuel (EJ)",153.247584745125
+537,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2050,"Primary Energy Consumption by Fuel (EJ)",168.098603031603
+538,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2055,"Primary Energy Consumption by Fuel (EJ)",175.16786756366
+539,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2060,"Primary Energy Consumption by Fuel (EJ)",177.371503690823
+540,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2065,"Primary Energy Consumption by Fuel (EJ)",178.504429688156
+541,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2070,"Primary Energy Consumption by Fuel (EJ)",177.313527024126
+542,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2075,"Primary Energy Consumption by Fuel (EJ)",175.525766044218
+543,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2080,"Primary Energy Consumption by Fuel (EJ)",174.571430691473
+544,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2085,"Primary Energy Consumption by Fuel (EJ)",174.572671991764
+545,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2090,"Primary Energy Consumption by Fuel (EJ)",175.169524489179
+546,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2095,"Primary Energy Consumption by Fuel (EJ)",176.249805048978
+547,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","d bioenergy",2100,"Primary Energy Consumption by Fuel (EJ)",177.444276321719
+548,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",1990,"Primary Energy Consumption by Fuel (EJ)",7.2459284725
+549,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2005,"Primary Energy Consumption by Fuel (EJ)",9.964242726
+550,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2010,"Primary Energy Consumption by Fuel (EJ)",9.922119719
+551,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2015,"Primary Energy Consumption by Fuel (EJ)",9.247351843
+552,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2020,"Primary Energy Consumption by Fuel (EJ)",10.2693536444592
+553,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2025,"Primary Energy Consumption by Fuel (EJ)",11.5120627390441
+554,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2030,"Primary Energy Consumption by Fuel (EJ)",12.7583095062168
+555,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2035,"Primary Energy Consumption by Fuel (EJ)",13.8250935180876
+556,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2040,"Primary Energy Consumption by Fuel (EJ)",14.678570521929
+557,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2045,"Primary Energy Consumption by Fuel (EJ)",15.7244405953519
+558,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2050,"Primary Energy Consumption by Fuel (EJ)",16.543470004835
+559,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2055,"Primary Energy Consumption by Fuel (EJ)",17.0618110913964
+560,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2060,"Primary Energy Consumption by Fuel (EJ)",17.659972045124
+561,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2065,"Primary Energy Consumption by Fuel (EJ)",18.6100575840256
+562,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2070,"Primary Energy Consumption by Fuel (EJ)",19.418156286996
+563,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2075,"Primary Energy Consumption by Fuel (EJ)",20.1449353428075
+564,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2080,"Primary Energy Consumption by Fuel (EJ)",20.4209292697442
+565,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2085,"Primary Energy Consumption by Fuel (EJ)",20.4988539418984
+566,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2090,"Primary Energy Consumption by Fuel (EJ)",20.2816736207032
+567,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2095,"Primary Energy Consumption by Fuel (EJ)",19.9526504872277
+568,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","e nuclear",2100,"Primary Energy Consumption by Fuel (EJ)",19.486974977788
+569,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",1990,"Primary Energy Consumption by Fuel (EJ)",7.7098954
+570,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2005,"Primary Energy Consumption by Fuel (EJ)",10.5673404
+571,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2010,"Primary Energy Consumption by Fuel (EJ)",12.3974942
+572,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2015,"Primary Energy Consumption by Fuel (EJ)",14.0511296
+573,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2020,"Primary Energy Consumption by Fuel (EJ)",14.4909747
+574,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2025,"Primary Energy Consumption by Fuel (EJ)",14.9308109
+575,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2030,"Primary Energy Consumption by Fuel (EJ)",15.370655
+576,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2035,"Primary Energy Consumption by Fuel (EJ)",15.8104884
+577,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2040,"Primary Energy Consumption by Fuel (EJ)",16.2503269
+578,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2045,"Primary Energy Consumption by Fuel (EJ)",16.6901682
+579,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2050,"Primary Energy Consumption by Fuel (EJ)",17.1300046
+580,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2055,"Primary Energy Consumption by Fuel (EJ)",17.569847
+581,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2060,"Primary Energy Consumption by Fuel (EJ)",18.0096831
+582,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2065,"Primary Energy Consumption by Fuel (EJ)",18.4495293
+583,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2070,"Primary Energy Consumption by Fuel (EJ)",18.8893555
+584,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2075,"Primary Energy Consumption by Fuel (EJ)",19.3291855
+585,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2080,"Primary Energy Consumption by Fuel (EJ)",19.7690387
+586,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2085,"Primary Energy Consumption by Fuel (EJ)",20.208873
+587,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2090,"Primary Energy Consumption by Fuel (EJ)",20.6487121
+588,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2095,"Primary Energy Consumption by Fuel (EJ)",21.0885442
+589,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","f hydro",2100,"Primary Energy Consumption by Fuel (EJ)",21.5283995
+590,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",1990,"Primary Energy Consumption by Fuel (EJ)",0.01396779499
+591,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2005,"Primary Energy Consumption by Fuel (EJ)",0.3738380283
+592,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2010,"Primary Energy Consumption by Fuel (EJ)",1.22869505602
+593,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2015,"Primary Energy Consumption by Fuel (EJ)",3.0154911797
+594,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2020,"Primary Energy Consumption by Fuel (EJ)",5.1742071845961
+595,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2025,"Primary Energy Consumption by Fuel (EJ)",7.3865333276426
+596,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2030,"Primary Energy Consumption by Fuel (EJ)",10.0327690821056
+597,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2035,"Primary Energy Consumption by Fuel (EJ)",12.887785979829
+598,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2040,"Primary Energy Consumption by Fuel (EJ)",15.9976904571343
+599,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2045,"Primary Energy Consumption by Fuel (EJ)",16.9589214923616
+600,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2050,"Primary Energy Consumption by Fuel (EJ)",18.7950967500669
+601,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2055,"Primary Energy Consumption by Fuel (EJ)",20.3230495301532
+602,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2060,"Primary Energy Consumption by Fuel (EJ)",21.7189813539
+603,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2065,"Primary Energy Consumption by Fuel (EJ)",23.780826513559
+604,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2070,"Primary Energy Consumption by Fuel (EJ)",25.447406113318
+605,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2075,"Primary Energy Consumption by Fuel (EJ)",27.231749065998
+606,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2080,"Primary Energy Consumption by Fuel (EJ)",30.85115046829
+607,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2085,"Primary Energy Consumption by Fuel (EJ)",34.420501235554
+608,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2090,"Primary Energy Consumption by Fuel (EJ)",37.800003704489
+609,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2095,"Primary Energy Consumption by Fuel (EJ)",40.632525167952
+610,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","g wind",2100,"Primary Energy Consumption by Fuel (EJ)",43.422604669215
+611,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",1990,"Primary Energy Consumption by Fuel (EJ)",0.00271075487
+612,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2005,"Primary Energy Consumption by Fuel (EJ)",0.01628922641
+613,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2010,"Primary Energy Consumption by Fuel (EJ)",0.12190938197
+614,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2015,"Primary Energy Consumption by Fuel (EJ)",0.93604056536
+615,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2020,"Primary Energy Consumption by Fuel (EJ)",4.04962873955336
+616,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2025,"Primary Energy Consumption by Fuel (EJ)",6.91887633424755
+617,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2030,"Primary Energy Consumption by Fuel (EJ)",9.91687028040711
+618,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2035,"Primary Energy Consumption by Fuel (EJ)",12.908220827934
+619,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2040,"Primary Energy Consumption by Fuel (EJ)",15.9630050126441
+620,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2045,"Primary Energy Consumption by Fuel (EJ)",18.4991491115696
+621,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2050,"Primary Energy Consumption by Fuel (EJ)",19.9388674095293
+622,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2055,"Primary Energy Consumption by Fuel (EJ)",21.3289362129897
+623,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2060,"Primary Energy Consumption by Fuel (EJ)",22.6805231898254
+624,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2065,"Primary Energy Consumption by Fuel (EJ)",24.6175741086252
+625,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2070,"Primary Energy Consumption by Fuel (EJ)",26.4058266528228
+626,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2075,"Primary Energy Consumption by Fuel (EJ)",28.3735742585538
+627,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2080,"Primary Energy Consumption by Fuel (EJ)",31.565596652142
+628,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2085,"Primary Energy Consumption by Fuel (EJ)",34.6899896721532
+629,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2090,"Primary Energy Consumption by Fuel (EJ)",37.6699623610368
+630,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2095,"Primary Energy Consumption by Fuel (EJ)",40.4094698837028
+631,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","h solar",2100,"Primary Energy Consumption by Fuel (EJ)",43.2733482911986
+632,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",1990,"Primary Energy Consumption by Fuel (EJ)",0.13092182906
+633,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2005,"Primary Energy Consumption by Fuel (EJ)",0.209586759
+634,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2010,"Primary Energy Consumption by Fuel (EJ)",0.24497185
+635,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2015,"Primary Energy Consumption by Fuel (EJ)",0.289629778
+636,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2020,"Primary Energy Consumption by Fuel (EJ)",0.8330227198
+637,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2025,"Primary Energy Consumption by Fuel (EJ)",1.2668187988
+638,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2030,"Primary Energy Consumption by Fuel (EJ)",1.6568891952
+639,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2035,"Primary Energy Consumption by Fuel (EJ)",2.0213197148
+640,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2040,"Primary Energy Consumption by Fuel (EJ)",2.3553588097
+641,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2045,"Primary Energy Consumption by Fuel (EJ)",2.5221337553
+642,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2050,"Primary Energy Consumption by Fuel (EJ)",2.5853941527
+643,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2055,"Primary Energy Consumption by Fuel (EJ)",2.6449391024
+644,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2060,"Primary Energy Consumption by Fuel (EJ)",2.6717750011
+645,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2065,"Primary Energy Consumption by Fuel (EJ)",2.7853677174
+646,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2070,"Primary Energy Consumption by Fuel (EJ)",2.8125189679
+647,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2075,"Primary Energy Consumption by Fuel (EJ)",2.8254376064
+648,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2080,"Primary Energy Consumption by Fuel (EJ)",2.870557207
+649,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2085,"Primary Energy Consumption by Fuel (EJ)",2.9066927917
+650,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2090,"Primary Energy Consumption by Fuel (EJ)",2.9573352135
+651,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2095,"Primary Energy Consumption by Fuel (EJ)",2.9691031306
+652,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","i geothermal",2100,"Primary Energy Consumption by Fuel (EJ)",2.9968414432
+653,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2025,"Primary Energy Consumption by Fuel (EJ)",0.012068176729
+654,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2030,"Primary Energy Consumption by Fuel (EJ)",0.05353144658
+655,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2035,"Primary Energy Consumption by Fuel (EJ)",0.058155136
+656,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2040,"Primary Energy Consumption by Fuel (EJ)",0.0892315926
+657,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2045,"Primary Energy Consumption by Fuel (EJ)",0.150546751
+658,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2050,"Primary Energy Consumption by Fuel (EJ)",0.1342424085
+659,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2055,"Primary Energy Consumption by Fuel (EJ)",0.0971654601
+660,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2060,"Primary Energy Consumption by Fuel (EJ)",0.0578634962
+661,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2065,"Primary Energy Consumption by Fuel (EJ)",0.0423500474
+662,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2070,"Primary Energy Consumption by Fuel (EJ)",0.03428650106
+663,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2075,"Primary Energy Consumption by Fuel (EJ)",0.0494401965
+664,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2080,"Primary Energy Consumption by Fuel (EJ)",0.0609628331
+665,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2085,"Primary Energy Consumption by Fuel (EJ)",0.0587001055
+666,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2090,"Primary Energy Consumption by Fuel (EJ)",0.0470501827
+667,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2095,"Primary Energy Consumption by Fuel (EJ)",0.03401174317
+668,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","j hydrogen",2100,"Primary Energy Consumption by Fuel (EJ)",0.0267089978
+669,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",1975,"Primary Energy Consumption by Fuel (EJ)",1.5594107398
+670,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",1990,"Primary Energy Consumption by Fuel (EJ)",2.0922640726
+671,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2005,"Primary Energy Consumption by Fuel (EJ)",3.60040152
+672,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2010,"Primary Energy Consumption by Fuel (EJ)",4.2438637247
+673,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2015,"Primary Energy Consumption by Fuel (EJ)",4.4986756889
+674,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2020,"Primary Energy Consumption by Fuel (EJ)",4.881747519
+675,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2025,"Primary Energy Consumption by Fuel (EJ)",5.1126531722
+676,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2030,"Primary Energy Consumption by Fuel (EJ)",5.3245299609
+677,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2035,"Primary Energy Consumption by Fuel (EJ)",5.5451276503
+678,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2040,"Primary Energy Consumption by Fuel (EJ)",5.7353710524
+679,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2045,"Primary Energy Consumption by Fuel (EJ)",5.847621114
+680,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2050,"Primary Energy Consumption by Fuel (EJ)",5.915486874
+681,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2055,"Primary Energy Consumption by Fuel (EJ)",5.963028656
+682,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2060,"Primary Energy Consumption by Fuel (EJ)",5.998166525
+683,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2065,"Primary Energy Consumption by Fuel (EJ)",6.02273981
+684,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2070,"Primary Energy Consumption by Fuel (EJ)",6.041308179
+685,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2075,"Primary Energy Consumption by Fuel (EJ)",6.054353096
+686,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2080,"Primary Energy Consumption by Fuel (EJ)",6.06005533
+687,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2085,"Primary Energy Consumption by Fuel (EJ)",6.06039503
+688,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2090,"Primary Energy Consumption by Fuel (EJ)",6.057520143
+689,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2095,"Primary Energy Consumption by Fuel (EJ)",6.052237905
+690,"energyPrimaryByFuelEJ","GCAM_SSP3","gcamv7p0","global","Fuel","woodpulp_energy",2100,"Primary Energy Consumption by Fuel (EJ)",6.045827108
+691,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",1990,"Primary Energy Consumption by Fuel (EJ)",72.70134942
+692,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2005,"Primary Energy Consumption by Fuel (EJ)",80.23121425
+693,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2010,"Primary Energy Consumption by Fuel (EJ)",88.253983276
+694,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2015,"Primary Energy Consumption by Fuel (EJ)",90.3894724223
+695,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2020,"Primary Energy Consumption by Fuel (EJ)",101.54459158
+696,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2025,"Primary Energy Consumption by Fuel (EJ)",99.3967
+697,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2030,"Primary Energy Consumption by Fuel (EJ)",99.3370821
+698,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2035,"Primary Energy Consumption by Fuel (EJ)",98.2347589
+699,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2040,"Primary Energy Consumption by Fuel (EJ)",95.0214583
+700,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2045,"Primary Energy Consumption by Fuel (EJ)",90.1702411
+701,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2050,"Primary Energy Consumption by Fuel (EJ)",84.6512864
+702,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2055,"Primary Energy Consumption by Fuel (EJ)",81.9964017
+703,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2060,"Primary Energy Consumption by Fuel (EJ)",81.39168398
+704,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2065,"Primary Energy Consumption by Fuel (EJ)",81.66989619
+705,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2070,"Primary Energy Consumption by Fuel (EJ)",83.01887945
+706,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2075,"Primary Energy Consumption by Fuel (EJ)",82.61657811
+707,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2080,"Primary Energy Consumption by Fuel (EJ)",80.81041178
+708,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2085,"Primary Energy Consumption by Fuel (EJ)",78.105442531
+709,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2090,"Primary Energy Consumption by Fuel (EJ)",75.430664238
+710,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2095,"Primary Energy Consumption by Fuel (EJ)",73.180299588
+711,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","a oil",2100,"Primary Energy Consumption by Fuel (EJ)",71.609763393
+712,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",1975,"Primary Energy Consumption by Fuel (EJ)",19.45834586
+713,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",1990,"Primary Energy Consumption by Fuel (EJ)",57.9401669
+714,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2005,"Primary Energy Consumption by Fuel (EJ)",74.9921853
+715,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2010,"Primary Energy Consumption by Fuel (EJ)",88.71974
+716,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2015,"Primary Energy Consumption by Fuel (EJ)",91.9008007
+717,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2020,"Primary Energy Consumption by Fuel (EJ)",105.34390754
+718,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2025,"Primary Energy Consumption by Fuel (EJ)",113.5999145805
+719,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2030,"Primary Energy Consumption by Fuel (EJ)",124.1637632965
+720,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2035,"Primary Energy Consumption by Fuel (EJ)",132.9824303153
+721,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2040,"Primary Energy Consumption by Fuel (EJ)",139.0521199236
+722,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2045,"Primary Energy Consumption by Fuel (EJ)",144.6690336388
+723,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2050,"Primary Energy Consumption by Fuel (EJ)",149.5505712154
+724,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2055,"Primary Energy Consumption by Fuel (EJ)",155.299635608
+725,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2060,"Primary Energy Consumption by Fuel (EJ)",159.8543575058
+726,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2065,"Primary Energy Consumption by Fuel (EJ)",157.7654205263
+727,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2070,"Primary Energy Consumption by Fuel (EJ)",157.635095785
+728,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2075,"Primary Energy Consumption by Fuel (EJ)",156.044906416
+729,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2080,"Primary Energy Consumption by Fuel (EJ)",153.725400509
+730,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2085,"Primary Energy Consumption by Fuel (EJ)",151.02181008
+731,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2090,"Primary Energy Consumption by Fuel (EJ)",149.306694402
+732,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2095,"Primary Energy Consumption by Fuel (EJ)",148.493608285
+733,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","b natural gas",2100,"Primary Energy Consumption by Fuel (EJ)",146.862847147
+734,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",1975,"Primary Energy Consumption by Fuel (EJ)",23.9890080265
+735,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",1990,"Primary Energy Consumption by Fuel (EJ)",82.2551282201
+736,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2005,"Primary Energy Consumption by Fuel (EJ)",108.4579367419
+737,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2010,"Primary Energy Consumption by Fuel (EJ)",127.4856196648
+738,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2015,"Primary Energy Consumption by Fuel (EJ)",127.169981497013
+739,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2020,"Primary Energy Consumption by Fuel (EJ)",145.395481534
+740,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2025,"Primary Energy Consumption by Fuel (EJ)",154.332029709
+741,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2030,"Primary Energy Consumption by Fuel (EJ)",154.846810545
+742,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2035,"Primary Energy Consumption by Fuel (EJ)",150.635383315
+743,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2040,"Primary Energy Consumption by Fuel (EJ)",143.876095715
+744,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2045,"Primary Energy Consumption by Fuel (EJ)",135.77220936
+745,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2050,"Primary Energy Consumption by Fuel (EJ)",126.77497634
+746,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2055,"Primary Energy Consumption by Fuel (EJ)",117.23995079
+747,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2060,"Primary Energy Consumption by Fuel (EJ)",108.76687332
+748,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2065,"Primary Energy Consumption by Fuel (EJ)",102.57535736
+749,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2070,"Primary Energy Consumption by Fuel (EJ)",97.547026424
+750,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2075,"Primary Energy Consumption by Fuel (EJ)",92.063380571
+751,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2080,"Primary Energy Consumption by Fuel (EJ)",82.421073115
+752,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2085,"Primary Energy Consumption by Fuel (EJ)",74.342672099
+753,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2090,"Primary Energy Consumption by Fuel (EJ)",66.162329295
+754,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2095,"Primary Energy Consumption by Fuel (EJ)",59.7615235791
+755,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","c coal",2100,"Primary Energy Consumption by Fuel (EJ)",53.6797318232
+756,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",1975,"Primary Energy Consumption by Fuel (EJ)",4.17529461
+757,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",1990,"Primary Energy Consumption by Fuel (EJ)",35.7580939896
+758,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2005,"Primary Energy Consumption by Fuel (EJ)",41.9127598507
+759,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2010,"Primary Energy Consumption by Fuel (EJ)",46.6025835672
+760,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2015,"Primary Energy Consumption by Fuel (EJ)",49.787283719
+761,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2020,"Primary Energy Consumption by Fuel (EJ)",59.5560972562665
+762,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2025,"Primary Energy Consumption by Fuel (EJ)",72.4611981224569
+763,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2030,"Primary Energy Consumption by Fuel (EJ)",83.7207054250588
+764,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2035,"Primary Energy Consumption by Fuel (EJ)",95.7358606451859
+765,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2040,"Primary Energy Consumption by Fuel (EJ)",112.022637236271
+766,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2045,"Primary Energy Consumption by Fuel (EJ)",133.134368454451
+767,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2050,"Primary Energy Consumption by Fuel (EJ)",154.290282601601
+768,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2055,"Primary Energy Consumption by Fuel (EJ)",166.117662452136
+769,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2060,"Primary Energy Consumption by Fuel (EJ)",170.544582148088
+770,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2065,"Primary Energy Consumption by Fuel (EJ)",172.630746448227
+771,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2070,"Primary Energy Consumption by Fuel (EJ)",171.746530762339
+772,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2075,"Primary Energy Consumption by Fuel (EJ)",170.688294723483
+773,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2080,"Primary Energy Consumption by Fuel (EJ)",169.939378286365
+774,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2085,"Primary Energy Consumption by Fuel (EJ)",169.489106902257
+775,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2090,"Primary Energy Consumption by Fuel (EJ)",169.062890204354
+776,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2095,"Primary Energy Consumption by Fuel (EJ)",168.392989242201
+777,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","d bioenergy",2100,"Primary Energy Consumption by Fuel (EJ)",167.703115335401
+778,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",1990,"Primary Energy Consumption by Fuel (EJ)",7.2459284725
+779,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2005,"Primary Energy Consumption by Fuel (EJ)",9.964242726
+780,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2010,"Primary Energy Consumption by Fuel (EJ)",9.922119719
+781,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2015,"Primary Energy Consumption by Fuel (EJ)",9.247351843
+782,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2020,"Primary Energy Consumption by Fuel (EJ)",10.4241593076803
+783,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2025,"Primary Energy Consumption by Fuel (EJ)",12.1086088233557
+784,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2030,"Primary Energy Consumption by Fuel (EJ)",14.1046606174957
+785,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2035,"Primary Energy Consumption by Fuel (EJ)",16.1721291474908
+786,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2040,"Primary Energy Consumption by Fuel (EJ)",18.0963946090492
+787,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2045,"Primary Energy Consumption by Fuel (EJ)",20.2484777860395
+788,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2050,"Primary Energy Consumption by Fuel (EJ)",21.9335111303525
+789,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2055,"Primary Energy Consumption by Fuel (EJ)",23.4773752534552
+790,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2060,"Primary Energy Consumption by Fuel (EJ)",25.079141722
+791,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2065,"Primary Energy Consumption by Fuel (EJ)",26.842727231992
+792,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2070,"Primary Energy Consumption by Fuel (EJ)",28.3041004731138
+793,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2075,"Primary Energy Consumption by Fuel (EJ)",29.5608488337587
+794,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2080,"Primary Energy Consumption by Fuel (EJ)",30.027054923846
+795,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2085,"Primary Energy Consumption by Fuel (EJ)",29.962775655465
+796,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2090,"Primary Energy Consumption by Fuel (EJ)",29.296455386625
+797,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2095,"Primary Energy Consumption by Fuel (EJ)",28.1842419722079
+798,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","e nuclear",2100,"Primary Energy Consumption by Fuel (EJ)",26.7987531111546
+799,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",1990,"Primary Energy Consumption by Fuel (EJ)",7.7098954
+800,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2005,"Primary Energy Consumption by Fuel (EJ)",10.5673404
+801,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2010,"Primary Energy Consumption by Fuel (EJ)",12.3974942
+802,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2015,"Primary Energy Consumption by Fuel (EJ)",14.0511296
+803,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2020,"Primary Energy Consumption by Fuel (EJ)",14.4909747
+804,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2025,"Primary Energy Consumption by Fuel (EJ)",14.9308109
+805,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2030,"Primary Energy Consumption by Fuel (EJ)",15.370655
+806,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2035,"Primary Energy Consumption by Fuel (EJ)",15.8104884
+807,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2040,"Primary Energy Consumption by Fuel (EJ)",16.2503269
+808,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2045,"Primary Energy Consumption by Fuel (EJ)",16.6901682
+809,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2050,"Primary Energy Consumption by Fuel (EJ)",17.1300046
+810,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2055,"Primary Energy Consumption by Fuel (EJ)",17.569847
+811,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2060,"Primary Energy Consumption by Fuel (EJ)",18.0096831
+812,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2065,"Primary Energy Consumption by Fuel (EJ)",18.4495293
+813,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2070,"Primary Energy Consumption by Fuel (EJ)",18.8893555
+814,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2075,"Primary Energy Consumption by Fuel (EJ)",19.3291855
+815,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2080,"Primary Energy Consumption by Fuel (EJ)",19.7690387
+816,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2085,"Primary Energy Consumption by Fuel (EJ)",20.208873
+817,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2090,"Primary Energy Consumption by Fuel (EJ)",20.6487121
+818,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2095,"Primary Energy Consumption by Fuel (EJ)",21.0885442
+819,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","f hydro",2100,"Primary Energy Consumption by Fuel (EJ)",21.5283995
+820,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",1990,"Primary Energy Consumption by Fuel (EJ)",0.01396779499
+821,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2005,"Primary Energy Consumption by Fuel (EJ)",0.3738380283
+822,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2010,"Primary Energy Consumption by Fuel (EJ)",1.22869505602
+823,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2015,"Primary Energy Consumption by Fuel (EJ)",3.0154911797
+824,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2020,"Primary Energy Consumption by Fuel (EJ)",5.5718242203937
+825,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2025,"Primary Energy Consumption by Fuel (EJ)",8.806628507197
+826,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2030,"Primary Energy Consumption by Fuel (EJ)",13.225214412349
+827,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2035,"Primary Energy Consumption by Fuel (EJ)",18.3514296471628
+828,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2040,"Primary Energy Consumption by Fuel (EJ)",23.9879322496283
+829,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2045,"Primary Energy Consumption by Fuel (EJ)",27.9205607189837
+830,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2050,"Primary Energy Consumption by Fuel (EJ)",32.0367399400045
+831,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2055,"Primary Energy Consumption by Fuel (EJ)",35.7277156358326
+832,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2060,"Primary Energy Consumption by Fuel (EJ)",38.735009751504
+833,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2065,"Primary Energy Consumption by Fuel (EJ)",41.65074249251
+834,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2070,"Primary Energy Consumption by Fuel (EJ)",43.530351456644
+835,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2075,"Primary Energy Consumption by Fuel (EJ)",45.335367144195
+836,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2080,"Primary Energy Consumption by Fuel (EJ)",49.111656577049
+837,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2085,"Primary Energy Consumption by Fuel (EJ)",52.031406450585
+838,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2090,"Primary Energy Consumption by Fuel (EJ)",54.487448119833
+839,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2095,"Primary Energy Consumption by Fuel (EJ)",56.305685491866
+840,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","g wind",2100,"Primary Energy Consumption by Fuel (EJ)",57.811993210315
+841,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",1990,"Primary Energy Consumption by Fuel (EJ)",0.00271075487
+842,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2005,"Primary Energy Consumption by Fuel (EJ)",0.01628922641
+843,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2010,"Primary Energy Consumption by Fuel (EJ)",0.12190938197
+844,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2015,"Primary Energy Consumption by Fuel (EJ)",0.93604056536
+845,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2020,"Primary Energy Consumption by Fuel (EJ)",3.90775727361784
+846,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2025,"Primary Energy Consumption by Fuel (EJ)",11.4707768682075
+847,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2030,"Primary Energy Consumption by Fuel (EJ)",19.578615858824
+848,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2035,"Primary Energy Consumption by Fuel (EJ)",27.2707167498936
+849,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2040,"Primary Energy Consumption by Fuel (EJ)",34.6479963444349
+850,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2045,"Primary Energy Consumption by Fuel (EJ)",41.4894080408999
+851,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2050,"Primary Energy Consumption by Fuel (EJ)",47.4917090837319
+852,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2055,"Primary Energy Consumption by Fuel (EJ)",51.9299476724315
+853,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2060,"Primary Energy Consumption by Fuel (EJ)",55.9082478494802
+854,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2065,"Primary Energy Consumption by Fuel (EJ)",60.385067087541
+855,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2070,"Primary Energy Consumption by Fuel (EJ)",63.9519749920769
+856,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2075,"Primary Energy Consumption by Fuel (EJ)",67.3870869358588
+857,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2080,"Primary Energy Consumption by Fuel (EJ)",71.9562954125809
+858,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2085,"Primary Energy Consumption by Fuel (EJ)",75.7403127836198
+859,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2090,"Primary Energy Consumption by Fuel (EJ)",78.9642729588612
+860,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2095,"Primary Energy Consumption by Fuel (EJ)",81.6121543371753
+861,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","h solar",2100,"Primary Energy Consumption by Fuel (EJ)",84.4196990062121
+862,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",1990,"Primary Energy Consumption by Fuel (EJ)",0.13092182906
+863,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2005,"Primary Energy Consumption by Fuel (EJ)",0.209586759
+864,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2010,"Primary Energy Consumption by Fuel (EJ)",0.24497185
+865,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2015,"Primary Energy Consumption by Fuel (EJ)",0.289629778
+866,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2020,"Primary Energy Consumption by Fuel (EJ)",0.996664372
+867,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2025,"Primary Energy Consumption by Fuel (EJ)",1.612092892
+868,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2030,"Primary Energy Consumption by Fuel (EJ)",2.235575998
+869,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2035,"Primary Energy Consumption by Fuel (EJ)",2.807202578
+870,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2040,"Primary Energy Consumption by Fuel (EJ)",3.322041776
+871,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2045,"Primary Energy Consumption by Fuel (EJ)",3.639599393
+872,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2050,"Primary Energy Consumption by Fuel (EJ)",3.636838331
+873,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2055,"Primary Energy Consumption by Fuel (EJ)",3.671161005
+874,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2060,"Primary Energy Consumption by Fuel (EJ)",3.676848366
+875,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2065,"Primary Energy Consumption by Fuel (EJ)",3.739281307
+876,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2070,"Primary Energy Consumption by Fuel (EJ)",3.740352254
+877,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2075,"Primary Energy Consumption by Fuel (EJ)",3.743101923
+878,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2080,"Primary Energy Consumption by Fuel (EJ)",3.857349256
+879,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2085,"Primary Energy Consumption by Fuel (EJ)",3.894134121
+880,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2090,"Primary Energy Consumption by Fuel (EJ)",3.921498511
+881,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2095,"Primary Energy Consumption by Fuel (EJ)",3.903793034
+882,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","i geothermal",2100,"Primary Energy Consumption by Fuel (EJ)",3.908796713
+883,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2025,"Primary Energy Consumption by Fuel (EJ)",0.00508472030698
+884,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2030,"Primary Energy Consumption by Fuel (EJ)",0.03380046283
+885,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2035,"Primary Energy Consumption by Fuel (EJ)",0.0519220966
+886,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2040,"Primary Energy Consumption by Fuel (EJ)",0.0870243694
+887,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2045,"Primary Energy Consumption by Fuel (EJ)",0.1321177026
+888,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2050,"Primary Energy Consumption by Fuel (EJ)",0.1418960762
+889,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2055,"Primary Energy Consumption by Fuel (EJ)",0.109079833
+890,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2060,"Primary Energy Consumption by Fuel (EJ)",0.0676284132
+891,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2065,"Primary Energy Consumption by Fuel (EJ)",0.057614095
+892,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2070,"Primary Energy Consumption by Fuel (EJ)",0.0540997814
+893,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2075,"Primary Energy Consumption by Fuel (EJ)",0.0789269329
+894,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2080,"Primary Energy Consumption by Fuel (EJ)",0.100148832
+895,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2085,"Primary Energy Consumption by Fuel (EJ)",0.1023997745
+896,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2090,"Primary Energy Consumption by Fuel (EJ)",0.0883765324
+897,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2095,"Primary Energy Consumption by Fuel (EJ)",0.0714003413
+898,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","j hydrogen",2100,"Primary Energy Consumption by Fuel (EJ)",0.0633465982
+899,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",1975,"Primary Energy Consumption by Fuel (EJ)",1.5594107398
+900,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",1990,"Primary Energy Consumption by Fuel (EJ)",2.0922640726
+901,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2005,"Primary Energy Consumption by Fuel (EJ)",3.60040152
+902,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2010,"Primary Energy Consumption by Fuel (EJ)",4.2438637247
+903,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2015,"Primary Energy Consumption by Fuel (EJ)",4.4986756889
+904,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2020,"Primary Energy Consumption by Fuel (EJ)",4.8833000357
+905,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2025,"Primary Energy Consumption by Fuel (EJ)",5.1226803441
+906,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2030,"Primary Energy Consumption by Fuel (EJ)",5.3593593401
+907,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2035,"Primary Energy Consumption by Fuel (EJ)",5.6092117144
+908,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2040,"Primary Energy Consumption by Fuel (EJ)",5.8172275427
+909,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2045,"Primary Energy Consumption by Fuel (EJ)",5.937817502
+910,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2050,"Primary Energy Consumption by Fuel (EJ)",5.995514261
+911,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2055,"Primary Energy Consumption by Fuel (EJ)",6.022836753
+912,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2060,"Primary Energy Consumption by Fuel (EJ)",6.024700994
+913,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2065,"Primary Energy Consumption by Fuel (EJ)",5.998479327
+914,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2070,"Primary Energy Consumption by Fuel (EJ)",5.94814305
+915,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2075,"Primary Energy Consumption by Fuel (EJ)",5.873920589
+916,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2080,"Primary Energy Consumption by Fuel (EJ)",5.776538981
+917,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2085,"Primary Energy Consumption by Fuel (EJ)",5.660555531
+918,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2090,"Primary Energy Consumption by Fuel (EJ)",5.531861503
+919,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2095,"Primary Energy Consumption by Fuel (EJ)",5.393024803
+920,"energyPrimaryByFuelEJ","GCAM_SSP4","gcamv7p0","global","Fuel","woodpulp_energy",2100,"Primary Energy Consumption by Fuel (EJ)",5.24516049
+921,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",1990,"Primary Energy Consumption by Fuel (EJ)",72.70134942
+922,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2005,"Primary Energy Consumption by Fuel (EJ)",80.23121425
+923,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2010,"Primary Energy Consumption by Fuel (EJ)",88.253983276
+924,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2015,"Primary Energy Consumption by Fuel (EJ)",90.3894724223
+925,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2020,"Primary Energy Consumption by Fuel (EJ)",102.5294521
+926,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2025,"Primary Energy Consumption by Fuel (EJ)",104.2030904
+927,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2030,"Primary Energy Consumption by Fuel (EJ)",110.4934208
+928,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2035,"Primary Energy Consumption by Fuel (EJ)",115.2756238
+929,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2040,"Primary Energy Consumption by Fuel (EJ)",119.3261016
+930,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2045,"Primary Energy Consumption by Fuel (EJ)",121.6680181
+931,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2050,"Primary Energy Consumption by Fuel (EJ)",122.3699508
+932,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2055,"Primary Energy Consumption by Fuel (EJ)",124.1224518
+933,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2060,"Primary Energy Consumption by Fuel (EJ)",126.26888243
+934,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2065,"Primary Energy Consumption by Fuel (EJ)",128.28056319
+935,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2070,"Primary Energy Consumption by Fuel (EJ)",130.30416427
+936,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2075,"Primary Energy Consumption by Fuel (EJ)",132.35283353
+937,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2080,"Primary Energy Consumption by Fuel (EJ)",135.44946799
+938,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2085,"Primary Energy Consumption by Fuel (EJ)",138.218720572
+939,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2090,"Primary Energy Consumption by Fuel (EJ)",140.246000794
+940,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2095,"Primary Energy Consumption by Fuel (EJ)",141.994793738
+941,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","a oil",2100,"Primary Energy Consumption by Fuel (EJ)",143.799929589
+942,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",1975,"Primary Energy Consumption by Fuel (EJ)",19.45834586
+943,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",1990,"Primary Energy Consumption by Fuel (EJ)",57.9401669
+944,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2005,"Primary Energy Consumption by Fuel (EJ)",74.9921853
+945,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2010,"Primary Energy Consumption by Fuel (EJ)",88.71974
+946,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2015,"Primary Energy Consumption by Fuel (EJ)",91.9008007
+947,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2020,"Primary Energy Consumption by Fuel (EJ)",110.59523876
+948,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2025,"Primary Energy Consumption by Fuel (EJ)",128.71489762
+949,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2030,"Primary Energy Consumption by Fuel (EJ)",152.66942622
+950,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2035,"Primary Energy Consumption by Fuel (EJ)",176.97422268
+951,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2040,"Primary Energy Consumption by Fuel (EJ)",199.633709978
+952,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2045,"Primary Energy Consumption by Fuel (EJ)",222.133750407
+953,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2050,"Primary Energy Consumption by Fuel (EJ)",241.152919085
+954,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2055,"Primary Energy Consumption by Fuel (EJ)",258.043585234
+955,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2060,"Primary Energy Consumption by Fuel (EJ)",271.8730589
+956,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2065,"Primary Energy Consumption by Fuel (EJ)",276.13746979
+957,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2070,"Primary Energy Consumption by Fuel (EJ)",280.038103522
+958,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2075,"Primary Energy Consumption by Fuel (EJ)",279.83129003
+959,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2080,"Primary Energy Consumption by Fuel (EJ)",277.651674814
+960,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2085,"Primary Energy Consumption by Fuel (EJ)",275.066728706
+961,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2090,"Primary Energy Consumption by Fuel (EJ)",274.177318332
+962,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2095,"Primary Energy Consumption by Fuel (EJ)",273.960385003
+963,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","b natural gas",2100,"Primary Energy Consumption by Fuel (EJ)",274.7960704012
+964,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",1975,"Primary Energy Consumption by Fuel (EJ)",23.9890080265
+965,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",1990,"Primary Energy Consumption by Fuel (EJ)",82.2551282201
+966,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2005,"Primary Energy Consumption by Fuel (EJ)",108.4579367419
+967,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2010,"Primary Energy Consumption by Fuel (EJ)",127.4856196648
+968,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2015,"Primary Energy Consumption by Fuel (EJ)",127.169981497013
+969,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2020,"Primary Energy Consumption by Fuel (EJ)",149.871899745
+970,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2025,"Primary Energy Consumption by Fuel (EJ)",171.506825857
+971,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2030,"Primary Energy Consumption by Fuel (EJ)",188.557120543
+972,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2035,"Primary Energy Consumption by Fuel (EJ)",200.85442493
+973,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2040,"Primary Energy Consumption by Fuel (EJ)",208.63019976
+974,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2045,"Primary Energy Consumption by Fuel (EJ)",213.59346107
+975,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2050,"Primary Energy Consumption by Fuel (EJ)",217.47960625
+976,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2055,"Primary Energy Consumption by Fuel (EJ)",219.12896978
+977,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2060,"Primary Energy Consumption by Fuel (EJ)",219.97439141
+978,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2065,"Primary Energy Consumption by Fuel (EJ)",222.593369571
+979,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2070,"Primary Energy Consumption by Fuel (EJ)",225.130157092
+980,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2075,"Primary Energy Consumption by Fuel (EJ)",225.965561067
+981,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2080,"Primary Energy Consumption by Fuel (EJ)",218.865763041
+982,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2085,"Primary Energy Consumption by Fuel (EJ)",209.9609965492
+983,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2090,"Primary Energy Consumption by Fuel (EJ)",198.59257083715
+984,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2095,"Primary Energy Consumption by Fuel (EJ)",186.26795393822
+985,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","c coal",2100,"Primary Energy Consumption by Fuel (EJ)",174.120636407519
+986,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",1975,"Primary Energy Consumption by Fuel (EJ)",4.17529461
+987,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",1990,"Primary Energy Consumption by Fuel (EJ)",35.7580939896
+988,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2005,"Primary Energy Consumption by Fuel (EJ)",41.9127598507
+989,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2010,"Primary Energy Consumption by Fuel (EJ)",46.6025835672
+990,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2015,"Primary Energy Consumption by Fuel (EJ)",49.787283719
+991,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2020,"Primary Energy Consumption by Fuel (EJ)",54.41418009735
+992,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2025,"Primary Energy Consumption by Fuel (EJ)",64.763502259719
+993,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2030,"Primary Energy Consumption by Fuel (EJ)",76.556467123653
+994,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2035,"Primary Energy Consumption by Fuel (EJ)",90.30123472415
+995,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2040,"Primary Energy Consumption by Fuel (EJ)",105.444419314434
+996,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2045,"Primary Energy Consumption by Fuel (EJ)",122.116224647338
+997,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2050,"Primary Energy Consumption by Fuel (EJ)",137.364447600462
+998,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2055,"Primary Energy Consumption by Fuel (EJ)",143.017577748953
+999,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2060,"Primary Energy Consumption by Fuel (EJ)",144.137555588319
+1000,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2065,"Primary Energy Consumption by Fuel (EJ)",143.392761840351
+1001,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2070,"Primary Energy Consumption by Fuel (EJ)",140.962992852822
+1002,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2075,"Primary Energy Consumption by Fuel (EJ)",137.887018483535
+1003,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2080,"Primary Energy Consumption by Fuel (EJ)",133.716414541295
+1004,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2085,"Primary Energy Consumption by Fuel (EJ)",129.416541633395
+1005,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2090,"Primary Energy Consumption by Fuel (EJ)",124.79588552394
+1006,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2095,"Primary Energy Consumption by Fuel (EJ)",119.349148517728
+1007,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","d bioenergy",2100,"Primary Energy Consumption by Fuel (EJ)",113.217972562568
+1008,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",1990,"Primary Energy Consumption by Fuel (EJ)",7.2459284725
+1009,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2005,"Primary Energy Consumption by Fuel (EJ)",9.964242726
+1010,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2010,"Primary Energy Consumption by Fuel (EJ)",9.922119719
+1011,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2015,"Primary Energy Consumption by Fuel (EJ)",9.247351843
+1012,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2020,"Primary Energy Consumption by Fuel (EJ)",10.5414333806944
+1013,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2025,"Primary Energy Consumption by Fuel (EJ)",12.7606489542499
+1014,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2030,"Primary Energy Consumption by Fuel (EJ)",15.6012793518647
+1015,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2035,"Primary Energy Consumption by Fuel (EJ)",18.6164875612527
+1016,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2040,"Primary Energy Consumption by Fuel (EJ)",21.383577187686
+1017,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2045,"Primary Energy Consumption by Fuel (EJ)",24.1905275076858
+1018,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2050,"Primary Energy Consumption by Fuel (EJ)",26.4893548681925
+1019,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2055,"Primary Energy Consumption by Fuel (EJ)",28.5842827693792
+1020,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2060,"Primary Energy Consumption by Fuel (EJ)",30.6985269230323
+1021,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2065,"Primary Energy Consumption by Fuel (EJ)",32.947634015124
+1022,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2070,"Primary Energy Consumption by Fuel (EJ)",34.8586806193453
+1023,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2075,"Primary Energy Consumption by Fuel (EJ)",36.3856645287421
+1024,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2080,"Primary Energy Consumption by Fuel (EJ)",36.937252520375
+1025,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2085,"Primary Energy Consumption by Fuel (EJ)",36.7030426507442
+1026,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2090,"Primary Energy Consumption by Fuel (EJ)",35.5472624099521
+1027,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2095,"Primary Energy Consumption by Fuel (EJ)",33.6863436357104
+1028,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","e nuclear",2100,"Primary Energy Consumption by Fuel (EJ)",31.5126496306693
+1029,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",1990,"Primary Energy Consumption by Fuel (EJ)",7.7098954
+1030,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2005,"Primary Energy Consumption by Fuel (EJ)",10.5673404
+1031,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2010,"Primary Energy Consumption by Fuel (EJ)",12.3974942
+1032,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2015,"Primary Energy Consumption by Fuel (EJ)",14.0511296
+1033,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2020,"Primary Energy Consumption by Fuel (EJ)",14.4909747
+1034,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2025,"Primary Energy Consumption by Fuel (EJ)",14.9308109
+1035,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2030,"Primary Energy Consumption by Fuel (EJ)",15.370655
+1036,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2035,"Primary Energy Consumption by Fuel (EJ)",15.8104884
+1037,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2040,"Primary Energy Consumption by Fuel (EJ)",16.2503269
+1038,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2045,"Primary Energy Consumption by Fuel (EJ)",16.6901682
+1039,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2050,"Primary Energy Consumption by Fuel (EJ)",17.1300046
+1040,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2055,"Primary Energy Consumption by Fuel (EJ)",17.569847
+1041,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2060,"Primary Energy Consumption by Fuel (EJ)",18.0096831
+1042,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2065,"Primary Energy Consumption by Fuel (EJ)",18.4495293
+1043,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2070,"Primary Energy Consumption by Fuel (EJ)",18.8893555
+1044,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2075,"Primary Energy Consumption by Fuel (EJ)",19.3291855
+1045,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2080,"Primary Energy Consumption by Fuel (EJ)",19.7690387
+1046,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2085,"Primary Energy Consumption by Fuel (EJ)",20.208873
+1047,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2090,"Primary Energy Consumption by Fuel (EJ)",20.6487121
+1048,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2095,"Primary Energy Consumption by Fuel (EJ)",21.0885442
+1049,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","f hydro",2100,"Primary Energy Consumption by Fuel (EJ)",21.5283995
+1050,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",1990,"Primary Energy Consumption by Fuel (EJ)",0.01396779499
+1051,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2005,"Primary Energy Consumption by Fuel (EJ)",0.3738380283
+1052,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2010,"Primary Energy Consumption by Fuel (EJ)",1.22869505602
+1053,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2015,"Primary Energy Consumption by Fuel (EJ)",3.0154911797
+1054,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2020,"Primary Energy Consumption by Fuel (EJ)",5.73299919187718
+1055,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2025,"Primary Energy Consumption by Fuel (EJ)",9.70130106949448
+1056,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2030,"Primary Energy Consumption by Fuel (EJ)",15.5965244643965
+1057,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2035,"Primary Energy Consumption by Fuel (EJ)",22.965147912284
+1058,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2040,"Primary Energy Consumption by Fuel (EJ)",31.2128675212171
+1059,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2045,"Primary Energy Consumption by Fuel (EJ)",37.7445926391572
+1060,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2050,"Primary Energy Consumption by Fuel (EJ)",44.3049029069016
+1061,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2055,"Primary Energy Consumption by Fuel (EJ)",50.019836700347
+1062,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2060,"Primary Energy Consumption by Fuel (EJ)",54.389020647475
+1063,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2065,"Primary Energy Consumption by Fuel (EJ)",57.94752683954
+1064,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2070,"Primary Energy Consumption by Fuel (EJ)",59.949545982472
+1065,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2075,"Primary Energy Consumption by Fuel (EJ)",61.106011411734
+1066,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2080,"Primary Energy Consumption by Fuel (EJ)",64.178978168816
+1067,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2085,"Primary Energy Consumption by Fuel (EJ)",66.859113177079
+1068,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2090,"Primary Energy Consumption by Fuel (EJ)",68.86496992373
+1069,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2095,"Primary Energy Consumption by Fuel (EJ)",69.539850138239
+1070,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","g wind",2100,"Primary Energy Consumption by Fuel (EJ)",69.391876511805
+1071,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",1990,"Primary Energy Consumption by Fuel (EJ)",0.00271075487
+1072,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2005,"Primary Energy Consumption by Fuel (EJ)",0.01628922641
+1073,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2010,"Primary Energy Consumption by Fuel (EJ)",0.12190938197
+1074,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2015,"Primary Energy Consumption by Fuel (EJ)",0.93604056536
+1075,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2020,"Primary Energy Consumption by Fuel (EJ)",2.82287149993777
+1076,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2025,"Primary Energy Consumption by Fuel (EJ)",8.04512869259722
+1077,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2030,"Primary Energy Consumption by Fuel (EJ)",16.6841934370248
+1078,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2035,"Primary Energy Consumption by Fuel (EJ)",26.7774017062467
+1079,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2040,"Primary Energy Consumption by Fuel (EJ)",37.1854558141266
+1080,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2045,"Primary Energy Consumption by Fuel (EJ)",47.1581639550371
+1081,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2050,"Primary Energy Consumption by Fuel (EJ)",56.3827787230323
+1082,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2055,"Primary Energy Consumption by Fuel (EJ)",63.8698071092573
+1083,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2060,"Primary Energy Consumption by Fuel (EJ)",69.426061284583
+1084,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2065,"Primary Energy Consumption by Fuel (EJ)",73.886358786455
+1085,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2070,"Primary Energy Consumption by Fuel (EJ)",76.5344155838938
+1086,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2075,"Primary Energy Consumption by Fuel (EJ)",78.3705200736179
+1087,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2080,"Primary Energy Consumption by Fuel (EJ)",80.5335504780586
+1088,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2085,"Primary Energy Consumption by Fuel (EJ)",81.7090715702437
+1089,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2090,"Primary Energy Consumption by Fuel (EJ)",81.9646844081461
+1090,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2095,"Primary Energy Consumption by Fuel (EJ)",80.8929985146365
+1091,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","h solar",2100,"Primary Energy Consumption by Fuel (EJ)",79.3305687120166
+1092,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",1990,"Primary Energy Consumption by Fuel (EJ)",0.13092182906
+1093,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2005,"Primary Energy Consumption by Fuel (EJ)",0.209586759
+1094,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2010,"Primary Energy Consumption by Fuel (EJ)",0.24497185
+1095,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2015,"Primary Energy Consumption by Fuel (EJ)",0.289629778
+1096,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2020,"Primary Energy Consumption by Fuel (EJ)",0.8418050389
+1097,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2025,"Primary Energy Consumption by Fuel (EJ)",1.3962567139
+1098,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2030,"Primary Energy Consumption by Fuel (EJ)",1.954780465
+1099,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2035,"Primary Energy Consumption by Fuel (EJ)",2.4927162495
+1100,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2040,"Primary Energy Consumption by Fuel (EJ)",2.9207444367
+1101,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2045,"Primary Energy Consumption by Fuel (EJ)",3.0858679679
+1102,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2050,"Primary Energy Consumption by Fuel (EJ)",3.1696001172
+1103,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2055,"Primary Energy Consumption by Fuel (EJ)",3.2096042613
+1104,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2060,"Primary Energy Consumption by Fuel (EJ)",3.2124197195
+1105,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2065,"Primary Energy Consumption by Fuel (EJ)",3.248033365
+1106,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2070,"Primary Energy Consumption by Fuel (EJ)",3.2343255703
+1107,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2075,"Primary Energy Consumption by Fuel (EJ)",3.2302823428
+1108,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2080,"Primary Energy Consumption by Fuel (EJ)",3.2447086046
+1109,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2085,"Primary Energy Consumption by Fuel (EJ)",3.2501795412
+1110,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2090,"Primary Energy Consumption by Fuel (EJ)",3.2340816282
+1111,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2095,"Primary Energy Consumption by Fuel (EJ)",3.1697006411
+1112,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","i geothermal",2100,"Primary Energy Consumption by Fuel (EJ)",3.0899975209
+1113,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2025,"Primary Energy Consumption by Fuel (EJ)",0.00798538912
+1114,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2030,"Primary Energy Consumption by Fuel (EJ)",0.06062738762
+1115,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2035,"Primary Energy Consumption by Fuel (EJ)",0.0820588006
+1116,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2040,"Primary Energy Consumption by Fuel (EJ)",0.1064299559
+1117,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2045,"Primary Energy Consumption by Fuel (EJ)",0.1419442453
+1118,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2050,"Primary Energy Consumption by Fuel (EJ)",0.1503164596
+1119,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2055,"Primary Energy Consumption by Fuel (EJ)",0.1231869076
+1120,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2060,"Primary Energy Consumption by Fuel (EJ)",0.0927017369
+1121,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2065,"Primary Energy Consumption by Fuel (EJ)",0.0893741897
+1122,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2070,"Primary Energy Consumption by Fuel (EJ)",0.0885468353
+1123,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2075,"Primary Energy Consumption by Fuel (EJ)",0.107019366
+1124,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2080,"Primary Energy Consumption by Fuel (EJ)",0.1198579214
+1125,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2085,"Primary Energy Consumption by Fuel (EJ)",0.1202309368
+1126,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2090,"Primary Energy Consumption by Fuel (EJ)",0.1132867762
+1127,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2095,"Primary Energy Consumption by Fuel (EJ)",0.1064082357
+1128,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","j hydrogen",2100,"Primary Energy Consumption by Fuel (EJ)",0.1095591185
+1129,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",1975,"Primary Energy Consumption by Fuel (EJ)",1.5594107398
+1130,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",1990,"Primary Energy Consumption by Fuel (EJ)",2.0922640726
+1131,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2005,"Primary Energy Consumption by Fuel (EJ)",3.60040152
+1132,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2010,"Primary Energy Consumption by Fuel (EJ)",4.2438637247
+1133,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2015,"Primary Energy Consumption by Fuel (EJ)",4.4986756889
+1134,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2020,"Primary Energy Consumption by Fuel (EJ)",4.9365088903
+1135,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2025,"Primary Energy Consumption by Fuel (EJ)",5.2899423344
+1136,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2030,"Primary Energy Consumption by Fuel (EJ)",5.6704283542
+1137,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2035,"Primary Energy Consumption by Fuel (EJ)",6.051730921
+1138,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2040,"Primary Energy Consumption by Fuel (EJ)",6.380357849
+1139,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2045,"Primary Energy Consumption by Fuel (EJ)",6.615526206
+1140,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2050,"Primary Energy Consumption by Fuel (EJ)",6.791931831
+1141,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2055,"Primary Energy Consumption by Fuel (EJ)",6.940379981
+1142,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2060,"Primary Energy Consumption by Fuel (EJ)",7.067735252
+1143,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2065,"Primary Energy Consumption by Fuel (EJ)",7.169005114
+1144,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2070,"Primary Energy Consumption by Fuel (EJ)",7.246558153
+1145,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2075,"Primary Energy Consumption by Fuel (EJ)",7.301864947
+1146,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2080,"Primary Energy Consumption by Fuel (EJ)",7.337485082
+1147,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2085,"Primary Energy Consumption by Fuel (EJ)",7.352255972
+1148,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2090,"Primary Energy Consumption by Fuel (EJ)",7.349238597
+1149,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2095,"Primary Energy Consumption by Fuel (EJ)",7.326266172
+1150,"energyPrimaryByFuelEJ","GCAM_SSP5","gcamv7p0","global","Fuel","woodpulp_energy",2100,"Primary Energy Consumption by Fuel (EJ)",7.282815022
+1151,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",1990,"Primary Energy Consumption by Fuel (EJ)",72.70134942
+1152,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2005,"Primary Energy Consumption by Fuel (EJ)",80.23121425
+1153,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2010,"Primary Energy Consumption by Fuel (EJ)",88.253983276
+1154,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2015,"Primary Energy Consumption by Fuel (EJ)",90.3894724223
+1155,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2020,"Primary Energy Consumption by Fuel (EJ)",91.35456974
+1156,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2025,"Primary Energy Consumption by Fuel (EJ)",90.0492566
+1157,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2030,"Primary Energy Consumption by Fuel (EJ)",86.791528
+1158,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2035,"Primary Energy Consumption by Fuel (EJ)",85.0418432
+1159,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2040,"Primary Energy Consumption by Fuel (EJ)",83.6944359
+1160,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2045,"Primary Energy Consumption by Fuel (EJ)",81.3615826
+1161,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2050,"Primary Energy Consumption by Fuel (EJ)",79.3244934
+1162,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2055,"Primary Energy Consumption by Fuel (EJ)",79.8414608
+1163,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2060,"Primary Energy Consumption by Fuel (EJ)",81.80877371
+1164,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2065,"Primary Energy Consumption by Fuel (EJ)",84.73656669
+1165,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2070,"Primary Energy Consumption by Fuel (EJ)",86.7442573
+1166,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2075,"Primary Energy Consumption by Fuel (EJ)",88.13203217
+1167,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2080,"Primary Energy Consumption by Fuel (EJ)",88.48455925
+1168,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2085,"Primary Energy Consumption by Fuel (EJ)",89.29836025
+1169,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2090,"Primary Energy Consumption by Fuel (EJ)",90.487504801
+1170,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2095,"Primary Energy Consumption by Fuel (EJ)",92.605225481
+1171,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","a oil",2100,"Primary Energy Consumption by Fuel (EJ)",95.382103648
+1172,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",1975,"Primary Energy Consumption by Fuel (EJ)",19.45834586
+1173,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",1990,"Primary Energy Consumption by Fuel (EJ)",57.9401669
+1174,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2005,"Primary Energy Consumption by Fuel (EJ)",74.9921853
+1175,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2010,"Primary Energy Consumption by Fuel (EJ)",88.71974
+1176,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2015,"Primary Energy Consumption by Fuel (EJ)",91.9008007
+1177,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2020,"Primary Energy Consumption by Fuel (EJ)",101.36329122
+1178,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2025,"Primary Energy Consumption by Fuel (EJ)",108.849352205
+1179,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2030,"Primary Energy Consumption by Fuel (EJ)",120.527894944
+1180,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2035,"Primary Energy Consumption by Fuel (EJ)",130.408142473
+1181,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2040,"Primary Energy Consumption by Fuel (EJ)",138.239514791
+1182,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2045,"Primary Energy Consumption by Fuel (EJ)",147.047176069
+1183,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2050,"Primary Energy Consumption by Fuel (EJ)",155.510196229
+1184,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2055,"Primary Energy Consumption by Fuel (EJ)",164.531666387
+1185,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2060,"Primary Energy Consumption by Fuel (EJ)",172.325350834
+1186,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2065,"Primary Energy Consumption by Fuel (EJ)",174.335630926
+1187,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2070,"Primary Energy Consumption by Fuel (EJ)",177.31844904
+1188,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2075,"Primary Energy Consumption by Fuel (EJ)",177.77381927
+1189,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2080,"Primary Energy Consumption by Fuel (EJ)",176.195836579
+1190,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2085,"Primary Energy Consumption by Fuel (EJ)",173.457503634
+1191,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2090,"Primary Energy Consumption by Fuel (EJ)",170.696746104
+1192,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2095,"Primary Energy Consumption by Fuel (EJ)",167.646665819
+1193,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","b natural gas",2100,"Primary Energy Consumption by Fuel (EJ)",164.807621888
+1194,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",1975,"Primary Energy Consumption by Fuel (EJ)",23.9890080265
+1195,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",1990,"Primary Energy Consumption by Fuel (EJ)",82.2551282201
+1196,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2005,"Primary Energy Consumption by Fuel (EJ)",108.4579367419
+1197,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2010,"Primary Energy Consumption by Fuel (EJ)",127.4856196648
+1198,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2015,"Primary Energy Consumption by Fuel (EJ)",127.169981497013
+1199,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2020,"Primary Energy Consumption by Fuel (EJ)",142.275805996
+1200,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2025,"Primary Energy Consumption by Fuel (EJ)",153.534829585
+1201,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2030,"Primary Energy Consumption by Fuel (EJ)",158.163401306
+1202,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2035,"Primary Energy Consumption by Fuel (EJ)",159.206465011
+1203,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2040,"Primary Energy Consumption by Fuel (EJ)",158.158076439
+1204,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2045,"Primary Energy Consumption by Fuel (EJ)",155.85294478
+1205,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2050,"Primary Energy Consumption by Fuel (EJ)",151.43695181
+1206,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2055,"Primary Energy Consumption by Fuel (EJ)",145.02106587
+1207,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2060,"Primary Energy Consumption by Fuel (EJ)",139.0280562
+1208,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2065,"Primary Energy Consumption by Fuel (EJ)",135.94546646
+1209,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2070,"Primary Energy Consumption by Fuel (EJ)",133.72212926
+1210,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2075,"Primary Energy Consumption by Fuel (EJ)",130.71609919
+1211,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2080,"Primary Energy Consumption by Fuel (EJ)",124.174994425
+1212,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2085,"Primary Energy Consumption by Fuel (EJ)",117.946888072
+1213,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2090,"Primary Energy Consumption by Fuel (EJ)",111.768610896
+1214,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2095,"Primary Energy Consumption by Fuel (EJ)",106.1958218442
+1215,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","c coal",2100,"Primary Energy Consumption by Fuel (EJ)",100.7410528391
+1216,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",1975,"Primary Energy Consumption by Fuel (EJ)",4.17529461
+1217,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",1990,"Primary Energy Consumption by Fuel (EJ)",35.7580939896
+1218,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2005,"Primary Energy Consumption by Fuel (EJ)",41.9127598507
+1219,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2010,"Primary Energy Consumption by Fuel (EJ)",46.6025835672
+1220,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2015,"Primary Energy Consumption by Fuel (EJ)",49.787283719
+1221,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2020,"Primary Energy Consumption by Fuel (EJ)",53.438205221584
+1222,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2025,"Primary Energy Consumption by Fuel (EJ)",61.4269453811985
+1223,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2030,"Primary Energy Consumption by Fuel (EJ)",69.4274488921192
+1224,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2035,"Primary Energy Consumption by Fuel (EJ)",77.649703464091
+1225,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2040,"Primary Energy Consumption by Fuel (EJ)",89.4061495759169
+1226,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2045,"Primary Energy Consumption by Fuel (EJ)",105.631162750617
+1227,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2050,"Primary Energy Consumption by Fuel (EJ)",121.375962540432
+1228,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2055,"Primary Energy Consumption by Fuel (EJ)",131.581202466161
+1229,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2060,"Primary Energy Consumption by Fuel (EJ)",137.789418404766
+1230,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2065,"Primary Energy Consumption by Fuel (EJ)",142.395313939714
+1231,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2070,"Primary Energy Consumption by Fuel (EJ)",144.108071045983
+1232,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2075,"Primary Energy Consumption by Fuel (EJ)",144.416218738368
+1233,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2080,"Primary Energy Consumption by Fuel (EJ)",143.655073298276
+1234,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2085,"Primary Energy Consumption by Fuel (EJ)",142.143265802323
+1235,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2090,"Primary Energy Consumption by Fuel (EJ)",140.473948504165
+1236,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2095,"Primary Energy Consumption by Fuel (EJ)",138.902797156647
+1237,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","d bioenergy",2100,"Primary Energy Consumption by Fuel (EJ)",136.907309477551
+1238,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",1990,"Primary Energy Consumption by Fuel (EJ)",7.2459284725
+1239,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2005,"Primary Energy Consumption by Fuel (EJ)",9.964242726
+1240,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2010,"Primary Energy Consumption by Fuel (EJ)",9.922119719
+1241,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2015,"Primary Energy Consumption by Fuel (EJ)",9.247351843
+1242,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2020,"Primary Energy Consumption by Fuel (EJ)",10.1070448445198
+1243,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2025,"Primary Energy Consumption by Fuel (EJ)",11.5575210886377
+1244,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2030,"Primary Energy Consumption by Fuel (EJ)",13.3346287459549
+1245,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2035,"Primary Energy Consumption by Fuel (EJ)",15.1140681730091
+1246,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2040,"Primary Energy Consumption by Fuel (EJ)",16.8345781968979
+1247,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2045,"Primary Energy Consumption by Fuel (EJ)",18.8491500295168
+1248,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2050,"Primary Energy Consumption by Fuel (EJ)",20.4342276084333
+1249,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2055,"Primary Energy Consumption by Fuel (EJ)",21.943317380477
+1250,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2060,"Primary Energy Consumption by Fuel (EJ)",23.651609004838
+1251,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2065,"Primary Energy Consumption by Fuel (EJ)",25.6503046190883
+1252,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2070,"Primary Energy Consumption by Fuel (EJ)",27.5559735133031
+1253,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2075,"Primary Energy Consumption by Fuel (EJ)",29.3618910243832
+1254,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2080,"Primary Energy Consumption by Fuel (EJ)",30.6122139053484
+1255,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2085,"Primary Energy Consumption by Fuel (EJ)",31.3877601003025
+1256,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2090,"Primary Energy Consumption by Fuel (EJ)",31.5813668778597
+1257,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2095,"Primary Energy Consumption by Fuel (EJ)",31.4153219144681
+1258,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","e nuclear",2100,"Primary Energy Consumption by Fuel (EJ)",30.9737929342306
+1259,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",1990,"Primary Energy Consumption by Fuel (EJ)",7.7098954
+1260,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2005,"Primary Energy Consumption by Fuel (EJ)",10.5673404
+1261,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2010,"Primary Energy Consumption by Fuel (EJ)",12.3974942
+1262,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2015,"Primary Energy Consumption by Fuel (EJ)",14.0511296
+1263,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2020,"Primary Energy Consumption by Fuel (EJ)",14.3188777
+1264,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2025,"Primary Energy Consumption by Fuel (EJ)",14.7593559
+1265,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2030,"Primary Energy Consumption by Fuel (EJ)",15.238125
+1266,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2035,"Primary Energy Consumption by Fuel (EJ)",15.7383384
+1267,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2040,"Primary Energy Consumption by Fuel (EJ)",16.2503269
+1268,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2045,"Primary Energy Consumption by Fuel (EJ)",16.6901682
+1269,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2050,"Primary Energy Consumption by Fuel (EJ)",17.1300046
+1270,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2055,"Primary Energy Consumption by Fuel (EJ)",17.569847
+1271,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2060,"Primary Energy Consumption by Fuel (EJ)",18.0096831
+1272,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2065,"Primary Energy Consumption by Fuel (EJ)",18.4495293
+1273,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2070,"Primary Energy Consumption by Fuel (EJ)",18.8893555
+1274,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2075,"Primary Energy Consumption by Fuel (EJ)",19.3291855
+1275,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2080,"Primary Energy Consumption by Fuel (EJ)",19.7690387
+1276,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2085,"Primary Energy Consumption by Fuel (EJ)",20.208873
+1277,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2090,"Primary Energy Consumption by Fuel (EJ)",20.6487121
+1278,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2095,"Primary Energy Consumption by Fuel (EJ)",21.0885442
+1279,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","f hydro",2100,"Primary Energy Consumption by Fuel (EJ)",21.5283995
+1280,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",1990,"Primary Energy Consumption by Fuel (EJ)",0.01396779499
+1281,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2005,"Primary Energy Consumption by Fuel (EJ)",0.3738380283
+1282,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2010,"Primary Energy Consumption by Fuel (EJ)",1.22869505602
+1283,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2015,"Primary Energy Consumption by Fuel (EJ)",3.0154911797
+1284,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2020,"Primary Energy Consumption by Fuel (EJ)",5.0835708073773
+1285,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2025,"Primary Energy Consumption by Fuel (EJ)",7.95483641035351
+1286,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2030,"Primary Energy Consumption by Fuel (EJ)",12.0535737765216
+1287,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2035,"Primary Energy Consumption by Fuel (EJ)",16.9221118582281
+1288,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2040,"Primary Energy Consumption by Fuel (EJ)",22.5713096922501
+1289,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2045,"Primary Energy Consumption by Fuel (EJ)",26.7325388059238
+1290,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2050,"Primary Energy Consumption by Fuel (EJ)",31.5599908654622
+1291,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2055,"Primary Energy Consumption by Fuel (EJ)",36.1336485393537
+1292,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2060,"Primary Energy Consumption by Fuel (EJ)",40.448256656984
+1293,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2065,"Primary Energy Consumption by Fuel (EJ)",45.122911205734
+1294,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2070,"Primary Energy Consumption by Fuel (EJ)",49.22159389609
+1295,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2075,"Primary Energy Consumption by Fuel (EJ)",53.318937388301
+1296,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2080,"Primary Energy Consumption by Fuel (EJ)",59.1119469036
+1297,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2085,"Primary Energy Consumption by Fuel (EJ)",64.26418156266
+1298,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2090,"Primary Energy Consumption by Fuel (EJ)",68.5179048961
+1299,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2095,"Primary Energy Consumption by Fuel (EJ)",71.79418987241
+1300,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","g wind",2100,"Primary Energy Consumption by Fuel (EJ)",74.4458437889
+1301,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",1990,"Primary Energy Consumption by Fuel (EJ)",0.00271075487
+1302,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2005,"Primary Energy Consumption by Fuel (EJ)",0.01628922641
+1303,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2010,"Primary Energy Consumption by Fuel (EJ)",0.12190938197
+1304,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2015,"Primary Energy Consumption by Fuel (EJ)",0.93604056536
+1305,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2020,"Primary Energy Consumption by Fuel (EJ)",2.49445226567596
+1306,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2025,"Primary Energy Consumption by Fuel (EJ)",6.62867766568076
+1307,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2030,"Primary Energy Consumption by Fuel (EJ)",12.9137229762623
+1308,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2035,"Primary Energy Consumption by Fuel (EJ)",19.5227628314696
+1309,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2040,"Primary Energy Consumption by Fuel (EJ)",26.1321167564143
+1310,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2045,"Primary Energy Consumption by Fuel (EJ)",32.3838679988895
+1311,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2050,"Primary Energy Consumption by Fuel (EJ)",38.3278026263694
+1312,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2055,"Primary Energy Consumption by Fuel (EJ)",43.5467909599787
+1313,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2060,"Primary Energy Consumption by Fuel (EJ)",48.2401355680463
+1314,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2065,"Primary Energy Consumption by Fuel (EJ)",53.1467109115565
+1315,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2070,"Primary Energy Consumption by Fuel (EJ)",57.4367354429676
+1316,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2075,"Primary Energy Consumption by Fuel (EJ)",61.747433961543
+1317,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2080,"Primary Energy Consumption by Fuel (EJ)",66.7811782232008
+1318,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2085,"Primary Energy Consumption by Fuel (EJ)",71.3315613482903
+1319,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2090,"Primary Energy Consumption by Fuel (EJ)",75.3979642806278
+1320,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2095,"Primary Energy Consumption by Fuel (EJ)",78.7589947767269
+1321,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","h solar",2100,"Primary Energy Consumption by Fuel (EJ)",81.8642588533804
+1322,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",1990,"Primary Energy Consumption by Fuel (EJ)",0.13092182906
+1323,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2005,"Primary Energy Consumption by Fuel (EJ)",0.209586759
+1324,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2010,"Primary Energy Consumption by Fuel (EJ)",0.24497185
+1325,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2015,"Primary Energy Consumption by Fuel (EJ)",0.289629778
+1326,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2020,"Primary Energy Consumption by Fuel (EJ)",0.73321197428
+1327,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2025,"Primary Energy Consumption by Fuel (EJ)",1.16583776428
+1328,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2030,"Primary Energy Consumption by Fuel (EJ)",1.63567509278
+1329,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2035,"Primary Energy Consumption by Fuel (EJ)",2.08314481737
+1330,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2040,"Primary Energy Consumption by Fuel (EJ)",2.49885766726
+1331,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2045,"Primary Energy Consumption by Fuel (EJ)",2.72488229892
+1332,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2050,"Primary Energy Consumption by Fuel (EJ)",2.884402418
+1333,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2055,"Primary Energy Consumption by Fuel (EJ)",2.9991995837
+1334,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2060,"Primary Energy Consumption by Fuel (EJ)",3.074395308
+1335,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2065,"Primary Energy Consumption by Fuel (EJ)",3.1662834911
+1336,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2070,"Primary Energy Consumption by Fuel (EJ)",3.2042588093
+1337,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2075,"Primary Energy Consumption by Fuel (EJ)",3.2457393572
+1338,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2080,"Primary Energy Consumption by Fuel (EJ)",3.2859283655
+1339,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2085,"Primary Energy Consumption by Fuel (EJ)",3.3317849547
+1340,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2090,"Primary Energy Consumption by Fuel (EJ)",3.3777679043
+1341,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2095,"Primary Energy Consumption by Fuel (EJ)",3.3997715587
+1342,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","i geothermal",2100,"Primary Energy Consumption by Fuel (EJ)",3.4236026713
+1343,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2025,"Primary Energy Consumption by Fuel (EJ)",0.0033490226737
+1344,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2030,"Primary Energy Consumption by Fuel (EJ)",0.023259267
+1345,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2035,"Primary Energy Consumption by Fuel (EJ)",0.03067243688
+1346,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2040,"Primary Energy Consumption by Fuel (EJ)",0.05730050628
+1347,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2045,"Primary Energy Consumption by Fuel (EJ)",0.1005963614
+1348,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2050,"Primary Energy Consumption by Fuel (EJ)",0.1046772779
+1349,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2055,"Primary Energy Consumption by Fuel (EJ)",0.0814826843
+1350,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2060,"Primary Energy Consumption by Fuel (EJ)",0.05478459579
+1351,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2065,"Primary Energy Consumption by Fuel (EJ)",0.04815740428
+1352,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2070,"Primary Energy Consumption by Fuel (EJ)",0.0443017068
+1353,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2075,"Primary Energy Consumption by Fuel (EJ)",0.05990182296
+1354,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2080,"Primary Energy Consumption by Fuel (EJ)",0.0709830348
+1355,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2085,"Primary Energy Consumption by Fuel (EJ)",0.0689462066
+1356,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2090,"Primary Energy Consumption by Fuel (EJ)",0.05824600041
+1357,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2095,"Primary Energy Consumption by Fuel (EJ)",0.04658001648
+1358,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","j hydrogen",2100,"Primary Energy Consumption by Fuel (EJ)",0.04039283175
+1359,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",1975,"Primary Energy Consumption by Fuel (EJ)",1.5594107398
+1360,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",1990,"Primary Energy Consumption by Fuel (EJ)",2.0922640726
+1361,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2005,"Primary Energy Consumption by Fuel (EJ)",3.60040152
+1362,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2010,"Primary Energy Consumption by Fuel (EJ)",4.2438637247
+1363,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2015,"Primary Energy Consumption by Fuel (EJ)",4.4986756889
+1364,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2020,"Primary Energy Consumption by Fuel (EJ)",4.8532781374
+1365,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2025,"Primary Energy Consumption by Fuel (EJ)",5.1238842875
+1366,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2030,"Primary Energy Consumption by Fuel (EJ)",5.4025918791
+1367,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2035,"Primary Energy Consumption by Fuel (EJ)",5.6997596866
+1368,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2040,"Primary Energy Consumption by Fuel (EJ)",5.9633458373
+1369,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2045,"Primary Energy Consumption by Fuel (EJ)",6.149939422
+1370,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2050,"Primary Energy Consumption by Fuel (EJ)",6.283726735
+1371,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2055,"Primary Energy Consumption by Fuel (EJ)",6.392630206
+1372,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2060,"Primary Energy Consumption by Fuel (EJ)",6.479436372
+1373,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2065,"Primary Energy Consumption by Fuel (EJ)",6.542311316
+1374,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2070,"Primary Energy Consumption by Fuel (EJ)",6.583274566
+1375,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2075,"Primary Energy Consumption by Fuel (EJ)",6.602069603
+1376,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2080,"Primary Energy Consumption by Fuel (EJ)",6.59599999
+1377,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2085,"Primary Energy Consumption by Fuel (EJ)",6.57098446
+1378,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2090,"Primary Energy Consumption by Fuel (EJ)",6.528346411
+1379,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2095,"Primary Energy Consumption by Fuel (EJ)",6.470979825
+1380,"energyPrimaryByFuelEJ","Reference","gcamv7p0","global","Fuel","woodpulp_energy",2100,"Primary Energy Consumption by Fuel (EJ)",6.400688261
