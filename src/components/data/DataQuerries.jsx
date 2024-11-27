@@ -444,6 +444,7 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
       setAggSub(result);
       if(region === "")
         checkRegionURL(new Set(result.map(obj => obj.region)), setRegion);
+      console.log("!!!!", result); 
       setCountries(filterRegion(getScenerio(result, scenarios[0])));
     }
     // eslint-disable-next-line

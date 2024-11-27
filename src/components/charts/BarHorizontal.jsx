@@ -20,7 +20,6 @@ import { updateHash } from "../sharing/DashboardUrl.jsx";
  * @returns {ReactElement} The rendered component.
  */
 const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, selectedGuage, maxVal }) => {
-    //console.log("!!!!", csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, selectedGuage); 
     const [scenerioName, setScenerio] = useState(scenerio);
     const [barData, setData] = useState(getBarHorizontal(countries, csv, scenerio));
     useEffect(() => {

@@ -15,7 +15,7 @@ export const iconTypes = ["energy", "transport", "buildings", "industry", "water
 export const getIconParam = (param, guages) => {
   const found = guages.find(gauge => gauge.title === param);
   const guageCategory = found ? found.group : "error"
-  return getIcon(guageCategory, false);
+  return getIcon(guageCategory, true);
 }
 
 /**

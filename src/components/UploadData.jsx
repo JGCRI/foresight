@@ -287,7 +287,7 @@ function UploadData({ datasets, updateDatasets, userUploadedData, loadDataToStor
       return "socioeconomic - population";
     if (test.includes("hydrogen"))
       return "hydrogen";
-    return "custom"
+    return "other"
   }
 
   return (

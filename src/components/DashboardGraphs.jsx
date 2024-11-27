@@ -121,7 +121,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   }
 
   let barMax = aggSub === "i" ? 0 : Math.max(...aggSub.map(item => item.value));
-  console.log(aggSub, barMax);
+  //console.log(aggSub, barMax);
   if(!barMax || barMax < 0) {
     barMax = 0;
   }
