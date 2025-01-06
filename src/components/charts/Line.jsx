@@ -2,6 +2,8 @@ import React from "react";
 import { ResponsiveLine } from '@nivo/line'
 import { MdOutlineWarning } from "react-icons/md";
 import { updateHash } from "../sharing/DashboardUrl";
+import { setDashDate } from "../Store";
+import { connect } from 'react-redux';
 
 /**
  * Nivo line chart component .
@@ -12,7 +14,7 @@ import { updateHash } from "../sharing/DashboardUrl";
  * @param {string} props.unit - String containing the units description.
  * @returns {ReactElement} The rendered component.
  */
-const Line = ({ data, setDate, unit }) => (
+const Line = ({ data, dashDate, setDate, unit }) => (
     <div className="line_container">
         <div className="nivo-wrapper grid-border">
             <ResponsiveLine
@@ -33,7 +35,7 @@ const Line = ({ data, setDate, unit }) => (
                     reverse: false
                 }}
                 onClick={(data) => {
-                    setDate(
+                    dashDate(
                         parseInt(`${data["data"]["x"]}`)
                     );
                     updateHash("year", parseInt(`${data["data"]["x"]}`));
@@ -270,6 +272,10 @@ const Line = ({ data, setDate, unit }) => (
     </div >
 )
 
-
-
-export default Line;
+function mapDispatchToProps(dispatch) {
+    return {
+        dashDate: (date) => dispatch(setDashDate(date)),
+    };
+  }
+  
+export default connect(null, mapDispatchToProps)(Line);

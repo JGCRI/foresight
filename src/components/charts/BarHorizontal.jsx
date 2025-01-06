@@ -3,6 +3,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { connect } from 'react-redux';
 import { getBarHorizontal } from "../data/DataManager.jsx";
 import { updateHash } from "../sharing/DashboardUrl.jsx";
+import { setDashSubs } from "../Store";
 
 /**
  * Unused test Nivo TreeMap component.
@@ -19,7 +20,7 @@ import { updateHash } from "../sharing/DashboardUrl.jsx";
  * @param {string} props.selectedGuage - Currently selected data variable.
  * @returns {ReactElement} The rendered component.
  */
-const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left, countries, subcat, selectedGuage, maxVal }) => {
+const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, setdashboardSub, left, countries, subcat, selectedGuage, maxVal }) => {
     const [scenerioName, setScenerio] = useState(scenerio);
     const [barData, setData] = useState(getBarHorizontal(countries, csv, scenerio));
     useEffect(() => {
@@ -73,7 +74,7 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left
                 }}
                 onClick={(data) => {
                     if (data.id !== 'class1') {
-                        setdashboardSub(
+                        dashSubs(
                             `${data["id"]}`
                         );
                         updateHash("sub", `${data["id"]}`);
@@ -311,6 +312,12 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, setdashboardSub, left
     );
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    dashSubs: (subs) => dispatch(setDashSubs(subs)),
+  };
+}
+
 function mapStateToProps(state) {
     return {
         subcat: state.dashboardSubsector,
@@ -318,4 +325,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(MyResponsiveBar);
+export default connect(mapStateToProps, mapDispatchToProps)(MyResponsiveBar);

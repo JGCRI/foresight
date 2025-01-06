@@ -35,11 +35,16 @@ export const updateListHash = (name, index, value) => {
   }
 }
 
-// const isequal = (A, B) => {
-//   if (A.length !== B.length)
-//     return false;
-//   return A.every((element, index) => element === B[index]);
-// }
+/**
+ * Updates the URL hash for single parameter hashes. Takes in the name and value of the hash.
+ * Does not guarantee order of placement.
+ * 
+ * @param {string} name - The name of the hash parameter.
+ * @param {string} value - The value of the hash parameter.
+ */
+export const clearHash = () => {
+  window.location.hash = "";
+}
 
 /**
  * Loads data and updates the dashboard based on the URL parameters.

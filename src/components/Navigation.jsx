@@ -13,7 +13,7 @@ import { MdFileUpload, MdHelp } from "react-icons/md";
 import { connect } from "react-redux";
 import { setDashDate, setDashReg, setDashSubs, setDataset } from "./Store";
 import './css/Navigation.css';
-import { updateHash } from "./sharing/DashboardUrl";
+import { clearHash, updateHash } from "./sharing/DashboardUrl";
 
 /**
  * Navigation component. Used for testing different maps
@@ -36,9 +36,7 @@ function Navigation({ dataset, datasets, updateDataset, dashDate, dashReg, dashS
     dashDate(2020);
     dashReg("Global");
     dashSubs("Aggregate of Subsectors");
-    updateHash("year", 2020);
-    updateHash("reg", "Global");
-    updateHash("sub", "Aggregate of Subsectors");
+    clearHash();
     updateHash("dataset", selectedDataset.data);
   };
 

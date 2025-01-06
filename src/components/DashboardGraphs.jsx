@@ -72,7 +72,8 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   const [dashRegion, setRegion] = useState(region);
   const [dashSubcategory, setSubcategory] = useState(subcat);
 
-  //console.log(openedScenerios, selectedGuage)
+  console.log(dashYear, dashRegion, dashSubcategory);
+  
   useEffect(() => {
     setDashboardDate(dashYear)
   }, [dashYear, setDashboardDate]);
@@ -213,7 +214,6 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
         maxVal = {barMax}/>
     </div>
   )
-
 
   //Display the grid. Below 1000 pixels results in its upright form.
   return (

@@ -29,7 +29,7 @@ export const datasets = [
       livestock_MeatDairybySubsector: { units: "Livestock Production (Mt)", group: "livestock", region: "region", description: "Total livestock production by Region in metric tons." },
       pop: { units: "Population (Million)", group: "socioeconomic - population", region: "region", description: "Total population by GCAM region given in units of 1 million people." },
       tempGlobalMean: { units: "Global Mean T. (Degrees C above 1850 - 1900 avg)", group: "climate", region: "global", description:  "Global mean surface temperature anomaly relative to the 1850 - 1900's mean in degrees celcius." },
-      watSupRunoffBasin: { units: "Water Runoff (km3)", group: "water", region: "region", description: "Water runoff by Basin in kilometers cubed." },
+      watSupRunoffBasin: { units: "Available Runoff (km3)", group: "water", region: "glu", description: "Water runoff by Basin in kilometers cubed." },
       watWithdrawByBasinRunoff: { units: "Water Withdrawals by Basin [Runoff] (km3)", group: "water", region: "glu", description: "Water withdrawals from runoff by GCAM basin in kilometers cubed." },
       watWithdrawByCrop: { units: "Water Withdrawals by Crop (km3)", group: "water", region: "region", description: "Water withdrawals by crop for each GCAM region in kilometers cubed." },
       watWithdrawBySec: { units: "Water Withdrawals by Sector (km3)", group: "water", region: "region", description: "Water withdrawals by sector for each GCAM region in kilometers cubed." },

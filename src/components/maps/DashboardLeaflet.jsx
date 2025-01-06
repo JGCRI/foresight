@@ -7,7 +7,8 @@ import glu from "./data/glu.json"
 import regions_glu from "./data/regions_glu.json"
 import { getChoroplethValue } from '../data/DataManager';
 import { updateHash } from '../sharing/DashboardUrl';
-
+import { setDashReg } from "../Store";
+import { connect } from 'react-redux';
 
 /**
  * A Leaflet choropleth to be synced and displayed in the LeafletSync component.
@@ -28,7 +29,7 @@ import { updateHash } from '../sharing/DashboardUrl';
  * @param {number} props.divisions - Maximum number of color divisions in the map.
  * @returns {ReactElement} The rendered component.
  */
-const DashboardLeaflet = ({ data, mapRegion, displayLegend, id, setRegion, mapInstance, setMapInstance, mapStyles, setCountryDisplay, setCountryDisplayValue, choroplethColorPalette, choroplethInterpolation, divisions }) => {
+const DashboardLeaflet = ({ data, mapRegion, displayLegend, id, dashReg, setRegion, mapInstance, setMapInstance, mapStyles, setCountryDisplay, setCountryDisplayValue, choroplethColorPalette, choroplethInterpolation, divisions }) => {
   const mapData = data;
   const getJson = (data) => {
     if (!data || !data[0] || !data[0].id || data === 'i') return landcells;
@@ -140,7 +141,7 @@ const DashboardLeaflet = ({ data, mapRegion, displayLegend, id, setRegion, mapIn
   }
 
   function setCountry(e) {
-    setRegion(e.sourceTarget.feature.id);
+    dashReg(e.sourceTarget.feature.id);
     updateHash("reg", e.sourceTarget.feature.id);
   }
 
@@ -165,4 +166,10 @@ const DashboardLeaflet = ({ data, mapRegion, displayLegend, id, setRegion, mapIn
   );
 };
 
-export default DashboardLeaflet;
+function mapDispatchToProps(dispatch) {
+  return {
+      dashReg: (reg) => dispatch(setDashReg(reg)),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(DashboardLeaflet);

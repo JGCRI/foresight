@@ -55,10 +55,10 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
     }, []);
     //console.log(regions);
     function resetParams() {
-        dashDate(2020);
+        dashDate(2100);
         dashReg("Global");
         dashSubs("Aggregate of Subsectors");
-        updateHash("year", 2020);
+        updateHash("year", 2100);
         updateHash("reg", "Global");
         updateHash("sub", "Aggregate of Subsectors");
     }
