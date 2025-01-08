@@ -13,7 +13,7 @@ export const iconTypes = ["energy", "transport", "buildings", "industry", "water
  * @returns {IconType} The icon for display.
  */
 export const getIconParam = (param, guages) => {
-  const found = guages.find(gauge => gauge.title === param);
+  const found = (Array.isArray(guages)) ? guages.find(gauge => gauge.title === param) : "error";
   const guageCategory = found ? found.group : "error"
   return getIcon(guageCategory, true);
 }

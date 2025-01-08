@@ -68,14 +68,14 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
         updateGuage(scenerio);
     }
 
-    const links = openGuages.map((guage) => (
+    const links = (Array.isArray(openGuages)) ? openGuages.map((guage) => (
         <div key={guage ? guage.title : "Error"}>
             <Dropdown.Item as="button" active={guage ? (selection === guage.title ? true : false) : false}
                 onClick={() => guage ? updateScenerio(guage ? guage.title : "Error") : ""}>
                 {guage ? guage.units : "Error"}
             </Dropdown.Item>
         </div >
-    ))
+    )) : [];
 
     let uniqueDates = dates !== "i" ? new Set(dates.map(obj => obj.x)) : "i";
     let uniqueRegions = regions !== "i" ? new Set(regions) : "i";

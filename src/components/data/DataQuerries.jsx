@@ -3,7 +3,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { connect } from 'react-redux';
 import { setAllScenarios, setSceneriosNoUpdate, setGuageList, setdashboardGuages, setdashboardSelection, setStartDate, setEndDate, setDashDate, setBarCountries, setDataset, setDashReg, setDashSubs } from '../Store';
 import { checkRegionURL, checkSubcatURL, loadDataURL } from '../sharing/DashboardUrl';
-import { getScenerio, filterRegion, listRegions, filterSubcat } from './DataManager';
+import { getScenerio, filterRegion, listRegions, filterSubcat, getGlobalBarHorizontal } from './DataManager';
 
 export const lineQuery = `
 query BarQuery($reg: String!, $sub: String!, $nextToken: String, $id: String!) {
@@ -147,6 +147,26 @@ query BarQuery($date: String!, $nextToken: String, $id: String!) {
 }
 `;
 
+export const globalBarQuery = `
+query GlobalBarQuery($date: Int!, $nextToken: String, $id: String!) {
+  queryGcamDataTableAggClass1Globals(
+    id: $id,
+    filter: {
+      x: {eq: $date}
+    },
+    limit: 100000, 
+    nextToken: $nextToken
+  ) {
+    items {
+      value
+      x
+      scenario
+      class
+    }
+    nextToken
+  }
+}
+`;
 
 const queryGuage = `
 query MyQuery($nextToken: String, $start: Int!, $end: Int!, $id: String!) {
@@ -277,6 +297,9 @@ query BarQuery($date: Int!, $nextToken: String, $id: String!) {
  * React.Dispatch<React.SetStateAction<Object[]>>} props.setBar - Function
  * to change the data for the bar chart.
  * @param {React.Dispatch<React.SetStateAction<string>> | 
+ * React.Dispatch<React.SetStateAction<Object[]>>} props.setBarGlobal - Function
+ * to change the data for the bottom global bar chart.
+ * @param {React.Dispatch<React.SetStateAction<string>> | 
  * React.Dispatch<React.SetStateAction<Object[]>>} props.setAggSub - Function
  * to change the aggregated region data.
  * @param {React.Dispatch<React.SetStateAction<string>> | 
@@ -318,7 +341,7 @@ query BarQuery($date: Int!, $nextToken: String, $id: String!) {
  * list of datasets.
  * @returns {ReactElement} The rendered component.
  */
-function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, year, region, subcat, setGuage, setDates, setLine, setChoropleth, setBar, setAggSub, setCountries, setRegions, setSubcategories, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart, setEnd, setCurrentDate, setSubcat, setRegion, URLLoaded, toggleURLLoaded, updateDataset, datasetList }) {
+function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, year, region, subcat, setGuage, setDates, setLine, setChoropleth, setBar, setBarGlobal, setAggSub, setCountries, setRegions, setSubcategories, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart, setEnd, setCurrentDate, setSubcat, setRegion, URLLoaded, toggleURLLoaded, updateDataset, datasetList }) {
   const [scenarios, setScenarios] = useState("i");
 
   useEffect(() => {
@@ -352,11 +375,23 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
     return allItems;
   };
 
-
   const fetchParallel = useCallback(async (queries) => {
-    const results = await Promise.all(queries.map(([query, variables]) => fetchData(query, variables)));
-    return results.flat().sort((a, b) => a.x - b.x);
+    if (!navigator.onLine) {
+      console.warn("You are offline. Some functionalities may not be available.");
+      return [];
+    }
+  
+    try {
+      const results = await Promise.all(
+        queries.map(([query, variables]) => fetchData(query, variables))
+      );
+      return results.flat().sort((a, b) => a.x - b.x);
+    } catch (error) {
+      console.error("Error in fetchParallel:", error);
+      return []; // Return empty data to prevent further errors
+    }
   }, []);
+  
 
   const fetchDashboard = useCallback(async () => {
     const result = await fetchParallel([[queryDataset, { dataset: dataset }]]);
@@ -407,11 +442,20 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
   const fetchBar = useCallback(async () => {
     if (scenarios !== "i" && scenarios.length > 1) {
       const queries = [];
+      const globalQueries = [];
+
       queries.push([barQuery, { id: dataset + "|" + scenarios[0] + "|" + parameter, date: year.toString()  + "|"  }]);
       queries.push([barQuery, { id: dataset + "|" + scenarios[1] + "|" + parameter, date: year.toString()  + "|"  }]);
+
+      globalQueries.push([globalBarQuery, { id: dataset + "|" + scenarios[0] + "|" + parameter, date: year.toString() }]);
+      globalQueries.push([globalBarQuery, { id: dataset + "|" + scenarios[1] + "|" + parameter, date: year.toString() }]);
+
       const result = await fetchParallel(queries);
+      const globalResult = await fetchParallel(globalQueries);
+      
       setBar(result);
-      //console.log(parameter);
+      //console.log("GLOBAL RESULT", getGlobalBarHorizontal(globalResult, scenarios[0]));
+      setBarGlobal(globalResult);
     }
   }, [dataset, scenarios, parameter, year, setBar, fetchParallel]);
 
@@ -487,6 +531,7 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
     if (URLLoaded && dataset) {
       const abortController = new AbortController();
       setBar("i");
+      setBarGlobal("i");
       fetchBar(abortController.signal);
       return () => abortController.abort();
     }

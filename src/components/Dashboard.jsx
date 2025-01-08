@@ -27,6 +27,7 @@ function Dashboard({ open, dataset, scenarios }) {
   const [lineData, setLineData] = useState("i");
   const [choroplethData, setChoroplethData] = useState("i");
   const [barData, setBarData] = useState("i");
+  const [barGlobalData, setBarGlobalData] = useState("i");
   const [aggSub, setAggSub] = useState("i");
   const [regionList, setRegionList] = useState("i");
   const [subcategoriesList, setSubcategoriesList] = useState("i");
@@ -40,6 +41,7 @@ function Dashboard({ open, dataset, scenarios }) {
     setLineData("i");
     setChoroplethData("i");
     setBarData("i");
+    setBarGlobalData("i");
     setAggSub("i");
     setRegionList("i");
     setSubcategoriesList("i");
@@ -58,6 +60,7 @@ function Dashboard({ open, dataset, scenarios }) {
           setLine={setLineData}
           setChoropleth={setChoroplethData}
           setBar={setBarData}
+          setBarGlobal={setBarGlobalData}
           setAggSub={setAggSub}
           setRegions={setRegionList}
           setSubcategories={setSubcategoriesList}
@@ -116,6 +119,7 @@ function Dashboard({ open, dataset, scenarios }) {
               lineData={lineData}
               choroplethData={choroplethData}
               barData={barData}
+              barGlobalData={barGlobalData}
               aggSub={aggSub}
               guageData={guageData}
               choroplethColorPalette={choroplethColorPalette}

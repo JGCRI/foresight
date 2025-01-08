@@ -1,4 +1,5 @@
 import { getColorsFromPalette } from "./GcamColors";
+import { BAR_COUNTRIES } from "./Scenarios";
 
 /**
  * Filters a dataset by the specified parameter.
@@ -45,6 +46,17 @@ export const getScenerio = (data, scenario) => data.filter(item => item.scenario
  * @returns {object[]} The filtered dataset sorted by date.
  */
 export const getScenerios = (data, scenario1, scenario2) => data.filter(item => item.scenario === scenario1 || item.scenario === scenario2).sort((a, b) => a.x - b.x);
+
+/**
+ * Returns the sums of the positive values of a dataset given a scenario.
+ * 
+ * @param {object[]} data - The dataset to filter.
+ * @param {string} scenario - The parameter to filter by.
+ * @returns {object[]} The filtered dataset.
+ */
+export const getDataPosSum = (data, scenario) => getScenerio(data, scenario).reduce((sum, obj) => {
+    return obj.value > 0 ? sum + obj.value : sum;
+  }, 0);
 
 /**
  * Gets the units of a parameter for dashboard display.
@@ -155,6 +167,7 @@ export const getDataDate = (data, scenario, param, date) => {
  * @returns {string} The units or an error message.
  */
 export const findUnitsByTitle = (objectsArray, titleToFind) => {
+    if(!Array.isArray(objectsArray)) return "Loading...";
     const foundObject = objectsArray.find(obj => obj.title === titleToFind);
     //console.log(foundObject)
     return foundObject ? foundObject.units : "Loading...";
@@ -355,14 +368,14 @@ export const getRegionsSorted = (countries, data) => {
 }
 
 /**
- * Creates a list of all regions for the dataset.
+ * Creates a list of the top x regions for the dataset where x is set by BAR_COUNTRIES in Scenarios.
  * 
  * @param {object[]} data - The dataset to filter.
  * @returns {Object[]} The list of regions.
  */
 export const filterRegion = (data) => {
     data.sort((a, b) => b.value - a.value);
-    data = data.slice(0, 10);
+    data = data.slice(0, BAR_COUNTRIES);
     data.sort((a, b) => a.value - b.value);
     const reducedData = [...new Set(data.map(item => item.region))];
     return reducedData;
@@ -541,6 +554,28 @@ export const getBarHorizontal = (countries, data, scenerio) => {
         }
         output.push(obj);
     }
+    return output
+}
+
+/**
+ * Gets the global horizontal bar data for the specified  scenario.
+ * 
+ * @param {object[]} data - The dataset to search.
+ * @param {string} scenario - The scenario to search for.
+ * @returns {object[]} The horizontal bar data.
+ */
+export const getGlobalBarHorizontal = (data, scenerio) => {
+    let output = [];
+    let barData = getScenerio(data, scenerio);
+    let subcatList = filterSubcat(barData);
+    subcatList.sort((a, b) => a.toLowerCase() - b.toLowerCase());
+    let obj = {
+        "country": "Global"
+    };
+    for (let j = 0; j < subcatList.length; j++) {
+        obj[subcatList[j]] = parseFloat(getSubcat(barData, subcatList.at(j)).at(0).value);
+    }
+    output.push(obj);
     return output
 }
 

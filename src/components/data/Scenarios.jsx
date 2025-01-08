@@ -45,3 +45,5 @@ export const datasets = [
     ]
   }
 ]
+
+export const BAR_COUNTRIES = 8;

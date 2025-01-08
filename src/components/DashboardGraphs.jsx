@@ -7,10 +7,11 @@ import Line from './charts/Line';
 import BarCountryControl from './dropdowns/BarCountryControl';
 import { setDashDate, setDashReg, setDashSubs } from './Store';
 import LeafletSync from "./maps/LeafletSync";
-import { choroplethReduce, filterSubcat, lineGraphReduce, getUnits } from 
+import { choroplethReduce, filterSubcat, lineGraphReduce, getUnits, getScenerio, getDataPosSum } from 
 './data/DataManager';
 import { getBarColors } from './data/GcamColors';
 import { datasets } from './data/Scenarios';
+import DashboardBarGlobal from './charts/DashboardBarGlobal';
 
 /**
  * DashboardGraphs component is responsible for rendering the three data 
@@ -39,6 +40,8 @@ import { datasets } from './data/Scenarios';
  * for the choropleth Leaflet.
  * @param {object[]} props.barData - Dataset containing data required
  * for the bar chart.
+ * @param {object[]} props.barGlobalData - Dataset containing data required
+ * for the lower global bar chart.
  * @param {object[]} props.aggSub - Dataset containing data with global
  * regions.
  * @param {(date: Number) => any} props.setDashboardDate - Function setting the
@@ -62,7 +65,7 @@ import { datasets } from './data/Scenarios';
  */
 function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages, 
   curYear, region, subcat, lineData, guageData, choroplethData, barData, 
-  aggSub, setDashboardDate, setDashboardReg, setDashboardSubs, 
+  barGlobalData, aggSub, setDashboardDate, setDashboardReg, setDashboardSubs, 
   choroplethColorPalette, setChoroplethColorPalette, choroplethInterpolation, 
   setInterpolation, dataset, datasetInfo }) {
 
@@ -72,7 +75,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   const [dashRegion, setRegion] = useState(region);
   const [dashSubcategory, setSubcategory] = useState(subcat);
 
-  console.log(dashYear, dashRegion, dashSubcategory);
+  //console.log(dashYear, dashRegion, dashSubcategory);
   
   useEffect(() => {
     setDashboardDate(dashYear)
@@ -122,7 +125,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   }
 
   let barMax = aggSub === "i" ? 0 : Math.max(...aggSub.map(item => item.value));
-  //console.log(aggSub, barMax);
+  let barGlobalMax = barGlobalData === "i" ? 0 : Math.max(0, getDataPosSum(barGlobalData, Scenerios.at(0).title), getDataPosSum(barGlobalData, Scenerios.at(1).title));
   if(!barMax || barMax < 0) {
     barMax = 0;
   }
@@ -134,7 +137,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
     <div>{Scenerios.at(0).title} vs. {Scenerios.at(1).title}</div>
   </div>)
   let barChartLabel = (<div className="text-centered"> Top 10 Countries 
-  {"(" + curYear + ")"} -- By Subsector</div>)
+  {" (" + curYear + ")"} -- By Subsector</div>)
 
   // Line Chart Visualization
   const lineChart = (lineData === 'i') ? (
@@ -189,7 +192,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
 
 
   // Bar Chart Visualization
-  const barChart = (barData === "i" || aggSub === 'i') ? (
+  const barChart = (!Array.isArray(barData) || !Array.isArray(openedGuages) || aggSub === 'i') ? (
     <div className="grid-border-hidden text-centered">
       Loading Dataset...
     </div>
@@ -206,12 +209,26 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
         selectedGuage = {selectedGuage}
         maxVal = {barMax}/>
       <BarHorizontal csv={barData} color={openedGuages ? 
-        getBarColors(barData, Scenerios.at(0).title, 
+        getBarColors(barData, Scenerios.at(1).title, 
         openedGuages.find(guage => guage.title === selectedGuage) ? openedGuages.find(guage => guage.title === selectedGuage).group : ["error"]) : ["#666666"]} 
         listKeys={filterSubcat(barData)} scenerio={Scenerios.at(1).title} 
         setdashboardSub={setSubcategory} left={false} 
         selectedGuage = {selectedGuage}
         maxVal = {barMax}/>
+      <DashboardBarGlobal csv={barGlobalData} color={openedGuages ? 
+        getBarColors(barGlobalData, Scenerios.at(0).title, 
+        openedGuages.find(guage => guage.title === selectedGuage) ? openedGuages.find(guage => guage.title === selectedGuage).group : ["#error"]) : ["#666666"]} 
+        listKeys={filterSubcat(barGlobalData)} scenerio={Scenerios.at(0).title} 
+        setdashboardSub={setSubcategory} left={true} 
+        selectedGuage = {selectedGuage}
+        maxVal = {barGlobalMax}/>
+      <DashboardBarGlobal csv={barGlobalData} color={openedGuages ? 
+        getBarColors(barGlobalData, Scenerios.at(1).title, 
+        openedGuages.find(guage => guage.title === selectedGuage) ? openedGuages.find(guage => guage.title === selectedGuage).group : ["error"]) : ["#666666"]} 
+        listKeys={filterSubcat(barGlobalData)} scenerio={Scenerios.at(1).title} 
+        setdashboardSub={setSubcategory} left={false} 
+        selectedGuage = {selectedGuage}
+        maxVal = {barGlobalMax}/>
     </div>
   )
 

@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import { getRegionsSorted, getScenerio, listRegions } from '../data/DataManager';
 import { DropdownSearchBar } from './DropdownSearchBar';
+import { BAR_COUNTRIES } from '../data/Scenarios';
 
 /**
  * A dropdown menu for Bar Chart settings.
@@ -43,7 +44,7 @@ function BarChartControl({ csv, scenario, setCountries, countries }) {
     let country = countryList.at(i);
     colors.push(
       <Form.Check
-        disabled={!(countries.includes(country)) && countries.length >= 10}
+        disabled={!(countries.includes(country)) && countries.length >= BAR_COUNTRIES}
         checked={countries.includes(country)}
         type="switch"
         key={country}

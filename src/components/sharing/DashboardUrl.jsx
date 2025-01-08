@@ -80,7 +80,7 @@ export const loadDataURL = (result, setAllScenarios, setScenariosTotal, setGuage
   setAllScenarios(scenarios.map(obj => ({ title: obj })));
 
   //Prepare opened scenarios
-  console.log("CURRENT SCENARIOS:", storedScenarios);
+  //console.log("CURRENT SCENARIOS:", storedScenarios);
   const currentScenarios = checkScenarioURL(urlLoaded, scenarios, storedScenarios);
   //console.log("STORE CURRENT SCENARIOS:", currentScenarios);
   setScenariosTotal(currentScenarios);
@@ -218,7 +218,8 @@ const checkParamURL = (urlLoaded, params, selection, guages) => {
  */
 const checkGuageURL = (urlLoaded, parameter, guageData, title) => {
   let searchParams = new URLSearchParams(window.location.hash.substring(1));
-  let guageList = guageData ? guageData.map(guage => guage ? guage.title : "") : [];
+  console.log(guageData);
+  let guageList = (guageData && Array.isArray(guageData)) ? guageData.map(guage => guage ? guage.title : "") : [];
   if (!urlLoaded && searchParams.has(title) && guageList.includes(searchParams.get(title)))
     return searchParams.get(title);
   if(guageList.includes(parameter))

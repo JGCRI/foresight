@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ResponsiveBar } from '@nivo/bar'
 import { connect } from 'react-redux';
-import { getBarHorizontal } from "../data/DataManager.jsx";
+import { getBarHorizontal, getGlobalBarHorizontal } from "../data/DataManager.jsx";
 import { updateHash } from "../sharing/DashboardUrl.jsx";
-import { setDashReg, setDashSubs } from "../Store";
+import { setDashReg, setDashSubs } from "../Store.jsx";
 
 /**
  * Unused test Nivo TreeMap component.
@@ -20,21 +20,20 @@ import { setDashReg, setDashSubs } from "../Store";
  * @param {string} props.selectedGuage - Currently selected data variable.
  * @returns {ReactElement} The rendered component.
  */
-const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, left, countries, subcat, selectedGuage, maxVal }) => {
+const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, left, subcat, selectedGuage, maxVal }) => {
     const [scenerioName, setScenerio] = useState(scenerio);
-    const [barData, setData] = useState(getBarHorizontal(countries, csv, scenerio));
+    const [barData, setData] = useState(getGlobalBarHorizontal(csv, scenerio));
     useEffect(() => {
         setScenerio(scenerio);
         //console.log("Scenario:", scenerio);
     }, [scenerio])
     useEffect(() => {
-        setData(getBarHorizontal(countries, csv, scenerio));
+        setData(getGlobalBarHorizontal(csv, scenerio));
         //console.log("BAR DATA:", barData);
-    }, [countries, csv, scenerio])
+    }, [csv, scenerio])
     //console.log(selectedGuage, subcat);
     return (
-        <div className="bar-wrapper">
-            <div className="double-bar-text-wrapper">  {scenerioName} </div>
+        <div className="bar-global-wrapper">
             <ResponsiveBar
                 data={barData}
                 keys={listKeys}
@@ -73,16 +72,15 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, le
                     legendOffset: 32
                 }}
                 onClick={(data) => {
-                    console.log(data);
                     if (data.id !== 'class1') {
                         dashSubs(
                             `${data["id"]}`
                         );
                         dashReg(
-                            `${data["indexValue"]}`
+                            `Global`
                         );
                         updateHash("sub", `${data["id"]}`);
-                        updateHash("reg", `${data["indexValue"]}`);
+                        updateHash("reg", `Global`);
                     }
                 }}
                 axisLeft={{
