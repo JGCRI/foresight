@@ -10,6 +10,7 @@ import { DropdownButton } from 'react-bootstrap';
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import Form from 'react-bootstrap/Form';
 import { getIconParam, iconTypes } from '../data/VariableCategories';
+import { datasets } from '../data/Scenarios';
 
 /**
  * The floater component displayed between the guages and the charts on the dashboard. 
@@ -24,6 +25,7 @@ import { getIconParam, iconTypes } from '../data/VariableCategories';
  * @param {number} props.startDate - Guage start date.
  * @param {number} props.endDate - Guage end date.
  * @param {object[]} props.data - Data for loading the guages.
+ * @param {string} props.dataset - Currently selected dataset.
  * @param {(openGuage: object[]) => any} props.updateSelection - Updates the currently selected guage.
  * @param {(openScenerio: object[]) => any} props.updateScenerios - Updates the current scenarios.
  * @param {(guages: object[]) => any} props.updateGuages - Updates the currently opened guages.
@@ -33,10 +35,11 @@ import { getIconParam, iconTypes } from '../data/VariableCategories';
  * @param {() => void} props.reset - Function that forces a re-query of all data.
  * @returns {ReactElement} The rendered component.
  */
-function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameters, SelectedParameter, startDate, endDate, data, updateSelection, updateScenerios, updateGuages, dashDate, dashReg, dashSubs, reset }) {
+function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameters, SelectedParameter, startDate, endDate, data, dataset, updateSelection, updateScenerios, updateGuages, dashDate, dashReg, dashSubs, reset }) {
 
   const paramDropdownList = () => {
     let list = [];
+    list.push(<Dropdown.Item as="button" key={"reset"} onClick={() => resetToDefault()}>{"Reset to Default"}</Dropdown.Item>)
     iconTypes.sort().forEach(group => {
       let params = paramDropdownListGroup(group)
       if (params && params.length > 0) {
@@ -89,7 +92,21 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
     updateGuages(newParameters);
   }
 
-  // Maps the dropdown menu. Takes in the vector of all scenerios and creates 
+  const resetToDefault = () => {
+    console.log("reset triggered");
+    let newParams = [];
+    datasets.find(obj => obj.dataset === dataset).defaults.forEach(defaultGuage => newParams.push(Parameters.filter(guage => guage ? guage.title === defaultGuage : false)[0]));
+    if (newParams.length < 1 || newParams.length > 6) return;
+    console.log(newParams);
+    if (!newParams.includes(obj => obj.title === SelectedParameter)) {
+      updateSelection(newParams[Math.min(1, newParams.length - 1)].title);
+      resetParams();
+    }
+    updateHash("params", newParams.map(param => param.title).toString());
+    updateGuages(newParams);
+  }
+
+  // Maps the dropdown menu. Takes in the list of all scenerios and creates 
   // a Dropdown.Item for each.
   const scenarioDropdownList = (index) => Scenarios.map((scenerio) => (
     <div key={scenerio.title}>
@@ -252,6 +269,7 @@ function mapStateToProps(state) {
     startDate: state.startDate,
     endDate: state.endDate,
     Parameters: state.guageList,
+    dataset: state.dataset,
   };
 }
 

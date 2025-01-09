@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 
 /**
- * The component that handles data downloading. Contains seperate pipelines for both user-uploaded and cloud-hosted data.
+ * Search component for dropdowns. Creates an interactive search field to filter results.
  */
 export const DropdownSearchBar = React.forwardRef(
   ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
