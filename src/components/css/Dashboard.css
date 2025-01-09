@@ -483,14 +483,14 @@
 .bar-wrapper {
   min-width: 0;
   width: 100%;
-  height: max(330px, min(48vw, 36vh));
+  height: max(330px, min(48vw, 33vh));
   margin-top: 5px;
 }
 
 .bar-global-wrapper {
   min-width: 0;
   width: 100%;
-  height: max(70px, min(10vw, 7.6vh));
+  height: max(70px, min(10vw, 7vh));
   margin-top: 0px;
 }
 

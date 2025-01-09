@@ -13,14 +13,16 @@ import { setDashReg, setDashSubs } from "../Store.jsx";
  * @param {string[]} props.color - List of colors in hex.
  * @param {string[]} props.listKeys - List of all possible subcategories.
  * @param {string} props.scenerio - Current scenario.
- * @param {React.Dispatch<React.SetStateAction<string>>} props.setdashboardSub - Updates the selected subsector.
+ * @param {(subs: string) => any} props.dashSubs - Updates the subsector value.
+ * @param {(reg: string) => any} props.dashReg - Updates the region value.
  * @param {boolean} props.left - Boolean value of whether the bar should be displayed on the left.
- * @param {string[]} props.countries - List of currently selected countries.
  * @param {string} props.subcat - Stored subcategory value.
+ * @param {string} props.region - Stored region value.
  * @param {string} props.selectedGuage - Currently selected data variable.
+ * @param {number} props.maxVal - Maximum data value on a single line. Used for scaling.
  * @returns {ReactElement} The rendered component.
  */
-const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, left, subcat, selectedGuage, maxVal }) => {
+const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, left, subcat, region, selectedGuage, maxVal }) => {
     const [scenerioName, setScenerio] = useState(scenerio);
     const [barData, setData] = useState(getGlobalBarHorizontal(csv, scenerio));
     useEffect(() => {
@@ -66,7 +68,7 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, le
                     tickSize: 5,
                     tickPadding: 5,
                     tickRotation: 0,
-                    tickValues: 2,
+                    tickValues: 1,
                     legend: '',
                     legendPosition: 'middle',
                     legendOffset: 32
@@ -76,10 +78,12 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, le
                         dashSubs(
                             `${data["id"]}`
                         );
+                        updateHash("sub", `${data["id"]}`);
+                    }
+                    if(region !== 'Global') {
                         dashReg(
                             `Global`
                         );
-                        updateHash("sub", `${data["id"]}`);
                         updateHash("reg", `Global`);
                     }
                 }}
@@ -325,6 +329,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
     return {
         subcat: state.dashboardSubsector,
+        region: state.dashboardRegion,
         countries: state.barCountries,
     };
 }
