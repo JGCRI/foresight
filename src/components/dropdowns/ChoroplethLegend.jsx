@@ -29,6 +29,21 @@ export default function ChoroplethLegend({ data, data2, mapRegion, color, divisi
     return maxValue < 10 ? Math.round(maxValue * 100) / 100 : Math.round(maxValue);
   }
 
+  const digitsBeforeDecimal = (num) => {
+    if (!Number.isFinite(num)) return 0;
+    return Math.abs(num.toString().split('.')[0]).toString().length;
+  }
+
+  const getDisplayValues = (num) => {
+    let numLength = digitsBeforeDecimal(num);
+    if(numLength > 9)
+      return (num / 1000000000).toFixed(2) + "B";
+    else if(numLength > 6)
+      return (num / 1000000).toFixed(2) + "M";
+    else if (numLength > 5)
+      return (num / 100000).toFixed(2) + "K";
+    return num.toString();
+  }
 
   const rows = () => {
     let rowHTML = [];
@@ -45,7 +60,7 @@ export default function ChoroplethLegend({ data, data2, mapRegion, color, divisi
       //console.log(data, color, max);
       if (max !== -Infinity) {
         rowHTML.push(<div key={index + "2choroplethlegend"} className={opened ? "choropleth-legend-color" : "choropleth-legend-closed"} style={{ backgroundColor: getColorValues(color, index, divisions) }}></div>);
-        rowHTML.push(!isNegative ? <div key={index + "3choroplethlegend"} className={opened ? "choropleth-legend-text" : "choropleth-legend-closed"}> <strong>{min}</strong> to <strong>{max}</strong> </div> : <div key={index + "3choroplethlegend"} className={opened ? "choropleth-legend-text" : "choropleth-legend-closed"}> <strong>{max}</strong> to <strong>{min}</strong> </div>);
+        rowHTML.push(!isNegative ? <div key={index + "3choroplethlegend"} className={opened ? "choropleth-legend-text" : "choropleth-legend-closed"}> <strong>{getDisplayValues(min)}</strong> to <strong>{getDisplayValues(max)}</strong> </div> : <div key={index + "3choroplethlegend"} className={opened ? "choropleth-legend-text" : "choropleth-legend-closed"}> <strong>{getDisplayValues(max)}</strong> to <strong>{getDisplayValues(min)}</strong> </div>);
         min = max;
       }
     }

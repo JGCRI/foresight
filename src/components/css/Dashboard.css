@@ -521,7 +521,11 @@
   }
 
   .bar-wrapper {
-    height:max(390px,  min(148vw, 48vh));
+    height:max(330px,  min(130vw, 40vh));
+  }
+
+  .bar-global-wrapper {
+    height: max(70px, min(8vw, 8vh));
   }
 }
 

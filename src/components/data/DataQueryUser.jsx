@@ -43,6 +43,9 @@ import { filterRegion, findClosestDateAllParamsAbove, getScenerio, listRegions }
  * React.Dispatch<React.SetStateAction<Object[]>>} props.setBar - Function
  * to change the data for the bar chart.
  * @param {React.Dispatch<React.SetStateAction<string>> | 
+ * React.Dispatch<React.SetStateAction<Object[]>>} props.setBarGlobal - Function
+ * to change the data for the bottom global bar chart.
+ * @param {React.Dispatch<React.SetStateAction<string>> | 
  * React.Dispatch<React.SetStateAction<Object[]>>} props.setGuage - Function
  * to change the data for guage displays.
  * @param {React.Dispatch<React.SetStateAction<string>> | 
@@ -66,7 +69,7 @@ import { filterRegion, findClosestDateAllParamsAbove, getScenerio, listRegions }
  * @returns {ReactElement} The rendered component.
  */
 function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart,
-  setEnd, setCurrentDate, setDates, setLine, setChoropleth, setBar, setGuage, setAggSub, setCountries, setRegions, setSubcategories, year, region, subcat, start, end, parameter }) {
+  setEnd, setCurrentDate, setDates, setLine, setChoropleth, setBar, setBarGlobal, setGuage, setAggSub, setCountries, setRegions, setSubcategories, year, region, subcat, start, end, parameter }) {
   const data = userUploadedData[dataset];
   const dataInfo = userUploadedInfo.filter(data => data.dataset === dataset)[0];
 
@@ -145,6 +148,7 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
     }
 
     let barData = data.aggClass1_regions.filter(item => item.param === selectedGuage && item.x === dashboardDate && opened.includes(item.scenario));
+    let barGlobalData = data.aggClass1_global.filter(item => item.param === selectedGuage && opened.includes(item.scenario) && item.x === dashboardDate);
     let guageData = data.aggParam_global.filter(item => (item.x === start || item.x === end) && opened.includes(item.scenario));
     let dateData = data.aggParam_global.filter(item => item.param === selectedGuage && opened.includes(item.scenario));
     let aggSubData = data.aggParam_regions.filter(item => item.param === selectedGuage && item.x === dashboardDate && opened.includes(item.scenario));
@@ -159,6 +163,7 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
     setRegions(listRegions(choroplethData));
     //console.log("DATASET: BAR", barData);
     setBar(barData);
+    setBarGlobal(barGlobalData);
     //console.log("DATASET: GUAGE", guageData);
     setGuage(guageData);
     //console.log("DATASET: DATES", dateData);
@@ -210,8 +215,13 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
 
   useEffect(() => {
     setBar("i");
+    setBarGlobal("i");
+
     let barData = data.aggClass1_regions.filter(item => item.param === parameter && item.x.toString() === year.toString() && scenarios.includes(item.scenario));
     setBar(barData);
+
+    let barGlobalData = data.aggClass1_global.filter(item => item.param === parameter && item.x.toString() === year.toString() && scenarios.includes(item.scenario));
+    setBarGlobal(barGlobalData);
   }, [scenarios, data, parameter, year, setBar]);
 
   useEffect(() => {

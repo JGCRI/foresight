@@ -95,7 +95,10 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
   const resetToDefault = () => {
     console.log("reset triggered");
     let newParams = [];
-    datasets.find(obj => obj.dataset === dataset).defaults.forEach(defaultGuage => newParams.push(Parameters.filter(guage => guage ? guage.title === defaultGuage : false)[0]));
+    if(datasets.some(e => e.dataset === dataset))
+      datasets.find(obj => obj.dataset === dataset).defaults.forEach(defaultGuage => newParams.push(Parameters.filter(guage => guage ? guage.title === defaultGuage : false)[0]));
+    else
+      newParams = Parameters.slice(0, 5);
     if (newParams.length < 1 || newParams.length > 6) return;
     console.log(newParams);
     if (!newParams.includes(obj => obj.title === SelectedParameter)) {

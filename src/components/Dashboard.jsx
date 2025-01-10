@@ -73,6 +73,7 @@ function Dashboard({ open, dataset, scenarios }) {
           setLine={setLineData}
           setChoropleth={setChoroplethData}
           setBar={setBarData}
+          setBarGlobal={setBarGlobalData}
           setAggSub={setAggSub}
           setRegions={setRegionList}
           setSubcategories={setSubcategoriesList}
