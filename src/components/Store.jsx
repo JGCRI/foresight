@@ -15,6 +15,7 @@ const initialState = {
   dashboardRegion: "",
   dashboardSubsector: "",
   barCountries: [],
+  barCountriesFrozen: false,
   scenerios: [],
   allScenarios: [],
   guages: [],
@@ -68,6 +69,8 @@ function reducer(state = initialState, action) {
       return { ...state, dashboardSubsector: action.payload };
     case 'setBarCountries':
       return { ...state, barCountries: action.payload };
+    case 'setBarCountriesFrozen':
+      return { ...state, barCountriesFrozen: action.payload };
     default:
       return state;
   }
@@ -265,6 +268,16 @@ export function setSceneriosNoUpdate(scenerios) {
  */
 export function setBarCountries(country) {
   return { type: 'setBarCountries', payload: country };
+}
+
+/**
+ * Updates whether to freeze the list of bar countries.
+ * 
+ * @param {boolean} frozen - True if the countries are frozen. False otherwise.
+ * @returns {object} The action.
+ */
+export function setBarCountriesFrozen(frozen) {
+  return { type: 'setBarCountriesFrozen', payload: frozen };
 }
 
 // Create the Redux store

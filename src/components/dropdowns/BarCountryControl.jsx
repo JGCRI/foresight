@@ -3,7 +3,7 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 import { MdSettings } from "react-icons/md";
-import { setBarCountries } from '../Store';
+import { setBarCountries, setBarCountriesFrozen } from '../Store';
 import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import { getRegionsSorted, getScenerio, listRegions } from '../data/DataManager';
@@ -20,9 +20,12 @@ import { BAR_COUNTRIES } from '../data/Scenarios';
  * modifying the currently displayed countries on the bar chart.
  * @param {string[]} props.countries - State of the array 
  * of currently selected countries.
+ * @param {(frozen: boolean) => any} props.setFrozen - Function 
+ * setting whether the countries are frozen.
+ * @param {boolean} props.frozen - Boolean on whether the countries are frozen upon change.
  * @returns {ReactElement} The rendered component.
  */
-function BarChartControl({ csv, scenario, setCountries, countries }) {
+function BarChartControl({ csv, scenario, setCountries, countries, setFrozen, frozen }) {
   const changeCountries = (checked, country) => {
     if (checked) {
       countries.push(country);
@@ -39,10 +42,20 @@ function BarChartControl({ csv, scenario, setCountries, countries }) {
   const countryList = listRegions(aggregates);
   countryList.sort();
   //console.log("!", countryList);
-  let colors = []
+  let countryMenu = []
+  countryMenu.push(<Dropdown.ItemText>Settings</Dropdown.ItemText>);
+  countryMenu.push(<Form.Check
+    checked={frozen}
+    type="switch"
+    key={"country_frozen_toggle"}
+    id={"country_frozen_toggle"}
+    label={"Freeze regions on change"}
+    onChange={e => { setFrozen(!frozen) }}
+  />);
+  countryMenu.push(<Dropdown.ItemText>Regions</Dropdown.ItemText>);
   for (let i = 0; i < countryList.length; i++) {
     let country = countryList.at(i);
-    colors.push(
+    countryMenu.push(
       <Form.Check
         disabled={!(countries.includes(country)) && countries.length >= BAR_COUNTRIES}
         checked={countries.includes(country)}
@@ -63,7 +76,7 @@ function BarChartControl({ csv, scenario, setCountries, countries }) {
 
       <Dropdown.Menu as={DropdownSearchBar}>
         <Dropdown.Header>Region Selection</Dropdown.Header>
-        {colors}
+        {countryMenu}
       </Dropdown.Menu>
     </Dropdown>
   );
@@ -78,6 +91,7 @@ function BarChartControl({ csv, scenario, setCountries, countries }) {
 function mapDispatchToProps(dispatch) {
   return {
     setCountries: (countryList) => dispatch(setBarCountries(countryList)),
+    setFrozen: (frozen) => dispatch(setBarCountriesFrozen(frozen)),
   };
 }
 
@@ -90,6 +104,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     countries: state.barCountries,
+    frozen: state.barCountriesFrozen,
   };
 }
 

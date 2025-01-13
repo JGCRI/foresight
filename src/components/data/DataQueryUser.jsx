@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { connect } from 'react-redux';
-import { setAllScenarios, setdashboardGuages, setdashboardSelection, setGuageList, setSceneriosNoUpdate, setStartDate, setEndDate, setDashDate, setBarCountries } from '../Store';
+import { setAllScenarios, setdashboardGuages, setdashboardSelection, setGuageList, setSceneriosNoUpdate, setStartDate, setEndDate, setDashDate, setBarCountries, setBarCountriesFrozen } from '../Store';
 import { filterRegion, findClosestDateAllParamsAbove, getScenerio, listRegions } from './DataManager';
 
 /**
@@ -14,6 +14,8 @@ import { filterRegion, findClosestDateAllParamsAbove, getScenerio, listRegions }
  * @param {object[]} props.userUploadedInfo - Dataset of 
  * the headers of all user uploaded data
  * @param {object[]} props.scenerios - State of the currently open scenarios
+ * @param {string[]} props.countries - Array of currently selected countries.
+ * @param {string} props.barFrozen - State of whether the bar countries are frozen.
  * @param {(scenarios: Object[]) => any} props.setAllScenarios - Function to 
  * set the list of all scenarios.
  * @param {(scenarios: Object[]) => any} props.setScenariosTotal - Function to 
@@ -30,6 +32,8 @@ import { filterRegion, findClosestDateAllParamsAbove, getScenerio, listRegions }
  * to set the end year.
  * @param {(current: number) => any} props.setCurrentDate - Function 
  * to set the current year.
+ * @param {(frozen: boolean) => any} props.setFrozen - Function 
+ * setting whether the countries are frozen.
  * @param {React.Dispatch<React.SetStateAction<string>> | 
  * React.Dispatch<React.SetStateAction<Object[]>>} props.setDates - Function
  * to change the data needed for dates.
@@ -68,8 +72,8 @@ import { filterRegion, findClosestDateAllParamsAbove, getScenerio, listRegions }
  * @param {string} props.subcat - State of the current subcategory
  * @returns {ReactElement} The rendered component.
  */
-function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart,
-  setEnd, setCurrentDate, setDates, setLine, setChoropleth, setBar, setBarGlobal, setGuage, setAggSub, setCountries, setRegions, setSubcategories, year, region, subcat, start, end, parameter }) {
+function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios, countries, barFrozen, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart,
+  setEnd, setCurrentDate, setFrozen, setDates, setLine, setChoropleth, setBar, setBarGlobal, setGuage, setAggSub, setCountries, setRegions, setSubcategories, year, region, subcat, start, end, parameter }) {
   const data = userUploadedData[dataset];
   const dataInfo = userUploadedInfo.filter(data => data.dataset === dataset)[0];
 
@@ -171,6 +175,7 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
     //console.log("DATASET: AGGSUB", aggSubData);
     setAggSub(aggSubData);
     //console.log("DATASET: COUNTRIES", filterRegion(getScenerio(aggSubData, scenarios[0])));
+    setFrozen(false);
     setCountries(filterRegion(getScenerio(aggSubData, currentScenarios[0].title)));
     //console.log("DATASET: AGGREG", aggRegData);
     setSubcategories(aggRegData);
@@ -240,7 +245,8 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
     setAggSub("i");
     let aggSubData = data.aggParam_regions.filter(item => item.param === parameter && item.x.toString() === year.toString() && scenarios.includes(item.scenario));
     setAggSub(aggSubData);
-    setCountries(filterRegion(getScenerio(aggSubData, scenarios[0])));
+    if(countries.length < 1 || !barFrozen)
+      setCountries(filterRegion(getScenerio(aggSubData, scenarios[0])));
   }, [scenarios, data, parameter, year, setAggSub, setCountries]);
 
   useEffect(() => {
@@ -267,6 +273,8 @@ function mapStateToProps(state) {
     start: parseInt(state.startDate),
     end: parseInt(state.endDate),
     parameter: state.dashboardSelection,
+    countries: state.barCountries,
+    barFrozen: state.barCountriesFrozen,
   };
 }
 
@@ -287,6 +295,7 @@ function mapDispatchToProps(dispatch) {
     setEnd: (end) => dispatch(setEndDate(end)),
     setCurrentDate: (current) => dispatch(setDashDate(current)),
     setCountries: (countryList) => dispatch(setBarCountries(countryList)),
+    setFrozen: (frozen) => dispatch(setBarCountriesFrozen(frozen)),
   };
 }
 

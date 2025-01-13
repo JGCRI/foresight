@@ -10,7 +10,7 @@ import LeafletSync from "./maps/LeafletSync";
 import { choroplethReduce, filterSubcat, lineGraphReduce, getUnits, getScenerio, getDataPosSum } from 
 './data/DataManager';
 import { getBarColors } from './data/GcamColors';
-import { datasets } from './data/Scenarios';
+import { BAR_COUNTRIES, datasets } from './data/Scenarios';
 import DashboardBarGlobal from './charts/DashboardBarGlobal';
 
 /**
@@ -58,6 +58,7 @@ import DashboardBarGlobal from './charts/DashboardBarGlobal';
  * interpolation selection.
  * @param {React.Dispatch<React.SetStateAction<string>>} props.setInterpolation - 
  * Function that sets the current choropleth interpolation.
+ * @param {string[]} props.countries - Array of currently selected countries.
  * @param {string} props.dataset - State indicating the current dataset.
  * @param {object} props.datasetInfo - State indicating the dataset headers
  * for user-uploaded datasets.
@@ -67,7 +68,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   curYear, region, subcat, lineData, guageData, choroplethData, barData, 
   barGlobalData, aggSub, setDashboardDate, setDashboardReg, setDashboardSubs, 
   choroplethColorPalette, setChoroplethColorPalette, choroplethInterpolation, 
-  setInterpolation, dataset, datasetInfo }) {
+  setInterpolation, countries, dataset, datasetInfo }) {
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -136,7 +137,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
     <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
     <div>{Scenerios.at(0).title} vs. {Scenerios.at(1).title}</div>
   </div>)
-  let barChartLabel = (<div className="text-centered"> Top 10 Countries 
+  let barChartLabel = (<div className="text-centered"> Top {countries.length} Regions 
   {" (" + curYear + ")"} -- By Subsector</div>)
 
   // Line Chart Visualization

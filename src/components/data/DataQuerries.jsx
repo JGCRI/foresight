@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { API, graphqlOperation } from "aws-amplify";
 import { connect } from 'react-redux';
-import { setAllScenarios, setSceneriosNoUpdate, setGuageList, setdashboardGuages, setdashboardSelection, setStartDate, setEndDate, setDashDate, setBarCountries, setDataset, setDashReg, setDashSubs } from '../Store';
+import { setAllScenarios, setSceneriosNoUpdate, setGuageList, setdashboardGuages, setdashboardSelection, setStartDate, setEndDate, setDashDate, setBarCountries, setDataset, setDashReg, setDashSubs, setBarCountriesFrozen } from '../Store';
 import { checkRegionURL, checkSubcatURL, loadDataURL } from '../sharing/DashboardUrl';
 import { getScenerio, filterRegion, listRegions, filterSubcat, getGlobalBarHorizontal } from './DataManager';
 
@@ -281,6 +281,8 @@ query BarQuery($date: Int!, $nextToken: String, $id: String!) {
  * @param {number} props.year - State of the current year.
  * @param {string} props.region - State of the current region.
  * @param {string} props.subcat - State of the current subcategory.
+ * @param {string[]} props.countries - Array of currently selected countries.
+ * @param {string} props.barFrozen - State of whether the bar countries are frozen.
  * @param {React.Dispatch<React.SetStateAction<string>> | 
  * React.Dispatch<React.SetStateAction<Object[]>>} props.setGuage - Function
  * to change the data for guage displays.
@@ -331,6 +333,7 @@ query BarQuery($date: Int!, $nextToken: String, $id: String!) {
  * to set the current subcategory.
  * @param {(region: string) => any} props.setRegion - Function 
  * to set the current region.
+ * @param {(frozen: boolean) => any} props.setFrozen - Function 
  * @param {boolean} props.URLLoaded - Flag indicating 
  * if the URL is loaded.
  * @param {() -> any} props.toggleURLLoaded - Function to 
@@ -341,7 +344,7 @@ query BarQuery($date: Int!, $nextToken: String, $id: String!) {
  * list of datasets.
  * @returns {ReactElement} The rendered component.
  */
-function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, year, region, subcat, setGuage, setDates, setLine, setChoropleth, setBar, setBarGlobal, setAggSub, setCountries, setRegions, setSubcategories, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart, setEnd, setCurrentDate, setSubcat, setRegion, URLLoaded, toggleURLLoaded, updateDataset, datasetList }) {
+function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, year, region, subcat, countries, barFrozen, setGuage, setDates, setLine, setChoropleth, setBar, setBarGlobal, setAggSub, setCountries, setRegions, setSubcategories, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart, setEnd, setCurrentDate, setSubcat, setRegion, setFrozen, URLLoaded, toggleURLLoaded, updateDataset, datasetList }) {
   const [scenarios, setScenarios] = useState("i");
 
   useEffect(() => {
@@ -395,7 +398,7 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
 
   const fetchDashboard = useCallback(async () => {
     const result = await fetchParallel([[queryDataset, { dataset: dataset }]]);
-    //console.log(result);
+    setFrozen(false);
     loadDataURL(result, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart, setEnd, setCurrentDate, URLLoaded, toggleURLLoaded, updateDataset, datasetList, dataset, start, end, year, parameter, parameters, scenerios);
     // eslint-disable-next-line
   }, [dataset]);
@@ -488,8 +491,8 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
       setAggSub(result);
       if(region === "")
         checkRegionURL(new Set(result.map(obj => obj.region)), setRegion);
-      console.log("!!!!", result); 
-      setCountries(filterRegion(getScenerio(result, scenarios[0])));
+      if(countries.length < 1 || !barFrozen)
+        setCountries(filterRegion(getScenerio(result, scenarios[0])));
     }
     // eslint-disable-next-line
   }, [dataset, scenarios, parameter, year, setAggSub, setCountries, setRegion, fetchParallel]);
@@ -586,6 +589,8 @@ function mapStateToProps(state) {
     year: state.dashboardYear,
     region: state.dashboardRegion,
     subcat: state.dashboardSubsector,
+    countries: state.barCountries,
+    barFrozen: state.barCountriesFrozen,
     URLLoaded: state.urlLoaded
   };
 }
@@ -611,6 +616,7 @@ function mapDispatchToProps(dispatch) {
     updateDataset: (dataset) => dispatch(setDataset(dataset)),
     setSubcat: (subcat) => dispatch(setDashSubs(subcat)),
     setRegion: (region) => dispatch(setDashReg(region)),
+    setFrozen: (frozen) => dispatch(setBarCountriesFrozen(frozen)),
   };
 }
 
