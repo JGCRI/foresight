@@ -76,6 +76,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   const [dashRegion, setRegion] = useState(region);
   const [dashSubcategory, setSubcategory] = useState(subcat);
 
+  const [barMax, setBarMax] = useState(0);
   //console.log(dashYear, dashRegion, dashSubcategory);
   
   useEffect(() => {
@@ -91,8 +92,8 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   }, [dashSubcategory, setDashboardSubs]);
 
   useEffect(() => {
-    //console.log("SCENERIO CHANGE");
-  }, [openedScenerios]);
+    setBarMax(aggSub === "i" ? 0 : Math.max(...aggSub.filter(obj => countries.includes(obj.region)).map(item => item.value), 0));
+  }, [aggSub, countries]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -125,11 +126,8 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
     units = getUnits(guageData, selectedGuage);
   }
 
-  let barMax = aggSub === "i" ? 0 : Math.max(...aggSub.map(item => item.value));
   let barGlobalMax = barGlobalData === "i" ? 0 : Math.max(0, getDataPosSum(barGlobalData, Scenerios.at(0).title), getDataPosSum(barGlobalData, Scenerios.at(1).title));
-  if(!barMax || barMax < 0) {
-    barMax = 0;
-  }
+
   // Labels
   let lineChartLabel = 
   (<div className="text-centered">{regionDisplay} {subcatDisplay} Trends</div>)
@@ -137,7 +135,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
     <div>Spatial Composition {"(" + curYear + subcatDisplay + ")"}</div>
     <div>{Scenerios.at(0).title} vs. {Scenerios.at(1).title}</div>
   </div>)
-  let barChartLabel = (<div className="text-centered"> Top {countries.length} Regions 
+  let barChartLabel = (<div className="text-centered"> Top{countries.length > 1 ? " " + countries.length : ""} Selected Region{countries.length > 1 ? "s":""} 
   {" (" + curYear + ")"} -- By Subsector</div>)
 
   // Line Chart Visualization
@@ -199,9 +197,12 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
     </div>
   ) : (
     <div className='bar-grid grid-border'>
-      <BarCountryControl csv={aggSub} scenario={Scenerios.at(0).title} 
-      scenerio2={Scenerios.at(1).title} 
-      className="choropleth-control" />
+      <BarCountryControl 
+        csv={aggSub} 
+        setMaxVal = {setBarMax}
+        scenario={Scenerios.at(0).title} 
+        scenerio2={Scenerios.at(1).title} 
+        className="choropleth-control" />
       <BarHorizontal csv={barData} color={openedGuages ? 
         getBarColors(barData, Scenerios.at(0).title, 
         openedGuages.find(guage => guage.title === selectedGuage) ? openedGuages.find(guage => guage.title === selectedGuage).group : ["#error"]) : ["#666666"]} 
