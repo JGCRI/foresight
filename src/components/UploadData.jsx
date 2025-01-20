@@ -212,31 +212,79 @@ function UploadData({ datasets, updateDatasets, userUploadedData, loadDataToStor
       return;
     }
     //console.log(e);
-    setInput1(e.target.files[0].name.replace(".csv", ""));
     const uploadedFile = e.target.files[0];
     if (uploadedFile) {
       setLoading(true);
       setDataStore(null);
       setDataInfoStore(null);
-      Papa.parse(uploadedFile, {
-        header: true,
-        complete: (result) => {
+      const fileExtension = e.target.files[0].name.split('.').pop().toLowerCase();
+      setInput1(e.target.files[0].name.replace(/\.[^/.]+$/, ""));
+
+      switch (fileExtension) {
+        case 'csv':
+          handleCSVUpload(uploadedFile);
+          break;
+        case 'dat':
+          handleDATUpload(uploadedFile);
+          break;
+        default:
+          setFileError('Unsupported file type. Please upload a .csv, .dat, or BaseX project file.');
           setLoading(false);
-          let error = validateCSV(result.data);
-          if (error === "") {
-            if(result.data[0].dataset) setInput1(getUniqueName(result.data[0].dataset, true));
-            processCSV(result.data.slice(0, -1));
-            setFileError('');
-          } else {
-            setDataStore(null);
-            setFileError("Invalid CSV format. Please ensure the file has the column " + error + ".");
-          }
-        },
-        error: (error) => {
-          setDataStore(null);
-          setFileError('Error parsing CSV file: ' + error.message);
+          break;
+      }
+    }
+  };
+
+  const handleCSVUpload = (file) => {
+    Papa.parse(file, {
+      header: true,
+      complete: (result) => {
+        setLoading(false);
+        const error = validateCSV(result.data);
+        if (!error) {
+          if(result.data[0].dataset) setInput1(getUniqueName(result.data[0].dataset, true));
+          processCSV(result.data.slice(0, -1));
+          setFileError('');
+        } else {
+          setFileError(`Invalid CSV format. Missing column(s): ${error}.`);
         }
+      },
+      error: (error) => {
+        setLoading(false);
+        setFileError(`Error parsing CSV file: ${error.message}`);
+      }
+    });
+  };
+
+  const handleDATUpload = async (file) => {
+    if (!file) return;
+  
+    const formData = new FormData();
+    formData.append('datFile', file);
+  
+    try {
+      setLoading(true);
+      setFileError('');
+  
+      const response = await fetch('http://localhost:3000/upload-dat', {
+        method: 'POST',
+        body: formData,
       });
+  
+      if (!response.ok) {
+        throw new Error(`Failed to upload file: ${response.statusText}`);
+      }
+  
+      const jsonData = await response.json();
+  
+      // Process CSV data and update the state
+      processCSV(jsonData);
+  
+      setFileError('');
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      setFileError(`Error uploading DAT file: ${error.message}`);
     }
   };
 
@@ -341,8 +389,9 @@ function UploadData({ datasets, updateDatasets, userUploadedData, loadDataToStor
               <Form.Control
                 id="upload-files"
                 type="file"
-                accept=".csv"
+                accept=".csv,.dat,.basex"
                 onChange={handleFileChange}
+                multiple
               />
               {fileError && <p className="text-danger">{fileError}</p>}
             </Form.Group>
