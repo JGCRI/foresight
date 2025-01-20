@@ -6,9 +6,9 @@ import { MdSettings } from "react-icons/md";
 import { setBarCountries, setBarCountriesFrozen } from '../Store';
 import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
-import { getRegionsSorted, getScenerio, listRegions } from '../data/DataManager';
-import { DropdownSearchBar } from './DropdownSearchBar';
+import { filterRegion, getRegionsSorted, getScenerio, listRegions } from '../data/DataManager';
 import { BAR_COUNTRIES } from '../data/Scenarios';
+import { DropdownBarSearchBar } from './DropdownBarSearchBar';
 
 /**
  * A dropdown menu for Bar Chart settings.
@@ -38,12 +38,17 @@ function BarChartControl({ csv, scenario, setCountries, countries, setFrozen, fr
     }
   }
 
+  const resetCountries = () => {
+    setCountries(filterRegion(getScenerio(csv, scenario)));
+  }
+
   let aggregates = getScenerio(csv, scenario);
   const countryList = listRegions(aggregates);
   countryList.sort();
   //console.log("!", countryList);
   let countryMenu = []
   countryMenu.push(<Dropdown.ItemText>Settings</Dropdown.ItemText>);
+  countryMenu.push(<Dropdown.Item as="button" key={"reset_all"} onClick={() => resetCountries()}>{"Reset to Default"}</Dropdown.Item>)
   countryMenu.push(<Form.Check
     checked={frozen}
     type="switch"
@@ -74,7 +79,7 @@ function BarChartControl({ csv, scenario, setCountries, countries, setFrozen, fr
         <MdSettings />
       </Dropdown.Toggle>
 
-      <Dropdown.Menu as={DropdownSearchBar}>
+      <Dropdown.Menu as={DropdownBarSearchBar}>
         <Dropdown.Header>Region Selection</Dropdown.Header>
         {countryMenu}
       </Dropdown.Menu>

@@ -4,26 +4,19 @@ import { Form } from 'react-bootstrap';
 /**
  * Search component for dropdowns. Creates an interactive search field to filter results.
  */
-export const DropdownSearchBar = React.forwardRef(
+export const DropdownBarSearchBar = React.forwardRef(
   ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-    console.log(children);
     const [value, setValue] = useState('');
     const getItems = () => {
       if (!children || !children[0] || !children[1])
         return "";
       if (Array.isArray(children[1]))
-        return children[1].filter(
-          (child) =>
-            !value || !child.key
-        )
-      if ((children && children.length === 1) || (children && children.length === 2 && children[1].key))
-        return children;
-      if (children[0].key)
-        return children.filter(
-          (child) =>
-            !value || !child.key || child.key.toLowerCase().startsWith(value.toLowerCase())
+        return children[1].slice(0, 4).concat(
+          children[1].slice(4).filter(
+            (child) =>
+              !value || !child.key || child.key.toLowerCase().startsWith(value.toLowerCase())
+          )
         );
-      return "";
     };
     return (
       <div
