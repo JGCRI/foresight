@@ -32,7 +32,7 @@ import { connect } from 'react-redux';
 const DashboardLeaflet = ({ data, mapRegion, displayLegend, id, dashReg, setRegion, mapInstance, setMapInstance, mapStyles, setCountryDisplay, setCountryDisplayValue, choroplethColorPalette, choroplethInterpolation, divisions }) => {
   const mapData = data;
   const getJson = (data) => {
-    if (!data || !data[0] || !data[0].id || data === 'i') return landcells;
+    if (!data || !data[0] || !data[0].id || data === 'i') return global;
     if (mapRegion === 'global')
       return global;
     else if (mapRegion === 'glu' || mapRegion === 'basin')

@@ -33,7 +33,7 @@ function Navigation({ dataset, datasets, updateDataset, dashDate, dashReg, dashS
     //console.log("Selected dataset:", selectedDataset);
     // Call updateDataset to dispatch the action
     updateDataset(selectedDataset.data);
-    dashDate(2020);
+    dashDate(2100);
     dashReg("Global");
     dashSubs("Aggregate of Subsectors");
     clearHash();

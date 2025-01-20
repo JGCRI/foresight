@@ -6,7 +6,6 @@ import { Form } from 'react-bootstrap';
  */
 export const DropdownSearchBar = React.forwardRef(
   ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-    console.log(children);
     const [value, setValue] = useState('');
     const getItems = () => {
       if (!children || !children[0] || !children[1])

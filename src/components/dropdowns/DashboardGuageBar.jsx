@@ -4,7 +4,7 @@ import { setDashDate, setDashReg, setDashSubs, setScenerios, setdashboardSelecti
 import ScenerioGuage from "../guages/ScenerioGuage"
 import ScenerioGuageNegative from "../guages/ScenerioGuageNegative"
 import Dropdown from 'react-bootstrap/Dropdown';
-import { getGuage } from '../data/DataManager';
+import { findClosestDate, getGuage } from '../data/DataManager';
 import { updateHash, updateListHash } from '../sharing/DashboardUrl';
 import { DropdownButton } from 'react-bootstrap';
 import { MdOutlineLibraryAdd } from "react-icons/md";
@@ -68,10 +68,10 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
   }
 
   const resetParams = () => {
-    dashDate(2020);
+    dashDate(findClosestDate(data, 2100));
     dashReg("Global");
     dashSubs("Aggregate of Subsectors");
-    updateHash("year", 2020);
+    updateHash("year", findClosestDate(data, 2100));
     updateHash("reg", "Global");
     updateHash("sub", "Aggregate of Subsectors");
   }

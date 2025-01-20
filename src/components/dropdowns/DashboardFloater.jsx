@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { DropdownButton } from "react-bootstrap";
 import { getIconParam } from "../data/VariableCategories";
 import { updateHash } from "../sharing/DashboardUrl";
-import { findUnitsByTitle } from "../data/DataManager";
+import { findClosestDate, findUnitsByTitle } from "../data/DataManager";
 import { DropdownSearchBar } from "./DropdownSearchBar";
 import DashboardDataDownload from "../sharing/DashboardDataDownload";
 
@@ -55,10 +55,10 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
     }, []);
     //console.log(regions);
     function resetParams() {
-        dashDate(2100);
+        dashDate(findClosestDate(dates, 2100));
         dashReg("Global");
         dashSubs("Aggregate of Subsectors");
-        updateHash("year", 2100);
+        updateHash("year", findClosestDate(dates, 2100));
         updateHash("reg", "Global");
         updateHash("sub", "Aggregate of Subsectors");
     }
@@ -77,13 +77,14 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
         </div >
     )) : [];
 
-    let uniqueDates = dates !== "i" ? new Set(dates.map(obj => obj.x)) : "i";
+    let uniqueDates = dates !== "i" ? new Set(dates.map(obj => obj.x).sort((a, b) => parseInt(a) - parseInt(b))) : "i";
     let uniqueRegions = regions !== "i" ? new Set(regions) : "i";
     let uniqueSubcats = subcats !== "i" ? new Set(subcats) : "i";
     if (uniqueRegions !== "i")
         uniqueRegions.add("Global");
     if (uniqueSubcats !== "i")
         uniqueSubcats.add("Aggregate of Subsectors");
+
     //console.log(uniqueDates, uniqueRegions, uniqueSubcats);
 
     const date_links = (uniqueDates && uniqueDates !== "i") ? Array.from(uniqueDates).map((date) => (
