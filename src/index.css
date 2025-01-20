@@ -204,7 +204,7 @@ a {
   position: absolute;
   left: 0 !important;
   z-index: 999 !important;
-  width: 150px;
+  width: 140px;
   transition: width 0.3s ease-in-out;
   height: 200vh !important;
   background-color: rgb(10, 25, 41);
@@ -215,7 +215,7 @@ a {
   position: absolute;
   left: 0 !important;
   z-index: 999 !important;
-  width: 60px;
+  width: 50px;
   transition: none;
   height: 200vh !important;
   background-color: rgb(10, 25, 41);

@@ -35,29 +35,10 @@ function SidebarDashboard({ open, toggleOpen, setOpen }) {
           <AiFillCaretRight />
         )}
       </button>
-      {
-        (open) ? (
-          <div className="side-info-text">
-            Subpages Coming Soon!
-          </div>
-        ) : (<div />)
-      }
       <NavLink className="sideitem" >
         <RiDashboardFill />
         <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Dashboard"}</span>
       </NavLink>
-      <div className="sideitem" >
-        <MdElectricBolt />
-        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Energy"}</span>
-      </div>
-      <div className="sideitem" >
-        <GiWaterDrop />
-        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Water"}</span>
-      </div>
-      <div className="sideitem" >
-        <CiWheat />
-        <span className={`linkText ${!open ? "collapsed" : ""}`}>{"Land"}</span>
-      </div>
     </div>
   );
 }

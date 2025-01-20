@@ -14,7 +14,7 @@
   position: relative;
   padding-right: 20px !important;
   padding-left: 160px !important;
-  padding-top: 50px !important;
+  padding-top: 30px !important;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -100,7 +100,6 @@
 .date-select-row {
   height: 30px;
   background: rgb(0, 0, 0, 1);
-  margin-bottom: 50px;
   margin-left: 5%;
   border: 1px solid rgb(21, 21, 21);
   border-radius: 5px;
