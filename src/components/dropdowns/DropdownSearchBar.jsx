@@ -8,7 +8,7 @@ export const DropdownSearchBar = React.forwardRef(
   ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
     const [value, setValue] = useState('');
     const getItems = () => {
-      if (!children || !children[0] || !children[1])
+      if (!children || !children[0])
         return "";
       if (Array.isArray(children[1]))
         return children[1].filter(

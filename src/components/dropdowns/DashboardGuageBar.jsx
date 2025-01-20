@@ -25,6 +25,7 @@ import { datasets } from '../data/Scenarios';
  * @param {number} props.startDate - Guage start date.
  * @param {number} props.endDate - Guage end date.
  * @param {object[]} props.data - Data for loading the guages.
+ * @param {object[]} props.dateData - Data for determining the reset date.
  * @param {string} props.dataset - Currently selected dataset.
  * @param {(openGuage: object[]) => any} props.updateSelection - Updates the currently selected guage.
  * @param {(openScenerio: object[]) => any} props.updateScenerios - Updates the current scenarios.
@@ -35,7 +36,7 @@ import { datasets } from '../data/Scenarios';
  * @param {() => void} props.reset - Function that forces a re-query of all data.
  * @returns {ReactElement} The rendered component.
  */
-function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameters, SelectedParameter, startDate, endDate, data, dataset, updateSelection, updateScenerios, updateGuages, dashDate, dashReg, dashSubs, reset }) {
+function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameters, SelectedParameter, startDate, endDate, data, dateData, dataset, updateSelection, updateScenerios, updateGuages, dashDate, dashReg, dashSubs, reset }) {
 
   const paramDropdownList = () => {
     let list = [];
@@ -180,7 +181,7 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
   // This function resets and updates each selected parameter apon a new parameter being
   // chosen. 
   function resetAndUpdate(title) {
-    dashDate(2020);
+    dashDate(findClosestDate(dateData, 2100));
     dashReg("Global");
     dashSubs("Aggregate of Subsectors");
     updateSelection(title);

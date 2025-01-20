@@ -116,7 +116,7 @@ const DashboardLeaflet = ({ data, mapRegion, displayLegend, id, dashReg, setRegi
 
   function highlightFeature(e) {
     var layer = e.target;
-    setCountryDisplay(e.sourceTarget.feature.id);
+    setCountryDisplay(e.sourceTarget.feature.id + id.slice(-2));
     setCountryDisplayValue(getChoroplethValue(mapData, e.sourceTarget.feature.id));
     layer.setStyle({
       weight: 5,

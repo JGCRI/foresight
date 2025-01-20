@@ -101,8 +101,8 @@ const LeafletSync = ({ mapRegion, choroplethColorPalette, setChoroplethColorPale
       <div className="slider-container">
         <div className="image-container">
           <div className="choropleth-data-info">
-            {country === "" ? "" : country + ": "}
-            <strong>{country === "" ? "" : (getRank(data, country) === -1 ? "No Data" : Number(countryValue).toFixed(2))}</strong>
+            {country === "" ? "" : country.slice(0, -2) + ": "}
+            <strong>{country === "" ? "" : ((country.slice(-2) === "_1" ? getRank(data, country.slice(0, -2)) === -1 : getRank(data2, country.slice(0, -2)) === -1) ? "No Data" : Number(countryValue).toFixed(2))}</strong>
           </div>
           <ChoroplethControl
             palette={choroplethColorPalette}

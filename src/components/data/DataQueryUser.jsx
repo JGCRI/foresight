@@ -176,7 +176,10 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
     setAggSub(aggSubData);
     //console.log("DATASET: COUNTRIES", filterRegion(getScenerio(aggSubData, scenarios[0])));
     setFrozen(false);
-    setCountries(filterRegion(getScenerio(aggSubData, currentScenarios[0].title)));
+    let countries = filterRegion(getScenerio(aggSubData, currentScenarios[0].title))
+    if(countries.length === 0)
+      countries = filterRegion(getScenerio(aggSubData, currentScenarios[1].title))
+    setCountries(countries);
     //console.log("DATASET: AGGREG", aggRegData);
     setSubcategories(aggRegData);
 
@@ -245,8 +248,12 @@ function DataQueryUser({ dataset, userUploadedData, userUploadedInfo, scenerios,
     setAggSub("i");
     let aggSubData = data.aggParam_regions.filter(item => item.param === parameter && item.x.toString() === year.toString() && scenarios.includes(item.scenario));
     setAggSub(aggSubData);
-    if(countries.length < 1 || !barFrozen)
-      setCountries(filterRegion(getScenerio(aggSubData, scenarios[0])));
+    if(countries.length < 1 || !barFrozen) {
+      let countries = filterRegion(getScenerio(aggSubData, scenarios[0]));
+      if(countries.length === 0)
+        countries = filterRegion(getScenerio(aggSubData, scenarios[1]));
+      setCountries(countries);
+    }
   }, [scenarios, data, parameter, year, setAggSub, setCountries]);
 
   useEffect(() => {

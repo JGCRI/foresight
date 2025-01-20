@@ -85,7 +85,7 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
     if (uniqueSubcats !== "i")
         uniqueSubcats.add("Aggregate of Subsectors");
 
-    //console.log(uniqueDates, uniqueRegions, uniqueSubcats);
+    console.log(uniqueDates, uniqueRegions, uniqueSubcats);
 
     const date_links = (uniqueDates && uniqueDates !== "i") ? Array.from(uniqueDates).map((date) => (
         <div key={date}>

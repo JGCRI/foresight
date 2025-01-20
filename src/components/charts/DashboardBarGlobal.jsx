@@ -228,13 +228,13 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, le
                                 pointerEvents: "none",
                                 position: "absolute",
                                 zIndex: "9999",
-                                top: "0px",
+                                bottom: "0px",
                                 left: "0px"
                             } : {
                                 pointerEvents: "none",
                                 position: "absolute",
                                 zIndex: "9999",
-                                top: "0px",
+                                bottom: "0px",
                                 right: "0px"
                             }}
                         >
