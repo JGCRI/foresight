@@ -220,6 +220,7 @@ function UploadData({ datasets, updateDatasets, userUploadedData, loadDataToStor
       setDataInfoStore(null);
       Papa.parse(uploadedFile, {
         header: true,
+        delimiter: ",",
         complete: (result) => {
           setLoading(false);
           let error = validateCSV(result.data);
@@ -227,7 +228,11 @@ function UploadData({ datasets, updateDatasets, userUploadedData, loadDataToStor
             if(result.data[0].dataset) setInput1(getUniqueName(result.data[0].dataset, true));
             processCSV(result.data.slice(0, -1));
             setFileError('');
-          } else {
+          } else if(error === "empty"){
+            setDataStore(null);
+            setFileError("Invalid CSV format. The file is empty or contains invalid formatting.");
+          }
+          else {
             setDataStore(null);
             setFileError("Invalid CSV format. Please ensure the file has the column " + error + ".");
           }
@@ -243,7 +248,7 @@ function UploadData({ datasets, updateDatasets, userUploadedData, loadDataToStor
   const validateCSV = (data) => {
     let error = []
     const requiredColumns = ['scenario', 'param', 'x', 'value', 'region', 'class', 'units'];
-    if (data.length === 0) return requiredColumns.toString();
+    if (data.length === 0) return "empty";
     const keys = Object.keys(data[0]);
     requiredColumns.forEach((requirement) => {
       if (!keys.includes(requirement)) {

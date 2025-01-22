@@ -92,7 +92,6 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
   }, [dashSubcategory, setDashboardSubs]);
 
   useEffect(() => {
-    console.log(countries);
     setBarMax(aggSub === "i" ? 0 : Math.max(...aggSub.filter(obj => countries.includes(obj.region)).map(item => item.value), 0));
   }, [aggSub, countries]);
 

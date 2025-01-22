@@ -412,7 +412,7 @@
   position: relative;
   display: grid;
   width: 100%;;
-  font-size: max(18px, 1vh);
+  font-size: max(15px, 1vh);
   font-weight: 600;
   color: rgb(187, 155, 49);
   grid-template-columns: repeat(3, 1fr);
@@ -422,6 +422,7 @@
   margin-top: 1%;
   margin-bottom: 2%;
   justify-items: center;
+  align-items: center;
 }
 
 .graph-grid-small {

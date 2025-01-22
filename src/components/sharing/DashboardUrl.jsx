@@ -218,7 +218,6 @@ const checkParamURL = (urlLoaded, params, selection, guages) => {
  */
 const checkGuageURL = (urlLoaded, parameter, guageData, title) => {
   let searchParams = new URLSearchParams(window.location.hash.substring(1));
-  console.log(guageData);
   let guageList = (guageData && Array.isArray(guageData)) ? guageData.map(guage => guage ? guage.title : "") : [];
   if (!urlLoaded && searchParams.has(title) && guageList.includes(searchParams.get(title)))
     return searchParams.get(title);

@@ -76,7 +76,6 @@ const MyResponsiveBar = ({ csv, color, listKeys, scenerio, dashSubs, dashReg, le
                     legendOffset: 32
                 }}
                 onClick={(data) => {
-                    console.log(data);
                     if (data.id !== 'class1') {
                         dashSubs(
                             `${data["id"]}`
