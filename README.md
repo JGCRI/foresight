@@ -23,4 +23,4 @@
 <!-- ------------------------>
 <!-- ------------------------>
 
-Khan, Z., Knight, B., Zhao, M., Vernon, C.R., Waite, T. and Niazi, H., 2023. Foresight: Global Change Analytics. Communicating complex science through interactive dashboards. Journal TBD DOI: TBD
+Knight, B., Zhao, M., Vernon, C.R., Waite, T., Niazi, H., and Khan, Z., 2025. Foresight: Global Change Analytics. Communicating complex science through interactive dashboards. Journal TBD DOI: TBD
