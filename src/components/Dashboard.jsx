@@ -11,6 +11,8 @@ import DashboardGuageBar from "./dropdowns/DashboardGuageBar.jsx";
 import DataQuerries from "./data/DataQuerries.jsx";
 import { datasets } from "./data/Scenarios.jsx";
 import DataQueryUser from "./data/DataQueryUser.jsx";
+import DashboardGuageStats from "./dropdowns/DashboardGuageStats.jsx";
+import DashboardTutorial from "./DashboardTutorial.jsx";
 
 /**
  * Main Dashboard component.
@@ -81,12 +83,13 @@ function Dashboard({ open, dataset, scenarios }) {
       )}
       <div className={open ? "dashboard" : "dashboardClosed"}>
         <Container fluid>
-          <Row title="Select date range for guages" className="date-select-row">
+          <DashboardTutorial />
+          <Row title="Select date range for guages" className="date-select-row" id="date-dropdown-bar">
             <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
               % Change from :
             </Col>
-            <Col title="Select guage starting date">
-              <DateDropdown
+            <Col title="Select guage starting date" id="date-dropdown-start">
+              <DateDropdown 
                 data={datesData}
                 isOrNotStart={0}
               />
@@ -94,8 +97,8 @@ function Dashboard({ open, dataset, scenarios }) {
             <Col className="date-select-text" xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
               to
             </Col>
-            <Col title="Select guage ending date">
-              <DateDropdown
+            <Col title="Select guage ending date" id="date-dropdown-end">
+              <DateDropdown 
                 data={datesData}
                 isOrNotStart={1}
               />
@@ -107,7 +110,7 @@ function Dashboard({ open, dataset, scenarios }) {
             Scenarios={scenarios}
             reset={resetData}
           />
-          <Row title="Selected data information." className="selection-divider">
+          <Row title="Selected data information." className="selection-divider" id = "guage-bar">
             <DashboardFloater
               dataset={dataset}
               scenarios={scenarios}
@@ -116,7 +119,7 @@ function Dashboard({ open, dataset, scenarios }) {
               subcats={subcategoriesList}
             />
           </Row>
-          <Row>
+          <Row id="parameter-visualizations">
             <DashboardGraphs
               lineData={lineData}
               choroplethData={choroplethData}
@@ -128,6 +131,12 @@ function Dashboard({ open, dataset, scenarios }) {
               setChoroplethColorPalette={setChoroplethColorPalette}
               choroplethInterpolation={choroplethInterpolation}
               setInterpolation={setInterpolation}
+            />
+          </Row>
+          <Row>
+            <DashboardGuageStats
+              dataset={dataset}
+              aggSub={aggSub}
             />
           </Row>
         </Container>
