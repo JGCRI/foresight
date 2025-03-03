@@ -14,6 +14,8 @@ import { connect } from "react-redux";
 import { setDashDate, setDashReg, setDashSubs, setDataset } from "./Store";
 import './css/Navigation.css';
 import { clearHash, updateHash } from "./sharing/DashboardUrl";
+import { Amplify} from "aws-amplify";
+import awsconfig from "../aws-exports";
 
 /**
  * Navigation component. Used for testing different maps
@@ -28,6 +30,9 @@ import { clearHash, updateHash } from "./sharing/DashboardUrl";
  * @param {(sub: string) => any} props.dashSubs - Updates the current dashboard subcategory.
  * @returns {ReactElement} The rendered component.
  */
+
+Amplify.configure(awsconfig);
+
 function Navigation({ dataset, datasets, updateDataset, dashDate, dashReg, dashSubs }) {
   const handleDatasetChange = (selectedDataset) => {
     //console.log("Selected dataset:", selectedDataset);
