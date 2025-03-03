@@ -8,32 +8,7 @@ import { datasets } from '../data/Scenarios';
 **/
 function DashboardGuageStats({ dataset, aggSub, selection, start, end, year, scenarios}) {
     let param = datasets.some(e => e.dataset === dataset) ? datasets.find(obj => obj.dataset === dataset).params[selection] : {};
-    let aggValuesScenario1 = Array.isArray(aggSub) ? aggSub.filter(obj => obj.scenario === scenarios[0].title).sort((a, b) => b.value - a.value) : [];
-    let aggValuesScenario2 = Array.isArray(aggSub) ? aggSub.filter(obj => obj.scenario === scenarios[1].title).sort((a, b) => b.value - a.value) : [];
-    
-    // Current Selection
-    let currentParamDescription = `You have selected ${param.description}. `;
-
-    // Greatest and least values
-    let greatestValue = Array.isArray(aggSub) ? (
-        <>
-            The region with the greatest value in {year} is 
-            <span style={{ color: "#FFFF00", fontWeight: "bold" }}> {aggValuesScenario1[0].region}</span> 
-            for<span style={{ color: "#FFA500", fontWeight: "bold" }}> {scenarios[0].title}</span> and
-            <span style={{ color: "#FFFF00", fontWeight: "bold" }}> {aggValuesScenario2[0].region}</span> 
-            for<span style={{ color: "#FFA500", fontWeight: "bold" }}> {scenarios[1].title}</span>.
-        </>
-    ) : "Data Loading...";
-
-    let smallestValue = Array.isArray(aggSub) ? (
-        <>
-            The region with the smallest value in {year} is 
-            <span style={{ color: "#FFFF00", fontWeight: "bold" }}> {aggValuesScenario1[aggValuesScenario2.length - 1].region}</span> 
-            for<span style={{ color: "#FFA500", fontWeight: "bold" }}> {scenarios[0].title}</span> and
-            <span style={{ color: "#FFFF00", fontWeight: "bold" }}> {aggValuesScenario2[aggValuesScenario2.length - 1].region}</span> 
-            for<span style={{ color: "#FFA500", fontWeight: "bold" }}> {scenarios[1].title}</span>.
-        </>
-    ) : "";
+    let currentParamDescription = param ? `You have selected ${param.description}. ` : "";
 
     return (
         <>
