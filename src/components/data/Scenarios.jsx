@@ -41,7 +41,7 @@ export const datasets = [
       "agProdByCrop",
       "energyPrimaryByFuelEJ",
       "watWithdrawBySec",
-      "landIrrCrop"
+      "landAlloc"
     ]
   }
 ]
