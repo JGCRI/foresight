@@ -215,6 +215,7 @@ export const findClosestDateAllParamsAbove = (data, params, targetDate) => {
  * @returns {number} The closest date.
  */
 export const findClosestDate = (data, targetDate) => {
+    if (!Array.isArray(data)) return -1;
     const closest = data.reduce((prev, curr) => {
         return (Math.abs(Number(curr.x) - targetDate) < Math.abs(Number(prev.x) - targetDate)) ? curr : prev;
     });

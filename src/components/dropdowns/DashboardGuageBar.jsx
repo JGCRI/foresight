@@ -205,7 +205,7 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
     return (
       OpenScenarios.map((scenario, index) => (
         <Dropdown>
-          <Dropdown.Toggle className="dashboard-scenerio-button" variant="outline-light">
+          <Dropdown.Toggle className="dashboard-scenerio-button" variant="outline-light" id="add-guage">
             <MdOutlineLibraryAdd />
           </Dropdown.Toggle>
           <Dropdown.Menu className="guage-scenerio-button">
@@ -222,7 +222,7 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
     return (
       OpenParameters.map((param, index) => (
         (param) ?
-          <div className={getGuageCSS(param ? param.title : "")} key={index} onClick={() => resetAndUpdate(param ? param.title : "")}>
+          <div className={getGuageCSS(param ? param.title : "")} id={getGuageCSS(param ? param.title : "")} key={index} onClick={() => resetAndUpdate(param ? param.title : "")}>
             {row(param.title, param.units)}
           </div> : <div></div>
       ))
@@ -245,8 +245,8 @@ function DashboardGuageBar({ Scenarios, OpenScenarios, Parameters, OpenParameter
 
   // If the dataset hasn't loaded yet, we give the user the "Loading Dataset..." message.
   return (
-    <div className="dashboard-guage-grid">
-      <div className="dashboard-guage-grid-columns" title="Select scenario">
+    <div className="dashboard-guage-grid" id="dashboard-guagebar">
+      <div className="dashboard-guage-grid-columns" title="Select scenario" id="scenario-selector">
         {scenarioSelectionCol()}
       </div>
       {(data === 'i' || data.length === 0) ? (

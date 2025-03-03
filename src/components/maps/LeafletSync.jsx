@@ -97,7 +97,7 @@ const LeafletSync = ({ mapRegion, choroplethColorPalette, setChoroplethColorPale
   }, [mapInstance, mapInstance2, choroplethColorPalette, choroplethInterpolation]);
   // Toggle marker on button click:
   return (
-    <div className="slider grid-border">
+    <div className="slider grid-border" id="graph-choropleth">
       <div className="slider-container">
         <div className="image-container">
           <div className="choropleth-data-info">

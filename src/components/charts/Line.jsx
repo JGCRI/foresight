@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
  * @returns {ReactElement} The rendered component.
  */
 const Line = ({ data, dashDate, setDate, unit }) => (
-    <div className="line_container">
+    <div className="line_container" id="graph-line">
         <div className="nivo-wrapper grid-border">
             <ResponsiveLine
                 data={data}

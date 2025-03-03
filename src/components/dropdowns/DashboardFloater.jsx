@@ -122,7 +122,7 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
     )) : <div></div>
     return (
         <>
-            <div title="Change selected data variable">
+            <div title="Change selected data variable" id="guage-selector-dropdown">
                 SELECTED:    {findUnitsByTitle(openGuages, selection)}   {<div className='floater-icon'>{getIconParam(selection, openGuages)}</div>}
                 <Dropdown as={ButtonGroup}>
                     <Dropdown.Toggle
@@ -135,6 +135,7 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
                     </Dropdown.Menu>
                 </Dropdown>
                 <DashboardDataDownload
+                    id="data-download"
                     dataset={dataset}
                     scenarios={scenarios}
                     parameter={selection}
@@ -142,7 +143,7 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
                 />
             </div>
             {(width >= 875) ? (
-                <div title="Change selected year, region, and subsector">
+                <div title="Change selected year, region, and subsector" id="floater-change-selection">
                     <Dropdown>
                         <Dropdown.Toggle variant="outline-light" className="dashboard-scenerio-button dashboard-floater-button">
                             {"Year: " + year}
@@ -168,6 +169,7 @@ function DashboardFloater({ dataset, scenarios, updateGuage, selection, openGuag
                         </Dropdown.Menu>
                     </Dropdown>
                     <Button
+                        id="floater-change-reset"
                         title="Reset all data selections"
                         className="floater-button"
                         variant="danger"

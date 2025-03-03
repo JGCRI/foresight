@@ -7,7 +7,6 @@ import team_benjamin from "../assets/img/team_benjamin.jpg";
 import team_mengqi from "../assets/img/team_mengqi.jpg";
 import team_taryn from "../assets/img/team_taryn.png";
 import team_hassan from "../assets/img/team_hassan.jpg";
-import team_zarrar from "../assets/img/team_zarrar.png";
 import team_chris from "../assets/img/team_chris.png";
 import './css/Team.css';
 
@@ -37,12 +36,6 @@ const teamMembers = [
     email: "hassan.niazi@pnnl.gov"
   },
   {
-    name: "Zarrar Khan",
-    position: "Climate Change Specialist",
-    photo: team_zarrar,
-    email: "zarrar_khan@abtassoc.com"
-  },
-  {
     name: "Chris Vernon",
     position: "Data Scientist",
     photo: team_chris,
@@ -63,7 +56,7 @@ const Team = () => {
         <h1 className="page-title">Our Team</h1>
         <hr className="home-hr" />
           <div className="page-subtitle">
-            The models and data used by Foresight are produced by our full team of scientists at the Joint Global Change Research Institute <a href="https://www.pnnl.gov/projects/jgcri" target="_blank" rel="noreferrer">(JGCRI)</a>. Key contributors to the Foresight dashboard are listed below. 
+            Key contributors to the Foresight dashboard are listed below. 
           </div>
         </Row>
         <hr className="home-hr lower-hr" />

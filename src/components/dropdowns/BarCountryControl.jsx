@@ -74,7 +74,7 @@ function BarChartControl({ csv, scenario, setCountries, countries, setFrozen, fr
   }
 
   return (
-    <Dropdown title="Bar chart settings" className="choropleth-control">
+    <Dropdown title="Bar chart settings" className="choropleth-control" id="graph-bar-settings">
       <Dropdown.Toggle variant="outline-secondary" size="sm" id="dropdown-basic">
         <MdSettings />
       </Dropdown.Toggle>

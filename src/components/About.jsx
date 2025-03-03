@@ -60,7 +60,7 @@ function About() {
         </Row>
         <Row className="about-grid">
           <div className="about-grid-text">
-            Access analysis-specific highlights as well as broader insights across water, energy, land, and many other systems, leveraging the power of our integrated suite of tools.
+            Access analysis-specific highlights as well as broader insights across energy, water, land, and many other systems, leveraging the power of our integrated suite of tools.
           </div>
           <div className="about-grid-text">
             All figures are shareable across platforms, inviting feedback and comments from the community to drive continuous improvement.

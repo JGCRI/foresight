@@ -198,7 +198,7 @@ function DashboardGraphs({ openedScenerios, selectedGuage, openedGuages,
       Loading Dataset...
     </div>
   ) : (
-    <div className='bar-grid grid-border'>
+    <div className='bar-grid grid-border' id="graph-bar">
       <BarCountryControl 
         csv={aggSub} 
         setMaxVal = {setBarMax}

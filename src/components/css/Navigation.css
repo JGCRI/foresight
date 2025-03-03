@@ -9,7 +9,7 @@
   .bartop {
     position: fixed;
     min-height: 100px;
-    z-index: 1000000 !important;
+    z-index: 1001 !important;
     top: 0;
     width: 100%;
     padding-right: 50px;

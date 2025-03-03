@@ -55,7 +55,7 @@ function ChoroplethControl({palette, interpolation, changePalette, changeInterpo
   }
 
   return (
-    <Dropdown title="Choropleth settings" className = "choropleth-control">
+    <Dropdown title="Choropleth settings" className = "choropleth-control" id="graph-choropleth-settings">
       <Dropdown.Toggle variant="outline-secondary" size="sm" id="dropdown-basic">
         <MdSettings/>
       </Dropdown.Toggle>
