@@ -11,7 +11,8 @@ query BarQuery($reg: String!, $sub: String!, $nextToken: String, $id: String!) {
     id: $id,
     filter: {
       region: {eq: $reg},
-      class: {eq: $sub}
+      class: {eq: $sub},
+      x: { ge: 2015}
     },
     limit: 100000, 
     nextToken: $nextToken
@@ -33,6 +34,7 @@ query BarQuery($sub: String!, $nextToken: String, $id: String!) {
     id: $id,
     date: $sub,
     limit: 100000, 
+    filter: { x: { ge: 2015 } },
     nextToken: $nextToken
   ) {
     items {
@@ -51,7 +53,8 @@ query BarQuery($reg: String!, $nextToken: String, $id: String!) {
   queryGcamDataTableAggParamRegions(
     id: $id,
     filter: {
-      region: {eq: $reg}
+      region: {eq: $reg},
+      x: { ge: 2015 }
     },
     limit: 100000, 
     nextToken: $nextToken
@@ -73,6 +76,7 @@ query BarQuery($param: String!, $nextToken: String, $id: String!) {
     id: $id,
     date: $param,
     limit: 100000, 
+    filter: { x: { ge: 2015 } },
     nextToken: $nextToken
   ) {
     items {
@@ -92,7 +96,8 @@ query BarQuery($nextToken: String, $id: String!, $date: String!, $sub: String!) 
     id: $id,
     date: $date,
     filter: {
-      class: {eq: $sub}
+      class: {eq: $sub},
+      x: { ge: 2015 }
     },
     limit: 100000, 
     nextToken: $nextToken
@@ -114,6 +119,7 @@ query BarQuery($nextToken: String, $id: String!, $sort: String!) {
     id: $id,
     date: $sort,
     limit: 100000, 
+    filter: { x: { ge: 2015 } },
     nextToken: $nextToken
   ) {
     items {
@@ -133,6 +139,7 @@ query BarQuery($date: String!, $nextToken: String, $id: String!) {
     id: $id,
     date: $date,
     limit: 100000,
+    filter: { x: { ge: 2015 } },
     nextToken: $nextToken
   ) {
     items {
@@ -152,7 +159,8 @@ query GlobalBarQuery($date: Int!, $nextToken: String, $id: String!) {
   queryGcamDataTableAggClass1Globals(
     id: $id,
     filter: {
-      x: {eq: $date}
+      x: {eq: $date},
+      x: { ge: 2015 }
     },
     limit: 100000, 
     nextToken: $nextToken
@@ -194,7 +202,8 @@ const queryDataset = `
 query MyQuery($nextToken: String, $dataset: String!) {
   listGcamDataTableAggParamGlobals(
     filter: {
-      id: { beginsWith: $dataset }
+      id: { beginsWith: $dataset },
+      x: { ge: 2015}
     },
     limit: 100000,
     nextToken: $nextToken
@@ -217,6 +226,7 @@ query MyQuery($nextToken: String, $param: String!, $id: String!) {
     id: $id,
     date: $param,
     limit: 100000,
+    filter: { x: { ge: 2015 } },
     nextToken: $nextToken
   ) {
     items {
@@ -233,6 +243,7 @@ query BarQuery($date: String!, $nextToken: String, $id: String!) {
     id: $id,
     date: $date,
     limit: 100000, 
+    filter: { x: { ge: 2015 } },
     nextToken: $nextToken
   ) {
     items {
@@ -398,6 +409,7 @@ function DataQuerries({ dataset, scenerios, start, end, parameter, parameters, y
 
   const fetchDashboard = useCallback(async () => {
     const result = await fetchParallel([[queryDataset, { dataset: dataset }]]);
+    console.log(result);
     setFrozen(false);
     loadDataURL(result, setAllScenarios, setScenariosTotal, setGuagesTotal, setGuagesCurrent, setGuageSelected, setStart, setEnd, setCurrentDate, URLLoaded, toggleURLLoaded, updateDataset, datasetList, dataset, start, end, year, parameter, parameters, scenerios);
     // eslint-disable-next-line
