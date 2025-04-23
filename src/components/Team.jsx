@@ -7,6 +7,7 @@ import team_benjamin from "../assets/img/team_benjamin.jpg";
 import team_mengqi from "../assets/img/team_mengqi.jpg";
 import team_taryn from "../assets/img/team_taryn.png";
 import team_hassan from "../assets/img/team_hassan.jpg";
+import team_zarrar from "../assets/img/team_zarrar.png";
 import team_chris from "../assets/img/team_chris.png";
 import './css/Team.css';
 
@@ -16,12 +17,18 @@ const teamMembers = [
     position: "Software Lead",
     photo: team_benjamin,
     email: "benjamin.knight@pnnl.gov"
-  },    
+  },
   {
     name: "Mengqi Zhao",
     position: "Earth Scientist",
     photo: team_mengqi,
     email: "mengqi.zhao@pnnl.gov"
+  },    
+  {
+    name: "Zarrar Khan",
+    position: "Computational Scientist",
+    photo: team_zarrar,
+    email: "zarrar.khan@pnnl.gov"
   },
   {
     name: "Taryn Waite",
